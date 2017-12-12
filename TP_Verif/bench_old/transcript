@@ -1,0 +1,247 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim lib_BENCH.bench(test)
+# vsim lib_BENCH.bench(test) 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "RECEIVER(RTL_VIEW)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "SENDER(RTL_VIEW)".
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lib_genbuf.type_def
+# Loading work.bench(test)#1
+# Loading lib_genbuf.genbuf(rtl_view)#1
+# Loading lib_genbuf.sender(rtl_view)#1
+# Loading lib_genbuf.arbk(rtl_view)#1
+# Loading lib_genbuf.receiver(rtl_view)#1
+# Loading lib_genbuf.arbk(rtl_view)#2
+# Loading lib_genbuf.fifo(rtl_view)#1
+add wave -position insertpoint  \
+sim:/bench/BtoR_REQ \
+sim:/bench/BtoS_ACK \
+sim:/bench/DI \
+sim:/bench/DO \
+sim:/bench/RtoB_ACK \
+sim:/bench/StoB_REQ \
+sim:/bench/clk \
+sim:/bench/reset
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /bench/inst_gen/FIFO_DATA
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /bench/inst_gen/FIFO_DATA
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/RECEIVE_ARB/Make_ack(1)/Make_token(1)/B1/MOD_else
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/RECEIVE_ARB/Make_ack(0)/Make_token(1)/B1/MOD_if
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(3)/Make_token(3)/B1/MOD_else
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(3)/Make_token(2)/B1/MOD_else
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(3)/Make_token(1)/B1/MOD_else
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(2)/Make_token(3)/B1/MOD_else
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(2)/Make_token(2)/B1/MOD_else
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(2)/Make_token(1)/B1/MOD_if
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(1)/Make_token(3)/B1/MOD_else
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(1)/Make_token(2)/B1/MOD_if
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(1)/Make_token(1)/B1/MOD_if
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(0)/Make_token(3)/B1/MOD_if
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(0)/Make_token(2)/B1/MOD_if
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Region: /bench/inst_gen/SEND_ARB/Make_ack(0)/Make_token(1)/B1/MOD_if
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 300 ns  Iteration: 0  Process: /bench/inst_gen/xx_stable
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 300 ns  Iteration: 0  Process: /bench/inst_gen/xx_stable
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 1500 ns Started: 1500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 2500 ns Started: 2500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 3500 ns Started: 3500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 4300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 4500 ns Started: 4500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 4700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 4900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 5500 ns Started: 5500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 6300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 6500 ns Started: 6500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 6700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 6900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 7300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 7500 ns Started: 7500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 7700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 7900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 8300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 8500 ns Started: 8500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 8700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 8900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 9300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 9500 ns Started: 9500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 9700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 9900 ns  Iteration: 1  Instance: /bench/inst_gen
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 10500 ns Started: 10500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 11500 ns Started: 11500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 12300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 12500 ns Started: 12500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 12700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 12900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 13300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 13500 ns Started: 13500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 13700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 13900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 14300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 14500 ns Started: 14500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 14700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 14900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 15500 ns Started: 15500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 16300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 16500 ns Started: 16500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 16700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 16900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 17300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 17500 ns Started: 17500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 17700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 17900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 18300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 18500 ns Started: 18500 ns  Scope: /bench/inst_gen/Not_C_1 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 18700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 18900 ns  Iteration: 1  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 19300 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Error: Assertion failed
+#    Time: 19500 ns Started: 19500 ns  Scope: /bench/inst_gen/Not_C_0 File: /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl Line: 250
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 19700 ns  Iteration: 3  Instance: /bench/inst_gen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 19900 ns  Iteration: 1  Instance: /bench/inst_gen

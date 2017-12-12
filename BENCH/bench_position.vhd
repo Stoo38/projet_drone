@@ -1,0 +1,122 @@
+-------------------------------------------------------------------------------
+--
+-- FILE NAME: BENCH.vhd
+-- AUTHOR: Ludovic BERNARD
+-- Created: 17 Nov 27
+-- Test Bench for getting the drone's position
+-------------------------------------------------------------------------------
+
+
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.math_real.all;
+
+library LIB_VHD;
+use LIB_VHD.all;
+
+entity bench is
+end bench;
+
+
+architecture test_position of bench is
+
+  component position
+    port (
+		n_reset    : in std_logic;
+		IMG	   : in std_logic;
+		VGA_CLK	   : in std_logic;
+		X_Cont   : in std_logic_vector(8 downto 0);
+		Y_Cont   : in std_logic_vector(8 downto 0);  -- image 512 x 512
+		r_proc	   : in std_logic_vector(7 downto 0);
+		g_proc	   : in std_logic_vector(7 downto 0);
+		b_proc	   : in std_logic_vector(7 downto 0);
+		X_barycentre : out std_logic_vector (8 downto 0);
+		Y_barycentre : out std_logic_vector (8 downto 0));
+  end component;
+
+
+signal clk 					: std_logic := '0';
+signal n_reset 				: std_logic := '1';
+signal x_count, y_count		: std_logic_vector (8 downto 0):= "000000000";
+signal r,g,b				: std_logic_vector (7 downto 0) := x"FF";
+signal sortie_x, sortie_y 	: std_logic_vector(8 downto 0);
+signal img 			: std_logic := '1';
+
+
+begin
+
+
+barycentre : position port map  (
+		n_reset => n_reset,
+		IMG => img,
+		VGA_CLK => clk,
+		X_Cont => x_count,
+		Y_Cont => y_count,
+		r_proc => r,
+		g_proc => g,
+		b_proc => b,
+		X_barycentre => sortie_x, 
+		Y_barycentre =>  sortie_y);
+
+ 	clk <= not clk after 100 ns;
+ 	n_reset <=  '0' , '1' after 200 ns; 
+	img <= '1';
+		process
+			begin
+				wait until clk'event and clk ='1' ;
+				r <= x"FF";
+				g <= x"FF";
+				b <= x"FF";
+				x_count <= "000000000";
+				y_count <= "000000000";
+
+				wait until clk'event and clk ='1' ;
+
+				r <= x"00";
+				g <= x"00";
+				b <= x"00";
+				x_count <= "000000001";
+				y_count <= "000000000";
+
+				wait until clk'event and clk ='1' ;
+				r <= x"00";
+				g <= x"00";
+				b <= x"00";
+				x_count <= "000000011";
+				y_count <= "000000000";
+
+				wait until clk'event and clk ='1' ;
+
+				r <= x"00";
+				g <= x"00";
+				b <= x"00";
+				x_count <= "000000001";
+				y_count <= "000000010";
+
+				wait until clk'event and clk ='1' ;
+				r <= x"00";
+				g <= x"00";
+				b <= x"00";
+				x_count <= "000000011";
+				y_count <= "000000010";
+
+				wait until clk'event and clk ='1' ;
+				r <= x"01";
+				g <= x"00";
+				b <= x"00";
+				x_count <= "001000011";
+				y_count <= "000100010";
+
+				wait until clk'event and clk ='1' ;
+				r <= x"A0";
+				g <= x"11";
+				b <= x"FF";
+				x_count <= "111111111";
+				y_count <= "111111111";
+
+				wait for 2000 ns;
+
+		end process;
+end test_position;

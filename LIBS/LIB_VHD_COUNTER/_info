@@ -1,0 +1,151 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/tp/xph3app/xph3app602/projet_drone/VHD
+T_opt
+!s110 1513082839
+V3zlHhQYOD:`hhKAYC^m3h2
+04 10 1 work tb_counter c 1
+=1-bc305b9b270e-5a2fcfd7-3cb45-15f6
+o-quiet -auto_acc_if_foreign -work LIB_VHD_COUNTER
+tCvgOpt 0
+n@_opt
+OL;O;10.5c;63
+R0
+Eglobal_counter
+Z1 w1512982053
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd
+Z8 F/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd
+l0
+L6
+Vm<kem7olH>hT2Id<@2g7z1
+!s100 ;E:djdji=@HP>8RnWlVe02
+Z9 OL;C;10.5c;63
+31
+Z10 !s110 1513082831
+!i10b 1
+Z11 !s108 1513082831.000000
+Z12 !s90 -93|-work|LIB_VHD_COUNTER|/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd|
+Z13 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd|
+!i113 0
+Z14 o-93 -work LIB_VHD_COUNTER
+Z15 tExplicit 1 CvgOpt 0
+Aa
+R2
+R3
+R4
+R5
+R6
+DEx4 work 14 global_counter 0 22 m<kem7olH>hT2Id<@2g7z1
+31
+R10
+l14
+L13
+VW@@`DLE;NbeG5OYTgl<3k3
+!s100 ^M>_nMbI^=1>hoO^Jz:O10
+R9
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Elocal_counter
+R1
+R2
+R3
+R4
+R5
+R6
+R0
+Z16 8/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd
+Z17 F/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd
+l0
+L6
+VDHglLF<dbhDObf4HfQ4^;0
+!s100 NV<BR:aQRYlSm1W6`=ZKC1
+R9
+31
+R10
+!i10b 1
+R11
+Z18 !s90 -93|-work|LIB_VHD_COUNTER|/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd|
+Z19 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd|
+!i113 0
+R14
+R15
+Ab
+R2
+R3
+R4
+R5
+R6
+DEx4 work 13 local_counter 0 22 DHglLF<dbhDObf4HfQ4^;0
+31
+R10
+l14
+L13
+VR5HRFhKHMDWaQ3U<aGmBo3
+!s100 j9@DYFQE8a?2mZ3:OW8>:3
+R9
+!i10b 1
+R11
+R18
+R19
+!i113 0
+R14
+R15
+Etb_counter
+Z20 w1513082829
+R4
+R5
+R6
+R0
+Z21 8/tp/xph3app/xph3app602/projet_drone/VHD/test_counter.vhd
+Z22 F/tp/xph3app/xph3app602/projet_drone/VHD/test_counter.vhd
+l0
+L7
+VBO`FYeQ0O5mE=SHS4[FKb0
+!s100 W?QcfJo_jXCTBIVagVdhG0
+R9
+31
+Z23 !s110 1513082832
+!i10b 1
+R11
+Z24 !s90 -93|-work|LIB_VHD_COUNTER|/tp/xph3app/xph3app602/projet_drone/VHD/test_counter.vhd|
+Z25 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/test_counter.vhd|
+!i113 0
+R14
+R15
+Ac
+R4
+R5
+R6
+DEx4 work 10 tb_counter 0 22 BO`FYeQ0O5mE=SHS4[FKb0
+31
+R23
+l37
+L9
+V7O:dX0fWjE;^H@_Q_:[K_2
+!s100 2Z2n]AfM<6OW74E3QGnEo3
+R9
+!i10b 1
+R11
+R24
+R25
+!i113 0
+R14
+R15

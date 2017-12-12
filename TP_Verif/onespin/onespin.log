@@ -1,0 +1,321 @@
+-I- Logging messages into '/tp/xph3app/xph3app104/TP_Verif/onespin/onespin.log'.
+-I- VHDL initialization file '/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/scripts/read_vhdl.tcl' for design golden sourced successfully.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/arithmetic.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/arithmetic.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/attributes.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/attributes.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/bvarithmetic.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/bvarithmetic.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/distributions.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/distributions.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/qe.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/qe.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/sdf_header.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/sdf_header.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/synopsys.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/synopsys.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/types.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/types.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/vhdlq.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/vhdlq.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/vhdlzq.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/synopsys/orig/vhdlzq.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_1164.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_1164.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_arith.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_arith.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_signed.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_signed.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_unsigned.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_unsigned.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_misc.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_misc.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/gs_types.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/gs_types.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_textio.vhd.02" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_textio.vhd.02" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_components.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_components.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_entities.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/std_logic_entities.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/math_real.vhd.02" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/math_real.vhd.02" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/math_complex.vhd.02" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/math_complex.vhd.02" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/timing_p.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/timing_p.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/timing_b.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/timing_b.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/prmtvs_p.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/prmtvs_p.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/ulogic_arithmetic.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/ulogic_arithmetic.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/prmtvs_b.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/prmtvs_b.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/onespin/orig/substitute.vhd" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/onespin/orig/substitute.vhd" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/numeric_std.vhd.02" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/numeric_std.vhd.02" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/numeric_bit.vhd.02" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ieee/orig/numeric_bit.vhd.02" to this library. The file will not be analyzed again.
+-W- File "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ncutils/orig/ncutilities.vhdl" already read from "/softslin/onespin360_2016_06_SP2016_09_28/lib/vhdl/ncutils/orig/ncutilities.vhdl" to this library. The file will not be analyzed again.
+-I- Analyzing input file "/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd" ... [1]
+-I- Analyzing input file "/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd" ... [1]
+-I- Analyzing input file "/tp/xph3app/xph3app104/TP_Verif/vhd_ko/def.vhd" ... [1]
+-I- Analyzing input file "/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd" ... [1]
+-I- Analyzing input file "/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd" ... [1]
+-I- VHDL file(s) read successfully.
+-I- Analyzing input file "/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl" ... [1]
+-I- VHDL file(s) read successfully.
+-I- Elaborate auto-selected the toplevel: "vhdl!work.genbuf(rtl_view)"
+-I- Elaborating vhdl portion...
+-I- Alternative subprogram bodies in library 'onespin' package 'substitute' read
+-I- Using top-level 'genbuf-rtl_view' in library 'work' ...
+-I- ConstSig - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:171: Signal sender_num has constant value
+-I- ConstSig - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:172: Signal reveiver_num has constant value
+-I- ConstSig - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:173: Signal depth_num has constant value
+-I- ConstSig - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:174: Signal word_len has constant value
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:115: Instantiate component Architecture sender(rtl_view) in library work : 
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:115: Instantiate component Architecture sender(rtl_view) in library work : 
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:115: Instantiate component Architecture sender(rtl_view) in library work : 
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:115: Instantiate component Architecture sender(rtl_view) in library work : 
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:137: Instantiate component Architecture receiver(rtl_view) in library work : 
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:137: Instantiate component Architecture receiver(rtl_view) in library work : 
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:127: Instantiate component Architecture arbk(rtl_view) in library work parametrized with generics : <req_no_k=3>
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:24: Input 'rst' in module arbk(rtl_view) with generics <req_no_k=3>  is declared but never read
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:35: Signal 'req_2k(0)' in module arbk(rtl_view) with generics <req_no_k=3>  is declared but never read
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:35: Signal 'req_2k(7)' in module arbk(rtl_view) with generics <req_no_k=3>  is declared but never read
+-W- UnusedW - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:37: Signal 'temp(0..3)(0..3)' in module arbk(rtl_view) with generics <req_no_k=3> is declared but never used
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:149: Instantiate component Architecture arbk(rtl_view) in library work parametrized with generics : <req_no_k=1>
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:24: Input 'rst' in module arbk(rtl_view) with generics <req_no_k=1>  is declared but never read
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:35: Signal 'req_2k(0)' in module arbk(rtl_view) with generics <req_no_k=1>  is declared but never read
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:35: Signal 'req_2k(3)' in module arbk(rtl_view) with generics <req_no_k=1>  is declared but never read
+-W- UnusedW - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:37: Signal 'temp(0..1)(0..1)' in module arbk(rtl_view) with generics <req_no_k=1> is declared but never used
+-I- /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:158: Instantiate component Architecture fifo(rtl_view) in library work parametrized with generics : <depth=3>
+-W- VhdlW - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:65: Maybe parenthese is missing. Abort is not on top level.
+-W- VhdlW - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:68: Maybe parenthese is missing. Abort is not on top level.
+-W- VhdlW - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:19: Maybe parenthese is missing. Abort is not on top level.
+-W- VhdlW - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:22: Maybe parenthese is missing. Abort is not on top level.
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:25: Input 'di(1..3)(2..31)'  is declared but never read
+-W- UnusedW - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:53: Signal 'fifo_di_0(0..31)' is declared but never used
+-W- UnusedW - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:54: Signal 'fifo_di_1(0..31)' is declared but never used
+-W- UnusedW - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:55: Signal 'fifo_di_2(0..31)' is declared but never used
+-W- UnusedW - /tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:56: Signal 'fifo_di_3(0..31)' is declared but never used
+-W- UnusedW - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:234: Signal 'zero_4(0..3)' is declared but never used
+-W- NoDriver - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:235: Signal 'zero_32(0..31)' is declared but never written
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:93: Signal 'rose_b2r_req'  is declared but never read
+-W- NotRead - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:179: Signal 'fell_b2r_req'  is declared but never read
+-W- NoDriver - /tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:186: Signal 'xx(0..1)' is declared but never written
+
+Warning Statistics:
+-------------------
+    2   NoDriver             Signal is declared but never written
+    4   VhdlW                VHDL warning
+    7   UnusedW              Signal is declared but never used
+    9   NotRead              Signal is declared but never read
+-I- Elaboration of design golden succeeded.
+-I- Traversing modules of design 'genbuf-rtl_view'
+-I- Traversing all modules took 0.192 seconds.
+-I- Analyzing signal dependency in design 'genbuf-rtl_view'
+-I- Analyzing signal dependency took 0.12 seconds.
+-I- Analyzing  loops ...
+-I- Analyzing loops took 0.08 seconds
+-I- Analyzing primary clocks ...
+-I- Analysis of primary clocks took 0.04 seconds.
+-I- Analyzing generated clocks.
+-I- Analysis of generated clocks took 0.00 seconds.
+-I- Checking clock dependency assumption.
+-I- Checking clock dependency assumption took 0.00 seconds.
+-I- Clock input 'clk (posedge)' found.
+-I- Reset input 'rst (pos_sync_reset)' found.
+-I- Computing CSA result.
+-I- Computing CSA result took 0.00 seconds.
+-I- Compilation for design golden succeeded.
+-I- Formal model generated.
+-I- Model trimmed.
+-I- State 'fifo_data/data_buffer/data_temp' is redundant.
+-I- State 'block_rec_gnt_l' is redundant.
+-I- State 'fifo_data/data_buffer/vec_in' is redundant.
+-I- State 'fifo_data/data_buffer/data_in' is redundant.
+-I- Current mode is 'cc'.
+-C- AutoCheck - Signal 'stob_rr_req_l' is initialized to "0000"
+-V- AutoCheck - Signal 'fifo_data/fifo_rec' is not initialized
+-C- AutoCheck - Signal 'fifo_data/head' is initialized to 0
+-C- AutoCheck - Signal 'fifo_data/tail' is initialized to 0
+-V- AutoCheck - Signal 'fifo_data/do' is not initialized
+-V- AutoCheck - Signal 'receive_arb/token_l' is not initialized ("?")
+-V- AutoCheck - Signal 'send_arb/token_l' is not initialized ("??")
+-C- AutoCheck - Signal 'ins_senders__0/senderk/s_state' is initialized to s_idle
+-C- AutoCheck - Signal 'ins_senders__1/senderk/s_state' is initialized to s_idle
+-C- AutoCheck - Signal 'ins_senders__2/senderk/s_state' is initialized to s_idle
+-C- AutoCheck - Signal 'ins_senders__3/senderk/s_state' is initialized to s_idle
+-C- AutoCheck - Signal 'ins_receiver__0/receiverk/r_state' is initialized to r_idle
+-C- AutoCheck - Signal 'ins_receiver__1/receiverk/r_state' is initialized to r_idle
+-I- License - -W- Only for non-commercial usage
+-C- AutoCheck - 'range_check_1' holds
+    Value of signal 'fifo_data/data_buffer/if_blk2/if_blk1/if_blk2/tail' always within range
+-C- AutoCheck - 'range_check_2' holds
+    Value of signal 'fifo_data/data_buffer/if_blk2/if_blk3/if_blk2/head' always within range
+-C- AutoCheck - 'range_check_3' holds
+    Value of signal 'receive_arb/latches/if_blk2/token_l' always within range
+-C- AutoCheck - 'range_check_4' holds
+    Value of signal 'send_arb/latches/if_blk2/token_l' always within range
+-C- AutoCheck - 'range_check_5' holds
+    Value of signal 'computq_counter/if_blk1/if_blk2/q_counter_next' always within range
+-C- AutoCheck - 'range_check_6' holds
+    Value of signal 'q_counter_compute/if_blk3/q_counter' always within range
+-C- AutoCheck - 'range_check_7' holds
+    Value of signal 'q_counter_compute/if_blk4/q_counter' always within range
+-C- AutoCheck - 'range_check_8' holds
+    Value of signal 'q_counter_compute/if_blk5/q_counter' always within range
+-C- AutoCheck - 'range_check_9' holds
+    Value of signal 'q_counter_compute/if_blk6/q_counter' always within range
+-C- AutoCheck - 'dead_code_check_6' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:97'
+-C- AutoCheck - 'dead_code_check_15' is reachable within 1 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:54-56'
+-C- AutoCheck - 'dead_code_check_39' is reachable within 1 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:197'
+-C- AutoCheck - 'dead_code_check_41' is reachable within 1 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:207'
+-C- AutoCheck - 'dead_code_check_43' is reachable within 1 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:114-126'
+-C- AutoCheck - 'dead_code_check_58' is reachable within 1 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:115-119'
+-C- AutoCheck - 'dead_code_check_32' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:184'
+-C- AutoCheck - 'dead_code_check_63' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:54'
+-C- AutoCheck - 'dead_code_check_65' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:58'
+-C- AutoCheck - 'dead_code_check_66' is reachable within 1 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:39'
+-C- AutoCheck - 'dead_code_check_77' is reachable within 1 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:92'
+-C- AutoCheck - 'dead_code_check_72' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:86'
+-C- AutoCheck - 'dead_code_check_2' is reachable within 1 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:48'
+-C- AutoCheck - 'dead_code_check_1' is reachable within 1 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:46'
+-C- AutoCheck - 'dead_code_check_5' is reachable within 1 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:94-96'
+-C- AutoCheck - 'dead_code_check_10' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:84'
+-C- AutoCheck - 'dead_code_check_9' is reachable within 1 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:81-83'
+-C- AutoCheck - 'dead_code_check_8' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:78'
+-C- AutoCheck - 'dead_code_check_7' is reachable within 1 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:75-77'
+-C- AutoCheck - 'dead_code_check_4' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:59'
+-C- AutoCheck - 'dead_code_check_3' is reachable within 1 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/ARBk.vhd:59'
+-C- AutoCheck - 'dead_code_check_16' is reachable within 1 cycle(s) from reset
+    Reachable else-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:58-80'
+-C- AutoCheck - 'dead_code_check_13' is reachable within 1 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:44'
+-C- AutoCheck - 'dead_code_check_12' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:43'
+-C- AutoCheck - 'dead_code_check_55' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:203'
+-C- AutoCheck - 'dead_code_check_53' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:198'
+-C- AutoCheck - 'dead_code_check_51' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:193'
+-C- AutoCheck - 'dead_code_check_49' is reachable within 1 cycle(s) from reset
+    Reachable else-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:145'
+-C- AutoCheck - 'dead_code_check_59' is reachable within 1 cycle(s) from reset
+    Reachable else-block in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:122-126'
+-C- AutoCheck - 'dead_code_check_57' is reachable within 1 cycle(s) from reset
+    Reachable else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:220'
+-C- AutoCheck - 'dead_code_check_42' is reachable within 1 cycle(s) from reset
+    Reachable else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:209'
+-C- AutoCheck - 'dead_code_check_40' is reachable within 1 cycle(s) from reset
+    Reachable else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:199'
+-C- AutoCheck - 'dead_code_check_38' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:191'
+-C- AutoCheck - 'dead_code_check_36' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:187'
+-C- AutoCheck - 'dead_code_check_34' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:186'
+-C- AutoCheck - 'dead_code_check_30' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:183'
+-C- AutoCheck - 'dead_code_check_29' is reachable within 1 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:183'
+-C- AutoCheck - 'dead_code_check_28' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:182'
+-C- AutoCheck - 'dead_code_check_26' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:180'
+-C- AutoCheck - 'dead_code_check_23' is reachable within 1 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:176'
+-C- AutoCheck - 'dead_code_check_67' is reachable within 1 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:41-44'
+-C- AutoCheck - 'dead_code_check_61' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:52'
+-C- AutoCheck - 'dead_code_check_78' is reachable within 1 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:94-95'
+-C- AutoCheck - 'dead_code_check_81' is reachable within 1 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:95'
+-C- AutoCheck - 'dead_code_check_76' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:107'
+-C- AutoCheck - 'dead_code_check_74' is reachable within 1 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:106'
+-C- AutoCheck - 'dead_code_check_71' is reachable within 1 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:83-85'
+-C- AutoCheck - 'dead_code_check_17' is reachable within 2 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:60-67'
+-C- AutoCheck - 'dead_code_check_20' is reachable within 2 cycle(s) from reset
+    Reachable else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:67'
+-C- AutoCheck - 'dead_code_check_56' is reachable within 2 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:217-218'
+-C- AutoCheck - 'dead_code_check_33' is reachable within 2 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:186'
+-C- AutoCheck - 'dead_code_check_27' is reachable within 2 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:182'
+-C- AutoCheck - 'dead_code_check_79' is reachable within 2 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:98'
+-C- AutoCheck - 'dead_code_check_73' is reachable within 2 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:106'
+-C- AutoCheck - 'dead_code_check_14' is reachable within 3 cycle(s) from reset
+    Reachable when-else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:44'
+-C- AutoCheck - 'dead_code_check_54' is reachable within 3 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:201-202'
+-C- AutoCheck - 'dead_code_check_52' is reachable within 3 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:196-197'
+-C- AutoCheck - 'dead_code_check_47' is reachable within 3 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:141'
+-C- AutoCheck - 'dead_code_check_37' is reachable within 3 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:189-190'
+-C- AutoCheck - 'dead_code_check_31' is reachable within 3 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:184'
+-C- AutoCheck - 'dead_code_check_25' is reachable within 3 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:179'
+-C- AutoCheck - 'dead_code_check_69' is reachable within 3 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:44'
+-C- AutoCheck - 'dead_code_check_64' is reachable within 3 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:55-57'
+-C- AutoCheck - 'dead_code_check_80' is reachable within 3 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:100-101'
+-C- AutoCheck - 'dead_code_check_82' is reachable within 3 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:101'
+-C- AutoCheck - 'dead_code_check_75' is reachable within 3 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:107'
+-C- AutoCheck - 'dead_code_check_35' is reachable within 4 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/GENBUF.vhd:187'
+-C- AutoCheck - 'dead_code_check_68' is reachable within 4 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:47-48'
+-C- AutoCheck - 'dead_code_check_62' is reachable within 4 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:54'
+-C- AutoCheck - 'dead_code_check_60' is reachable within 4 cycle(s) from reset
+    Reachable when-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:52'
+-C- AutoCheck - 'dead_code_check_18' is reachable within 5 cycle(s) from reset
+    Reachable if-block in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:71-77'
+-C- AutoCheck - 'dead_code_check_22' is reachable within 5 cycle(s) from reset
+    Reachable else-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:77'
+-C- AutoCheck - 'dead_code_check_19' is reachable within 5 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:65'
+-C- AutoCheck - 'dead_code_check_50' is reachable within 5 cycle(s) from reset
+    Reachable when-block in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:190-192'
+-C- AutoCheck - 'dead_code_check_70' is reachable within 5 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/SEND_RECEIVE.vhd:48'
+-C- AutoCheck - 'dead_code_check_48' is reachable within 6 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:143'
+-C- AutoCheck - 'dead_code_check_46' is reachable within 6 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:139'
+-C- AutoCheck - 'dead_code_check_44' is reachable within 8 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:135'
+-C- AutoCheck - 'dead_code_check_21' is reachable within 9 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/vhd_ko/FIFO.vhd:75'
+-C- AutoCheck - 'dead_code_check_45' is reachable within 12 cycle(s) from reset
+    Reachable if-branch in file '/tp/xph3app/xph3app104/TP_Verif/psl/genbuf.psl:137'
+-R- AutoCheck - 'dead_code_check_11' is not reachable within 30 cycle(s) from reset
+-R- AutoCheck - 'dead_code_check_24' is not reachable within 30 cycle(s) from reset
+-I- Running stick check chunk 1 (checking 341 bits)
+-E- Processing was interrupted by user.
+-W- check_consistency interrupted by user.
+-------------------------------------------------------------------------------
+-R- Number of dead_code checks:                           82 |    80 hold,     0 fail,     2 open 
+-R- Number of init checks:                               178 |    16 hold,   162 fail,     0 open 
+-R- Number of range checks:                                9 |     9 hold,     0 fail,     0 open 
+-R- Number of stick checks:                              347 |     0 hold,     0 fail,   347 open 
+-------------------------------------------------------------------------------
+-R- Total number of checks:                              616 |   105 hold,   162 fail,   349 open 
+-------------------------------------------------------------------------------
+-E- Can not source script '/tp/xph3app/xph3app104/TP_Verif/onespin/default.onespin/rebuild_kernel.tcl'.
+    while executing
+"check_consistency "
+    (file "/tp/xph3app/xph3app104/TP_Verif/onespin/default.onespin/rebuild_kernel.tcl" line 170)
+exit

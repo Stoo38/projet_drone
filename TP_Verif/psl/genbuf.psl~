@@ -1,0 +1,254 @@
+
+-------------------------------------------------------------------------------
+-- Sender Properties
+-------------------------------------------------------------------------------
+vunit sender_to_buffer(GENBUF(RTL_VIEW)){
+  default clock is rose(clk);
+
+  %for i in 0..3 do
+  --Sender request gets acknowleged--
+    StoB_REQ_ACK_%{i}: assert always ((StoB_REQ(%{i}) -> eventually! (BtoS_ACK(%{i}))) abort rst); --OK
+
+  --In case the sender deasserts its request GenBuf will eventually deassert its acknowledgement--
+    StoB_deassert_ACK_%{i}: assert always ((not(StoB_REQ(%{i})) -> eventually! not(BtoS_ACK(%{i}))) abort rst); --OK
+
+  --GenBuf does not acknowledge sender unless requested--
+    StoB_REQ_before_ACK_%{i}: assert always((not(fell(StoB_REQ(%{i}))) -> (not(BtoS_ACK(%{i})))) abort rst); --ambiguïté
+
+  --The sender will keep the request up until it is acknowledged--
+    S_REQ_UNTIL_ACK_%{i}: assume always (rose(StoB_REQ(%{i})) -> (StoB_REQ(%{i}) until_(BtoS_ACK(%{i}))) abort rst);
+
+  --Sender will deassert the request one cycle after it is acknowledged--
+    S_ACK_DISABLE_REQ_%{i}: assume always (rose(BtoS_ACK(%{i})) -> next(not(StoB_REQ(%{i}))) abort rst);
+
+  --GenBuf will not deassert its acknowledgement unless the sender first deasserted its request--
+    StoB_first_deassert_REQ_%{i}: assert always ((not(StoB_REQ(%{i})) -> eventually! not(BtoS_ACK(%{i})))abort rst); --NULNULNUL
+  %end
+}
+
+vunit one_sender_at_a_time(GENBUF(RTL_VIEW)){
+  default clock is rose(clk);
+
+  --Only one sender can send data at any given time.--
+  %for i in 0..3 do
+    %for j in 0..3 do 
+      %if i!=j
+      %then
+        --Senders %{i} and %{j} do not send together--
+        --BtoS_mutex%{i}%{j}: --TODO
+      %end
+    %end
+  %end
+}
+
+
+-------------------------------------------------------------------------------
+-- RECEIVER Properties 
+-------------------------------------------------------------------------------
+vunit buffer_to_receiver(GENBUF(RTL_VIEW)){
+  default clock is rose(clk);
+
+  %for i in 0..1 do
+  --Genbuf request gets acknowleged--
+    R_Req_ACK_%{i}: assume always (BtoR_REQ(%{i}) -> next(RtoB_ACK(%{i}))) abort rst;
+
+  --In case the genbuf deasserts its request receiver will eventually deassert its acknowledgement--
+    R_deassert_ACK_%{i}: assume always ((not(BtoR_REQ(%{i})) -> eventually! not(RtoB_ACK(%{i}))) abort rst); 
+
+  --Receiver does not acknowledge genbuf unless requested--
+    R_REQ_before_ACK_%{i}: assume always (RtoB_ACK(%{i}) -> prev(BtoR_REQ(%{i}))) abort rst;
+
+  --The genbuf will keep the request up until it is acknowledged--
+    BtoR_REQ_UNTIL_ACK_%{i}: assert always (BtoR_REQ(%{i}) -> (BtoR_REQ(%{i})) until (RtoB_ACK(%{i}))) abort rst; --OK
+
+  --GenBuf will deassert its request to the receiver one cycle after receiver acknowledged the request--
+    BtoR_ACK_DISABLE_REQ_%{i}: assert always (RtoB_ACK(%{i}) -> next(not(BtoR_REQ(%{i}))) abort rst);
+
+  --Receiver will not deassert its acknowledgement unless the genbuf first deasserted its request--
+    R_first_deassert_REQ_%{i}: assume always (not(RtoB_ACK(%{i})) -> prev(not(BtoR_REQ(%{i}))) abort rst);
+  %end
+
+  --GenBuf does not request both receivers at the same time--
+  --one_receiver: --TODO
+
+  --GenBuf will not make two consecutive requests to receiver 0--
+  round_robin0: assert always (rose(BtoR_REQ(0)) -> next next_event(rose(BtoR_REQ(0) or BtoR_REQ(1)))(BtoR_REQ(1))) abort rst;
+
+  --GenBuf will not make two consecutive requests to receiver 1--
+  --round_robin1: --TODO
+
+  --GenBuf deasserts BtoR_REQ in the cycle it puts the data on bus-- State-space explosion
+  deassert_data: assert always (rose(not(DO_onespin(0 to 31) = 0)) -> fell(BtoR_REQ(0) or BtoR_REQ(1)));
+
+}
+
+
+-------------------------------------------------------------------------------
+-- Modeling Queue
+-------------------------------------------------------------------------------
+
+vmode Queue(GENBUF(RTL_VIEW)){
+
+  -- This is a mode keeping track of buffers queue (which is of depth 4)
+  signal rose_B2S_ACK, rose_R2B_ACK, rose_B2R_REQ,prev_rose_R2B_ACK : std_logic;
+  signal prev_BtoS_ACK, rose_BtoS_ACK                               : std_logic_vector(0 to 3);
+  signal prev_RtoB_ACK, rose_RtoB_ACK, prev_BtoR_REQ,rose_BtoR_REQ  : std_logic_vector(0 to 1);
+  signal Q_counter, Q_counter_next                                  : integer range -1 to 5 ;
+ 
+  rose_B2S_ACK <= rose_BtoS_ACK(0) or rose_BtoS_ACK(1) or rose_BtoS_ACK(2) or rose_BtoS_ACK(3) ;
+  rose_R2B_ACK <= rose_RtoB_ACK(0) or rose_RtoB_ACK(1) ;
+  rose_B2R_REQ <= rose_BtoR_REQ(0) or rose_BtoR_REQ(1) ;
+  rose_BtoS_ACK <= (BtoS_ACK(0) and not prev_BtoS_ACK(0),
+                    BtoS_ACK(1) and not prev_BtoS_ACK(1),
+                    BtoS_ACK(2) and not prev_BtoS_ACK(2),
+                    BtoS_ACK(3) and not prev_BtoS_ACK(3));
+  rose_RtoB_ACK <= (RtoB_ACK(0) and not prev_RtoB_ACK(0),
+                    RtoB_ACK(1) and not prev_RtoB_ACK(1));
+  rose_BtoR_REQ <= (BtoR_REQ(0) and not prev_BtoR_REQ(0),
+                    BtoR_REQ(1) and not prev_BtoR_REQ(1));
+
+
+  computQ_counter: process (clk, rst)
+  begin
+    if clk'event and clk='1' then
+      if rst ='1' then
+        Q_counter_next    <= 0;
+        prev_RtoB_ACK     <= "00";
+        prev_BtoR_REQ     <= "00";
+        prev_BtoS_ACK     <= "0000";
+        prev_rose_R2B_ACK <= '0';
+ 
+      else
+        prev_RtoB_ACK     <= RtoB_ACK;
+        prev_BtoR_REQ     <= BtoR_REQ;
+        prev_BtoS_ACK     <= BtoS_ACK;
+        prev_rose_R2B_ACK <= rose_R2B_ACK;
+        Q_counter_next    <= Q_counter;
+      end if;
+    end if;
+  end process computQ_counter;
+
+
+ Q_counter_compute: process (rose_B2S_ACK, prev_rose_R2B_ACK, Q_counter_next)
+ begin
+   if Q_counter_next=-1 then
+     Q_counter <= -1;
+   elsif Q_counter_next=5 then
+     Q_counter <= 5;
+   elsif rose_B2S_ACK='1' and prev_rose_R2B_ACK='1' then
+     Q_counter <= Q_counter_next;
+   elsif rose_B2S_ACK='1' then
+     Q_counter <= Q_counter_next+1;
+   elsif prev_rose_R2B_ACK='1' then
+     Q_counter <= Q_counter_next -1;
+   else
+     Q_counter <= Q_counter_next;
+   end if; 
+ end process Q_counter_compute;
+ 
+}
+
+
+-------------------------------------------------------------------------------
+-- Queue Properties
+-------------------------------------------------------------------------------
+vunit empty_full_stops_transaction(GENBUF(RTL_VIEW)){
+  inherit Queue;
+  default clock is rose(clk);
+
+  --GenBuf does not receive when the queue is full
+  %for i in 0..3 do
+   -- NO_ACK_WHEN_Full%{i}: --TODO
+  %end
+
+  --GenBuf does not send when the queue is empty
+  %for i in 0..1 do
+   -- NO_REQ_WHEN_EMPTY%{i}: --TODO
+  %end
+}
+
+
+vmode data_read_xx(GENBUF(RTL_VIEW)){
+  inherit Queue;
+  default clock is rose(clk);
+
+  %for i in 0..3 do
+    signal DxRF_%{i} : std_logic;
+  %end
+
+  signal DxR, DxW, fell_B2R_REQ : std_logic;
+  signal fell_BtoR_REQ          : std_logic_vector(0 to 1);
+
+  fell_B2R_REQ <= fell_BtoR_REQ(0) or fell_BtoR_REQ(1) ;	 
+  fell_BtoR_REQ <= (not BtoR_REQ(0) and prev_BtoR_REQ(0),
+                    not BtoR_REQ(1) and prev_BtoR_REQ(1));
+
+  signal xx: std_logic_vector(0 to 1);
+
+  xx_stable: assume always (xx=prev(xx)) abort rst;
+
+  DxW <= '1'
+--    when ((fell_BtoR_REQ(0)='1' or fell_BtoR_REQ(1)='1') and (DO(0 to 1)=xx(0 to 1)))
+    when ((fell_BtoR_REQ(0)='1' or fell_BtoR_REQ(1)='1') and (DO_onespin(0 to 1)=xx(0 to 1)))
+    else '0';
+
+  %for i in 0..3 do 
+    DxRF_%{i} <= '1'
+      when (rose_BtoS_ACK(i)='1' and (DI(%{i})(0 to 1)=xx(0 to 1)))
+      else '0';
+  %end
+
+  DxR <= '1'
+    when ( DxRF_0 ='1' or DxRF_1='1' or DxRF_2 ='1' or DxRF_3='1')
+    else '0';
+}
+
+vunit data_read_is_eventually_written(GENBUF(RTL_VIEW)){
+  inherit data_read_xx;
+  default clock is rose(clk);
+
+  %for i in 0..3 do 
+    DATA_E_W_%{i}: assert always ((DxRF_%{i} -> eventually!(DxW)) abort rst);
+  %end 
+}
+
+vunit genbuf_keeps_fifo_order(GENBUF(RTL_VIEW)){
+  inherit data_read_xx;
+  inherit Queue;
+  default clock is rose(clk);
+
+  signal DWR : std_logic;
+  DWR <= (fell_BtoR_REQ(0) or fell_BtoR_REQ(1));
+
+  --If data is read when the queue is at depth %{j} then the data will be written in %{j} write operations
+  %for j in 1..4 do
+    GENBUF_F_O_%{j}: assert always (((DxR='1') and (Q_counter = j))
+      -> next(next_event( DWR )[j](DO_onespin(0 to 1)=xx(0 to 1))))abort rst;
+--      -> next(next_event( DWR )[j](DO(0 to 1)=xx(0 to 1))))abort rst;
+  %end
+}
+
+-- We cheat to avoid state-space explosion
+vmode stuck_input_on_0(GENBUF(RTL_VIEW)){
+  default clock is rose(clk);
+  signal zero_4  : std_logic_vector(0 to 3) :=(others=>'0');
+  signal zero_32 : std_logic_vector(0 to 31):=(1=>'1',others=>'0');
+
+  %for i in 0..3 do
+    --defDI_%{i}: assume always DI(%{i})= zero_32 ;
+  %end
+}
+
+vunit genbuf_not_c (GENBUF(RTL_VIEW)){
+  inherit stuck_input_on_0 ;
+  inherit data_read_xx;
+  default clock is rose(clk);
+
+  %for j in 0..1 do
+    Not_C_%{j} : assert 
+--      always (fell_BtoR_REQ(%{j}) -> (DO(0 to 31)=zero_32) )abort rst;
+      always (fell_BtoR_REQ(%{j}) -> (DO_onespin(0 to 31)=zero_32) )abort rst;
+  %end
+}
+
+
