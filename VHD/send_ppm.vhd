@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 --use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
+--use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 library LIB_VHD;
@@ -46,7 +46,7 @@ architecture rtl of send_ppm is
 												third_delay,
 												fourth_delay);
 
-	-- Signaux représentant les différents états
+	--Signaux représentant les différents états
 	signal current_state, next_state : ppm_states;
 
 	--Signaux du bloc send_ppm
@@ -63,8 +63,19 @@ architecture rtl of send_ppm is
 
 	
 
-	--Déclaration des constantes
-	constant test_test				: std_logic_vector(const_vector_size - 1 downto 0) := std_logic_vector(unsigned(const_t_min)/unsigned(const_clk_period));			
+	--Signaux pour le calcul du nombre de cycles de chaque trame
+
+	signal sig_cyclesTrame1					: std_logic_vector(31 - 1 downto 0);
+	signal sig_cyclesTrame2					: std_logic_vector(const_vector_size - 1 downto 0);
+	signal sig_cyclesTrame3					: std_logic_vector(const_vector_size - 1 downto 0);
+	signal sig_cyclesTrame4					: std_logic_vector(const_vector_size - 1 downto 0);
+	signal sig_cyclesTrameSynchro		: std_logic_vector(const_vector_size - 1 downto 0);
+
+
+
+
+
+	--constant test_test				: std_logic_vector(const_vector_size - 1 downto 0) := std_logic_vector(unsigned(const_t_min)/unsigned(const_clk_period));			
 
  
 
@@ -91,9 +102,10 @@ architecture rtl of send_ppm is
 
 
 		
-	cal:process(i_reg) --process de calcul du nombre de cycles pour chaque impulsion
+	cal:process(sig_in_reg) --process de calcul du nombre de cycles pour chaque impulsion
 	begin
 
+		sig_cyclesTrame1 <= std_logic_vector((unsigned(sig_in_reg(7 downto 0))*unsigned(const_pas)+unsigned(const_t_min))/unsigned(const_clk_period));
 		--unsigned(sig_in_reg(7 downto 0))*unsigned(std_logic_vector(pas));
 	--	sig_in_reg(15 downto 8)
 	--	sig_in_reg(23 downto 16)

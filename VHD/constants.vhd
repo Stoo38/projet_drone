@@ -18,9 +18,11 @@ package constants_package is
 	constant const_cycles_trame_max		: std_logic_vector(const_vector_size - 1 downto 0) := "00000001010011000000100";		-- Nombre de cycles nécessaires pour la trame la plus longue
   constant const_pas								: std_logic_vector(const_vector_size - 1 downto 0) := "00000000000111101010000";		-- valeur du pas de quantification
 
-	constant const_cycles_synchro_min	: std_logic_vector(const_vector_size - 1 downto 0) := "00001010110101010111000";
+	constant const_cycles_synchro_min	: std_logic_vector(const_vector_size - 1 downto 0) := "00001010110101010111000";		-- 355000 cycles pour le temps de synchro min
 	
-	constant const_cycles_synchro_max	: std_logic_vector(const_vector_size - 1 downto 0) := "00001101111000101011000";
+	constant const_cycles_synchro_max	: std_logic_vector(const_vector_size - 1 downto 0) := "00001101111000101011000";		-- 455000 cycles pour le temps de synchro max
+
+	constant const_cyles_ppm				  : std_logic_vector(const_vector_size - 1 downto 0) := "00010001001010101000100";		-- 562500 cycles pour une trame PPM complète
 
 
 	constant const_test : std_logic_vector(const_vector_size - 1 downto 0) := std_logic_vector(unsigned(const_t_min)/unsigned(const_clk_period));	

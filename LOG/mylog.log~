@@ -1,60 +1,71 @@
 
-Modifying /tp/xph3app/xph3app602/projet_drone/CONFIG/modelsim.ini
-Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+vmap LIB_VHD /home/mahtalb/projet_drone/LIBS/LIB_VHD 
+Modifying modelsim.ini
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 23:55:31 on Dec 12,2017
+vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/constants.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity test
-Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+-- Loading package NUMERIC_STD
+-- Compiling package constants_package
+End time: 23:55:31 on Dec 12,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 23:55:31 on Dec 12,2017
+vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/local_counter.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity test2
-Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling entity local_counter
+-- Compiling architecture b of local_counter
+End time: 23:55:31 on Dec 12,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 23:55:31 on Dec 12,2017
+vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/global_counter.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity global_counter
+-- Compiling architecture a of global_counter
+End time: 23:55:31 on Dec 12,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 23:55:31 on Dec 12,2017
+vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/send_ppm.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
 -- Loading package NUMERIC_STD
--- Compiling entity image_process
--- Compiling architecture rtl of image_process
-Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+-- Loading package constants_package
+-- Compiling entity send_ppm
+-- Compiling architecture rtl of send_ppm
+End time: 23:55:31 on Dec 12,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+vmap LIB_VHD_BENCH /home/mahtalb/projet_drone/LIBS/LIB_VHD_BENCH 
+Modifying modelsim.ini
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 23:55:31 on Dec 12,2017
+vcom -93 -work LIB_VHD_BENCH /home/mahtalb/projet_drone/BENCH/test_counter.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity gensync
--- Compiling architecture Behavioral of gensync
-Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
 -- Loading package NUMERIC_STD
--- Compiling entity position
--- Compiling architecture det of position
-Modifying /tp/xph3app/xph3app602/projet_drone/CONFIG/modelsim.ini
-Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity test3
-Modifying /tp/xph3app/xph3app602/projet_drone/CONFIG/modelsim.ini
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling package tbench_sv_unit
--- Compiling module tbench
-
-Top level modules:
-	tbench
+-- Compiling entity tb_counter
+-- Compiling architecture c of tb_counter
+End time: 23:55:31 on Dec 12,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
 
 Total Errors :   0
 Total Warnings : 0
