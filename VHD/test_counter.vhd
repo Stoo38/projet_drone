@@ -10,33 +10,24 @@ architecture c of tb_counter is
 
 	component global_counter port (	i_clk  : in  std_logic;                      
 				               		i_reset_n	: in  std_logic;                     
-				  					o_count : out std_logic_vector(19 downto 0));
+				  					o_count : out std_logic_vector(const_vector_size-1 downto 0));
 	end component;
 
 	component local_counter port(	i_clk	: in std_logic;
                     				i_reset_n	: in std_logic;
 									i_init	: in std_logic;
-									o_count : out std_logic_vector(18 downto 0)); 
+									o_count : out std_logic_vector(const_vector_size-1 downto 0)); 
 	end component;
 
 	signal sig_in_clk     			: std_logic := '0';
 	signal sig_in_reset_n     		: std_logic;
 	signal sig_in_init				: std_logic;	
-	signal sig_out_local_count   	: std_logic_vector(18 downto 0):= (others => '0');
-	signal sig_out_global_count   	: std_logic_vector(19 downto 0):= (others => '0');
-	
-	constant val_min				: std_logic_vector(20 downto 0) := "010101010111001100000";
-	constant pas 					: std_logic_vector(11 downto 0) := "111110100000";
-	signal sig_test					: std_logic_vector(20 downto 0):= (others => '0');
-	signal sig_test2				: std_logic_vector(19 downto 0):= (others => '0');
-	constant sig_in_reg				: std_logic_vector(7 downto 0) := "01101011";
-
-
- 
+	signal sig_out_local_count   	: std_logic_vector(const_vector_size-1 downto 0):= (others => '0');
+	signal sig_out_global_count   	: std_logic_vector(const_vector_size-1 downto 0):= (others => '0');
 
 	begin    
     global_counter1 : global_counter port map (sig_in_clk, sig_in_reset_n, sig_out_global_count);
-	local_counter1 : local_counter port map (sig_in_clk, sig_in_reset_n, sig_in_init, sig_out_local_count);
+		local_counter1 : local_counter port map (sig_in_clk, sig_in_reset_n, sig_in_init, sig_out_local_count);
 
     sig_in_clk <= not(sig_in_clk) after 20 ns;
 	

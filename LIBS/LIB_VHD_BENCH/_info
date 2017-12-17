@@ -8,44 +8,87 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/mahtalb/projet_drone
-Etb_counter
-Z1 w1513110377
-Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Ebench_send_ppm
+Z1 w1513448963
+Z2 DPx7 lib_vhd 17 constants_package 0 22 SRY4bN3;:ZKzP>QcM]S>o3
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z5 8/home/mahtalb/projet_drone/BENCH/test_counter.vhd
-Z6 F/home/mahtalb/projet_drone/BENCH/test_counter.vhd
+Z6 8/home/mahtalb/projet_drone/BENCH/test_ppm.vhd
+Z7 F/home/mahtalb/projet_drone/BENCH/test_ppm.vhd
+l0
+L9
+VV<eVB5^L@@i1R1Qo88:eG1
+!s100 HMc;<dAWBUfz6m?X^hC=?0
+Z8 OV;C;10.5b;63
+31
+Z9 !s110 1513546740
+!i10b 1
+Z10 !s108 1513546740.000000
+Z11 !s90 -93|-work|LIB_VHD_BENCH|/home/mahtalb/projet_drone/BENCH/test_ppm.vhd|
+Z12 !s107 /home/mahtalb/projet_drone/BENCH/test_ppm.vhd|
+!i113 1
+Z13 o-93 -work LIB_VHD_BENCH
+Z14 tExplicit 1 CvgOpt 0
+Atb_ppm
+R2
+R3
+R4
+R5
+DEx4 work 14 bench_send_ppm 0 22 V<eVB5^L@@i1R1Qo88:eG1
+l26
+L11
+V]L6FY?[G17MlJ3mBE042k0
+!s100 QT=2]lbUUJL][Qah@PdD[0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Etb_counter
+Z15 w1513110377
+R3
+R4
+R5
+R0
+Z16 8/home/mahtalb/projet_drone/BENCH/test_counter.vhd
+Z17 F/home/mahtalb/projet_drone/BENCH/test_counter.vhd
 l0
 L8
 VoEbe2FnP?AlniC^K1D?kj2
 !s100 4`n@A=nmRen>5@OkZ<I>Z3
-Z7 OV;C;10.5b;63
+R8
 31
-Z8 !s110 1513119331
+R9
 !i10b 1
-Z9 !s108 1513119331.000000
-Z10 !s90 -93|-work|LIB_VHD_BENCH|/home/mahtalb/projet_drone/BENCH/test_counter.vhd|
-Z11 !s107 /home/mahtalb/projet_drone/BENCH/test_counter.vhd|
+Z18 !s108 1513546739.000000
+Z19 !s90 -93|-work|LIB_VHD_BENCH|/home/mahtalb/projet_drone/BENCH/test_counter.vhd|
+Z20 !s107 /home/mahtalb/projet_drone/BENCH/test_counter.vhd|
 !i113 1
-Z12 o-93 -work LIB_VHD_BENCH
-Z13 tExplicit 1 CvgOpt 0
+R13
+R14
 Ac
-R2
 R3
 R4
+R5
 DEx4 work 10 tb_counter 0 22 oEbe2FnP?AlniC^K1D?kj2
 l29
 L10
 V:k5@a^8W4WR4<J1ATaXhh1
 !s100 =HLQAK:Zf3]dO5mBi<DAS3
-R7
-31
 R8
-!i10b 1
+31
 R9
-R10
-R11
+!i10b 1
+R18
+R19
+R20
 !i113 1
-R12
 R13
+R14

@@ -1,0 +1,143 @@
+vsim LIB_VHD_BENCH.tb_counter
+# vsim LIB_VHD_BENCH.tb_counter 
+# Start time: 15:49:53 on Dec 17,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading LIB_VHD_BENCH.tb_counter(c)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lib_vhd.global_counter(a)
+# Loading lib_vhd.local_counter(b)
+# WARNING: No extended dataflow license exists
+vsim LIB_VHD_BENCH.bench_send_ppm
+# End time: 15:50:29 on Dec 17,2017, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 1
+# vsim LIB_VHD_BENCH.bench_send_ppm 
+# Start time: 15:50:29 on Dec 17,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_vhd.constants_package
+# Loading LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Loading lib_vhd.send_ppm(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lib_vhd.global_counter(a)
+# Loading lib_vhd.local_counter(b)
+# WARNING: No extended dataflow license exists
+vsim LIB_VHD_BENCH.bench_send_ppm
+# End time: 15:50:30 on Dec 17,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# vsim LIB_VHD_BENCH.bench_send_ppm 
+# Start time: 15:50:30 on Dec 17,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_vhd.constants_package
+# Loading LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Loading lib_vhd.send_ppm(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lib_vhd.global_counter(a)
+# Loading lib_vhd.local_counter(b)
+# WARNING: No extended dataflow license exists
+vsim LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# End time: 15:# End time: 15:50:46 on Dec 17,2017, Elapsed time: 20:21:09
+# Errors: 0, Warnings: 1
+ENCH.bench_send_ppm(tb_ppm) 
+# Start time: 15:50:31 on Dec 17,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_vhd.constants_package
+# Loading LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Loading lib_vhd.send_ppm(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lib_vhd.global_counter(a)
+# Loading lib_vhd.local_counter(b)
+# WARNING: No extended dataflow license exists
+vsim LIB_VHD.send_ppm(rtl)
+# End time: 15:50:32 on Dec 17,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# vsim LIB_VHD.send_ppm(rtl) 
+# Start time: 15:50:32 on Dec 17,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading LIB_VHD.constants_package
+# Loading LIB_VHD.send_ppm(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading LIB_VHD.global_counter(a)
+# Loading LIB_VHD.local_counter(b)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/send_ppm/i_clk \
+sim:/send_ppm/i_reset_n \
+sim:/send_ppm/i_enable \
+sim:/send_ppm/i_reg \
+sim:/send_ppm/o_ppm \
+sim:/send_ppm/current_state \
+sim:/send_ppm/next_state \
+sim:/send_ppm/sig_in_clk \
+sim:/send_ppm/sig_in_reset_n \
+sim:/send_ppm/sig_in_enable \
+sim:/send_ppm/sig_in_reg \
+sim:/send_ppm/sig_out_ppm \
+sim:/send_ppm/sig_in_init \
+sim:/send_ppm/sig_out_local_count \
+sim:/send_ppm/sig_out_global_count \
+sim:/send_ppm/sig_cyclesTrame1 \
+sim:/send_ppm/sig_cyclesTrame2 \
+sim:/send_ppm/sig_cyclesTrame3 \
+sim:/send_ppm/sig_cyclesTrame4 \
+sim:/send_ppm/sig_cyclesTrameSynchro
+run
+vsim LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# End time: 15:51:27 on Dec 17,2017, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 1
+# vsim LIB_VHD_BENCH.bench_send_ppm(tb_ppm) 
+# Start time: 15:51:27 on Dec 17,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_vhd.constants_package
+# Loading LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Loading lib_vhd.send_ppm(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lib_vhd.global_counter(a)
+# Loading lib_vhd.local_counter(b)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/bench_send_ppm/send_ppm1/i_clk \
+sim:/bench_send_ppm/send_ppm1/i_reset_n \
+sim:/bench_send_ppm/send_ppm1/i_enable \
+sim:/bench_send_ppm/send_ppm1/i_reg \
+sim:/bench_send_ppm/send_ppm1/o_ppm \
+sim:/bench_send_ppm/send_ppm1/current_state \
+sim:/bench_send_ppm/send_ppm1/next_state \
+sim:/bench_send_ppm/send_ppm1/sig_in_clk \
+sim:/bench_send_ppm/send_ppm1/sig_in_reset_n \
+sim:/bench_send_ppm/send_ppm1/sig_in_enable \
+sim:/bench_send_ppm/send_ppm1/sig_in_reg \
+sim:/bench_send_ppm/send_ppm1/sig_out_ppm \
+sim:/bench_send_ppm/send_ppm1/sig_in_init \
+sim:/bench_send_ppm/send_ppm1/sig_out_local_count \
+sim:/bench_send_ppm/send_ppm1/sig_out_global_count \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame1 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame2 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame3 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame4 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrameSynchro
+run
+# End time: 16:31:47 on Dec 17,2017, Elapsed time: 0:40:20
+# Errors: 0, Warnings: 1

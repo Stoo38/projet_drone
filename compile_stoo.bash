@@ -14,7 +14,7 @@ else
 	CHOICE_COMPIL="all"												# By default, Benches and Design Files are compiled
 fi
 
-PROJECT_PATH="/tp/xph3app/xph3app602/projet_drone"				# Path of the Project Directory
+PROJECT_PATH="/home/mahtalb/projet_drone"				# Path of the Project Directory
 LIB_NAME="LIB_VHD"													# Name of the Library 
 #LIB_NAME_TEST="DRONE_LIB"											# Name of the Library 
 #VHDL_FILES=`ls -l vhd/ | awk {'print$9'} | grep .vhd`
@@ -28,6 +28,7 @@ VHDL_FILES="
 
 BENCH_VHD_FILES="														
 				test_counter.vhd
+				test_ppm.vhd
 				"													#List of the different VHDL Files used for the bench
 
 #BENCH_VERILOG_FILES="
