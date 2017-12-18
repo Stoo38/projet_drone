@@ -7,7 +7,7 @@ library LIB_VHD;
 use LIB_VHD.constants_package.all;
 
 entity local_counter is
-		          port(	i_clk		: in std_logic;
+		          port(	i_clk			: in std_logic;
                     i_reset_n	: in std_logic;
 										i_init		: in std_logic;
 										o_count 	: out std_logic_vector(const_vector_size-1 downto 0)); --Doit pouvoir compter jusqu'à 455 000 (Tsync_max)
@@ -31,7 +31,7 @@ architecture b of local_counter is
             	if i_init = '1' then
               		v_val := (others => '0');
             	else
-              		v_val := v_val + "00000000000000000000000000000001";
+              		v_val := v_val + "00000000000000000001";
             	end if;
 	        end if;
 	        o_count <= v_val;  

@@ -26,7 +26,6 @@ VHDL_FILES="
 			image_process.vhd
 			gensync.vhd
 			position.vhd
-			send_ppm.vhd
 			"
 
 BENCH_VHD_FILES="														

@@ -1,20 +1,20 @@
 
-Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-vmap LIB_VHD /home/mahtalb/projet_drone/LIBS/LIB_VHD 
+Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+vmap LIB_VHD /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD 
 Modifying modelsim.ini
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 22:38:59 on Dec 17,2017
-vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/constants.vhd 
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:20 on Dec 18,2017
+vcom -93 -work LIB_VHD /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling package constants_package
-End time: 22:38:59 on Dec 17,2017, Elapsed time: 0:00:00
+End time: 13:05:20 on Dec 18,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 22:38:59 on Dec 17,2017
-vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/local_counter.vhd 
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:20 on Dec 18,2017
+vcom -93 -work LIB_VHD /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -24,11 +24,11 @@ vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/local_counter.vhd
 -- Loading package constants_package
 -- Compiling entity local_counter
 -- Compiling architecture b of local_counter
-End time: 22:38:59 on Dec 17,2017, Elapsed time: 0:00:00
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 22:38:59 on Dec 17,2017
-vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/global_counter.vhd 
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:21 on Dec 18,2017
+vcom -93 -work LIB_VHD /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -38,55 +38,93 @@ vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/global_counter.vhd
 -- Loading package constants_package
 -- Compiling entity global_counter
 -- Compiling architecture a of global_counter
-End time: 22:38:59 on Dec 17,2017, Elapsed time: 0:00:00
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 22:38:59 on Dec 17,2017
-vcom -93 -work LIB_VHD /home/mahtalb/projet_drone/VHD/send_ppm.vhd 
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:21 on Dec 18,2017
+vcom -93 -work LIB_VHD /tp/xph3app/xph3app602/projet_drone/VHD/image_process.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity image_process
+-- Compiling architecture rtl of image_process
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:21 on Dec 18,2017
+vcom -93 -work LIB_VHD /tp/xph3app/xph3app602/projet_drone/VHD/gensync.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity gensync
+-- Compiling architecture Behavioral of gensync
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:21 on Dec 18,2017
+vcom -93 -work LIB_VHD /tp/xph3app/xph3app602/projet_drone/VHD/position.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity position
+-- Compiling architecture det of position
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+vmap LIB_VHD_BENCH /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD_BENCH 
+Modifying modelsim.ini
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:21 on Dec 18,2017
+vcom -93 -work LIB_VHD_BENCH /tp/xph3app/xph3app602/projet_drone/BENCH/test_bench.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity test3
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:21 on Dec 18,2017
+vcom -93 -work LIB_VHD_BENCH /tp/xph3app/xph3app602/projet_drone/BENCH/bench_position.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package constants_package
--- Compiling entity send_ppm
--- Compiling architecture rtl of send_ppm
-** Error: /home/mahtalb/projet_drone/VHD/send_ppm.vhd(179): near "when": (vcom-1576) expecting END.
-** Warning: /home/mahtalb/projet_drone/VHD/send_ppm.vhd(183): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-** Error (suppressible): /home/mahtalb/projet_drone/VHD/send_ppm.vhd(108): (vcom-1272) Length of expected is 32; length of actual is 40.
-** Error (suppressible): /home/mahtalb/projet_drone/VHD/send_ppm.vhd(109): (vcom-1272) Length of expected is 32; length of actual is 40.
-** Error (suppressible): /home/mahtalb/projet_drone/VHD/send_ppm.vhd(110): (vcom-1272) Length of expected is 32; length of actual is 40.
-** Error (suppressible): /home/mahtalb/projet_drone/VHD/send_ppm.vhd(111): (vcom-1272) Length of expected is 32; length of actual is 40.
-** Error (suppressible): /home/mahtalb/projet_drone/VHD/send_ppm.vhd(115): (vcom-1272) Length of expected is 46; length of actual is 64.
-** Error: /home/mahtalb/projet_drone/VHD/send_ppm.vhd(138): (vcom-1339) Case statement choices cover only 2 out of 3 cases.
-** Error: /home/mahtalb/projet_drone/VHD/send_ppm.vhd(184): VHDL Compiler exiting
-End time: 22:38:59 on Dec 17,2017, Elapsed time: 0:00:00
-Errors: 8, Warnings: 1
-Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-vmap LIB_VHD_BENCH /home/mahtalb/projet_drone/LIBS/LIB_VHD_BENCH 
-Modifying modelsim.ini
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 22:38:59 on Dec 17,2017
-vcom -93 -work LIB_VHD_BENCH /home/mahtalb/projet_drone/BENCH/test_counter.vhd 
+-- Loading package MATH_REAL
+-- Compiling entity bench
+-- Compiling architecture test_position of bench
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:21 on Dec 18,2017
+vcom -93 -work LIB_VHD_BENCH /tp/xph3app/xph3app602/projet_drone/BENCH/test_counter.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity tb_counter
 -- Compiling architecture c of tb_counter
-End time: 22:39:00 on Dec 17,2017, Elapsed time: 0:00:01
+End time: 13:05:21 on Dec 18,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 22:39:00 on Dec 17,2017
-vcom -93 -work LIB_VHD_BENCH /home/mahtalb/projet_drone/BENCH/test_ppm.vhd 
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package constants_package
--- Compiling entity bench_send_ppm
--- Compiling architecture tb_ppm of bench_send_ppm
-End time: 22:39:00 on Dec 17,2017, Elapsed time: 0:00:00
+Model Technology ModelSim SE-64 vlog 10.5c Compiler 2016.07 Jul 20 2016
+Start time: 13:05:23 on Dec 18,2017
+vlog -sv -work LIB_VHD_BENCH /tp/xph3app/xph3app602/projet_drone/BENCH/tbench.sv 
+-- Compiling package tbench_sv_unit
+-- Compiling module tbench
+
+Top level modules:
+	tbench
+End time: 13:05:23 on Dec 18,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
 
-Total Errors :   3
-Total Warnings : 1
+Total Errors :   0
+Total Warnings : 0

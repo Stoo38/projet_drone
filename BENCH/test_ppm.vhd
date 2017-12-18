@@ -25,11 +25,11 @@ architecture tb_ppm of bench_send_ppm is
 
 	begin    
     send_ppm1 : send_ppm port map (
-				i_clk => sig_i_clk,
+				i_clk			=> sig_i_clk,
 				i_reset_n => sig_i_reset_n,
-				i_enable => sig_i_enable,
-				i_reg => sig_i_reg,
-				o_ppm => sig_o_ppm);
+				i_enable	=> sig_i_enable,
+				i_reg			=> sig_i_reg,
+				o_ppm			=> sig_o_ppm);
 				
     sig_i_clk <= not(sig_i_clk) after 20 ns;
 		sig_i_reset_n <= '0', '1' after 1000 ns;	

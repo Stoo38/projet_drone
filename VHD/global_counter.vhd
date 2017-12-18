@@ -10,7 +10,7 @@ entity global_counter is
 		          port(	i_clk			: in std_logic;
                   	i_reset_n	: in std_logic;
 										o_count		: out std_logic_vector(const_vector_size-1 downto 0) --Doit pouvoir compter jusqu'à 22.5 ms
-						);
+									);
 end global_counter;
 
 architecture a of global_counter is
@@ -26,10 +26,10 @@ architecture a of global_counter is
           	if (i_reset_n = '0') then 
 	        	v_val := (others => '0');
   	      	else
-            	if (v_val = "00000000000010001001010101000100") then
+            	if (v_val = "10001001010101000100") then
               		v_val := (others => '0');
             	else
-              		v_val := v_val + "00000000000000000000000000000001";
+              		v_val := v_val + "00000000000000000001";
             	end if;
 	        end if;
 	        o_count <= v_val;  

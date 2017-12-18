@@ -85,18 +85,18 @@ begin
 		when reset =>
 		next_x_bar <= "000000000";
 		next_y_bar <= "000000000";
-		test_ecriture <= '1';
+		--test_ecriture <= '1';
 		next_state <= nouvelle_image;
 
 		when nouvelle_image =>
 		next_count <= "000000000000000000";
 		next_x_sum <= "000000000000000000";
 		next_y_sum <= "000000000000000000";
-		test_ecriture <= '0';
+		--test_ecriture <= '0';
 		next_state <= boucle_image;
 
 		when boucle_image =>
-		if (count_x /= "111111111" and count_y /= "111011111" and IMG = '1' and count_x >="000001101") then
+		if (count_x /= "111111111" and count_y /= "111011111" and IMG = '1' and count_x >="100001101") then
 			if (ri = x"00" and gi = x"00" and bi = x"00") then
 				next_x_sum <= x_sum + count_x;
 				next_y_sum <= y_sum + count_y;
@@ -125,17 +125,32 @@ begin
 
 end process gen;
 
-bar:process(ri, gi, bi, x_bar, y_bar)
+bar:process(ri, gi, bi, count_x, count_y)
 begin
-	nri <= ri;
-	ngi <= gi;
-	nbi <= bi;
 
-	if ((count_x >= x_bar -"000000011") and (count_y >= y_bar -"000000011") and (count_x <= x_bar +"000000011") and (count_y <= y_bar +"000000011") and (x_bar /= "000000000") and (y_bar /= "000000000")) then 
+
+	--if ((x_bar = count_x) and (y_bar = count_y) and (x_bar /= "000000000") and (x_bar /= "000000000")) then 
+	--	nri <= "00000000";
+	--	ngi <= "00000000";
+	--	nbi <= "00000000";
+	--	test_ecriture<='1';
+	--else 
+	--	nri <= ri;
+	--	ngi <= gi;
+	--	nbi <= bi;
+	--	test_ecriture<='0';
+	--end if;
+
+	if ((x_bar >= count_x -"000000011") and (y_bar >= count_y -"000000011") and (x_bar <= count_x +"000000011") and (y_bar <= count_y +"000000011") and (x_bar /= "000000000") and (y_bar /= "000000000")) then 
 		nri <= "11111111";
-		ngi <= "11111111";
-		nbi <= "11111111";
+		ngi <= "00000000";
+		nbi <= "00000000";
 		test_ecriture<='1';
+	else 
+		nri <= ri;
+		ngi <= gi;
+		nbi <= bi;
+		test_ecriture<='0';
 	end if;
 	
 end process bar;

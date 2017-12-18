@@ -14,7 +14,7 @@ else
 	CHOICE_COMPIL="all"												# By default, Benches and Design Files are compiled
 fi
 
-PROJECT_PATH="/home/mahtalb/projet_drone"				# Path of the Project Directory
+PROJECT_PATH="/tp/xph3app/xph3app602/projet_drone"				# Path of the Project Directory
 LIB_NAME="LIB_VHD"													# Name of the Library 
 #LIB_NAME_TEST="DRONE_LIB"											# Name of the Library 
 #VHDL_FILES=`ls -l vhd/ | awk {'print$9'} | grep .vhd`
@@ -125,5 +125,5 @@ cat ${PROJECT_PATH}/LOG/${LOG_FILE}
 ##################################################
 
 #vsim -c -L LIB_VHD -do runSim.do LIB_VHD_BENCH.tbench 	#Ligne de commandes
-#vsim -L LIB_VHD -do runSim.do LIB_VHD_BENCH.tbench 	#Interface graphique
+#vsim -L LIB_VHD -do runSim.do LIB_VHD_BENCH.bench_send_ppm 	#Interface graphique
 #vsim -L LIB_VHD LIB_VHD_BENCH.tbench 					#Interface graphique
