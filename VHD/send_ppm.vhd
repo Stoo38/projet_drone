@@ -46,7 +46,7 @@ architecture rtl of send_ppm is
 	--											third_delay,
 	--											fourth_delay);
 
-	type ppm_states is (tempo, pulse, synchro);
+	type ppm_states is (tempo, pulse, synchro, reset);
 
 	--Signaux représentant les différents états
 	signal current_state, next_state : ppm_states;
@@ -59,12 +59,12 @@ architecture rtl of send_ppm is
 	signal sig_out_ppm					: std_logic;
 
 	--Signaux des compteurs 
-	signal sig_in_init					: std_logic;	
-	signal sig_out_local_count  : std_logic_vector(const_vector_size-1 downto 0);
-	signal sig_out_global_count : std_logic_vector(const_vector_size-1  downto 0);
+	signal sig_in_init							: std_logic;	
+	signal sig_out_local_count			: std_logic_vector(const_vector_size-1 downto 0);
+	signal sig_out_global_count			: std_logic_vector(const_vector_size-1 downto 0);
+	signal sig_local_counter_inter	: std_logic_vector(const_vector_size-1 downto 0);
 
 	
-
 	--Signaux pour le calcul du nombre de cycles de chaque trame
 
 	signal sig_cyclesTrame1					: std_logic_vector(28-1 downto 0);
@@ -77,14 +77,14 @@ architecture rtl of send_ppm is
 	signal sig_final3								: std_logic_vector(const_vector_size-1 downto 0);
 	signal sig_final4								: std_logic_vector(const_vector_size-1 downto 0);
 
-
-	--Signal de gestion des états
+	--Signaux de gestion des états
 	signal sig_state								:	std_logic_vector(2 downto 0);
 	signal sig_state_inter					:	std_logic_vector(2 downto 0);
 
+	--Signaux de gestion du trafic 
+	signal sig_reg_storage					: std_logic_vector(31 downto 0);
+	--signal sig_flag									: std_logic;
 
-
-	--constant test_test				: std_logic_vector(const_vector_size - 1 downto 0) := std_logic_vector(unsigned(const_t_min)/unsigned(const_clk_period));			 
 
 	begin
 
@@ -109,16 +109,16 @@ architecture rtl of send_ppm is
 	--cal:process(sig_in_reg) --process de calcul du nombre de cycles pour chaque impulsion
 	--begin
 
-		sig_cyclesTrame1 <= std_logic_vector((unsigned(sig_in_reg(7 downto 0))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
+		sig_cyclesTrame1 <= std_logic_vector((unsigned(sig_reg_storage(7 downto 0))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
 		sig_final1 <= sig_cyclesTrame1(const_vector_size-1 downto 0);
 
-		sig_cyclesTrame2 <= std_logic_vector((unsigned(sig_in_reg(15 downto 8))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
+		sig_cyclesTrame2 <= std_logic_vector((unsigned(sig_reg_storage(15 downto 8))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
 		sig_final2 <= sig_cyclesTrame2(const_vector_size-1 downto 0);
 
-		sig_cyclesTrame3 <= std_logic_vector((unsigned(sig_in_reg(23 downto 16))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
+		sig_cyclesTrame3 <= std_logic_vector((unsigned(sig_reg_storage(23 downto 16))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
 		sig_final3 <= sig_cyclesTrame3(const_vector_size-1 downto 0);
 
-		sig_cyclesTrame4 <= std_logic_vector((unsigned(sig_in_reg(31 downto 24))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
+		sig_cyclesTrame4 <= std_logic_vector((unsigned(sig_reg_storage(31 downto 24))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
 		sig_final4 <= sig_cyclesTrame4(const_vector_size-1 downto 0);
 
 		
@@ -126,10 +126,15 @@ architecture rtl of send_ppm is
 		
 		sig_cyclesSynchro <= std_logic_vector(unsigned(const_cyles_ppm) - (unsigned(sig_cyclesTrame1)+unsigned(sig_cyclesTrame2)+unsigned(sig_cyclesTrame3)+unsigned(sig_cyclesTrame4)+5*unsigned(const_cycles_tempo)));
 
+		sig_local_counter_inter <= std_logic_vector(unsigned(sig_out_local_count)/unsigned(const_clk_period));
 	--end process cal;
 
-	sig_out_ppm <=	'1' when current_state = tempo else
-									'0';
+		--sig_out_ppm <=	'1' when (sig_state = "010") else
+		--								'0';
+										--'0' when (current_state = synchro) else
+										--'0' when (current_state = pulse) else
+										--'0';
+
 
 	seq: process(sig_in_clk)	--process qui gère la partie séquentielle
 	begin
@@ -138,8 +143,13 @@ architecture rtl of send_ppm is
 			if (sig_in_reset_n='0') then
 				sig_out_ppm <= '0';
 				sig_state <= "000";
-				current_state <= tempo;
+				current_state <= reset;
 			else
+				if(current_state = tempo) then 
+					sig_out_ppm <= '1';
+				else
+					sig_out_ppm <= '0';
+				end if;
 				sig_state <= sig_state_inter;
 				current_state <= next_state;
 			end if;
@@ -147,13 +157,19 @@ architecture rtl of send_ppm is
 
 	end process seq;
 
-
-	combi: process(sig_state, current_state, sig_out_local_count, sig_final1, sig_final2, sig_final3, sig_final4)		--process qui gère la partie combinatoire
+	combi: process(sig_in_reg, sig_state, current_state, sig_out_local_count, sig_final1, sig_final2, sig_final3, sig_final4)		--process qui gère la partie combinatoire
 	begin
 		case current_state is
 
+			when reset =>	
+				sig_state_inter <= "000";
+				sig_in_init <= '1';	
+				next_state <= tempo;
+				sig_reg_storage <= sig_in_reg;
+
 			when tempo =>
-				if (std_logic_vector(unsigned(sig_out_local_count)/unsigned(const_clk_period)) = const_cycles_tempo) then 
+				--sig_out_ppm <=	'1';
+				if (sig_out_local_count = const_cycles_tempo) then 
 					sig_in_init <= '1';
 					if (sig_state = "100") then 
 						sig_state_inter <= sig_state;
@@ -167,34 +183,36 @@ architecture rtl of send_ppm is
 					next_state <= tempo;
 					sig_state_inter <= sig_state;
 				end if;
-
+			
 			when pulse =>
-				if (sig_state="001" and std_logic_vector(unsigned(sig_out_local_count)/unsigned(const_clk_period)) = sig_final1) then 
+				--sig_out_ppm <=	'0';
+				if (sig_state="001" and (sig_out_local_count = sig_final1)) then 
 						sig_in_init <= '1';
 						next_state <= tempo;
-					
-				elsif (sig_state="010" and std_logic_vector(unsigned(sig_out_local_count)/unsigned(const_clk_period)) = sig_final2) then 
+				elsif (sig_state="010" and (sig_out_local_count = sig_final2)) then 
 						sig_in_init <= '1';
 						next_state <= tempo;
-
-				elsif (sig_state="011" and std_logic_vector(unsigned(sig_out_local_count)/unsigned(const_clk_period)) = sig_final3) then 
+				elsif (sig_state="011" and (sig_out_local_count = sig_final3)) then 
 						sig_in_init <= '1';
 						next_state <= tempo;
-
-				elsif (sig_state="100" and std_logic_vector(unsigned(sig_out_local_count)/unsigned(const_clk_period)) = sig_final4) then 
+				elsif (sig_state="100" and (sig_out_local_count = sig_final4)) then 
 						sig_in_init <= '1';
 						next_state <= tempo;
-
 				else 
 					sig_in_init <= '0';
 					next_state <= pulse;
 				end if;
 
 			when synchro =>
-				if(std_logic_vector(unsigned(sig_out_local_count)/unsigned(const_clk_period)) = sig_cyclesSynchro) then 
-					
+				--sig_out_ppm <=	'0';
+				if(sig_out_local_count = sig_cyclesSynchro) then 
+					sig_in_init <= '1';
+					sig_state_inter <= "000";
+					next_state <= tempo;
+					sig_reg_storage <= sig_in_reg;
 				else
 					sig_in_init <= '0';
+					next_state <= synchro;
 				end if;
 
 		end case;

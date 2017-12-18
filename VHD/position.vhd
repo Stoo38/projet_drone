@@ -34,8 +34,8 @@ signal		ri,gi,bi,nri,ngi,nbi			 	: std_logic_vector(7 downto 0);
 signal		x_bar, y_bar, next_x_bar, next_y_bar 			: std_logic_vector(8 downto 0):="000000000";
 signal		count_x,count_y			: std_logic_vector(8 downto 0);
 signal 		count, next_count 					: std_logic_vector (17 downto 0);
-signal		x_sum, next_x_sum					: std_logic_vector (17 downto 0):="000000000000000000";
-signal		y_sum, next_y_sum					: std_logic_vector (17 downto 0):="000000000000000000";
+signal		x_sum, next_x_sum					: std_logic_vector (20 downto 0):="000000000000000000000";
+signal		y_sum, next_y_sum					: std_logic_vector (20 downto 0):="000000000000000000000";
 signal   	state,next_state 		: gen_states;
 signal		vga_im				: std_logic:='0';
 signal		test_ecriture			: std_logic:='0';--signal qui va tester si l'on passe bien dans l'écriture
@@ -53,8 +53,8 @@ begin
 			count_x <= "000000000";
 			count_y <= "000000000";
 			count <= "000000000000000000";
-			x_sum <= "000000000000000000";
-			y_sum <= "000000000000000000";
+			x_sum <= "000000000000000000000";
+			y_sum <= "000000000000000000000";
 	  		state <= reset;
 		else
 			ri <= r_proc;
@@ -90,8 +90,8 @@ begin
 
 		when nouvelle_image =>
 		next_count <= "000000000000000000";
-		next_x_sum <= "000000000000000000";
-		next_y_sum <= "000000000000000000";
+		next_x_sum <= "000000000000000000000";
+		next_y_sum <= "000000000000000000000";
 		--test_ecriture <= '0';
 		next_state <= boucle_image;
 
@@ -141,7 +141,7 @@ begin
 	--	test_ecriture<='0';
 	--end if;
 
-	if ((x_bar >= count_x -"000000011") and (y_bar >= count_y -"000000011") and (x_bar <= count_x +"000000011") and (y_bar <= count_y +"000000011") and (x_bar /= "000000000") and (y_bar /= "000000000")) then 
+	if ((x_bar >= count_x +"00011101") and (y_bar >= count_y -"000000011") and (x_bar <= count_x +"00100011") and (y_bar <= count_y +"000000011") and (x_bar /= "000000000") and (y_bar /= "000000000")) then 
 		nri <= "11111111";
 		ngi <= "00000000";
 		nbi <= "00000000";

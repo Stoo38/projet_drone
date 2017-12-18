@@ -32,12 +32,23 @@ architecture tb_ppm of bench_send_ppm is
 				o_ppm			=> sig_o_ppm);
 				
     sig_i_clk <= not(sig_i_clk) after 20 ns;
-		sig_i_reset_n <= '0', '1' after 1000 ns;	
+		sig_i_reset_n <= '0', '1' after 10000 ns;	
 
  	process
 		begin
 			wait for 200 ns;
-			sig_i_reg <= "01101100111010111000101110110101";	
+			sig_i_reg <= "01101100111010111000101110110101";
+			wait for 25 ns;
+			sig_i_reg <= "00000000000000000000000000000000";
+			wait for 250 ns;	
+			sig_i_reg <= "11111111111111111111111111111111";
+		  wait for 25 ns;
+			sig_i_reg <= "00000000000000000000000000000000";
+			wait for 100000 ns;
+			sig_i_reg <= "00000000001111111111111111111110";
+			wait for 30000000 ns;
+
+
 	end process;
 	
 end tb_ppm;

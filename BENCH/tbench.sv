@@ -159,7 +159,7 @@ always #10 vga_clk2x <= ~vga_clk2x;
 
 // Read Image From File
 initial begin
-  read_bmp(img_camera,"/tp/xph3app/xph3app602/projet_drone/IMG/dronelourd.bmp");//selection image
+  read_bmp(img_camera,"/tp/xph3app/xph3app602/projet_drone/IMG/dalmatien4.bmp");//selection image
 end
 
 // Write image

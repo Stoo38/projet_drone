@@ -34,7 +34,7 @@ BENCH_VHD_FILES="
 #BENCH_VERILOG_FILES="
 #					tbench.sv"										#List of the different Verilog Files used for the bench
 
-OPT_VCOM="-93 -work" #+acc											# List of the different options of ModelSim used for Compilation
+OPT_VCOM="+acc -work" #+acc	-93										# List of the different options of ModelSim used for Compilation
 OPT_VLOG="-sv -work"
 
 LOG_FILE="mylog.log"												# Name of the log file
@@ -125,5 +125,7 @@ cat ${PROJECT_PATH}/LOG/${LOG_FILE}
 ##################################################
 
 #vsim -c -L LIB_VHD -do runSim.do LIB_VHD_BENCH.tbench 	#Ligne de commandes
-#vsim -L LIB_VHD -do runSim.do LIB_VHD_BENCH.bench_send_ppm 	#Interface graphique
+vsim LIB_VHD_BENCH.bench_send_ppm -do runSimStoo.do
+
+#vsim LIB_VHD -do runSimStoo.do LIB_VHD_BENCH.bench_send_ppm 	#Interface graphique
 #vsim -L LIB_VHD LIB_VHD_BENCH.tbench 					#Interface graphique
