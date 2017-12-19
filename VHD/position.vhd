@@ -22,7 +22,7 @@ entity position is
 		b_bout	   : out std_logic_vector(7 downto 0);
 		X_barycentre : out std_logic_vector (8 downto 0);
 		Y_barycentre : out std_logic_vector (8 downto 0)
---		test_write	: out std_logic
+
 	);
 
 end entity;
@@ -30,15 +30,16 @@ end entity;
 architecture det of position is
 type gen_states is (reset, nouvelle_image, boucle_image, calcul_barycentre);
 
-signal		ri,gi,bi,nri,ngi,nbi			 	: std_logic_vector(7 downto 0);
-signal		x_bar, y_bar, next_x_bar, next_y_bar 			: std_logic_vector(8 downto 0):="000000000";
-signal		count_x,count_y			: std_logic_vector(8 downto 0);
+signal		ri,gi,bi,nri,ngi,nbi				: std_logic_vector(7 downto 0);
+signal		x_bar, y_bar, next_x_bar, next_y_bar: std_logic_vector(8 downto 0):="000000000";
+signal		count_x,count_y						: std_logic_vector(8 downto 0);
 signal 		count, next_count 					: std_logic_vector (17 downto 0);
-signal		x_sum, next_x_sum					: std_logic_vector (20 downto 0):="000000000000000000000";
-signal		y_sum, next_y_sum					: std_logic_vector (20 downto 0):="000000000000000000000";
-signal   	state,next_state 		: gen_states;
-signal		vga_im				: std_logic:='0';
-signal		test_ecriture			: std_logic:='0';--signal qui va tester si l'on passe bien dans l'écriture
+signal		x_sum, next_x_sum					: std_logic_vector (23 downto 0):="000000000000000000000000";
+signal		y_sum, next_y_sum					: std_logic_vector (23 downto 0):="000000000000000000000000";
+signal   	state,next_state 					: gen_states;
+signal		vga_im								: std_logic:='0';
+signal		test_ecriture						: std_logic:='0';--signal qui va tester si l'on passe bien dans l'écriture
+
 
 begin
 
@@ -53,8 +54,8 @@ begin
 			count_x <= "000000000";
 			count_y <= "000000000";
 			count <= "000000000000000000";
-			x_sum <= "000000000000000000000";
-			y_sum <= "000000000000000000000";
+			x_sum <= "000000000000000000000000";
+			y_sum <= "000000000000000000000000";
 	  		state <= reset;
 		else
 			ri <= r_proc;
@@ -72,7 +73,8 @@ begin
 			x_sum<=next_x_sum;
 			y_sum<=next_y_sum;
 			vga_im <= IMG;
---			test_write <= test_ecriture;
+
+
 		end if;
 	end if;
 end process clk;	
@@ -85,13 +87,14 @@ begin
 		when reset =>
 		next_x_bar <= "000000000";
 		next_y_bar <= "000000000";
+		
 		--test_ecriture <= '1';
 		next_state <= nouvelle_image;
 
 		when nouvelle_image =>
 		next_count <= "000000000000000000";
-		next_x_sum <= "000000000000000000000";
-		next_y_sum <= "000000000000000000000";
+		next_x_sum <= "000000000000000000000000";
+		next_y_sum <= "000000000000000000000000";
 		--test_ecriture <= '0';
 		next_state <= boucle_image;
 
@@ -100,7 +103,7 @@ begin
 			if (ri = x"00" and gi = x"00" and bi = x"00") then
 				next_x_sum <= x_sum + count_x;
 				next_y_sum <= y_sum + count_y;
-				next_count <= count + '1'; 
+				next_count <= count + '1'; 				
 			end if;
 		next_state <= boucle_image;
 
@@ -141,6 +144,16 @@ begin
 	--	test_ecriture<='0';
 	--end if;
 
+--	if ((x_min >= count_x +"00011101") and (y_min >= count_y -"000000011") and (x_min <= count_x +"00100011") and (y_min <= count_y +"000000011") and (x_min /= "000000000") and (y_min /= "000000000")) then 
+--		nri <= "00000000";
+--		ngi <= "11111111";
+--		nbi <= "00000000";
+--		test_ecriture<='1';
+--	elsif ((x_max >= count_x +"00011101") and (y_max >= count_y -"000000011") and (x_max <= count_x +"00100011") and (y_max <= count_y +"000000011") and (x_max /= "000000000") and (y_max /= "000000000")) then 
+--		nri <= "00000000";
+--		ngi <= "00000000";
+--		nbi <= "11111111";
+--		test_ecriture<='1';
 	if ((x_bar >= count_x +"00011101") and (y_bar >= count_y -"000000011") and (x_bar <= count_x +"00100011") and (y_bar <= count_y +"000000011") and (x_bar /= "000000000") and (y_bar /= "000000000")) then 
 		nri <= "11111111";
 		ngi <= "00000000";
@@ -152,6 +165,8 @@ begin
 		nbi <= bi;
 		test_ecriture<='0';
 	end if;
+
+	
 	
 end process bar;
 X_barycentre <= x_bar;

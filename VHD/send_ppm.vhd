@@ -83,7 +83,8 @@ architecture rtl of send_ppm is
 
 	--Signaux de gestion du trafic 
 	signal sig_reg_storage					: std_logic_vector(31 downto 0);
-	--signal sig_flag									: std_logic;
+
+	signal sig_flag_ppm_ready				: std_logic;
 
 
 	begin
@@ -120,9 +121,6 @@ architecture rtl of send_ppm is
 
 		sig_cyclesTrame4 <= std_logic_vector((unsigned(sig_reg_storage(31 downto 24))*unsigned(const_pas)/unsigned(const_clk_period))+unsigned(const_cycles_trame_min));
 		sig_final4 <= sig_cyclesTrame4(const_vector_size-1 downto 0);
-
-		
-		--sig_test <= std_logic_vector(unsigned(sig_in_reg(7 downto 0))/unsigned(const_clk_period)*unsigned(const_pas)+unsigned(const_cycles_trame_min));
 		
 		sig_cyclesSynchro <= std_logic_vector(unsigned(const_cyles_ppm) - (unsigned(sig_cyclesTrame1)+unsigned(sig_cyclesTrame2)+unsigned(sig_cyclesTrame3)+unsigned(sig_cyclesTrame4)+5*unsigned(const_cycles_tempo)));
 
@@ -138,7 +136,6 @@ architecture rtl of send_ppm is
 
 	seq: process(sig_in_clk)	--process qui gère la partie séquentielle
 	begin
-
 		if (sig_in_clk'event and sig_in_clk ='1') then	
 			if (sig_in_reset_n='0') then
 				sig_out_ppm <= '0';
@@ -154,7 +151,6 @@ architecture rtl of send_ppm is
 				current_state <= next_state;
 			end if;
 		end if;
-
 	end process seq;
 
 	combi: process(sig_in_reg, sig_state, current_state, sig_out_local_count, sig_final1, sig_final2, sig_final3, sig_final4)		--process qui gère la partie combinatoire
@@ -164,11 +160,13 @@ architecture rtl of send_ppm is
 			when reset =>	
 				sig_state_inter <= "000";
 				sig_in_init <= '1';	
+				sig_flag_ppm_ready <= '0';
 				next_state <= tempo;
 				sig_reg_storage <= sig_in_reg;
 
 			when tempo =>
 				--sig_out_ppm <=	'1';
+				sig_flag_ppm_ready <= '0';
 				if (sig_out_local_count = const_cycles_tempo) then 
 					sig_in_init <= '1';
 					if (sig_state = "100") then 
@@ -186,7 +184,8 @@ architecture rtl of send_ppm is
 			
 			when pulse =>
 				--sig_out_ppm <=	'0';
-				if (sig_state="001" and (sig_out_local_count = sig_final1)) then 
+				sig_flag_ppm_ready <= '0';
+				if (sig_state="001" and (sig_out_local_count = sig_final1))	then 
 						sig_in_init <= '1';
 						next_state <= tempo;
 				elsif (sig_state="010" and (sig_out_local_count = sig_final2)) then 
@@ -205,19 +204,20 @@ architecture rtl of send_ppm is
 
 			when synchro =>
 				--sig_out_ppm <=	'0';
-				if(sig_out_local_count = sig_cyclesSynchro) then 
-					sig_in_init <= '1';
+				if(sig_out_local_count = sig_cyclesSynchro) then
+					sig_flag_ppm_ready <= '1'; 
+					sig_in_init	<= '1';
 					sig_state_inter <= "000";
 					next_state <= tempo;
 					sig_reg_storage <= sig_in_reg;
 				else
+					sig_flag_ppm_ready <= '0';
 					sig_in_init <= '0';
 					next_state <= synchro;
 				end if;
 
 		end case;
 	end process combi;
-
 end rtl;	
 
 

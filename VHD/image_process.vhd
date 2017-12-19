@@ -82,61 +82,45 @@ begin
 			elsif ( SW1='0') then  
 			nri <= x"00"; ngi <= x"00";  nbi <= gi;				-- tiers droit image bleu		  
 			else  -- le reste soit  SW1='1'
-			
-				if (ri <= x"10") then
-				nri <= x"00";
-				else 
-				nri <= x"FF";
-				end if;
 
-				if (gi <= x"10") then
-				ngi <= x"00";
-				else 
-				ngi <= x"FF";
-				end if;
+---------------------------------------------------------------------------------------------------------------------------			
+				--if (ri <= x"20") then
+				--nri <= x"00";
+				--else 
+				--nri <= x"FF";
+				--end if;
 
-				if (bi <= x"10") then
-				nbi <= x"00";
-				else 
-				nbi <= x"FF";
-				end if;
+				--if (gi <= x"20") then
+				--ngi <= x"00";
+				--else 
+				--ngi <= x"FF";
+				--end if;
+
+				--if (bi <= x"20") then
+				--nbi <= x"00";
+				--else 
+				--nbi <= x"FF";
+				--end if;
 				
 
-				if (nri = x"00" and ngi = x"00" ) then
-				nbi <= x"00";
-				elsif (nri = x"00" and nbi = x"00" ) then
-				ngi <= x"00";
-				elsif (ngi = x"00" and nbi = x"00" ) then
+				--if (nri = x"00" and ngi = x"00" ) then 
+				--nbi <= x"00";
+				--elsif (nri = x"00" and nbi = x"00" ) then
+				--ngi <= x"00";
+				--elsif (ngi = x"00" and nbi = x"00" ) then
+				--nri <= x"00";
+				--end if;
+---------------------------------------------------------------------------------------------------------------------------
+				if ((ri <= x"20") or (gi <= x"20") or (bi <= x"20")) then
 				nri <= x"00";
+				ngi <= x"00";
+				nbi <= x"00";
+				else 
+				nri <= x"FF";
+				ngi <= x"FF";
+				nbi <= x"FF";
 				end if;
 
-
-				--if (ri = x"00" or gi = x"00" or bi = x"00") then
-				--nbi <= x"00";
-				--ngi <= x"00";
-				--nri <= x"00";
-				--end if;
-				--if (nri = x"FF" and ngi = x"FF" and nbi = x"00" ) then
-				--nri <= x"00";
-				--ngi <= x"00";
-				--nbi <= x"00";
-				--elsif (ngi = x"FF" and nbi = x"FF" and nri = x"00" ) then
-				--ngi <= x"00";
-				--nri <= x"00";
-				--nbi <= x"00";
-				--elsif (nri = x"FF" and nbi = x"FF" and ngi = x"00" ) then
-				--nri <= x"00";
-				--ngi <= x"00";
-				--nbi <= x"00";
-				--end if;
-
-				--if (nri = x"FF" and ngi = x"00" and nbi = x"00"  ) then
-				--nri <= x"00";
-				--elsif (nbi = x"00" ) then
-				--nbi <= x"00";
-				--elsif (ngi = x"00") then
-				--ngi <= x"00";				
-				--end if;
 
 			end if;	 
 
