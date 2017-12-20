@@ -101,17 +101,25 @@ begin
 		when boucle_image =>
 		if (count_x /= "111111111" and count_y /= "111011111" and IMG = '1' and count_x >="100001101") then
 			if (ri = x"00" and gi = x"00" and bi = x"00") then
+				next_x_sum <= x_sum + count_x + count_x + count_x;
+				next_y_sum <= y_sum + count_y + count_y + count_y;
+				next_count <= count + '1' + '1' +'1';
+			elsif (ri = x"10" and gi = x"10" and bi = x"10") then
 				next_x_sum <= x_sum + count_x;
 				next_y_sum <= y_sum + count_y;
-				next_count <= count + '1'; 				
+				next_count <= count + '1';
 			end if;
 		next_state <= boucle_image;
 
 		elsif (count_x = "111111111" and count_y = "111011111"and IMG'event) then
 			if (ri = x"00" and gi = x"00" and bi = x"00") then
+				next_x_sum <= x_sum + count_x + count_x + count_x;
+				next_y_sum <= y_sum + count_y + count_y + count_y;
+				next_count <= count + '1' + '1' +'1'; 
+			elsif (ri = x"10" and gi = x"10" and bi = x"10") then
 				next_x_sum <= x_sum + count_x;
 				next_y_sum <= y_sum + count_y;
-				next_count <= count + '1'; 
+				next_count <= count + '1';
 			end if;
 		next_state <= calcul_barycentre;
 		
