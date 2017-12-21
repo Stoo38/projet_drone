@@ -33,7 +33,6 @@ BENCH_VHD_FILES="
 				test_bench.vhd
 				bench_position.vhd
 				test_counter.vhd
-				test_div.vhd
 				"													#List of the different VHDL Files used for the bench
 
 BENCH_VERILOG_FILES="

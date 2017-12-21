@@ -128,7 +128,7 @@ begin
 		end if;
 		
 		when calcul_barycentre =>
-		next_x_bar <= std_logic_vector(to_signed(to_integer(signed(x_sum) / signed(count)),9));--peut être pas synthétisable, transformer count en somme de puissance de 2
+		next_x_bar <= std_logic_vector(to_signed(to_integer(signed(x_sum) / signed(count)),9));--peut être pas synthétisable
 		next_y_bar <= std_logic_vector(to_signed(to_integer(signed(y_sum) / signed(count)),9));
 		next_state <= nouvelle_image;
 		
