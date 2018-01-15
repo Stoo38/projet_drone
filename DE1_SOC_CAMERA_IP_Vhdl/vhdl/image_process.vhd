@@ -41,51 +41,82 @@ begin
 
 clk:process(VGA_CLK)
 begin 
-  if (VGA_CLK'event and VGA_CLK ='1') then	
-    if (reset='0') then
-	  ri <= x"00"; gi <= x"00"; bi <= x"00";
-	  state <= S0;
-	  else
-	     ri <= r; gi <= g; bi <= b;
-		  for t in 0 to 7 loop		 
-		  r_out(t) <= (nri(t) and IMG); g_out(t) <= (ngi(t) and IMG); b_out(t) <= (nbi(t) and IMG);
-		  end loop;
-		  state <= next_state; 
-	  end if;
+	if (VGA_CLK'event and VGA_CLK ='1') then	
+		if (reset='0') then
+			ri <= x"00"; gi <= x"00"; bi <= x"00";
+			state <= S0;
+		else
+			ri <= r; gi <= g; bi <= b;
+			for t in 0 to 7 loop		 
+				r_out(t) <= (nri(t) and IMG); g_out(t) <= (ngi(t) and IMG); b_out(t) <= (nbi(t) and IMG);
+			end loop;
+			state <= next_state; 
+		end if;
 	end if;
 end process clk;	
 	   
 gen:process(ri,gi,bi,X_Cont,Y_Cont,IMG,state,SW1)
 begin
-  nri <= ri; ngi <= gi;  nbi <= bi;
-  case state is
+	nri <= ri; ngi <= gi;  nbi <= bi;
+	case state is
   
-    when S0 =>
-	  next_state <= S1;
-	 
-	 when S1 =>
-	  next_state <= S1;
-	  if (X_Cont >= x"0" and X_Cont <= x"0FE" and Y_Cont >= x"0" and  Y_Cont <= x"0FE" and SW1='0' ) then
-	  nri <= gi; ngi <= gi;  nbi <= gi; 						-- quart sup gauche image N & B
-	  
-	   elsif (X_Cont >= x"FF" and X_Cont <= x"1FF" and Y_Cont >= x"0"  and Y_Cont <= x"0FE"  and SW1='0' ) then
-	   nri <= x"FF"-gi; ngi <= x"FF"-gi;  nbi <= x"FF"-gi; -- quart sup droit image N & B negatif
-		
-		 elsif (X_Cont >= x"0" and X_Cont <= x"AA" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
-		 nri <= gi; ngi <= x"00";  nbi <= x"00";				-- tiers inf gauche  image rouge
+		when S0 =>
+		next_state <= S1;
 
-		  elsif (X_Cont >=x"AB" and X_Cont <= x"154" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
-		  nri <= x"00"; ngi <= gi;  nbi <= x"00";				-- tiers centre image vert
+		when S1 =>
+		next_state <= S1;
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------TRAITEMENT RGB----------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------	
+			if (X_Cont >= x"0" and X_Cont <= x"0FE" and Y_Cont >= x"0" and  Y_Cont <= x"0FE" and SW1='0' ) then
+			nri <= gi; ngi <= gi;  nbi <= gi; 						-- quart sup gauche image N & B
 
---		  elsif (X_Cont >=x"155" and X_Cont <= x"1FF" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF" ) then
---		  else  -- le reste
---		   elsif ( SW1='0') then  
---		   nri <= x"00"; ngi <= x"00";  nbi <= gi;				-- tiers droit image bleu		  
-		    else  -- le reste soit  SW1='1'
-          nri <= gi; ngi <= gi;  nbi <= gi; 						--  image entiere N & B
-	 end if;
-	 
- end case;
+			elsif (X_Cont >= x"FF" and X_Cont <= x"1FF" and Y_Cont >= x"0"  and Y_Cont <= x"0FE"  and SW1='0' ) then
+			nri <= x"FF"-gi; ngi <= x"FF"-gi;  nbi <= x"FF"-gi; -- quart sup droit image N & B negatif
+
+			elsif (X_Cont >= x"0" and X_Cont <= x"AA" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
+			nri <= ri; ngi <= x"00";  nbi <= x"00";				-- tiers inf gauche  image rouge
+
+			elsif (X_Cont >=x"AB" and X_Cont <= x"154" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
+			nri <= x"00"; ngi <= gi;  nbi <= x"00";				-- tiers centre image vert
+
+			--		  elsif (X_Cont >=x"155" and X_Cont <= x"1FF" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF" ) then
+			--		  else  -- le reste
+			elsif ( SW1='0') then  
+			nri <= x"00"; ngi <= x"00";  nbi <= bi;				-- tiers droit image bleu	
+			
+			
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------TRAITEMENT D'IMAGE------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------	
+
+			else  -- le reste soit  SW1='1'
+				-- seul le niveau de vert est pris en compte par la caméra
+				-- le traitement d'image ne se fait donc que sur ce niveau
+				if ((gi <= x"08") ) then
+				nri <= x"00";
+				ngi <= x"00";
+				nbi <= x"00";
+				elsif ((gi <= x"25")) then
+				nri <= x"35";
+				ngi <= x"35";
+				nbi <= x"35";
+				elsif ((gi <= x"50")) then
+				nri <= x"70";
+				ngi <= x"70";
+				nbi <= x"70";
+				else 
+				nri <= x"FF";
+				ngi <= x"FF";
+				nbi <= x"FF";
+				end if;
+
+
+			end if;	 
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------	
+-------------------------------------------------------------------------------------------------------------------	
+	end case;
  
 end process gen;
 		

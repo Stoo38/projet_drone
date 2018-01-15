@@ -1,0 +1,7 @@
+vdel -lib  ${TP_PATH}/LIBS/LIB_SYNTH/ -all
+
+vlib ${TP_PATH}/LIBS/LIB_SYNTH
+
+vmap lib_VHDL ${TP_PATH}/LIBS/LIB_SYNTH 
+
+vcom -93 -work LIB_SYNTH ppm_synth_impl_1/send_ppm_synth.vhd

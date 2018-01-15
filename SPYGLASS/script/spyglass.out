@@ -1,0 +1,15 @@
+FATAL [SPG#1011]: File "run_Spyglass.tcl", Line 14: Environment Variable "$VHDL_FILES" not defined
+
+FATAL [SPG#1011]: File "run_Spyglass.tcl", Line 18: Environment Variable "$LIBRARY_NAME" not defined
+
+FATAL [SPG#1011]: File "run_Spyglass.tcl", Line 18: Environment Variable "$LIBRARY_PATH" not defined
+
+FATAL [SPG#1011]: File "run_Spyglass.tcl", Line 21: Environment Variable "$VHDL_FILES" not defined
+
+FATAL [SPG#1011]: File "run_Spyglass.tcl", Line 21: Environment Variable "$LIBRARY_NAME" not defined
+
+FATAL [SPG#1011]: File "run_Spyglass.tcl", Line 21: Environment Variable "$LIBRARY_PATH" not defined
+
+
+SpyGlass Rule Checking Aborted.
+

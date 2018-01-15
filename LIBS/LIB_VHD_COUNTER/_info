@@ -1,0 +1,105 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/tp/xph3app/xph3app602/projet_drone/VHD
+T_opt
+!s110 1515587328
+V>Y;XURaiPBkdk59hR`MJ73
+04 10 1 work tb_counter c 1
+=1-002564c7956f-5a5606fd-e1a9-1c86
+o-quiet -auto_acc_if_foreign -work LIB_VHD_COUNTER
+tCvgOpt 0
+n@_opt
+OL;O;10.5c;63
+Elocal_counter
+Z1 w1515587243
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8/tp/xph3app/xph3app602/projet_drone/VHD/local_counter_pens.vhd
+Z8 F/tp/xph3app/xph3app602/projet_drone/VHD/local_counter_pens.vhd
+l0
+L6
+VbR_S2ZF]h=ZTj]DmD?cZc2
+!s100 d`UK]FM7hA^@A5j<>:95U3
+Z9 OL;C;10.5c;63
+31
+Z10 !s110 1515587252
+!i10b 1
+Z11 !s108 1515587252.000000
+Z12 !s90 -93|-work|LIB_VHD_COUNTER|/tp/xph3app/xph3app602/projet_drone/VHD/local_counter_pens.vhd|
+Z13 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/local_counter_pens.vhd|
+!i113 0
+Z14 o-93 -work LIB_VHD_COUNTER
+Z15 tExplicit 1 CvgOpt 0
+Ab
+R2
+R3
+R4
+R5
+R6
+DEx4 work 13 local_counter 0 22 bR_S2ZF]h=ZTj]DmD?cZc2
+l14
+L13
+VV2j0WHk5G@3o_UWJkjmZ52
+!s100 hZ<^=KMGHB]6hhEn@ANKc1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Etb_counter
+Z16 w1515587239
+R4
+R5
+R6
+R0
+Z17 8/tp/xph3app/xph3app602/projet_drone/VHD/test_counter_pens.vhd
+Z18 F/tp/xph3app/xph3app602/projet_drone/VHD/test_counter_pens.vhd
+l0
+L7
+VBO`FYeQ0O5mE=SHS4[FKb0
+!s100 W?QcfJo_jXCTBIVagVdhG0
+R9
+31
+R10
+!i10b 1
+R11
+Z19 !s90 -93|-work|LIB_VHD_COUNTER|/tp/xph3app/xph3app602/projet_drone/VHD/test_counter_pens.vhd|
+Z20 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/test_counter_pens.vhd|
+!i113 0
+R14
+R15
+Ac
+R4
+R5
+R6
+DEx4 work 10 tb_counter 0 22 BO`FYeQ0O5mE=SHS4[FKb0
+l23
+L9
+VlCG1MNDe336<oKW^c4f_42
+!s100 aKFDBdTlWaj:EFiV1kdT^3
+R9
+31
+R10
+!i10b 1
+R11
+R19
+R20
+!i113 0
+R14
+R15

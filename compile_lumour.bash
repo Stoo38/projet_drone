@@ -56,7 +56,9 @@ then
 	then
 		vdel -lib ${PROJECT_PATH}/LIBS/${LIB_NAME} -all					>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Deletes the old version of library
 	fi
-	vlib ${PROJECT_PATH}/LIBS/${LIB_NAME}								>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Creates a new library
+	vlib ${PROJECT_PATH}/LIBS/${LIB_NAME}
+								>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Creates a new library
+	#vmap /softslin/altera14_0/quartus/eda/sim_lib 
 	vmap ${LIB_NAME} ${PROJECT_PATH}/LIBS/${LIB_NAME}					>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Creates a link between the name of the library and its path
 
 	for file in ${VHDL_FILES}
@@ -134,6 +136,7 @@ cat ${PROJECT_PATH}/LOG/${LOG_FILE}
 ##################################################
 
 #vsim -c -L LIB_VHD -do runSim.do LIB_VHD_BENCH.tbench 	#Ligne de commandes
-#vsim -L LIB_VHD -do runSimLu.do LIB_VHD_BENCH.tbench 	#Interface graphique sans warnings
+vsim -L LIB_VHD -do runSimLu.do LIB_VHD_BENCH.tbench 	#Interface graphique sans warnings
 #vsim -L LIB_VHD LIB_VHD_BENCH.tbench 					#Interface graphique
 #vsim -L LIB_VHD -novopt LIB_VHD_BENCH.tbench
+

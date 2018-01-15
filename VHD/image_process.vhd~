@@ -72,7 +72,7 @@ begin
 			nri <= x"FF"-gi; ngi <= x"FF"-gi;  nbi <= x"FF"-gi; -- quart sup droit image N & B negatif
 
 			elsif (X_Cont >= x"0" and X_Cont <= x"AA" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
-			nri <= gi; ngi <= x"00";  nbi <= x"00";				-- tiers inf gauche  image rouge
+			nri <= ri; ngi <= x"00";  nbi <= x"00";				-- tiers inf gauche  image rouge
 
 			elsif (X_Cont >=x"AB" and X_Cont <= x"154" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
 			nri <= x"00"; ngi <= gi;  nbi <= x"00";				-- tiers centre image vert
@@ -80,7 +80,7 @@ begin
 			--		  elsif (X_Cont >=x"155" and X_Cont <= x"1FF" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF" ) then
 			--		  else  -- le reste
 			elsif ( SW1='0') then  
-			nri <= x"00"; ngi <= x"00";  nbi <= gi;				-- tiers droit image bleu		  
+			nri <= x"00"; ngi <= x"00";  nbi <= bi;				-- tiers droit image bleu		  
 			else  -- le reste soit  SW1='1'
 
 ---------------------------------------------------------------------------------------------------------------------------			
@@ -111,14 +111,18 @@ begin
 				--nri <= x"00";
 				--end if;
 ---------------------------------------------------------------------------------------------------------------------------
-				if ((ri <= x"10") or (gi <= x"10") or (bi <= x"10")) then
+				if ((gi <= x"08") ) then
 				nri <= x"00";
 				ngi <= x"00";
 				nbi <= x"00";
-				elsif ((ri <= x"30") or (gi <= x"30") or (bi <= x"30")) then
-				nri <= x"20";
-				ngi <= x"20";
-				nbi <= x"20";
+				elsif ((gi <= x"25")) then
+				nri <= x"35";
+				ngi <= x"35";
+				nbi <= x"35";
+				elsif ((gi <= x"50")) then
+				nri <= x"70";
+				ngi <= x"70";
+				nbi <= x"70";
 				else 
 				nri <= x"FF";
 				ngi <= x"FF";

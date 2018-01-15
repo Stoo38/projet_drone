@@ -1,0 +1,4 @@
+local_counter local_counter
+global_counter global_counter
+send_ppm send_ppm
+#LEGALIZEDMOD_COUNTER 0

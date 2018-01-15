@@ -24,5 +24,7 @@ package constants_package is
 
 	constant const_cyles_ppm				  : std_logic_vector(const_vector_size - 1 downto 0) := "10001001010101000100";		-- 562500 cycles pour une trame PPM complète
 
+	constant const_cycles_pas					: std_logic_vector(const_vector_size -1 downto 0)	 := "00000000000001100010";		--98 (pas/période de clock)
+
 
 end package constants_package;

@@ -1,0 +1,6 @@
+Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
+send_ppm,Top_Level,i_clk,INPUT,1,-,port definition,- 
+send_ppm,Top_Level,i_reset_n,INPUT,1,-,port definition,- 
+send_ppm,Top_Level,i_enable,INPUT,1,-,port definition,- 
+send_ppm,Top_Level,i_reg,INPUT,32,(31:0),port definition,- 
+send_ppm,Top_Level,o_ppm,OUTPUT,1,-,port definition,- 

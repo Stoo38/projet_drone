@@ -1,0 +1,6 @@
+SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
+VALUE@@i_clk@@INPUT@@0@@0@@-@@send_ppm@@No
+VALUE@@i_reset_n@@INPUT@@0@@0@@-@@send_ppm@@No
+VALUE@@i_enable@@INPUT@@0@@0@@-@@send_ppm@@No
+VALUE@@i_reg@@INPUT@@31@@0@@-@@send_ppm@@No
+VALUE@@o_ppm@@OUTPUT@@0@@0@@-@@send_ppm@@No

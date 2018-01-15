@@ -1,0 +1,3888 @@
+(edif send_ppm_synth 
+ (edifVersion 2 0 0)
+ (edifLevel 0)
+ (keywordMap (keywordLevel 0))
+ (status 
+  (written 
+   (timestamp 2018 01 15 09 53 55)
+   (program "Precision RTL Synthesis" (version "2014a.1_64-bit"))
+   (author "Mentor Graphics Corporation")))
+ (external cyclonev 
+  (edifLevel 0)
+  (technology (numberDefinition ))
+  (cell GND (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port Y (direction OUTPUT)))))
+  (cell VCC (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port Y (direction OUTPUT)))))
+  (cell cyclonev_lcell_comb (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port dataa (direction INPUT))
+     (port datab (direction INPUT))
+     (port datac (direction INPUT))
+     (port datad (direction INPUT))
+     (port datae (direction INPUT))
+     (port dataf (direction INPUT))
+     (port datag (direction INPUT))
+     (port cin (direction INPUT))
+     (port sharein (direction INPUT))
+     (port combout (direction OUTPUT))
+     (port sumout (direction OUTPUT))
+     (port cout (direction OUTPUT))
+     (port shareout (direction OUTPUT)))))
+  (cell dffeas (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port d (direction INPUT))
+     (port clk (direction INPUT))
+     (port ena (direction INPUT))
+     (port clrn (direction INPUT))
+     (port prn (direction INPUT))
+     (port aload (direction INPUT))
+     (port asdata (direction INPUT))
+     (port sclr (direction INPUT))
+     (port sload (direction INPUT))
+     (port q (direction OUTPUT)))))
+  (cell NOT (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port IN1 (direction INPUT))
+     (port Y (direction OUTPUT)))))
+  (cell cyclonev_mac (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port accumulate (direction INPUT))
+     (port (array (rename aclr "aclr(1:0)") 2 )(direction INPUT))
+     (port (array (rename ax "ax(26:0)") 27 )(direction INPUT))
+     (port (array (rename ay "ay(26:0)") 27 )(direction INPUT))
+     (port (array (rename az "az(25:0)") 26 )(direction INPUT))
+     (port (array (rename bx "bx(17:0)") 18 )(direction INPUT))
+     (port (array (rename by "by(18:0)") 19 )(direction INPUT))
+     (port (array (rename bz "bz(17:0)") 18 )(direction INPUT))
+     (port (array (rename chainin "chainin(63:0)") 64 )(direction INPUT))
+     (port (array (rename clk "clk(2:0)") 3 )(direction INPUT))
+     (port (array (rename coefsela "coefsela(2:0)") 3 )(direction INPUT))
+     (port (array (rename coefselb "coefselb(2:0)") 3 )(direction INPUT))
+     (port (array (rename ena "ena(2:0)") 3 )(direction INPUT))
+     (port loadconst (direction INPUT))
+     (port negate (direction INPUT))
+     (port (array (rename scanin "scanin(26:0)") 27 )(direction INPUT))
+     (port sub (direction INPUT))
+     (port (array (rename chainout "chainout(63:0)") 64 )(direction OUTPUT))
+     (port dftout (direction OUTPUT))
+     (port (array (rename resulta "resulta(63:0)") 64 )(direction OUTPUT))
+     (port (array (rename resultb "resultb(36:0)") 37 )(direction OUTPUT))
+     (port (array (rename scanout "scanout(26:0)") 27 )(direction OUTPUT)))))
+  (cell cyclonev_io_ibuf (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port i (direction INPUT))
+     (port ibar (direction INPUT))
+     (port dynamicterminationcontrol (direction INPUT))
+     (port o (direction OUTPUT)))))
+  (cell cyclonev_io_obuf (cellType GENERIC)
+   (view NETLIST  (viewType NETLIST)
+    (interface 
+     (port i (direction INPUT))
+     (port oe (direction INPUT))
+     (port dynamicterminationcontrol (direction INPUT))
+     (port (array (rename seriesterminationcontrol "seriesterminationcontrol(15:0)") 16 )(direction INPUT))
+     (port (array (rename parallelterminationcontrol "parallelterminationcontrol(15:0)") 16 )(direction INPUT))
+     (port devoe (direction INPUT))
+     (port o (direction OUTPUT))
+     (port obar (direction OUTPUT))))))
+ (library OPERATORS 
+  (edifLevel 0)
+  (technology (numberDefinition ))
+  (cell modgen_counter_20_0 (cellType GENERIC)
+   (property function (string "modgen_counter"))
+   (property size (string "20"))
+   (property tech (string "armstrong"))
+   (property generics (string "modgen_counter_size20_0_0_sign0_0_up_rise_false_false_true_true_false_false_false_false_small"))
+   (view IMPLEMENTATION  (viewType NETLIST)
+    (interface 
+     (port clock (direction INPUT))
+     (port (array (rename q "q(19:0)") 20 )(direction OUTPUT))
+     (port clk_en (direction INPUT))
+     (port aclear (direction INPUT))
+     (port sload (direction INPUT))
+     (port (array (rename data "data(19:0)") 20 )(direction INPUT))
+     (port aset (direction INPUT))
+     (port sclear (direction INPUT))
+     (port updn (direction INPUT))
+     (port cnt_en (direction INPUT)))
+    (contents 
+     (instance ps_gnd (viewRef NETLIST  (cellRef GND (libraryRef cyclonev ))))
+     (instance ps_vcc (viewRef NETLIST  (cellRef VCC (libraryRef cyclonev ))))
+     (instance ix26069z62827 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62826 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62825 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62824 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62823 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62822 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62821 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62820 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62819 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62818 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62817 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62816 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62815 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62814 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62813 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62812 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62811 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62810 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62809 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix26069z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance reg_q_19_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_18_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_17_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_16_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_15_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_14_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_13_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_12_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_11_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_10_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_9_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_8_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_7_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_6_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_5_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_4_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_3_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_2_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_1_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_q_0_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (net nx25072z3 
+      (joined 
+       (portRef Y (instanceRef ps_gnd ))
+       (portRef sload (instanceRef reg_q_19_ ))
+       (portRef asdata (instanceRef reg_q_19_ ))
+       (portRef sload (instanceRef reg_q_18_ ))
+       (portRef asdata (instanceRef reg_q_18_ ))
+       (portRef sload (instanceRef reg_q_17_ ))
+       (portRef asdata (instanceRef reg_q_17_ ))
+       (portRef sload (instanceRef reg_q_16_ ))
+       (portRef asdata (instanceRef reg_q_16_ ))
+       (portRef sload (instanceRef reg_q_15_ ))
+       (portRef asdata (instanceRef reg_q_15_ ))
+       (portRef sload (instanceRef reg_q_14_ ))
+       (portRef asdata (instanceRef reg_q_14_ ))
+       (portRef sload (instanceRef reg_q_13_ ))
+       (portRef asdata (instanceRef reg_q_13_ ))
+       (portRef sload (instanceRef reg_q_12_ ))
+       (portRef asdata (instanceRef reg_q_12_ ))
+       (portRef sload (instanceRef reg_q_11_ ))
+       (portRef asdata (instanceRef reg_q_11_ ))
+       (portRef sload (instanceRef reg_q_10_ ))
+       (portRef asdata (instanceRef reg_q_10_ ))
+       (portRef sload (instanceRef reg_q_9_ ))
+       (portRef asdata (instanceRef reg_q_9_ ))
+       (portRef sload (instanceRef reg_q_8_ ))
+       (portRef asdata (instanceRef reg_q_8_ ))
+       (portRef sload (instanceRef reg_q_7_ ))
+       (portRef asdata (instanceRef reg_q_7_ ))
+       (portRef sload (instanceRef reg_q_6_ ))
+       (portRef asdata (instanceRef reg_q_6_ ))
+       (portRef sload (instanceRef reg_q_5_ ))
+       (portRef asdata (instanceRef reg_q_5_ ))
+       (portRef sload (instanceRef reg_q_4_ ))
+       (portRef asdata (instanceRef reg_q_4_ ))
+       (portRef sload (instanceRef reg_q_3_ ))
+       (portRef asdata (instanceRef reg_q_3_ ))
+       (portRef sload (instanceRef reg_q_2_ ))
+       (portRef asdata (instanceRef reg_q_2_ ))
+       (portRef sload (instanceRef reg_q_1_ ))
+       (portRef asdata (instanceRef reg_q_1_ ))
+       (portRef sload (instanceRef reg_q_0_ ))
+       (portRef asdata (instanceRef reg_q_0_ ))
+       (portRef dataf (instanceRef ix26069z62827 ))
+       (portRef dataf (instanceRef ix26069z62826 ))
+       (portRef dataf (instanceRef ix26069z62825 ))
+       (portRef dataf (instanceRef ix26069z62824 ))
+       (portRef dataf (instanceRef ix26069z62823 ))
+       (portRef dataf (instanceRef ix26069z62822 ))
+       (portRef dataf (instanceRef ix26069z62821 ))
+       (portRef dataf (instanceRef ix26069z62820 ))
+       (portRef dataf (instanceRef ix26069z62819 ))
+       (portRef dataf (instanceRef ix26069z62818 ))
+       (portRef dataf (instanceRef ix26069z62817 ))
+       (portRef dataf (instanceRef ix26069z62816 ))
+       (portRef dataf (instanceRef ix26069z62815 ))
+       (portRef dataf (instanceRef ix26069z62814 ))
+       (portRef dataf (instanceRef ix26069z62813 ))
+       (portRef dataf (instanceRef ix26069z62812 ))
+       (portRef dataf (instanceRef ix26069z62811 ))
+       (portRef dataf (instanceRef ix26069z62810 ))
+       (portRef dataf (instanceRef ix26069z62809 ))
+       (portRef dataf (instanceRef ix26069z62807 ))))
+     (net nx25072z1 
+      (joined 
+       (portRef Y (instanceRef ps_vcc ))
+       (portRef cin (instanceRef ix26069z62827 ))
+       (portRef ena (instanceRef reg_q_19_ ))
+       (portRef ena (instanceRef reg_q_18_ ))
+       (portRef ena (instanceRef reg_q_17_ ))
+       (portRef ena (instanceRef reg_q_16_ ))
+       (portRef ena (instanceRef reg_q_15_ ))
+       (portRef ena (instanceRef reg_q_14_ ))
+       (portRef ena (instanceRef reg_q_13_ ))
+       (portRef ena (instanceRef reg_q_12_ ))
+       (portRef ena (instanceRef reg_q_11_ ))
+       (portRef ena (instanceRef reg_q_10_ ))
+       (portRef ena (instanceRef reg_q_9_ ))
+       (portRef ena (instanceRef reg_q_8_ ))
+       (portRef ena (instanceRef reg_q_7_ ))
+       (portRef ena (instanceRef reg_q_6_ ))
+       (portRef ena (instanceRef reg_q_5_ ))
+       (portRef ena (instanceRef reg_q_4_ ))
+       (portRef ena (instanceRef reg_q_3_ ))
+       (portRef ena (instanceRef reg_q_2_ ))
+       (portRef ena (instanceRef reg_q_1_ ))
+       (portRef ena (instanceRef reg_q_0_ ))
+       (portRef clrn (instanceRef reg_q_19_ ))
+       (portRef prn (instanceRef reg_q_19_ ))
+       (portRef clrn (instanceRef reg_q_18_ ))
+       (portRef prn (instanceRef reg_q_18_ ))
+       (portRef clrn (instanceRef reg_q_17_ ))
+       (portRef prn (instanceRef reg_q_17_ ))
+       (portRef clrn (instanceRef reg_q_16_ ))
+       (portRef prn (instanceRef reg_q_16_ ))
+       (portRef clrn (instanceRef reg_q_15_ ))
+       (portRef prn (instanceRef reg_q_15_ ))
+       (portRef clrn (instanceRef reg_q_14_ ))
+       (portRef prn (instanceRef reg_q_14_ ))
+       (portRef clrn (instanceRef reg_q_13_ ))
+       (portRef prn (instanceRef reg_q_13_ ))
+       (portRef clrn (instanceRef reg_q_12_ ))
+       (portRef prn (instanceRef reg_q_12_ ))
+       (portRef clrn (instanceRef reg_q_11_ ))
+       (portRef prn (instanceRef reg_q_11_ ))
+       (portRef clrn (instanceRef reg_q_10_ ))
+       (portRef prn (instanceRef reg_q_10_ ))
+       (portRef clrn (instanceRef reg_q_9_ ))
+       (portRef prn (instanceRef reg_q_9_ ))
+       (portRef clrn (instanceRef reg_q_8_ ))
+       (portRef prn (instanceRef reg_q_8_ ))
+       (portRef clrn (instanceRef reg_q_7_ ))
+       (portRef prn (instanceRef reg_q_7_ ))
+       (portRef clrn (instanceRef reg_q_6_ ))
+       (portRef prn (instanceRef reg_q_6_ ))
+       (portRef clrn (instanceRef reg_q_5_ ))
+       (portRef prn (instanceRef reg_q_5_ ))
+       (portRef clrn (instanceRef reg_q_4_ ))
+       (portRef prn (instanceRef reg_q_4_ ))
+       (portRef clrn (instanceRef reg_q_3_ ))
+       (portRef prn (instanceRef reg_q_3_ ))
+       (portRef clrn (instanceRef reg_q_2_ ))
+       (portRef prn (instanceRef reg_q_2_ ))
+       (portRef clrn (instanceRef reg_q_1_ ))
+       (portRef prn (instanceRef reg_q_1_ ))
+       (portRef clrn (instanceRef reg_q_0_ ))
+       (portRef prn (instanceRef reg_q_0_ ))))
+     (net sclear 
+      (joined 
+       (portRef sclear )
+       (portRef sclr (instanceRef reg_q_19_ ))
+       (portRef sclr (instanceRef reg_q_18_ ))
+       (portRef sclr (instanceRef reg_q_17_ ))
+       (portRef sclr (instanceRef reg_q_16_ ))
+       (portRef sclr (instanceRef reg_q_15_ ))
+       (portRef sclr (instanceRef reg_q_14_ ))
+       (portRef sclr (instanceRef reg_q_13_ ))
+       (portRef sclr (instanceRef reg_q_12_ ))
+       (portRef sclr (instanceRef reg_q_11_ ))
+       (portRef sclr (instanceRef reg_q_10_ ))
+       (portRef sclr (instanceRef reg_q_9_ ))
+       (portRef sclr (instanceRef reg_q_8_ ))
+       (portRef sclr (instanceRef reg_q_7_ ))
+       (portRef sclr (instanceRef reg_q_6_ ))
+       (portRef sclr (instanceRef reg_q_5_ ))
+       (portRef sclr (instanceRef reg_q_4_ ))
+       (portRef sclr (instanceRef reg_q_3_ ))
+       (portRef sclr (instanceRef reg_q_2_ ))
+       (portRef sclr (instanceRef reg_q_1_ ))
+       (portRef sclr (instanceRef reg_q_0_ ))))
+     (net clk 
+      (joined 
+       (portRef clock )
+       (portRef clk (instanceRef reg_q_19_ ))
+       (portRef clk (instanceRef reg_q_18_ ))
+       (portRef clk (instanceRef reg_q_17_ ))
+       (portRef clk (instanceRef reg_q_16_ ))
+       (portRef clk (instanceRef reg_q_15_ ))
+       (portRef clk (instanceRef reg_q_14_ ))
+       (portRef clk (instanceRef reg_q_13_ ))
+       (portRef clk (instanceRef reg_q_12_ ))
+       (portRef clk (instanceRef reg_q_11_ ))
+       (portRef clk (instanceRef reg_q_10_ ))
+       (portRef clk (instanceRef reg_q_9_ ))
+       (portRef clk (instanceRef reg_q_8_ ))
+       (portRef clk (instanceRef reg_q_7_ ))
+       (portRef clk (instanceRef reg_q_6_ ))
+       (portRef clk (instanceRef reg_q_5_ ))
+       (portRef clk (instanceRef reg_q_4_ ))
+       (portRef clk (instanceRef reg_q_3_ ))
+       (portRef clk (instanceRef reg_q_2_ ))
+       (portRef clk (instanceRef reg_q_1_ ))
+       (portRef clk (instanceRef reg_q_0_ ))))
+     (net nx26069z39 
+      (joined 
+       (portRef (member q 19))
+       (portRef q (instanceRef reg_q_0_ ))
+       (portRef datad (instanceRef ix26069z62827 ))))
+     (net nx26069z37 
+      (joined 
+       (portRef (member q 18))
+       (portRef q (instanceRef reg_q_1_ ))
+       (portRef datad (instanceRef ix26069z62826 ))))
+     (net nx26069z35 
+      (joined 
+       (portRef (member q 17))
+       (portRef q (instanceRef reg_q_2_ ))
+       (portRef datad (instanceRef ix26069z62825 ))))
+     (net nx26069z33 
+      (joined 
+       (portRef (member q 16))
+       (portRef q (instanceRef reg_q_3_ ))
+       (portRef datad (instanceRef ix26069z62824 ))))
+     (net nx26069z31 
+      (joined 
+       (portRef (member q 15))
+       (portRef q (instanceRef reg_q_4_ ))
+       (portRef datad (instanceRef ix26069z62823 ))))
+     (net nx26069z29 
+      (joined 
+       (portRef (member q 14))
+       (portRef q (instanceRef reg_q_5_ ))
+       (portRef datad (instanceRef ix26069z62822 ))))
+     (net nx26069z27 
+      (joined 
+       (portRef (member q 13))
+       (portRef q (instanceRef reg_q_6_ ))
+       (portRef datad (instanceRef ix26069z62821 ))))
+     (net nx26069z25 
+      (joined 
+       (portRef (member q 12))
+       (portRef q (instanceRef reg_q_7_ ))
+       (portRef datad (instanceRef ix26069z62820 ))))
+     (net nx26069z23 
+      (joined 
+       (portRef (member q 11))
+       (portRef q (instanceRef reg_q_8_ ))
+       (portRef datad (instanceRef ix26069z62819 ))))
+     (net nx26069z21 
+      (joined 
+       (portRef (member q 10))
+       (portRef q (instanceRef reg_q_9_ ))
+       (portRef datad (instanceRef ix26069z62818 ))))
+     (net nx26069z19 
+      (joined 
+       (portRef (member q 9))
+       (portRef q (instanceRef reg_q_10_ ))
+       (portRef datad (instanceRef ix26069z62817 ))))
+     (net nx26069z17 
+      (joined 
+       (portRef (member q 8))
+       (portRef q (instanceRef reg_q_11_ ))
+       (portRef datad (instanceRef ix26069z62816 ))))
+     (net nx26069z15 
+      (joined 
+       (portRef (member q 7))
+       (portRef q (instanceRef reg_q_12_ ))
+       (portRef datad (instanceRef ix26069z62815 ))))
+     (net nx26069z13 
+      (joined 
+       (portRef (member q 6))
+       (portRef q (instanceRef reg_q_13_ ))
+       (portRef datad (instanceRef ix26069z62814 ))))
+     (net nx26069z11 
+      (joined 
+       (portRef (member q 5))
+       (portRef q (instanceRef reg_q_14_ ))
+       (portRef datad (instanceRef ix26069z62813 ))))
+     (net nx26069z9 
+      (joined 
+       (portRef (member q 4))
+       (portRef q (instanceRef reg_q_15_ ))
+       (portRef datad (instanceRef ix26069z62812 ))))
+     (net nx26069z7 
+      (joined 
+       (portRef (member q 3))
+       (portRef q (instanceRef reg_q_16_ ))
+       (portRef datad (instanceRef ix26069z62811 ))))
+     (net nx26069z5 
+      (joined 
+       (portRef (member q 2))
+       (portRef q (instanceRef reg_q_17_ ))
+       (portRef datad (instanceRef ix26069z62810 ))))
+     (net nx26069z3 
+      (joined 
+       (portRef (member q 1))
+       (portRef q (instanceRef reg_q_18_ ))
+       (portRef datad (instanceRef ix26069z62809 ))))
+     (net nx60520z1 
+      (joined 
+       (portRef (member q 0))
+       (portRef q (instanceRef reg_q_19_ ))
+       (portRef datad (instanceRef ix26069z62807 ))))
+     (net inc_d_0_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62827 ))
+       (portRef d (instanceRef reg_q_0_ ))))
+     (net inc_d_1_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62826 ))
+       (portRef d (instanceRef reg_q_1_ ))))
+     (net inc_d_2_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62825 ))
+       (portRef d (instanceRef reg_q_2_ ))))
+     (net inc_d_3_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62824 ))
+       (portRef d (instanceRef reg_q_3_ ))))
+     (net inc_d_4_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62823 ))
+       (portRef d (instanceRef reg_q_4_ ))))
+     (net inc_d_5_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62822 ))
+       (portRef d (instanceRef reg_q_5_ ))))
+     (net inc_d_6_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62821 ))
+       (portRef d (instanceRef reg_q_6_ ))))
+     (net inc_d_7_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62820 ))
+       (portRef d (instanceRef reg_q_7_ ))))
+     (net inc_d_8_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62819 ))
+       (portRef d (instanceRef reg_q_8_ ))))
+     (net inc_d_9_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62818 ))
+       (portRef d (instanceRef reg_q_9_ ))))
+     (net inc_d_10_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62817 ))
+       (portRef d (instanceRef reg_q_10_ ))))
+     (net inc_d_11_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62816 ))
+       (portRef d (instanceRef reg_q_11_ ))))
+     (net inc_d_12_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62815 ))
+       (portRef d (instanceRef reg_q_12_ ))))
+     (net inc_d_13_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62814 ))
+       (portRef d (instanceRef reg_q_13_ ))))
+     (net inc_d_14_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62813 ))
+       (portRef d (instanceRef reg_q_14_ ))))
+     (net inc_d_15_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62812 ))
+       (portRef d (instanceRef reg_q_15_ ))))
+     (net inc_d_16_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62811 ))
+       (portRef d (instanceRef reg_q_16_ ))))
+     (net inc_d_17_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62810 ))
+       (portRef d (instanceRef reg_q_17_ ))))
+     (net inc_d_18_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62809 ))
+       (portRef d (instanceRef reg_q_18_ ))))
+     (net inc_d_19_ 
+      (joined 
+       (portRef sumout (instanceRef ix26069z62807 ))
+       (portRef d (instanceRef reg_q_19_ ))))
+     (net nx26069z38 
+      (joined 
+       (portRef cout (instanceRef ix26069z62827 ))
+       (portRef cin (instanceRef ix26069z62826 ))))
+     (net nx26069z36 
+      (joined 
+       (portRef cout (instanceRef ix26069z62826 ))
+       (portRef cin (instanceRef ix26069z62825 ))))
+     (net nx26069z34 
+      (joined 
+       (portRef cout (instanceRef ix26069z62825 ))
+       (portRef cin (instanceRef ix26069z62824 ))))
+     (net nx26069z32 
+      (joined 
+       (portRef cout (instanceRef ix26069z62824 ))
+       (portRef cin (instanceRef ix26069z62823 ))))
+     (net nx26069z30 
+      (joined 
+       (portRef cout (instanceRef ix26069z62823 ))
+       (portRef cin (instanceRef ix26069z62822 ))))
+     (net nx26069z28 
+      (joined 
+       (portRef cout (instanceRef ix26069z62822 ))
+       (portRef cin (instanceRef ix26069z62821 ))))
+     (net nx26069z26 
+      (joined 
+       (portRef cout (instanceRef ix26069z62821 ))
+       (portRef cin (instanceRef ix26069z62820 ))))
+     (net nx26069z24 
+      (joined 
+       (portRef cout (instanceRef ix26069z62820 ))
+       (portRef cin (instanceRef ix26069z62819 ))))
+     (net nx26069z22 
+      (joined 
+       (portRef cout (instanceRef ix26069z62819 ))
+       (portRef cin (instanceRef ix26069z62818 ))))
+     (net nx26069z20 
+      (joined 
+       (portRef cout (instanceRef ix26069z62818 ))
+       (portRef cin (instanceRef ix26069z62817 ))))
+     (net nx26069z18 
+      (joined 
+       (portRef cout (instanceRef ix26069z62817 ))
+       (portRef cin (instanceRef ix26069z62816 ))))
+     (net nx26069z16 
+      (joined 
+       (portRef cout (instanceRef ix26069z62816 ))
+       (portRef cin (instanceRef ix26069z62815 ))))
+     (net nx26069z14 
+      (joined 
+       (portRef cout (instanceRef ix26069z62815 ))
+       (portRef cin (instanceRef ix26069z62814 ))))
+     (net nx26069z12 
+      (joined 
+       (portRef cout (instanceRef ix26069z62814 ))
+       (portRef cin (instanceRef ix26069z62813 ))))
+     (net nx26069z10 
+      (joined 
+       (portRef cout (instanceRef ix26069z62813 ))
+       (portRef cin (instanceRef ix26069z62812 ))))
+     (net nx26069z8 
+      (joined 
+       (portRef cout (instanceRef ix26069z62812 ))
+       (portRef cin (instanceRef ix26069z62811 ))))
+     (net nx26069z6 
+      (joined 
+       (portRef cout (instanceRef ix26069z62811 ))
+       (portRef cin (instanceRef ix26069z62810 ))))
+     (net nx26069z4 
+      (joined 
+       (portRef cout (instanceRef ix26069z62810 ))
+       (portRef cin (instanceRef ix26069z62809 ))))
+     (net nx26069z2 
+      (joined 
+       (portRef cout (instanceRef ix26069z62809 ))
+       (portRef cin (instanceRef ix26069z62807 ))))))))
+ (library work 
+  (edifLevel 0)
+  (technology (numberDefinition ))
+  (cell send_ppm_synth (cellType GENERIC)
+   (view rtl  (viewType NETLIST)
+    (interface 
+     (port i_clk (direction INPUT)
+      (property INFF (string "FALSE")))
+     (port i_reset_n (direction INPUT))
+     (port (array (rename i_reg "i_reg(31:0)") 32 )(direction INPUT))
+     (port o_ppm (direction OUTPUT)))
+    (property DESIGN_IS_RTL (string "NO"))
+    (contents 
+     (instance local_counter1_modgen_counter_o_count (viewRef IMPLEMENTATION  (cellRef modgen_counter_20_0 (libraryRef OPERATORS ))))
+     (instance ix19104z1327 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1319 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1331 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1346 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1344 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1336 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1349 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1364 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1362 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1354 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1367 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1382 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1380 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1372 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1385 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1391 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1396 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix18107z4668 (viewRef NETLIST  (cellRef GND (libraryRef cyclonev ))))
+     (instance cyclonev_mac_0 (viewRef NETLIST  (cellRef cyclonev_mac (libraryRef cyclonev )))
+      (property ax_width (string "18"))
+      (property ay_scan_in_width (string "18"))
+      (property az_width (string "0"))
+      (property bx_width (string "18"))
+      (property by_width (string "18"))
+      (property bz_width (string "0"))
+      (property scan_out_width (string "0"))
+      (property result_a_width (string "16"))
+      (property result_b_width (string "1"))
+      (property operation_mode (string "m18x18_plus36"))
+      (property mode_sub_location (string "0"))
+      (property operand_source_max (string "input"))
+      (property operand_source_may (string "input"))
+      (property operand_source_mbx (string "input"))
+      (property operand_source_mby (string "input"))
+      (property preadder_subtract_a (string "false"))
+      (property preadder_subtract_b (string "false"))
+      (property signed_max (string "false"))
+      (property signed_may (string "false"))
+      (property signed_mbx (string "false"))
+      (property signed_mby (string "false"))
+      (property ay_use_scan_in (string "false"))
+      (property by_use_scan_in (string "false"))
+      (property delay_scan_out_ay (string "false"))
+      (property delay_scan_out_by (string "false"))
+      (property use_chainadder (string "false"))
+      (property enable_double_accum (string "false"))
+      (property load_const_value (string "0"))
+      (property coef_a_0 (string "0"))
+      (property coef_a_1 (string "0"))
+      (property coef_a_2 (string "0"))
+      (property coef_a_3 (string "0"))
+      (property coef_a_4 (string "0"))
+      (property coef_a_5 (string "0"))
+      (property coef_a_6 (string "0"))
+      (property coef_a_7 (string "0"))
+      (property coef_b_0 (string "0"))
+      (property coef_b_1 (string "0"))
+      (property coef_b_2 (string "0"))
+      (property coef_b_3 (string "0"))
+      (property coef_b_4 (string "0"))
+      (property coef_b_5 (string "0"))
+      (property coef_b_6 (string "0"))
+      (property coef_b_7 (string "0"))
+      (property ax_clock (string "none"))
+      (property ay_scan_in_clock (string "none"))
+      (property az_clock (string "none"))
+      (property bx_clock (string "none"))
+      (property by_clock (string "none"))
+      (property bz_clock (string "none"))
+      (property coef_sel_a_clock (string "none"))
+      (property coef_sel_b_clock (string "none"))
+      (property sub_clock (string "none"))
+      (property negate_clock (string "none"))
+      (property accumulate_clock (string "none"))
+      (property load_const_clock (string "none"))
+      (property output_clock (string "none")))
+     (instance cyclonev_mac_1 (viewRef NETLIST  (cellRef cyclonev_mac (libraryRef cyclonev )))
+      (property ax_width (string "18"))
+      (property ay_scan_in_width (string "18"))
+      (property az_width (string "0"))
+      (property bx_width (string "18"))
+      (property by_width (string "18"))
+      (property bz_width (string "0"))
+      (property scan_out_width (string "0"))
+      (property result_a_width (string "16"))
+      (property result_b_width (string "1"))
+      (property operation_mode (string "m18x18_plus36"))
+      (property mode_sub_location (string "0"))
+      (property operand_source_max (string "input"))
+      (property operand_source_may (string "input"))
+      (property operand_source_mbx (string "input"))
+      (property operand_source_mby (string "input"))
+      (property preadder_subtract_a (string "false"))
+      (property preadder_subtract_b (string "false"))
+      (property signed_max (string "false"))
+      (property signed_may (string "false"))
+      (property signed_mbx (string "false"))
+      (property signed_mby (string "false"))
+      (property ay_use_scan_in (string "false"))
+      (property by_use_scan_in (string "false"))
+      (property delay_scan_out_ay (string "false"))
+      (property delay_scan_out_by (string "false"))
+      (property use_chainadder (string "false"))
+      (property enable_double_accum (string "false"))
+      (property load_const_value (string "0"))
+      (property coef_a_0 (string "0"))
+      (property coef_a_1 (string "0"))
+      (property coef_a_2 (string "0"))
+      (property coef_a_3 (string "0"))
+      (property coef_a_4 (string "0"))
+      (property coef_a_5 (string "0"))
+      (property coef_a_6 (string "0"))
+      (property coef_a_7 (string "0"))
+      (property coef_b_0 (string "0"))
+      (property coef_b_1 (string "0"))
+      (property coef_b_2 (string "0"))
+      (property coef_b_3 (string "0"))
+      (property coef_b_4 (string "0"))
+      (property coef_b_5 (string "0"))
+      (property coef_b_6 (string "0"))
+      (property coef_b_7 (string "0"))
+      (property ax_clock (string "none"))
+      (property ay_scan_in_clock (string "none"))
+      (property az_clock (string "none"))
+      (property bx_clock (string "none"))
+      (property by_clock (string "none"))
+      (property bz_clock (string "none"))
+      (property coef_sel_a_clock (string "none"))
+      (property coef_sel_b_clock (string "none"))
+      (property sub_clock (string "none"))
+      (property negate_clock (string "none"))
+      (property accumulate_clock (string "none"))
+      (property load_const_clock (string "none"))
+      (property output_clock (string "none")))
+     (instance cyclonev_mac_2 (viewRef NETLIST  (cellRef cyclonev_mac (libraryRef cyclonev )))
+      (property ax_width (string "18"))
+      (property ay_scan_in_width (string "18"))
+      (property az_width (string "0"))
+      (property bx_width (string "18"))
+      (property by_width (string "18"))
+      (property bz_width (string "0"))
+      (property scan_out_width (string "0"))
+      (property result_a_width (string "16"))
+      (property result_b_width (string "1"))
+      (property operation_mode (string "m18x18_plus36"))
+      (property mode_sub_location (string "0"))
+      (property operand_source_max (string "input"))
+      (property operand_source_may (string "input"))
+      (property operand_source_mbx (string "input"))
+      (property operand_source_mby (string "input"))
+      (property preadder_subtract_a (string "false"))
+      (property preadder_subtract_b (string "false"))
+      (property signed_max (string "false"))
+      (property signed_may (string "false"))
+      (property signed_mbx (string "false"))
+      (property signed_mby (string "false"))
+      (property ay_use_scan_in (string "false"))
+      (property by_use_scan_in (string "false"))
+      (property delay_scan_out_ay (string "false"))
+      (property delay_scan_out_by (string "false"))
+      (property use_chainadder (string "false"))
+      (property enable_double_accum (string "false"))
+      (property load_const_value (string "0"))
+      (property coef_a_0 (string "0"))
+      (property coef_a_1 (string "0"))
+      (property coef_a_2 (string "0"))
+      (property coef_a_3 (string "0"))
+      (property coef_a_4 (string "0"))
+      (property coef_a_5 (string "0"))
+      (property coef_a_6 (string "0"))
+      (property coef_a_7 (string "0"))
+      (property coef_b_0 (string "0"))
+      (property coef_b_1 (string "0"))
+      (property coef_b_2 (string "0"))
+      (property coef_b_3 (string "0"))
+      (property coef_b_4 (string "0"))
+      (property coef_b_5 (string "0"))
+      (property coef_b_6 (string "0"))
+      (property coef_b_7 (string "0"))
+      (property ax_clock (string "none"))
+      (property ay_scan_in_clock (string "none"))
+      (property az_clock (string "none"))
+      (property bx_clock (string "none"))
+      (property by_clock (string "none"))
+      (property bz_clock (string "none"))
+      (property coef_sel_a_clock (string "none"))
+      (property coef_sel_b_clock (string "none"))
+      (property sub_clock (string "none"))
+      (property negate_clock (string "none"))
+      (property accumulate_clock (string "none"))
+      (property load_const_clock (string "none"))
+      (property output_clock (string "none")))
+     (instance cyclonev_mac_3 (viewRef NETLIST  (cellRef cyclonev_mac (libraryRef cyclonev )))
+      (property ax_width (string "18"))
+      (property ay_scan_in_width (string "18"))
+      (property az_width (string "0"))
+      (property bx_width (string "18"))
+      (property by_width (string "18"))
+      (property bz_width (string "0"))
+      (property scan_out_width (string "0"))
+      (property result_a_width (string "16"))
+      (property result_b_width (string "1"))
+      (property operation_mode (string "m18x18_plus36"))
+      (property mode_sub_location (string "0"))
+      (property operand_source_max (string "input"))
+      (property operand_source_may (string "input"))
+      (property operand_source_mbx (string "input"))
+      (property operand_source_mby (string "input"))
+      (property preadder_subtract_a (string "false"))
+      (property preadder_subtract_b (string "false"))
+      (property signed_max (string "false"))
+      (property signed_may (string "false"))
+      (property signed_mbx (string "false"))
+      (property signed_mby (string "false"))
+      (property ay_use_scan_in (string "false"))
+      (property by_use_scan_in (string "false"))
+      (property delay_scan_out_ay (string "false"))
+      (property delay_scan_out_by (string "false"))
+      (property use_chainadder (string "false"))
+      (property enable_double_accum (string "false"))
+      (property load_const_value (string "0"))
+      (property coef_a_0 (string "0"))
+      (property coef_a_1 (string "0"))
+      (property coef_a_2 (string "0"))
+      (property coef_a_3 (string "0"))
+      (property coef_a_4 (string "0"))
+      (property coef_a_5 (string "0"))
+      (property coef_a_6 (string "0"))
+      (property coef_a_7 (string "0"))
+      (property coef_b_0 (string "0"))
+      (property coef_b_1 (string "0"))
+      (property coef_b_2 (string "0"))
+      (property coef_b_3 (string "0"))
+      (property coef_b_4 (string "0"))
+      (property coef_b_5 (string "0"))
+      (property coef_b_6 (string "0"))
+      (property coef_b_7 (string "0"))
+      (property ax_clock (string "none"))
+      (property ay_scan_in_clock (string "none"))
+      (property az_clock (string "none"))
+      (property bx_clock (string "none"))
+      (property by_clock (string "none"))
+      (property bz_clock (string "none"))
+      (property coef_sel_a_clock (string "none"))
+      (property coef_sel_b_clock (string "none"))
+      (property sub_clock (string "none"))
+      (property negate_clock (string "none"))
+      (property accumulate_clock (string "none"))
+      (property load_const_clock (string "none"))
+      (property output_clock (string "none")))
+     (instance PWR (viewRef NETLIST  (cellRef VCC (libraryRef cyclonev ))))
+     (instance ix45248z1318 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z1328 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance GND (viewRef NETLIST  (cellRef GND (libraryRef cyclonev ))))
+     (instance i_clk_ibuf (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reset_n_ibuf (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_31_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_30_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_29_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_28_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_27_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_26_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_25_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_24_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_23_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_22_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_21_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_20_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_19_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_18_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_17_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_16_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_15_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_14_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_13_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_12_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_11_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_10_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_9_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_8_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_7_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_6_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_5_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_4_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_3_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_2_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_1_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance i_reg_ibuf_0_ (viewRef NETLIST  (cellRef cyclonev_io_ibuf (libraryRef cyclonev ))))
+     (instance o_ppm_obuf (viewRef NETLIST  (cellRef cyclonev_io_obuf (libraryRef cyclonev ))))
+     (instance ix1171_repl (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix49530z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix5349z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix45248z1317 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix49529z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix25042z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix49528z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix55433z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix49527z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix45248z1315 (viewRef NETLIST  (cellRef NOT (libraryRef cyclonev ))))
+     (instance ix19104z62818 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62810 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62822 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62837 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62835 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62827 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62840 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62855 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62853 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62845 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62858 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62873 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62871 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62863 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62876 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62882 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62887 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62815 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62814 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62813 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62825 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62832 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62831 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62830 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62843 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62850 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62849 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62848 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62861 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62868 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62867 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62866 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000faa00000a55a"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62879 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000fcc00000c33c"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62885 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000aaaa0000aaaa"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62890 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000aaaa0000aaaa"))
+      (property shared_arith (string "on")))
+     (instance ix19104z62817 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62816 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62812 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62824 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62834 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62833 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62829 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62842 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62852 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62851 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62847 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62860 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62870 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62869 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62865 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62878 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62884 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62889 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "000000ff0000ff00")))
+     (instance ix19104z62886 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "00000f0f0000f0f0")))
+     (instance ix5537z62814 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff01010426"))
+      (property extended_lut (string "on")))
+     (instance reg_sig_state_2_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_sig_state_1_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_sig_state_0_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_7_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_6_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_5_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_4_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_3_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_2_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_1_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_0_ay_0_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_7_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_6_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_5_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_4_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_3_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_2_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_1_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_1_ay_0_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_7_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_6_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_5_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_4_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_3_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_2_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_1_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_2_ay_0_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_7_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_6_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_5_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_4_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_3_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_2_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_1_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_pipe_cyclonev_mac_3_ay_0_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_sig_out_ppm (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_current_state_4_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_current_state_3_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_current_state_2_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance reg_current_state_1_ (viewRef NETLIST  (cellRef dffeas (libraryRef cyclonev )))
+      (property synch_mode (string "on"))
+      (property operation_mode (string "normal"))
+      (property lut_mask (string "aaaa")))
+     (instance ix19104z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "a0a0a0b3a0a0a0a0")))
+     (instance ix18107z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000ffffffffffff")))
+     (instance ix24215z62809 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffffd")))
+     (instance ix5537z62808 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "5555555555555557")))
+     (instance ix24215z62808 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff000f0000")))
+     (instance ix5537z62844 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffffc")))
+     (instance ix5537z62813 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffff0")))
+     (instance ix22221z62810 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffffc")))
+     (instance ix22221z62808 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000ffffffffffff")))
+     (instance ix5537z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "3f333333ff333333")))
+     (instance ix24215z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "f0f0c0c3f0f0000f")))
+     (instance ix23218z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "f0f0a0b4f0f0003c")))
+     (instance ix22221z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "cccc88c9cccc00c3")))
+     (instance ix22221z62809 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "f8f8f8fcf8f8f8f8")))
+     (instance ix19104z62881 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0000ffffffff0000")))
+     (instance ix19104z62808 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffffc")))
+     (instance ix5537z62833 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "5555555555555557")))
+     (instance ix19104z62880 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffbffbeffeffff")))
+     (instance ix19104z62875 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix19104z62862 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffff3fcffffff3fc")))
+     (instance ix19104z62857 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix19104z62844 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffff3fcffffff3fc")))
+     (instance ix19104z62839 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix19104z62826 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffff3fcffffff3fc")))
+     (instance ix19104z62821 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix19104z62809 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffff3fcffffff3fc")))
+     (instance ix5537z62852 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62851 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62850 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62849 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62848 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62847 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62846 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62845 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62843 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62842 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62841 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62840 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62839 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffff0")))
+     (instance ix5537z62838 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62837 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62836 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62835 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62834 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffff0")))
+     (instance ix5537z62832 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62831 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62830 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62829 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62828 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62827 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62826 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62825 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62823 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62822 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62821 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62820 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62819 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62818 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62817 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "0ffff0ffff0ffff0")))
+     (instance ix5537z62816 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff3fcff3fc")))
+     (instance ix5537z62824 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffffc")))
+     (instance ix5537z62815 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffffffffc")))
+     (instance ix5537z62812 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffff0fffffffffff")))
+     (instance ix5537z62811 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "fffffffffff0ffff")))
+     (instance ix5537z62810 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ff0fffffffffffff")))
+     (instance ix5537z62809 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffffffffff0f")))
+     (instance ix45248z62808 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "ffffffff0000ffff")))
+     (instance ix20101z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "00000000ffff0000")))
+     (instance ix17110z62807 (viewRef NETLIST  (cellRef cyclonev_lcell_comb (libraryRef cyclonev )))
+      (property lut_mask (string "00ff000000000000")))
+     (net i_clk 
+      (joined 
+       (portRef i_clk )
+       (portRef i (instanceRef i_clk_ibuf ))))
+     (net i_reset_n 
+      (joined 
+       (portRef i_reset_n )
+       (portRef i (instanceRef i_reset_n_ibuf ))))
+     (net i_reg_31_ 
+      (joined 
+       (portRef (member i_reg 0))
+       (portRef i (instanceRef i_reg_ibuf_31_ ))))
+     (net i_reg_30_ 
+      (joined 
+       (portRef (member i_reg 1))
+       (portRef i (instanceRef i_reg_ibuf_30_ ))))
+     (net i_reg_29_ 
+      (joined 
+       (portRef (member i_reg 2))
+       (portRef i (instanceRef i_reg_ibuf_29_ ))))
+     (net i_reg_28_ 
+      (joined 
+       (portRef (member i_reg 3))
+       (portRef i (instanceRef i_reg_ibuf_28_ ))))
+     (net i_reg_27_ 
+      (joined 
+       (portRef (member i_reg 4))
+       (portRef i (instanceRef i_reg_ibuf_27_ ))))
+     (net i_reg_26_ 
+      (joined 
+       (portRef (member i_reg 5))
+       (portRef i (instanceRef i_reg_ibuf_26_ ))))
+     (net i_reg_25_ 
+      (joined 
+       (portRef (member i_reg 6))
+       (portRef i (instanceRef i_reg_ibuf_25_ ))))
+     (net i_reg_24_ 
+      (joined 
+       (portRef (member i_reg 7))
+       (portRef i (instanceRef i_reg_ibuf_24_ ))))
+     (net i_reg_23_ 
+      (joined 
+       (portRef (member i_reg 8))
+       (portRef i (instanceRef i_reg_ibuf_23_ ))))
+     (net i_reg_22_ 
+      (joined 
+       (portRef (member i_reg 9))
+       (portRef i (instanceRef i_reg_ibuf_22_ ))))
+     (net i_reg_21_ 
+      (joined 
+       (portRef (member i_reg 10))
+       (portRef i (instanceRef i_reg_ibuf_21_ ))))
+     (net i_reg_20_ 
+      (joined 
+       (portRef (member i_reg 11))
+       (portRef i (instanceRef i_reg_ibuf_20_ ))))
+     (net i_reg_19_ 
+      (joined 
+       (portRef (member i_reg 12))
+       (portRef i (instanceRef i_reg_ibuf_19_ ))))
+     (net i_reg_18_ 
+      (joined 
+       (portRef (member i_reg 13))
+       (portRef i (instanceRef i_reg_ibuf_18_ ))))
+     (net i_reg_17_ 
+      (joined 
+       (portRef (member i_reg 14))
+       (portRef i (instanceRef i_reg_ibuf_17_ ))))
+     (net i_reg_16_ 
+      (joined 
+       (portRef (member i_reg 15))
+       (portRef i (instanceRef i_reg_ibuf_16_ ))))
+     (net i_reg_15_ 
+      (joined 
+       (portRef (member i_reg 16))
+       (portRef i (instanceRef i_reg_ibuf_15_ ))))
+     (net i_reg_14_ 
+      (joined 
+       (portRef (member i_reg 17))
+       (portRef i (instanceRef i_reg_ibuf_14_ ))))
+     (net i_reg_13_ 
+      (joined 
+       (portRef (member i_reg 18))
+       (portRef i (instanceRef i_reg_ibuf_13_ ))))
+     (net i_reg_12_ 
+      (joined 
+       (portRef (member i_reg 19))
+       (portRef i (instanceRef i_reg_ibuf_12_ ))))
+     (net i_reg_11_ 
+      (joined 
+       (portRef (member i_reg 20))
+       (portRef i (instanceRef i_reg_ibuf_11_ ))))
+     (net i_reg_10_ 
+      (joined 
+       (portRef (member i_reg 21))
+       (portRef i (instanceRef i_reg_ibuf_10_ ))))
+     (net i_reg_9_ 
+      (joined 
+       (portRef (member i_reg 22))
+       (portRef i (instanceRef i_reg_ibuf_9_ ))))
+     (net i_reg_8_ 
+      (joined 
+       (portRef (member i_reg 23))
+       (portRef i (instanceRef i_reg_ibuf_8_ ))))
+     (net i_reg_7_ 
+      (joined 
+       (portRef (member i_reg 24))
+       (portRef i (instanceRef i_reg_ibuf_7_ ))))
+     (net i_reg_6_ 
+      (joined 
+       (portRef (member i_reg 25))
+       (portRef i (instanceRef i_reg_ibuf_6_ ))))
+     (net i_reg_5_ 
+      (joined 
+       (portRef (member i_reg 26))
+       (portRef i (instanceRef i_reg_ibuf_5_ ))))
+     (net i_reg_4_ 
+      (joined 
+       (portRef (member i_reg 27))
+       (portRef i (instanceRef i_reg_ibuf_4_ ))))
+     (net i_reg_3_ 
+      (joined 
+       (portRef (member i_reg 28))
+       (portRef i (instanceRef i_reg_ibuf_3_ ))))
+     (net i_reg_2_ 
+      (joined 
+       (portRef (member i_reg 29))
+       (portRef i (instanceRef i_reg_ibuf_2_ ))))
+     (net i_reg_1_ 
+      (joined 
+       (portRef (member i_reg 30))
+       (portRef i (instanceRef i_reg_ibuf_1_ ))))
+     (net i_reg_0_ 
+      (joined 
+       (portRef (member i_reg 31))
+       (portRef i (instanceRef i_reg_ibuf_0_ ))))
+     (net o_ppm_dup_0 
+      (joined 
+       (portRef q (instanceRef reg_sig_out_ppm ))
+       (portRef i (instanceRef o_ppm_obuf ))))
+     (net sig_out_local_count_19_ 
+      (joined 
+       (portRef (member q 0)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef dataf (instanceRef ix5537z62813 ))
+       (portRef dataf (instanceRef ix19104z62880 ))))
+     (net sig_out_local_count_18_ 
+      (joined 
+       (portRef (member q 1)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datae (instanceRef ix5537z62813 ))
+       (portRef datae (instanceRef ix19104z62880 ))))
+     (net sig_out_local_count_17_ 
+      (joined 
+       (portRef (member q 2)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datad (instanceRef ix5537z62813 ))
+       (portRef datad (instanceRef ix19104z62880 ))))
+     (net sig_out_local_count_16_ 
+      (joined 
+       (portRef (member q 3)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix5537z62813 ))
+       (portRef datae (instanceRef ix19104z62881 ))))
+     (net sig_out_local_count_15_ 
+      (joined 
+       (portRef (member q 4)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62862 ))
+       (portRef datae (instanceRef ix5537z62851 ))
+       (portRef dataf (instanceRef ix5537z62843 ))
+       (portRef datae (instanceRef ix5537z62831 ))
+       (portRef datae (instanceRef ix5537z62822 ))
+       (portRef dataf (instanceRef ix5537z62809 ))))
+     (net sig_out_local_count_14_ 
+      (joined 
+       (portRef (member q 5)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datab (instanceRef ix19104z62862 ))
+       (portRef datad (instanceRef ix5537z62851 ))
+       (portRef datae (instanceRef ix5537z62843 ))
+       (portRef datad (instanceRef ix5537z62831 ))
+       (portRef datad (instanceRef ix5537z62822 ))
+       (portRef datae (instanceRef ix5537z62809 ))))
+     (net sig_out_local_count_13_ 
+      (joined 
+       (portRef (member q 6)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datad (instanceRef ix19104z62875 ))
+       (portRef dataf (instanceRef ix5537z62852 ))
+       (portRef dataf (instanceRef ix5537z62842 ))
+       (portRef dataf (instanceRef ix5537z62832 ))
+       (portRef dataf (instanceRef ix5537z62823 ))
+       (portRef datad (instanceRef ix5537z62809 ))))
+     (net sig_out_local_count_12_ 
+      (joined 
+       (portRef (member q 7)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62875 ))
+       (portRef datae (instanceRef ix5537z62852 ))
+       (portRef datae (instanceRef ix5537z62842 ))
+       (portRef datae (instanceRef ix5537z62832 ))
+       (portRef datae (instanceRef ix5537z62823 ))
+       (portRef datac (instanceRef ix5537z62809 ))))
+     (net sig_out_local_count_11_ 
+      (joined 
+       (portRef (member q 8)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62844 ))
+       (portRef datae (instanceRef ix5537z62849 ))
+       (portRef dataf (instanceRef ix5537z62841 ))
+       (portRef datae (instanceRef ix5537z62829 ))
+       (portRef datae (instanceRef ix5537z62820 ))
+       (portRef dataf (instanceRef ix5537z62810 ))))
+     (net sig_out_local_count_10_ 
+      (joined 
+       (portRef (member q 9)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datab (instanceRef ix19104z62844 ))
+       (portRef datad (instanceRef ix5537z62849 ))
+       (portRef datae (instanceRef ix5537z62841 ))
+       (portRef datad (instanceRef ix5537z62829 ))
+       (portRef datad (instanceRef ix5537z62820 ))
+       (portRef datae (instanceRef ix5537z62810 ))))
+     (net sig_out_local_count_9_ 
+      (joined 
+       (portRef (member q 10)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datad (instanceRef ix19104z62857 ))
+       (portRef dataf (instanceRef ix5537z62850 ))
+       (portRef dataf (instanceRef ix5537z62840 ))
+       (portRef dataf (instanceRef ix5537z62830 ))
+       (portRef dataf (instanceRef ix5537z62821 ))
+       (portRef datad (instanceRef ix5537z62810 ))))
+     (net sig_out_local_count_8_ 
+      (joined 
+       (portRef (member q 11)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62857 ))
+       (portRef datae (instanceRef ix5537z62850 ))
+       (portRef datae (instanceRef ix5537z62840 ))
+       (portRef datae (instanceRef ix5537z62830 ))
+       (portRef datae (instanceRef ix5537z62821 ))
+       (portRef datac (instanceRef ix5537z62810 ))))
+     (net sig_out_local_count_7_ 
+      (joined 
+       (portRef (member q 12)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62826 ))
+       (portRef datae (instanceRef ix5537z62847 ))
+       (portRef dataf (instanceRef ix5537z62838 ))
+       (portRef datae (instanceRef ix5537z62827 ))
+       (portRef datae (instanceRef ix5537z62818 ))
+       (portRef dataf (instanceRef ix5537z62811 ))))
+     (net sig_out_local_count_6_ 
+      (joined 
+       (portRef (member q 13)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datab (instanceRef ix19104z62826 ))
+       (portRef datad (instanceRef ix5537z62847 ))
+       (portRef datae (instanceRef ix5537z62838 ))
+       (portRef datad (instanceRef ix5537z62827 ))
+       (portRef datad (instanceRef ix5537z62818 ))
+       (portRef datae (instanceRef ix5537z62811 ))))
+     (net sig_out_local_count_5_ 
+      (joined 
+       (portRef (member q 14)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datad (instanceRef ix19104z62839 ))
+       (portRef dataf (instanceRef ix5537z62848 ))
+       (portRef dataf (instanceRef ix5537z62837 ))
+       (portRef dataf (instanceRef ix5537z62828 ))
+       (portRef dataf (instanceRef ix5537z62819 ))
+       (portRef datad (instanceRef ix5537z62811 ))))
+     (net sig_out_local_count_4_ 
+      (joined 
+       (portRef (member q 15)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62839 ))
+       (portRef datae (instanceRef ix5537z62848 ))
+       (portRef datae (instanceRef ix5537z62837 ))
+       (portRef datae (instanceRef ix5537z62828 ))
+       (portRef datae (instanceRef ix5537z62819 ))
+       (portRef datac (instanceRef ix5537z62811 ))))
+     (net sig_out_local_count_3_ 
+      (joined 
+       (portRef (member q 16)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62809 ))
+       (portRef datae (instanceRef ix5537z62845 ))
+       (portRef dataf (instanceRef ix5537z62836 ))
+       (portRef datae (instanceRef ix5537z62825 ))
+       (portRef datae (instanceRef ix5537z62816 ))
+       (portRef dataf (instanceRef ix5537z62812 ))))
+     (net sig_out_local_count_2_ 
+      (joined 
+       (portRef (member q 17)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datab (instanceRef ix19104z62809 ))
+       (portRef datad (instanceRef ix5537z62845 ))
+       (portRef datae (instanceRef ix5537z62836 ))
+       (portRef datad (instanceRef ix5537z62825 ))
+       (portRef datad (instanceRef ix5537z62816 ))
+       (portRef datae (instanceRef ix5537z62812 ))))
+     (net sig_out_local_count_1_ 
+      (joined 
+       (portRef (member q 18)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datad (instanceRef ix19104z62821 ))
+       (portRef dataf (instanceRef ix5537z62846 ))
+       (portRef dataf (instanceRef ix5537z62835 ))
+       (portRef dataf (instanceRef ix5537z62826 ))
+       (portRef dataf (instanceRef ix5537z62817 ))
+       (portRef datad (instanceRef ix5537z62812 ))))
+     (net sig_out_local_count_0_ 
+      (joined 
+       (portRef (member q 19)(instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef datac (instanceRef ix19104z62821 ))
+       (portRef datae (instanceRef ix5537z62846 ))
+       (portRef datae (instanceRef ix5537z62835 ))
+       (portRef datae (instanceRef ix5537z62826 ))
+       (portRef datae (instanceRef ix5537z62817 ))
+       (portRef datac (instanceRef ix5537z62812 ))))
+     (net sig_final1_15_ 
+      (joined 
+       (portRef (member resulta 48)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62879 ))
+       (portRef datac (instanceRef ix5537z62822 ))))
+     (net sig_final1_14_ 
+      (joined 
+       (portRef (member resulta 49)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62866 ))
+       (portRef datab (instanceRef ix5537z62822 ))))
+     (net sig_final1_13_ 
+      (joined 
+       (portRef (member resulta 50)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62867 ))
+       (portRef datad (instanceRef ix5537z62823 ))))
+     (net sig_final1_12_ 
+      (joined 
+       (portRef (member resulta 51)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62868 ))
+       (portRef datac (instanceRef ix5537z62823 ))))
+     (net sig_final1_11_ 
+      (joined 
+       (portRef (member resulta 52)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62861 ))
+       (portRef datac (instanceRef ix5537z62820 ))))
+     (net sig_final1_10_ 
+      (joined 
+       (portRef (member resulta 53)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62848 ))
+       (portRef datab (instanceRef ix5537z62820 ))))
+     (net sig_final1_9_ 
+      (joined 
+       (portRef (member resulta 54)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62849 ))
+       (portRef datad (instanceRef ix5537z62821 ))))
+     (net sig_final1_8_ 
+      (joined 
+       (portRef (member resulta 55)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62850 ))
+       (portRef datac (instanceRef ix5537z62821 ))))
+     (net sig_final1_7_ 
+      (joined 
+       (portRef (member resulta 56)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62843 ))
+       (portRef datac (instanceRef ix5537z62818 ))))
+     (net sig_final1_6_ 
+      (joined 
+       (portRef (member resulta 57)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62830 ))
+       (portRef datab (instanceRef ix5537z62818 ))))
+     (net sig_final1_5_ 
+      (joined 
+       (portRef (member resulta 58)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62831 ))
+       (portRef datad (instanceRef ix5537z62819 ))))
+     (net sig_final1_4_ 
+      (joined 
+       (portRef (member resulta 59)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62832 ))
+       (portRef datac (instanceRef ix5537z62819 ))))
+     (net sig_final1_3_ 
+      (joined 
+       (portRef (member resulta 60)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62825 ))
+       (portRef datac (instanceRef ix5537z62816 ))))
+     (net sig_final1_2_ 
+      (joined 
+       (portRef (member resulta 61)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62813 ))
+       (portRef datab (instanceRef ix5537z62816 ))))
+     (net sig_final1_1_ 
+      (joined 
+       (portRef (member resulta 62)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62814 ))
+       (portRef datad (instanceRef ix5537z62817 ))))
+     (net sig_final1_0_ 
+      (joined 
+       (portRef (member resulta 63)(instanceRef cyclonev_mac_3 ))
+       (portRef datac (instanceRef ix19104z62815 ))
+       (portRef datac (instanceRef ix5537z62817 ))))
+     (net sig_final2_15_ 
+      (joined 
+       (portRef (member resulta 48)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62878 ))
+       (portRef datac (instanceRef ix5537z62831 ))))
+     (net sig_final2_14_ 
+      (joined 
+       (portRef (member resulta 49)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62865 ))
+       (portRef datab (instanceRef ix5537z62831 ))))
+     (net sig_final2_13_ 
+      (joined 
+       (portRef (member resulta 50)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62869 ))
+       (portRef datad (instanceRef ix5537z62832 ))))
+     (net sig_final2_12_ 
+      (joined 
+       (portRef (member resulta 51)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62870 ))
+       (portRef datac (instanceRef ix5537z62832 ))))
+     (net sig_final2_11_ 
+      (joined 
+       (portRef (member resulta 52)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62860 ))
+       (portRef datac (instanceRef ix5537z62829 ))))
+     (net sig_final2_10_ 
+      (joined 
+       (portRef (member resulta 53)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62847 ))
+       (portRef datab (instanceRef ix5537z62829 ))))
+     (net sig_final2_9_ 
+      (joined 
+       (portRef (member resulta 54)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62851 ))
+       (portRef datad (instanceRef ix5537z62830 ))))
+     (net sig_final2_8_ 
+      (joined 
+       (portRef (member resulta 55)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62852 ))
+       (portRef datac (instanceRef ix5537z62830 ))))
+     (net sig_final2_7_ 
+      (joined 
+       (portRef (member resulta 56)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62842 ))
+       (portRef datac (instanceRef ix5537z62827 ))))
+     (net sig_final2_6_ 
+      (joined 
+       (portRef (member resulta 57)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62829 ))
+       (portRef datab (instanceRef ix5537z62827 ))))
+     (net sig_final2_5_ 
+      (joined 
+       (portRef (member resulta 58)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62833 ))
+       (portRef datad (instanceRef ix5537z62828 ))))
+     (net sig_final2_4_ 
+      (joined 
+       (portRef (member resulta 59)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62834 ))
+       (portRef datac (instanceRef ix5537z62828 ))))
+     (net sig_final2_3_ 
+      (joined 
+       (portRef (member resulta 60)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62824 ))
+       (portRef datac (instanceRef ix5537z62825 ))))
+     (net sig_final2_2_ 
+      (joined 
+       (portRef (member resulta 61)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62812 ))
+       (portRef datab (instanceRef ix5537z62825 ))))
+     (net sig_final2_1_ 
+      (joined 
+       (portRef (member resulta 62)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62816 ))
+       (portRef datad (instanceRef ix5537z62826 ))))
+     (net sig_final2_0_ 
+      (joined 
+       (portRef (member resulta 63)(instanceRef cyclonev_mac_2 ))
+       (portRef dataf (instanceRef ix19104z62817 ))
+       (portRef datac (instanceRef ix5537z62826 ))))
+     (net sig_final3_15_ 
+      (joined 
+       (portRef (member resulta 48)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62879 ))
+       (portRef datad (instanceRef ix5537z62843 ))))
+     (net sig_final3_14_ 
+      (joined 
+       (portRef (member resulta 49)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62866 ))
+       (portRef datac (instanceRef ix5537z62843 ))))
+     (net sig_final3_13_ 
+      (joined 
+       (portRef (member resulta 50)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62867 ))
+       (portRef datad (instanceRef ix5537z62842 ))))
+     (net sig_final3_12_ 
+      (joined 
+       (portRef (member resulta 51)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62868 ))
+       (portRef datac (instanceRef ix5537z62842 ))))
+     (net sig_final3_11_ 
+      (joined 
+       (portRef (member resulta 52)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62861 ))
+       (portRef datad (instanceRef ix5537z62841 ))))
+     (net sig_final3_10_ 
+      (joined 
+       (portRef (member resulta 53)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62848 ))
+       (portRef datac (instanceRef ix5537z62841 ))))
+     (net sig_final3_9_ 
+      (joined 
+       (portRef (member resulta 54)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62849 ))
+       (portRef datad (instanceRef ix5537z62840 ))))
+     (net sig_final3_8_ 
+      (joined 
+       (portRef (member resulta 55)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62850 ))
+       (portRef datac (instanceRef ix5537z62840 ))))
+     (net sig_final3_7_ 
+      (joined 
+       (portRef (member resulta 56)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62843 ))
+       (portRef datad (instanceRef ix5537z62838 ))))
+     (net sig_final3_6_ 
+      (joined 
+       (portRef (member resulta 57)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62830 ))
+       (portRef datac (instanceRef ix5537z62838 ))))
+     (net sig_final3_5_ 
+      (joined 
+       (portRef (member resulta 58)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62831 ))
+       (portRef datad (instanceRef ix5537z62837 ))))
+     (net sig_final3_4_ 
+      (joined 
+       (portRef (member resulta 59)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62832 ))
+       (portRef datac (instanceRef ix5537z62837 ))))
+     (net sig_final3_3_ 
+      (joined 
+       (portRef (member resulta 60)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62825 ))
+       (portRef datad (instanceRef ix5537z62836 ))))
+     (net sig_final3_2_ 
+      (joined 
+       (portRef (member resulta 61)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62813 ))
+       (portRef datac (instanceRef ix5537z62836 ))))
+     (net sig_final3_1_ 
+      (joined 
+       (portRef (member resulta 62)(instanceRef cyclonev_mac_1 ))
+       (portRef datab (instanceRef ix19104z62814 ))
+       (portRef datad (instanceRef ix5537z62835 ))))
+     (net sig_final3_0_ 
+      (joined 
+       (portRef (member resulta 63)(instanceRef cyclonev_mac_1 ))
+       (portRef dataa (instanceRef ix19104z62815 ))
+       (portRef datac (instanceRef ix5537z62835 ))))
+     (net sig_final4_15_ 
+      (joined 
+       (portRef (member resulta 48)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62879 ))
+       (portRef datac (instanceRef ix5537z62851 ))))
+     (net sig_final4_14_ 
+      (joined 
+       (portRef (member resulta 49)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62866 ))
+       (portRef datab (instanceRef ix5537z62851 ))))
+     (net sig_final4_13_ 
+      (joined 
+       (portRef (member resulta 50)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62867 ))
+       (portRef datad (instanceRef ix5537z62852 ))))
+     (net sig_final4_12_ 
+      (joined 
+       (portRef (member resulta 51)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62868 ))
+       (portRef datac (instanceRef ix5537z62852 ))))
+     (net sig_final4_11_ 
+      (joined 
+       (portRef (member resulta 52)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62861 ))
+       (portRef datac (instanceRef ix5537z62849 ))))
+     (net sig_final4_10_ 
+      (joined 
+       (portRef (member resulta 53)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62848 ))
+       (portRef datab (instanceRef ix5537z62849 ))))
+     (net sig_final4_9_ 
+      (joined 
+       (portRef (member resulta 54)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62849 ))
+       (portRef datad (instanceRef ix5537z62850 ))))
+     (net sig_final4_8_ 
+      (joined 
+       (portRef (member resulta 55)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62850 ))
+       (portRef datac (instanceRef ix5537z62850 ))))
+     (net sig_final4_7_ 
+      (joined 
+       (portRef (member resulta 56)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62843 ))
+       (portRef datac (instanceRef ix5537z62847 ))))
+     (net sig_final4_6_ 
+      (joined 
+       (portRef (member resulta 57)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62830 ))
+       (portRef datab (instanceRef ix5537z62847 ))))
+     (net sig_final4_5_ 
+      (joined 
+       (portRef (member resulta 58)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62831 ))
+       (portRef datad (instanceRef ix5537z62848 ))))
+     (net sig_final4_4_ 
+      (joined 
+       (portRef (member resulta 59)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62832 ))
+       (portRef datac (instanceRef ix5537z62848 ))))
+     (net sig_final4_3_ 
+      (joined 
+       (portRef (member resulta 60)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62825 ))
+       (portRef datac (instanceRef ix5537z62845 ))))
+     (net sig_final4_2_ 
+      (joined 
+       (portRef (member resulta 61)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62813 ))
+       (portRef datab (instanceRef ix5537z62845 ))))
+     (net sig_final4_1_ 
+      (joined 
+       (portRef (member resulta 62)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62814 ))
+       (portRef datad (instanceRef ix5537z62846 ))))
+     (net sig_final4_0_ 
+      (joined 
+       (portRef (member resulta 63)(instanceRef cyclonev_mac_0 ))
+       (portRef datad (instanceRef ix19104z62815 ))
+       (portRef datac (instanceRef ix5537z62846 ))))
+     (net sig_state_2_ 
+      (joined 
+       (portRef q (instanceRef reg_sig_state_2_ ))
+       (portRef datae (instanceRef ix5537z62814 ))
+       (portRef dataf (instanceRef ix19104z62807 ))
+       (portRef datae (instanceRef ix24215z62808 ))
+       (portRef datab (instanceRef ix22221z62807 ))
+       (portRef dataf (instanceRef ix22221z62809 ))
+       (portRef datab (instanceRef ix5537z62833 ))))
+     (net sig_state_1_ 
+      (joined 
+       (portRef q (instanceRef reg_sig_state_1_ ))
+       (portRef dataa (instanceRef ix5537z62814 ))
+       (portRef datae (instanceRef ix19104z62807 ))
+       (portRef datad (instanceRef ix24215z62808 ))
+       (portRef dataf (instanceRef ix22221z62808 ))
+       (portRef datac (instanceRef ix23218z62807 ))
+       (portRef datae (instanceRef ix22221z62809 ))))
+     (net sig_state_0_ 
+      (joined 
+       (portRef q (instanceRef reg_sig_state_0_ ))
+       (portRef datab (instanceRef ix5537z62814 ))
+       (portRef datad (instanceRef ix19104z62807 ))
+       (portRef datac (instanceRef ix24215z62808 ))
+       (portRef datae (instanceRef ix22221z62808 ))
+       (portRef datac (instanceRef ix24215z62807 ))
+       (portRef datab (instanceRef ix23218z62807 ))
+       (portRef datad (instanceRef ix22221z62809 ))))
+     (net sig_reg_storage_31_ 
+      (joined 
+       (portRef Y (instanceRef ix49530z1315 ))
+       (portRef (member ay 19)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_30_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef (member ay 20)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_29_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef (member ay 21)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_28_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef (member ay 22)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_27_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef (member ay 23)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_26_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef (member ay 24)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_25_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef (member ay 25)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_24_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef (member ay 26)(instanceRef cyclonev_mac_0 ))))
+     (net sig_reg_storage_23_ 
+      (joined 
+       (portRef Y (instanceRef ix49529z1315 ))
+       (portRef (member ay 19)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_22_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef (member ay 20)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_21_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef (member ay 21)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_20_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef (member ay 22)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_19_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef (member ay 23)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_18_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef (member ay 24)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_17_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef (member ay 25)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_16_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef (member ay 26)(instanceRef cyclonev_mac_1 ))))
+     (net sig_reg_storage_15_ 
+      (joined 
+       (portRef Y (instanceRef ix49528z1315 ))
+       (portRef (member ay 19)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_14_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef (member ay 20)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_13_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef (member ay 21)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_12_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef (member ay 22)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_11_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef (member ay 23)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_10_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef (member ay 24)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_9_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef (member ay 25)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_8_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef (member ay 26)(instanceRef cyclonev_mac_2 ))))
+     (net sig_reg_storage_7_ 
+      (joined 
+       (portRef Y (instanceRef ix49527z1315 ))
+       (portRef (member ay 19)(instanceRef cyclonev_mac_3 ))))
+     (net sig_reg_storage_6_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef (member ay 20)(instanceRef cyclonev_mac_3 ))))
+     (net sig_reg_storage_5_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef (member ay 21)(instanceRef cyclonev_mac_3 ))))
+     (net sig_reg_storage_4_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef (member ay 22)(instanceRef cyclonev_mac_3 ))))
+     (net sig_reg_storage_3_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef (member ay 23)(instanceRef cyclonev_mac_3 ))))
+     (net sig_reg_storage_2_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef (member ay 24)(instanceRef cyclonev_mac_3 ))))
+     (net sig_reg_storage_1_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef (member ay 25)(instanceRef cyclonev_mac_3 ))))
+     (net sig_reg_storage_0_ 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))
+       (portRef (member ay 26)(instanceRef cyclonev_mac_3 ))))
+     (net current_state_4_ 
+      (joined 
+       (portRef q (instanceRef reg_current_state_4_ ))
+       (portRef dataf (instanceRef ix45248z62808 ))))
+     (net current_state_3_ 
+      (joined 
+       (portRef q (instanceRef reg_current_state_3_ ))
+       (portRef datac (instanceRef ix19104z62807 ))
+       (portRef datac (instanceRef ix5537z62807 ))
+       (portRef datab (instanceRef ix24215z62807 ))
+       (portRef dataa (instanceRef ix23218z62807 ))
+       (portRef dataa (instanceRef ix22221z62807 ))
+       (portRef datae (instanceRef ix20101z62807 ))
+       (portRef datad (instanceRef ix17110z62807 ))))
+     (net current_state_2_ 
+      (joined 
+       (portRef q (instanceRef reg_current_state_2_ ))
+       (portRef datac (instanceRef ix22221z62809 ))
+       (portRef dataa (instanceRef ix5537z62833 ))))
+     (net current_state_1_ 
+      (joined 
+       (portRef q (instanceRef reg_current_state_1_ ))
+       (portRef d (instanceRef reg_sig_out_ppm ))
+       (portRef dataa (instanceRef ix24215z62809 ))
+       (portRef dataa (instanceRef ix5537z62808 ))
+       (portRef datab (instanceRef ix22221z62809 ))))
+     (net nx19104z147 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62889 ))
+       (portRef IN1 (instanceRef ix19104z1396 ))))
+     (net nx19104z138 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62884 ))
+       (portRef IN1 (instanceRef ix19104z1391 ))))
+     (net nx19104z129 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62878 ))
+       (portRef IN1 (instanceRef ix19104z1385 ))))
+     (net nx19104z104 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62865 ))
+       (portRef IN1 (instanceRef ix19104z1372 ))))
+     (net nx19104z119 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62869 ))
+       (portRef IN1 (instanceRef ix19104z1380 ))))
+     (net nx19104z122 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62870 ))
+       (portRef IN1 (instanceRef ix19104z1382 ))))
+     (net nx19104z95 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62860 ))
+       (portRef IN1 (instanceRef ix19104z1367 ))))
+     (net nx19104z70 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62847 ))
+       (portRef IN1 (instanceRef ix19104z1354 ))))
+     (net nx19104z85 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62851 ))
+       (portRef IN1 (instanceRef ix19104z1362 ))))
+     (net nx19104z88 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62852 ))
+       (portRef IN1 (instanceRef ix19104z1364 ))))
+     (net nx19104z61 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62842 ))
+       (portRef IN1 (instanceRef ix19104z1349 ))))
+     (net nx19104z36 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62829 ))
+       (portRef IN1 (instanceRef ix19104z1336 ))))
+     (net nx19104z51 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62833 ))
+       (portRef IN1 (instanceRef ix19104z1344 ))))
+     (net nx19104z54 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62834 ))
+       (portRef IN1 (instanceRef ix19104z1346 ))))
+     (net nx19104z27 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62824 ))
+       (portRef IN1 (instanceRef ix19104z1331 ))))
+     (net nx19104z7 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62812 ))
+       (portRef IN1 (instanceRef ix19104z1319 ))))
+     (net nx19104z20 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62816 ))
+       (portRef IN1 (instanceRef ix19104z1327 ))))
+     (net nx19104z22 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62817 ))
+       (portRef IN1 (instanceRef ix19104z1328 ))
+       (portRef datae (instanceRef ix19104z62821 ))))
+     (net nx19104z153 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62887 ))
+       (portRef datac (instanceRef ix19104z62880 ))))
+     (net nx19104z136 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62882 ))
+       (portRef dataf (instanceRef ix19104z62881 ))))
+     (net nx19104z127 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62876 ))
+       (portRef dataf (instanceRef ix19104z62862 ))))
+     (net nx19104z102 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62863 ))
+       (portRef datad (instanceRef ix19104z62862 ))))
+     (net nx19104z126 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62871 ))
+       (portRef dataf (instanceRef ix19104z62875 ))))
+     (net nx19104z125 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62873 ))
+       (portRef datae (instanceRef ix19104z62875 ))))
+     (net nx19104z93 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62858 ))
+       (portRef dataf (instanceRef ix19104z62844 ))))
+     (net nx19104z68 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62845 ))
+       (portRef datad (instanceRef ix19104z62844 ))))
+     (net nx19104z92 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62853 ))
+       (portRef dataf (instanceRef ix19104z62857 ))))
+     (net nx19104z91 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62855 ))
+       (portRef datae (instanceRef ix19104z62857 ))))
+     (net nx19104z59 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62840 ))
+       (portRef dataf (instanceRef ix19104z62826 ))))
+     (net nx19104z34 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62827 ))
+       (portRef datad (instanceRef ix19104z62826 ))))
+     (net nx19104z58 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62835 ))
+       (portRef dataf (instanceRef ix19104z62839 ))))
+     (net nx19104z57 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62837 ))
+       (portRef datae (instanceRef ix19104z62839 ))))
+     (net nx19104z25 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62822 ))
+       (portRef dataf (instanceRef ix19104z62809 ))))
+     (net nx19104z4 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62810 ))
+       (portRef datad (instanceRef ix19104z62809 ))))
+     (net nx19104z24 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62818 ))
+       (portRef dataf (instanceRef ix19104z62821 ))))
+     (net nx19104z144 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62886 ))
+       (portRef datab (instanceRef ix19104z62880 ))))
+     (net nx19104z19 
+      (joined 
+       (portRef Y (instanceRef ix19104z1327 ))
+       (portRef dataf (instanceRef ix19104z62818 ))))
+     (net nx19104z17 
+      (joined 
+       (portRef cout (instanceRef ix19104z62818 ))
+       (portRef cin (instanceRef ix19104z62810 ))))
+     (net nx19104z6 
+      (joined 
+       (portRef Y (instanceRef ix19104z1319 ))
+       (portRef dataf (instanceRef ix19104z62810 ))))
+     (net nx19104z32 
+      (joined 
+       (portRef cout (instanceRef ix19104z62810 ))
+       (portRef cin (instanceRef ix19104z62822 ))))
+     (net nx19104z26 
+      (joined 
+       (portRef Y (instanceRef ix19104z1331 ))
+       (portRef dataf (instanceRef ix19104z62822 ))))
+     (net nx19104z55 
+      (joined 
+       (portRef cout (instanceRef ix19104z62822 ))
+       (portRef cin (instanceRef ix19104z62837 ))))
+     (net nx19104z53 
+      (joined 
+       (portRef Y (instanceRef ix19104z1346 ))
+       (portRef dataf (instanceRef ix19104z62837 ))))
+     (net nx19104z52 
+      (joined 
+       (portRef cout (instanceRef ix19104z62837 ))
+       (portRef cin (instanceRef ix19104z62835 ))))
+     (net nx19104z50 
+      (joined 
+       (portRef Y (instanceRef ix19104z1344 ))
+       (portRef dataf (instanceRef ix19104z62835 ))))
+     (net nx19104z49 
+      (joined 
+       (portRef cout (instanceRef ix19104z62835 ))
+       (portRef cin (instanceRef ix19104z62827 ))))
+     (net nx19104z35 
+      (joined 
+       (portRef Y (instanceRef ix19104z1336 ))
+       (portRef dataf (instanceRef ix19104z62827 ))))
+     (net nx19104z66 
+      (joined 
+       (portRef cout (instanceRef ix19104z62827 ))
+       (portRef cin (instanceRef ix19104z62840 ))))
+     (net nx19104z60 
+      (joined 
+       (portRef Y (instanceRef ix19104z1349 ))
+       (portRef dataf (instanceRef ix19104z62840 ))))
+     (net nx19104z89 
+      (joined 
+       (portRef cout (instanceRef ix19104z62840 ))
+       (portRef cin (instanceRef ix19104z62855 ))))
+     (net nx19104z87 
+      (joined 
+       (portRef Y (instanceRef ix19104z1364 ))
+       (portRef dataf (instanceRef ix19104z62855 ))))
+     (net nx19104z86 
+      (joined 
+       (portRef cout (instanceRef ix19104z62855 ))
+       (portRef cin (instanceRef ix19104z62853 ))))
+     (net nx19104z84 
+      (joined 
+       (portRef Y (instanceRef ix19104z1362 ))
+       (portRef dataf (instanceRef ix19104z62853 ))))
+     (net nx19104z83 
+      (joined 
+       (portRef cout (instanceRef ix19104z62853 ))
+       (portRef cin (instanceRef ix19104z62845 ))))
+     (net nx19104z69 
+      (joined 
+       (portRef Y (instanceRef ix19104z1354 ))
+       (portRef dataf (instanceRef ix19104z62845 ))))
+     (net nx19104z100 
+      (joined 
+       (portRef cout (instanceRef ix19104z62845 ))
+       (portRef cin (instanceRef ix19104z62858 ))))
+     (net nx19104z94 
+      (joined 
+       (portRef Y (instanceRef ix19104z1367 ))
+       (portRef dataf (instanceRef ix19104z62858 ))))
+     (net nx19104z123 
+      (joined 
+       (portRef cout (instanceRef ix19104z62858 ))
+       (portRef cin (instanceRef ix19104z62873 ))))
+     (net nx19104z121 
+      (joined 
+       (portRef Y (instanceRef ix19104z1382 ))
+       (portRef dataf (instanceRef ix19104z62873 ))))
+     (net nx19104z120 
+      (joined 
+       (portRef cout (instanceRef ix19104z62873 ))
+       (portRef cin (instanceRef ix19104z62871 ))))
+     (net nx19104z118 
+      (joined 
+       (portRef Y (instanceRef ix19104z1380 ))
+       (portRef dataf (instanceRef ix19104z62871 ))))
+     (net nx19104z117 
+      (joined 
+       (portRef cout (instanceRef ix19104z62871 ))
+       (portRef cin (instanceRef ix19104z62863 ))))
+     (net nx19104z103 
+      (joined 
+       (portRef Y (instanceRef ix19104z1372 ))
+       (portRef dataf (instanceRef ix19104z62863 ))))
+     (net nx19104z134 
+      (joined 
+       (portRef cout (instanceRef ix19104z62863 ))
+       (portRef cin (instanceRef ix19104z62876 ))))
+     (net nx19104z128 
+      (joined 
+       (portRef Y (instanceRef ix19104z1385 ))
+       (portRef dataf (instanceRef ix19104z62876 ))))
+     (net nx19104z143 
+      (joined 
+       (portRef cout (instanceRef ix19104z62876 ))
+       (portRef cin (instanceRef ix19104z62882 ))))
+     (net nx19104z137 
+      (joined 
+       (portRef Y (instanceRef ix19104z1391 ))
+       (portRef dataf (instanceRef ix19104z62882 ))))
+     (net nx19104z152 
+      (joined 
+       (portRef cout (instanceRef ix19104z62882 ))
+       (portRef cin (instanceRef ix19104z62887 ))))
+     (net nx19104z146 
+      (joined 
+       (portRef Y (instanceRef ix19104z1396 ))
+       (portRef dataf (instanceRef ix19104z62887 ))))
+     (net GND 
+      (joined 
+       (portRef Y (instanceRef ix18107z4668 ))
+       (portRef accumulate (instanceRef cyclonev_mac_0 ))
+       (portRef (member aclr 0)(instanceRef cyclonev_mac_0 ))
+       (portRef (member aclr 1)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 9)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 10)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 11)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 12)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 13)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 14)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 15)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 16)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 17)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 18)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 19)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 22)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 23)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 24)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 26)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 9)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 10)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 11)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 12)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 13)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 14)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 15)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 16)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 17)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ay 18)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 0)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 1)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 2)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 3)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 4)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 5)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 6)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 7)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 8)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 9)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 10)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 11)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 12)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 13)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 14)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 15)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 16)(instanceRef cyclonev_mac_0 ))
+       (portRef (member bx 17)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 1)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 2)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 3)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 5)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 6)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 7)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 9)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 10)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 11)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 13)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 16)(instanceRef cyclonev_mac_0 ))
+       (portRef (member clk 0)(instanceRef cyclonev_mac_0 ))
+       (portRef (member clk 1)(instanceRef cyclonev_mac_0 ))
+       (portRef (member clk 2)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ena 0)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ena 1)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ena 2)(instanceRef cyclonev_mac_0 ))
+       (portRef loadconst (instanceRef cyclonev_mac_0 ))
+       (portRef negate (instanceRef cyclonev_mac_0 ))
+       (portRef sub (instanceRef cyclonev_mac_0 ))
+       (portRef accumulate (instanceRef cyclonev_mac_1 ))
+       (portRef (member aclr 0)(instanceRef cyclonev_mac_1 ))
+       (portRef (member aclr 1)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 9)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 10)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 11)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 12)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 13)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 14)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 15)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 16)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 17)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 18)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 19)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 22)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 23)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 24)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 26)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 9)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 10)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 11)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 12)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 13)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 14)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 15)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 16)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 17)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ay 18)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 0)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 1)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 2)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 3)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 4)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 5)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 6)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 7)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 8)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 9)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 10)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 11)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 12)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 13)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 14)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 15)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 16)(instanceRef cyclonev_mac_1 ))
+       (portRef (member bx 17)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 1)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 2)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 3)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 5)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 6)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 7)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 9)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 10)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 11)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 13)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 16)(instanceRef cyclonev_mac_1 ))
+       (portRef (member clk 0)(instanceRef cyclonev_mac_1 ))
+       (portRef (member clk 1)(instanceRef cyclonev_mac_1 ))
+       (portRef (member clk 2)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ena 0)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ena 1)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ena 2)(instanceRef cyclonev_mac_1 ))
+       (portRef loadconst (instanceRef cyclonev_mac_1 ))
+       (portRef negate (instanceRef cyclonev_mac_1 ))
+       (portRef sub (instanceRef cyclonev_mac_1 ))
+       (portRef accumulate (instanceRef cyclonev_mac_2 ))
+       (portRef (member aclr 0)(instanceRef cyclonev_mac_2 ))
+       (portRef (member aclr 1)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 9)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 10)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 11)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 12)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 13)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 14)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 15)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 16)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 17)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 18)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 19)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 22)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 23)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 24)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 26)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 9)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 10)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 11)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 12)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 13)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 14)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 15)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 16)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 17)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ay 18)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 0)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 1)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 2)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 3)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 4)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 5)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 6)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 7)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 8)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 9)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 10)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 11)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 12)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 13)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 14)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 15)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 16)(instanceRef cyclonev_mac_2 ))
+       (portRef (member bx 17)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 1)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 2)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 3)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 5)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 6)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 7)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 9)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 10)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 11)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 13)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 16)(instanceRef cyclonev_mac_2 ))
+       (portRef (member clk 0)(instanceRef cyclonev_mac_2 ))
+       (portRef (member clk 1)(instanceRef cyclonev_mac_2 ))
+       (portRef (member clk 2)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ena 0)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ena 1)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ena 2)(instanceRef cyclonev_mac_2 ))
+       (portRef loadconst (instanceRef cyclonev_mac_2 ))
+       (portRef negate (instanceRef cyclonev_mac_2 ))
+       (portRef sub (instanceRef cyclonev_mac_2 ))
+       (portRef accumulate (instanceRef cyclonev_mac_3 ))
+       (portRef (member aclr 0)(instanceRef cyclonev_mac_3 ))
+       (portRef (member aclr 1)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 9)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 10)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 11)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 12)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 13)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 14)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 15)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 16)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 17)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 18)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 19)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 22)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 23)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 24)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 26)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 9)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 10)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 11)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 12)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 13)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 14)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 15)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 16)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 17)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ay 18)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 0)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 1)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 2)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 3)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 4)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 5)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 6)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 7)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 8)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 9)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 10)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 11)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 12)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 13)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 14)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 15)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 16)(instanceRef cyclonev_mac_3 ))
+       (portRef (member bx 17)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 1)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 2)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 3)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 5)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 6)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 7)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 9)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 10)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 11)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 13)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 16)(instanceRef cyclonev_mac_3 ))
+       (portRef (member clk 0)(instanceRef cyclonev_mac_3 ))
+       (portRef (member clk 1)(instanceRef cyclonev_mac_3 ))
+       (portRef (member clk 2)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ena 0)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ena 1)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ena 2)(instanceRef cyclonev_mac_3 ))
+       (portRef loadconst (instanceRef cyclonev_mac_3 ))
+       (portRef negate (instanceRef cyclonev_mac_3 ))
+       (portRef sub (instanceRef cyclonev_mac_3 ))
+       (portRef IN1 (instanceRef ix45248z1317 ))
+       (portRef sharein (instanceRef ix19104z62815 ))
+       (portRef cin (instanceRef ix19104z62815 ))
+       (portRef cin (instanceRef ix19104z62817 ))
+       (portRef datac (instanceRef ix19104z62886 ))
+       (portRef sload (instanceRef reg_sig_state_2_ ))
+       (portRef asdata (instanceRef reg_sig_state_2_ ))
+       (portRef sload (instanceRef reg_sig_state_1_ ))
+       (portRef asdata (instanceRef reg_sig_state_1_ ))
+       (portRef sload (instanceRef reg_sig_state_0_ ))
+       (portRef asdata (instanceRef reg_sig_state_0_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef sload (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))
+       (portRef sload (instanceRef reg_sig_out_ppm ))
+       (portRef asdata (instanceRef reg_sig_out_ppm ))
+       (portRef sload (instanceRef reg_current_state_4_ ))
+       (portRef asdata (instanceRef reg_current_state_4_ ))
+       (portRef sload (instanceRef reg_current_state_3_ ))
+       (portRef asdata (instanceRef reg_current_state_3_ ))
+       (portRef sload (instanceRef reg_current_state_2_ ))
+       (portRef asdata (instanceRef reg_current_state_2_ ))
+       (portRef sload (instanceRef reg_current_state_1_ ))
+       (portRef asdata (instanceRef reg_current_state_1_ ))))
+     (net nx19104z16 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62815 ))
+       (portRef datad (instanceRef ix19104z62817 ))))
+     (net nx19104z14 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62814 ))
+       (portRef datad (instanceRef ix19104z62816 ))))
+     (net nx19104z8 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62813 ))
+       (portRef datad (instanceRef ix19104z62812 ))))
+     (net nx19104z28 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62825 ))
+       (portRef datad (instanceRef ix19104z62824 ))))
+     (net nx19104z47 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62832 ))
+       (portRef datad (instanceRef ix19104z62834 ))))
+     (net nx19104z45 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62831 ))
+       (portRef datad (instanceRef ix19104z62833 ))))
+     (net nx19104z37 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62830 ))
+       (portRef datad (instanceRef ix19104z62829 ))))
+     (net nx19104z62 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62843 ))
+       (portRef datad (instanceRef ix19104z62842 ))))
+     (net nx19104z81 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62850 ))
+       (portRef datad (instanceRef ix19104z62852 ))))
+     (net nx19104z79 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62849 ))
+       (portRef datad (instanceRef ix19104z62851 ))))
+     (net nx19104z71 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62848 ))
+       (portRef datad (instanceRef ix19104z62847 ))))
+     (net nx19104z96 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62861 ))
+       (portRef datad (instanceRef ix19104z62860 ))))
+     (net nx19104z115 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62868 ))
+       (portRef datad (instanceRef ix19104z62870 ))))
+     (net nx19104z113 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62867 ))
+       (portRef datad (instanceRef ix19104z62869 ))))
+     (net nx19104z105 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62866 ))
+       (portRef datad (instanceRef ix19104z62865 ))))
+     (net nx19104z130 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62879 ))
+       (portRef datad (instanceRef ix19104z62878 ))))
+     (net nx19104z139 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62885 ))
+       (portRef datad (instanceRef ix19104z62884 ))))
+     (net nx19104z148 
+      (joined 
+       (portRef sumout (instanceRef ix19104z62890 ))
+       (portRef datad (instanceRef ix19104z62889 ))))
+     (net nx19104z10 
+      (joined 
+       (portRef cout (instanceRef ix19104z62815 ))
+       (portRef cin (instanceRef ix19104z62814 ))))
+     (net nx19104z11 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62815 ))
+       (portRef sharein (instanceRef ix19104z62814 ))))
+     (net nx19104z9 
+      (joined 
+       (portRef cout (instanceRef ix19104z62814 ))
+       (portRef cin (instanceRef ix19104z62813 ))))
+     (net nx19104z12 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62814 ))
+       (portRef sharein (instanceRef ix19104z62813 ))))
+     (net nx19104z29 
+      (joined 
+       (portRef cout (instanceRef ix19104z62813 ))
+       (portRef cin (instanceRef ix19104z62825 ))))
+     (net nx19104z30 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62813 ))
+       (portRef sharein (instanceRef ix19104z62825 ))))
+     (net nx19104z40 
+      (joined 
+       (portRef cout (instanceRef ix19104z62825 ))
+       (portRef cin (instanceRef ix19104z62832 ))))
+     (net nx19104z41 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62825 ))
+       (portRef sharein (instanceRef ix19104z62832 ))))
+     (net nx19104z39 
+      (joined 
+       (portRef cout (instanceRef ix19104z62832 ))
+       (portRef cin (instanceRef ix19104z62831 ))))
+     (net nx19104z42 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62832 ))
+       (portRef sharein (instanceRef ix19104z62831 ))))
+     (net nx19104z38 
+      (joined 
+       (portRef cout (instanceRef ix19104z62831 ))
+       (portRef cin (instanceRef ix19104z62830 ))))
+     (net nx19104z43 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62831 ))
+       (portRef sharein (instanceRef ix19104z62830 ))))
+     (net nx19104z63 
+      (joined 
+       (portRef cout (instanceRef ix19104z62830 ))
+       (portRef cin (instanceRef ix19104z62843 ))))
+     (net nx19104z64 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62830 ))
+       (portRef sharein (instanceRef ix19104z62843 ))))
+     (net nx19104z74 
+      (joined 
+       (portRef cout (instanceRef ix19104z62843 ))
+       (portRef cin (instanceRef ix19104z62850 ))))
+     (net nx19104z75 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62843 ))
+       (portRef sharein (instanceRef ix19104z62850 ))))
+     (net nx19104z73 
+      (joined 
+       (portRef cout (instanceRef ix19104z62850 ))
+       (portRef cin (instanceRef ix19104z62849 ))))
+     (net nx19104z76 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62850 ))
+       (portRef sharein (instanceRef ix19104z62849 ))))
+     (net nx19104z72 
+      (joined 
+       (portRef cout (instanceRef ix19104z62849 ))
+       (portRef cin (instanceRef ix19104z62848 ))))
+     (net nx19104z77 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62849 ))
+       (portRef sharein (instanceRef ix19104z62848 ))))
+     (net nx19104z97 
+      (joined 
+       (portRef cout (instanceRef ix19104z62848 ))
+       (portRef cin (instanceRef ix19104z62861 ))))
+     (net nx19104z98 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62848 ))
+       (portRef sharein (instanceRef ix19104z62861 ))))
+     (net nx19104z108 
+      (joined 
+       (portRef cout (instanceRef ix19104z62861 ))
+       (portRef cin (instanceRef ix19104z62868 ))))
+     (net nx19104z109 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62861 ))
+       (portRef sharein (instanceRef ix19104z62868 ))))
+     (net nx19104z107 
+      (joined 
+       (portRef cout (instanceRef ix19104z62868 ))
+       (portRef cin (instanceRef ix19104z62867 ))))
+     (net nx19104z110 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62868 ))
+       (portRef sharein (instanceRef ix19104z62867 ))))
+     (net nx19104z106 
+      (joined 
+       (portRef cout (instanceRef ix19104z62867 ))
+       (portRef cin (instanceRef ix19104z62866 ))))
+     (net nx19104z111 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62867 ))
+       (portRef sharein (instanceRef ix19104z62866 ))))
+     (net nx19104z131 
+      (joined 
+       (portRef cout (instanceRef ix19104z62866 ))
+       (portRef cin (instanceRef ix19104z62879 ))))
+     (net nx19104z132 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62866 ))
+       (portRef sharein (instanceRef ix19104z62879 ))))
+     (net nx19104z140 
+      (joined 
+       (portRef cout (instanceRef ix19104z62879 ))
+       (portRef cin (instanceRef ix19104z62885 ))))
+     (net nx19104z141 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62879 ))
+       (portRef sharein (instanceRef ix19104z62885 ))))
+     (net nx19104z149 
+      (joined 
+       (portRef cout (instanceRef ix19104z62885 ))
+       (portRef cin (instanceRef ix19104z62890 ))))
+     (net nx19104z150 
+      (joined 
+       (portRef shareout (instanceRef ix19104z62885 ))
+       (portRef sharein (instanceRef ix19104z62890 ))))
+     (net nx19104z15 
+      (joined 
+       (portRef cout (instanceRef ix19104z62817 ))
+       (portRef cin (instanceRef ix19104z62816 ))))
+     (net nx19104z13 
+      (joined 
+       (portRef cout (instanceRef ix19104z62816 ))
+       (portRef cin (instanceRef ix19104z62812 ))))
+     (net nx19104z31 
+      (joined 
+       (portRef cout (instanceRef ix19104z62812 ))
+       (portRef cin (instanceRef ix19104z62824 ))))
+     (net nx19104z48 
+      (joined 
+       (portRef cout (instanceRef ix19104z62824 ))
+       (portRef cin (instanceRef ix19104z62834 ))))
+     (net nx19104z46 
+      (joined 
+       (portRef cout (instanceRef ix19104z62834 ))
+       (portRef cin (instanceRef ix19104z62833 ))))
+     (net nx19104z44 
+      (joined 
+       (portRef cout (instanceRef ix19104z62833 ))
+       (portRef cin (instanceRef ix19104z62829 ))))
+     (net nx19104z65 
+      (joined 
+       (portRef cout (instanceRef ix19104z62829 ))
+       (portRef cin (instanceRef ix19104z62842 ))))
+     (net nx19104z82 
+      (joined 
+       (portRef cout (instanceRef ix19104z62842 ))
+       (portRef cin (instanceRef ix19104z62852 ))))
+     (net nx19104z80 
+      (joined 
+       (portRef cout (instanceRef ix19104z62852 ))
+       (portRef cin (instanceRef ix19104z62851 ))))
+     (net nx19104z78 
+      (joined 
+       (portRef cout (instanceRef ix19104z62851 ))
+       (portRef cin (instanceRef ix19104z62847 ))))
+     (net nx19104z99 
+      (joined 
+       (portRef cout (instanceRef ix19104z62847 ))
+       (portRef cin (instanceRef ix19104z62860 ))))
+     (net nx19104z116 
+      (joined 
+       (portRef cout (instanceRef ix19104z62860 ))
+       (portRef cin (instanceRef ix19104z62870 ))))
+     (net nx19104z114 
+      (joined 
+       (portRef cout (instanceRef ix19104z62870 ))
+       (portRef cin (instanceRef ix19104z62869 ))))
+     (net nx19104z112 
+      (joined 
+       (portRef cout (instanceRef ix19104z62869 ))
+       (portRef cin (instanceRef ix19104z62865 ))))
+     (net nx19104z133 
+      (joined 
+       (portRef cout (instanceRef ix19104z62865 ))
+       (portRef cin (instanceRef ix19104z62878 ))))
+     (net nx19104z142 
+      (joined 
+       (portRef cout (instanceRef ix19104z62878 ))
+       (portRef cin (instanceRef ix19104z62884 ))))
+     (net nx19104z151 
+      (joined 
+       (portRef cout (instanceRef ix19104z62884 ))
+       (portRef cin (instanceRef ix19104z62889 ))))
+     (net nx19104z5 
+      (joined 
+       (portRef Y (instanceRef GND ))
+       (portRef datad (instanceRef ix19104z62810 ))
+       (portRef datad (instanceRef ix19104z62822 ))
+       (portRef datad (instanceRef ix19104z62837 ))
+       (portRef datad (instanceRef ix19104z62835 ))
+       (portRef datad (instanceRef ix19104z62855 ))
+       (portRef datad (instanceRef ix19104z62845 ))
+       (portRef datad (instanceRef ix19104z62858 ))
+       (portRef datad (instanceRef ix19104z62873 ))
+       (portRef datad (instanceRef ix19104z62871 ))
+       (portRef datad (instanceRef ix19104z62863 ))
+       (portRef datad (instanceRef ix19104z62876 ))
+       (portRef datad (instanceRef ix19104z62882 ))
+       (portRef datad (instanceRef ix19104z62887 ))
+       (portRef dataa (instanceRef ix19104z62885 ))
+       (portRef dataa (instanceRef ix19104z62890 ))
+       (portRef dataf (instanceRef ix19104z62884 ))
+       (portRef dataf (instanceRef ix19104z62889 ))))
+     (net i_clk_int 
+      (joined 
+       (portRef o (instanceRef i_clk_ibuf ))
+       (portRef clock (instanceRef local_counter1_modgen_counter_o_count ))
+       (portRef clk (instanceRef reg_sig_state_2_ ))
+       (portRef clk (instanceRef reg_sig_state_1_ ))
+       (portRef clk (instanceRef reg_sig_state_0_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef clk (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))
+       (portRef clk (instanceRef reg_sig_out_ppm ))
+       (portRef clk (instanceRef reg_current_state_4_ ))
+       (portRef clk (instanceRef reg_current_state_3_ ))
+       (portRef clk (instanceRef reg_current_state_2_ ))
+       (portRef clk (instanceRef reg_current_state_1_ ))))
+     (net i_reset_n_int 
+      (joined 
+       (portRef o (instanceRef i_reset_n_ibuf ))
+       (portRef IN1 (instanceRef ix45248z1318 ))
+       (portRef IN1 (instanceRef ix1171_repl ))
+       (portRef datab (instanceRef ix5537z62807 ))
+       (portRef datae (instanceRef ix45248z62808 ))))
+     (net i_reg_int_31_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_31_ ))
+       (portRef IN1 (instanceRef ix5349z1315 ))))
+     (net i_reg_int_30_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_30_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))))
+     (net i_reg_int_29_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_29_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))))
+     (net i_reg_int_28_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_28_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))))
+     (net i_reg_int_27_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_27_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))))
+     (net i_reg_int_26_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_26_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))))
+     (net i_reg_int_25_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_25_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))))
+     (net i_reg_int_24_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_24_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))))
+     (net i_reg_int_23_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_23_ ))
+       (portRef IN1 (instanceRef ix25042z1315 ))))
+     (net i_reg_int_22_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_22_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))))
+     (net i_reg_int_21_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_21_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))))
+     (net i_reg_int_20_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_20_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))))
+     (net i_reg_int_19_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_19_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))))
+     (net i_reg_int_18_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_18_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))))
+     (net i_reg_int_17_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_17_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))))
+     (net i_reg_int_16_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_16_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))))
+     (net i_reg_int_15_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_15_ ))
+       (portRef IN1 (instanceRef ix55433z1315 ))))
+     (net i_reg_int_14_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_14_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))))
+     (net i_reg_int_13_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_13_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))))
+     (net i_reg_int_12_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_12_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))))
+     (net i_reg_int_11_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_11_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))))
+     (net i_reg_int_10_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_10_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))))
+     (net i_reg_int_9_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_9_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))))
+     (net i_reg_int_8_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_8_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))))
+     (net i_reg_int_7_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_7_ ))
+       (portRef IN1 (instanceRef ix45248z1315 ))))
+     (net i_reg_int_6_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_6_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))))
+     (net i_reg_int_5_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_5_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))))
+     (net i_reg_int_4_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_4_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))))
+     (net i_reg_int_3_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_3_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))))
+     (net i_reg_int_2_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_2_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))))
+     (net i_reg_int_1_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_1_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))))
+     (net i_reg_int_0_ 
+      (joined 
+       (portRef o (instanceRef i_reg_ibuf_0_ ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))))
+     (net o_ppm 
+      (joined 
+       (portRef o_ppm )
+       (portRef o (instanceRef o_ppm_obuf ))))
+     (net PWR 
+      (joined 
+       (portRef Y (instanceRef PWR ))
+       (portRef (member ax 20)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 21)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 25)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 4)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 8)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 12)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 14)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 15)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 17)(instanceRef cyclonev_mac_0 ))
+       (portRef (member by 18)(instanceRef cyclonev_mac_0 ))
+       (portRef (member ax 20)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 21)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 25)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 4)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 8)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 12)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 14)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 15)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 17)(instanceRef cyclonev_mac_1 ))
+       (portRef (member by 18)(instanceRef cyclonev_mac_1 ))
+       (portRef (member ax 20)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 21)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 25)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 4)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 8)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 12)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 14)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 15)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 17)(instanceRef cyclonev_mac_2 ))
+       (portRef (member by 18)(instanceRef cyclonev_mac_2 ))
+       (portRef (member ax 20)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 21)(instanceRef cyclonev_mac_3 ))
+       (portRef (member ax 25)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 4)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 8)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 12)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 14)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 15)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 17)(instanceRef cyclonev_mac_3 ))
+       (portRef (member by 18)(instanceRef cyclonev_mac_3 ))
+       (portRef ena (instanceRef reg_sig_state_2_ ))
+       (portRef ena (instanceRef reg_sig_state_1_ ))
+       (portRef ena (instanceRef reg_sig_state_0_ ))
+       (portRef ena (instanceRef reg_sig_out_ppm ))
+       (portRef ena (instanceRef reg_current_state_4_ ))
+       (portRef ena (instanceRef reg_current_state_3_ ))
+       (portRef ena (instanceRef reg_current_state_2_ ))
+       (portRef ena (instanceRef reg_current_state_1_ ))
+       (portRef datad (instanceRef ix19104z62818 ))
+       (portRef datad (instanceRef ix19104z62827 ))
+       (portRef datad (instanceRef ix19104z62840 ))
+       (portRef datad (instanceRef ix19104z62853 ))
+       (portRef clrn (instanceRef reg_sig_state_2_ ))
+       (portRef prn (instanceRef reg_sig_state_2_ ))
+       (portRef clrn (instanceRef reg_sig_state_1_ ))
+       (portRef prn (instanceRef reg_sig_state_1_ ))
+       (portRef clrn (instanceRef reg_sig_state_0_ ))
+       (portRef prn (instanceRef reg_sig_state_0_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef clrn (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))
+       (portRef prn (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))
+       (portRef clrn (instanceRef reg_sig_out_ppm ))
+       (portRef prn (instanceRef reg_sig_out_ppm ))
+       (portRef clrn (instanceRef reg_current_state_4_ ))
+       (portRef prn (instanceRef reg_current_state_4_ ))
+       (portRef clrn (instanceRef reg_current_state_3_ ))
+       (portRef prn (instanceRef reg_current_state_3_ ))
+       (portRef clrn (instanceRef reg_current_state_2_ ))
+       (portRef prn (instanceRef reg_current_state_2_ ))
+       (portRef clrn (instanceRef reg_current_state_1_ ))
+       (portRef prn (instanceRef reg_current_state_1_ ))))
+     (net not_i_reset_n 
+      (joined 
+       (portRef Y (instanceRef ix45248z1318 ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))))
+     (net nx19104z1 
+      (joined 
+       (portRef combout (instanceRef ix19104z62807 ))
+       (portRef d (instanceRef reg_current_state_3_ ))))
+     (net nx18107z1 
+      (joined 
+       (portRef combout (instanceRef ix18107z62807 ))
+       (portRef d (instanceRef reg_current_state_2_ ))))
+     (net nx5537z8 
+      (joined 
+       (portRef combout (instanceRef ix5537z62814 ))
+       (portRef dataf (instanceRef ix18107z62807 ))
+       (portRef datae (instanceRef ix5537z62807 ))
+       (portRef dataf (instanceRef ix17110z62807 ))))
+     (net nx24215z3 
+      (joined 
+       (portRef combout (instanceRef ix24215z62809 ))
+       (portRef datab (instanceRef ix19104z62807 ))
+       (portRef dataf (instanceRef ix24215z62808 ))
+       (portRef datae (instanceRef ix17110z62807 ))))
+     (net nx5537z2 
+      (joined 
+       (portRef combout (instanceRef ix5537z62808 ))
+       (portRef datad (instanceRef ix5537z62807 ))))
+     (net nx24215z2 
+      (joined 
+       (portRef combout (instanceRef ix24215z62808 ))
+       (portRef datae (instanceRef ix18107z62807 ))
+       (portRef datad (instanceRef ix24215z62807 ))
+       (portRef datad (instanceRef ix23218z62807 ))
+       (portRef datad (instanceRef ix22221z62807 ))))
+     (net nx5537z38 
+      (joined 
+       (portRef combout (instanceRef ix5537z62844 ))
+       (portRef datag (instanceRef ix5537z62814 ))))
+     (net nx5537z7 
+      (joined 
+       (portRef combout (instanceRef ix5537z62813 ))
+       (portRef dataf (instanceRef ix24215z62809 ))
+       (portRef dataf (instanceRef ix5537z62808 ))
+       (portRef datab (instanceRef ix5537z62844 ))
+       (portRef dataf (instanceRef ix22221z62810 ))
+       (portRef datad (instanceRef ix5537z62833 ))
+       (portRef datab (instanceRef ix5537z62824 ))
+       (portRef datab (instanceRef ix5537z62815 ))))
+     (net nx22221z4 
+      (joined 
+       (portRef combout (instanceRef ix22221z62810 ))
+       (portRef dataa (instanceRef ix22221z62809 ))))
+     (net nx22221z2 
+      (joined 
+       (portRef combout (instanceRef ix22221z62808 ))
+       (portRef datac (instanceRef ix22221z62807 ))
+       (portRef datac (instanceRef ix5537z62833 ))))
+     (net nx19104z21 
+      (joined 
+       (portRef Y (instanceRef ix19104z1328 ))
+       (portRef cin (instanceRef ix19104z62818 ))))
+     (net nx5537z1 
+      (joined 
+       (portRef combout (instanceRef ix5537z62807 ))
+       (portRef sclear (instanceRef local_counter1_modgen_counter_o_count ))))
+     (net nx24215z1 
+      (joined 
+       (portRef combout (instanceRef ix24215z62807 ))
+       (portRef d (instanceRef reg_sig_state_0_ ))))
+     (net nx23218z1 
+      (joined 
+       (portRef combout (instanceRef ix23218z62807 ))
+       (portRef d (instanceRef reg_sig_state_1_ ))))
+     (net nx22221z1 
+      (joined 
+       (portRef combout (instanceRef ix22221z62807 ))
+       (portRef d (instanceRef reg_sig_state_2_ ))))
+     (net nx22221z3 
+      (joined 
+       (portRef combout (instanceRef ix22221z62809 ))
+       (portRef datae (instanceRef ix24215z62807 ))
+       (portRef datae (instanceRef ix23218z62807 ))
+       (portRef datae (instanceRef ix22221z62807 ))))
+     (net a_17_ 
+      (joined 
+       (portRef combout (instanceRef ix19104z62881 ))
+       (portRef dataa (instanceRef ix19104z62880 ))))
+     (net nx19104z2 
+      (joined 
+       (portRef combout (instanceRef ix19104z62808 ))
+       (portRef dataa (instanceRef ix19104z62807 ))
+       (portRef dataf (instanceRef ix5537z62807 ))
+       (portRef dataf (instanceRef ix24215z62807 ))
+       (portRef dataf (instanceRef ix23218z62807 ))
+       (portRef dataf (instanceRef ix22221z62807 ))
+       (portRef dataf (instanceRef ix20101z62807 ))))
+     (net nx5537z27 
+      (joined 
+       (portRef combout (instanceRef ix5537z62833 ))
+       (portRef dataf (instanceRef ix5537z62814 ))))
+     (net nx19104z135 
+      (joined 
+       (portRef combout (instanceRef ix19104z62880 ))
+       (portRef dataf (instanceRef ix19104z62808 ))))
+     (net nx19104z124 
+      (joined 
+       (portRef combout (instanceRef ix19104z62875 ))
+       (portRef datae (instanceRef ix19104z62862 ))))
+     (net nx19104z101 
+      (joined 
+       (portRef combout (instanceRef ix19104z62862 ))
+       (portRef datae (instanceRef ix19104z62808 ))))
+     (net nx19104z90 
+      (joined 
+       (portRef combout (instanceRef ix19104z62857 ))
+       (portRef datae (instanceRef ix19104z62844 ))))
+     (net nx19104z67 
+      (joined 
+       (portRef combout (instanceRef ix19104z62844 ))
+       (portRef datad (instanceRef ix19104z62808 ))))
+     (net nx19104z56 
+      (joined 
+       (portRef combout (instanceRef ix19104z62839 ))
+       (portRef datae (instanceRef ix19104z62826 ))))
+     (net nx19104z33 
+      (joined 
+       (portRef combout (instanceRef ix19104z62826 ))
+       (portRef datac (instanceRef ix19104z62808 ))))
+     (net nx19104z23 
+      (joined 
+       (portRef combout (instanceRef ix19104z62821 ))
+       (portRef datae (instanceRef ix19104z62809 ))))
+     (net nx19104z3 
+      (joined 
+       (portRef combout (instanceRef ix19104z62809 ))
+       (portRef datab (instanceRef ix19104z62808 ))))
+     (net nx5537z46 
+      (joined 
+       (portRef combout (instanceRef ix5537z62852 ))
+       (portRef dataf (instanceRef ix5537z62851 ))))
+     (net nx5537z45 
+      (joined 
+       (portRef combout (instanceRef ix5537z62851 ))
+       (portRef dataf (instanceRef ix5537z62844 ))))
+     (net nx5537z44 
+      (joined 
+       (portRef combout (instanceRef ix5537z62850 ))
+       (portRef dataf (instanceRef ix5537z62849 ))))
+     (net nx5537z43 
+      (joined 
+       (portRef combout (instanceRef ix5537z62849 ))
+       (portRef datae (instanceRef ix5537z62844 ))))
+     (net nx5537z42 
+      (joined 
+       (portRef combout (instanceRef ix5537z62848 ))
+       (portRef dataf (instanceRef ix5537z62847 ))))
+     (net nx5537z41 
+      (joined 
+       (portRef combout (instanceRef ix5537z62847 ))
+       (portRef datad (instanceRef ix5537z62844 ))))
+     (net nx5537z40 
+      (joined 
+       (portRef combout (instanceRef ix5537z62846 ))
+       (portRef dataf (instanceRef ix5537z62845 ))))
+     (net nx5537z39 
+      (joined 
+       (portRef combout (instanceRef ix5537z62845 ))
+       (portRef datac (instanceRef ix5537z62844 ))))
+     (net nx5537z37 
+      (joined 
+       (portRef combout (instanceRef ix5537z62843 ))
+       (portRef dataf (instanceRef ix5537z62839 ))))
+     (net nx5537z36 
+      (joined 
+       (portRef combout (instanceRef ix5537z62842 ))
+       (portRef datae (instanceRef ix5537z62839 ))))
+     (net nx5537z35 
+      (joined 
+       (portRef combout (instanceRef ix5537z62841 ))
+       (portRef datad (instanceRef ix5537z62839 ))))
+     (net nx5537z34 
+      (joined 
+       (portRef combout (instanceRef ix5537z62840 ))
+       (portRef datac (instanceRef ix5537z62839 ))))
+     (net nx5537z33 
+      (joined 
+       (portRef combout (instanceRef ix5537z62839 ))
+       (portRef dataf (instanceRef ix5537z62833 ))))
+     (net nx5537z32 
+      (joined 
+       (portRef combout (instanceRef ix5537z62838 ))
+       (portRef dataf (instanceRef ix5537z62834 ))))
+     (net nx5537z31 
+      (joined 
+       (portRef combout (instanceRef ix5537z62837 ))
+       (portRef datae (instanceRef ix5537z62834 ))))
+     (net nx5537z30 
+      (joined 
+       (portRef combout (instanceRef ix5537z62836 ))
+       (portRef datad (instanceRef ix5537z62834 ))))
+     (net nx5537z29 
+      (joined 
+       (portRef combout (instanceRef ix5537z62835 ))
+       (portRef datac (instanceRef ix5537z62834 ))))
+     (net nx5537z28 
+      (joined 
+       (portRef combout (instanceRef ix5537z62834 ))
+       (portRef datae (instanceRef ix5537z62833 ))))
+     (net nx5537z26 
+      (joined 
+       (portRef combout (instanceRef ix5537z62832 ))
+       (portRef dataf (instanceRef ix5537z62831 ))))
+     (net nx5537z25 
+      (joined 
+       (portRef combout (instanceRef ix5537z62831 ))
+       (portRef dataf (instanceRef ix5537z62824 ))))
+     (net nx5537z24 
+      (joined 
+       (portRef combout (instanceRef ix5537z62830 ))
+       (portRef dataf (instanceRef ix5537z62829 ))))
+     (net nx5537z23 
+      (joined 
+       (portRef combout (instanceRef ix5537z62829 ))
+       (portRef datae (instanceRef ix5537z62824 ))))
+     (net nx5537z22 
+      (joined 
+       (portRef combout (instanceRef ix5537z62828 ))
+       (portRef dataf (instanceRef ix5537z62827 ))))
+     (net nx5537z21 
+      (joined 
+       (portRef combout (instanceRef ix5537z62827 ))
+       (portRef datad (instanceRef ix5537z62824 ))))
+     (net nx5537z20 
+      (joined 
+       (portRef combout (instanceRef ix5537z62826 ))
+       (portRef dataf (instanceRef ix5537z62825 ))))
+     (net nx5537z19 
+      (joined 
+       (portRef combout (instanceRef ix5537z62825 ))
+       (portRef datac (instanceRef ix5537z62824 ))))
+     (net nx5537z17 
+      (joined 
+       (portRef combout (instanceRef ix5537z62823 ))
+       (portRef dataf (instanceRef ix5537z62822 ))))
+     (net nx5537z16 
+      (joined 
+       (portRef combout (instanceRef ix5537z62822 ))
+       (portRef dataf (instanceRef ix5537z62815 ))))
+     (net nx5537z15 
+      (joined 
+       (portRef combout (instanceRef ix5537z62821 ))
+       (portRef dataf (instanceRef ix5537z62820 ))))
+     (net nx5537z14 
+      (joined 
+       (portRef combout (instanceRef ix5537z62820 ))
+       (portRef datae (instanceRef ix5537z62815 ))))
+     (net nx5537z13 
+      (joined 
+       (portRef combout (instanceRef ix5537z62819 ))
+       (portRef dataf (instanceRef ix5537z62818 ))))
+     (net nx5537z12 
+      (joined 
+       (portRef combout (instanceRef ix5537z62818 ))
+       (portRef datad (instanceRef ix5537z62815 ))))
+     (net nx5537z11 
+      (joined 
+       (portRef combout (instanceRef ix5537z62817 ))
+       (portRef dataf (instanceRef ix5537z62816 ))))
+     (net nx5537z10 
+      (joined 
+       (portRef combout (instanceRef ix5537z62816 ))
+       (portRef datac (instanceRef ix5537z62815 ))))
+     (net nx5537z18 
+      (joined 
+       (portRef combout (instanceRef ix5537z62824 ))
+       (portRef datad (instanceRef ix5537z62814 ))))
+     (net nx5537z9 
+      (joined 
+       (portRef combout (instanceRef ix5537z62815 ))
+       (portRef datac (instanceRef ix5537z62814 ))))
+     (net nx5537z6 
+      (joined 
+       (portRef combout (instanceRef ix5537z62812 ))
+       (portRef datae (instanceRef ix24215z62809 ))
+       (portRef datae (instanceRef ix5537z62808 ))
+       (portRef datae (instanceRef ix22221z62810 ))))
+     (net nx5537z5 
+      (joined 
+       (portRef combout (instanceRef ix5537z62811 ))
+       (portRef datad (instanceRef ix24215z62809 ))
+       (portRef datad (instanceRef ix5537z62808 ))
+       (portRef datad (instanceRef ix22221z62810 ))))
+     (net nx5537z4 
+      (joined 
+       (portRef combout (instanceRef ix5537z62810 ))
+       (portRef datac (instanceRef ix24215z62809 ))
+       (portRef datac (instanceRef ix5537z62808 ))
+       (portRef datac (instanceRef ix22221z62810 ))))
+     (net nx5537z3 
+      (joined 
+       (portRef combout (instanceRef ix5537z62809 ))
+       (portRef datab (instanceRef ix24215z62809 ))
+       (portRef datab (instanceRef ix5537z62808 ))
+       (portRef datab (instanceRef ix22221z62810 ))))
+     (net nx45248z1 
+      (joined 
+       (portRef combout (instanceRef ix45248z62808 ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef ena (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))))
+     (net nx20101z1 
+      (joined 
+       (portRef combout (instanceRef ix20101z62807 ))
+       (portRef d (instanceRef reg_current_state_4_ ))))
+     (net nx17110z1 
+      (joined 
+       (portRef combout (instanceRef ix17110z62807 ))
+       (portRef d (instanceRef reg_current_state_1_ ))))
+     (net not_i_reset_n_repl 
+      (joined 
+       (portRef Y (instanceRef ix1171_repl ))
+       (portRef sclr (instanceRef reg_sig_state_2_ ))
+       (portRef sclr (instanceRef reg_sig_state_1_ ))
+       (portRef sclr (instanceRef reg_sig_state_0_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_6_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_5_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_4_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_3_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_2_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_1_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_0_ay_0_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_6_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_5_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_4_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_3_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_2_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_1_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_1_ay_0_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_6_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_5_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_4_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_3_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_2_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_1_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_2_ay_0_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_6_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_5_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_4_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_3_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_2_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_1_ ))
+       (portRef sclr (instanceRef reg_pipe_cyclonev_mac_3_ay_0_ ))
+       (portRef sclr (instanceRef reg_sig_out_ppm ))
+       (portRef sclr (instanceRef reg_current_state_4_ ))
+       (portRef sclr (instanceRef reg_current_state_3_ ))
+       (portRef sclr (instanceRef reg_current_state_2_ ))
+       (portRef sclr (instanceRef reg_current_state_1_ ))))
+     (net nx19104z145 
+      (joined 
+       (portRef cout (instanceRef ix19104z62887 ))
+       (portRef cin (instanceRef ix19104z62886 ))))
+     (net nx49530z1 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef IN1 (instanceRef ix49530z1315 ))))
+     (net NOT_i_reg_int_31_ 
+      (joined 
+       (portRef Y (instanceRef ix5349z1315 ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))))
+     (net NOT_GND 
+      (joined 
+       (portRef Y (instanceRef ix45248z1317 ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_0_ay_7_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef asdata (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))))
+     (net nx49529z1 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))
+       (portRef IN1 (instanceRef ix49529z1315 ))))
+     (net NOT_i_reg_int_23_ 
+      (joined 
+       (portRef Y (instanceRef ix25042z1315 ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_1_ay_7_ ))))
+     (net nx49528z1 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))
+       (portRef IN1 (instanceRef ix49528z1315 ))))
+     (net NOT_i_reg_int_15_ 
+      (joined 
+       (portRef Y (instanceRef ix55433z1315 ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_2_ay_7_ ))))
+     (net nx49527z1 
+      (joined 
+       (portRef q (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))
+       (portRef IN1 (instanceRef ix49527z1315 ))))
+     (net NOT_i_reg_int_7_ 
+      (joined 
+       (portRef Y (instanceRef ix45248z1315 ))
+       (portRef d (instanceRef reg_pipe_cyclonev_mac_3_ay_7_ ))))))))
+ (design send_ppm_synth (cellRef send_ppm_synth (libraryRef work ))))

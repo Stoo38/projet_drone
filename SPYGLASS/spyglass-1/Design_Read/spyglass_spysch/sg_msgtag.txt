@@ -1,0 +1,15 @@
+-1 "STX_VH_11" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "WRN_261" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "WRN_384" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"

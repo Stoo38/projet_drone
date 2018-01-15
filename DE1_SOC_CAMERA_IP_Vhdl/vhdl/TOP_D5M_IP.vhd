@@ -167,6 +167,27 @@ COMPONENT image_process
 		b_out	: out std_logic_vector(7 downto 0)
 		);
 END COMPONENT;
+
+COMPONENT position
+
+	port 
+	(
+		n_reset    : in std_logic;
+		VGA_CLK	   : in std_logic;
+		IMG	   : in std_logic;
+		X_Cont   : in std_logic_vector(8 downto 0);
+		Y_Cont   : in std_logic_vector(8 downto 0);  -- image 512 x 512
+		r_proc	   : in std_logic_vector(7 downto 0);
+		g_proc	   : in std_logic_vector(7 downto 0);
+		b_proc	   : in std_logic_vector(7 downto 0);
+		r_bout	   : out std_logic_vector(7 downto 0);
+		g_bout	   : out std_logic_vector(7 downto 0);
+		b_bout	   : out std_logic_vector(7 downto 0);
+		X_barycentre : out std_logic_vector (8 downto 0);
+		Y_barycentre : out std_logic_vector (8 downto 0)
+
+	);
+END COMPONENT;
 		
 COMPONENT altpll0
 	PORT(inclk0 : IN STD_LOGIC;
@@ -206,6 +227,7 @@ SIGNAL	wren :  STD_LOGIC;
 SIGNAL	IMG,CLK_25 :  STD_LOGIC;
 SIGNAL	owrite_DPRAM :  STD_LOGIC;
 SIGNAL	b,r,b_out,r_out,g,g_out :  STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL   r_bout, g_bout, b_bout : STD_LOGIC_VECTOR(7 downto 0);
 SIGNAL	Noir_et_blanc_int :  STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL	q :  STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL	IMGY_out,VGA_CLK_i :  STD_LOGIC;
@@ -225,9 +247,9 @@ VGA_VS <= VGA_V_int;
 --VGA_G <= Noir_et_blanc_int;
 --VGA_B <= Noir_et_blanc_int;
 
-VGA_R <= r_out;  -- sana le blanker
-VGA_G <= g_out;
-VGA_B <= b_out;
+VGA_R <= r_bout;  -- sana le blanker
+VGA_G <= g_bout;
+VGA_B <= b_bout;
 -- 
 VGA_NB_i <= conv_std_logic_vector(VGA_NB_i_uns(13 downto 0),14);
  
@@ -331,6 +353,19 @@ PORT MAP(IMG	 => IMG,
 		r_out	=> r_out,
 		g_out	=> g_out,
 		b_out	=> b_out);
+
+b2v_inst4 : position
+PORT MAP (n_reset	=> KEY(0),
+			VGA_CLK => CLK_25,
+			IMG => IMG,
+			X_Cont => memr_ad(8 DOWNTO 0),
+			Y_Cont => memr_ad(17 DOWNTO 9),
+			r_proc => r_out,
+			g_proc => g_out,
+			b_proc => b_out,
+			r_bout => r_bout,
+			g_bout => g_bout,
+			b_bout => b_bout);
 
 rdclock <= CLK_25;
 CCD_MCCLK  <= CCD_MCCLK_i;

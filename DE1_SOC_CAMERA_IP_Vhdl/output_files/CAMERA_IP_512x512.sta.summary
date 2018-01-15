@@ -3,88 +3,76 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -5.689
-TNS   : -336.437
+Slack : -5.744
+TNS   : -332.294
 
 Type  : Slow 1100mV 85C Model Setup 'Ext_Clock'
 Slack : -5.532
-TNS   : -37.531
-
-Type  : Slow 1100mV 85C Model Setup 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -4.785
-TNS   : -28253.553
-
-Type  : Slow 1100mV 85C Model Setup 'CCD_PIXCLK'
-Slack : -2.930
-TNS   : -370.441
+TNS   : -37.143
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.140
-TNS   : -3.367
+Slack : -1.988
+TNS   : -1.988
+
+Type  : Slow 1100mV 85C Model Setup 'CCD_PIXCLK'
+Slack : -1.829
+TNS   : -47.412
 
 Type  : Slow 1100mV 85C Model Setup 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 28.720
+Slack : 36.937
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'Ext_Clock'
-Slack : -1.319
-TNS   : -3.948
+Slack : -1.288
+TNS   : -3.855
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -0.913
-TNS   : -0.966
+Slack : -0.461
+TNS   : -0.461
 
 Type  : Slow 1100mV 85C Model Hold 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 0.321
+Slack : 0.241
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CCD_PIXCLK'
-Slack : 0.325
+Slack : 0.428
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.495
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'D5M_IP:b2v_inst|rClk[0]'
-Slack : 1.887
+Slack : 0.497
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -5.496
-TNS   : -170.804
+Slack : -5.118
+TNS   : -170.315
 
 Type  : Slow 1100mV 85C Model Recovery 'CCD_PIXCLK'
-Slack : -1.047
-TNS   : -90.235
+Slack : -0.968
+TNS   : -28.788
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : 15.903
+Slack : 15.583
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'CCD_PIXCLK'
-Slack : 0.283
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.446
+Slack : 1.088
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 3.116
+Slack : 2.680
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CCD_PIXCLK'
-Slack : -2.636
-TNS   : -954.869
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -2.174
-TNS   : -24963.418
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -50.694
+TNS   : -54.294
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : -0.394
+TNS   : -16.894
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Ext_Clock'
 Slack : -0.394
@@ -95,311 +83,275 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.821
+Slack : 8.956
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.760
+Slack : 19.286
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -5.705
-TNS   : -336.653
+Slack : -5.793
+TNS   : -333.324
 
 Type  : Slow 1100mV 0C Model Setup 'Ext_Clock'
-Slack : -5.311
-TNS   : -36.609
-
-Type  : Slow 1100mV 0C Model Setup 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -4.789
-TNS   : -28167.759
-
-Type  : Slow 1100mV 0C Model Setup 'CCD_PIXCLK'
-Slack : -3.023
-TNS   : -348.571
+Slack : -5.332
+TNS   : -36.294
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.100
-TNS   : -3.289
+Slack : -1.941
+TNS   : -1.941
+
+Type  : Slow 1100mV 0C Model Setup 'CCD_PIXCLK'
+Slack : -1.773
+TNS   : -45.276
 
 Type  : Slow 1100mV 0C Model Setup 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 29.107
+Slack : 36.996
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'Ext_Clock'
-Slack : -1.360
-TNS   : -4.073
+Slack : -1.301
+TNS   : -3.895
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.874
-TNS   : -0.911
-
-Type  : Slow 1100mV 0C Model Hold 'CCD_PIXCLK'
-Slack : 0.301
-TNS   : 0.000
+Slack : -0.490
+TNS   : -0.490
 
 Type  : Slow 1100mV 0C Model Hold 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 0.312
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CCD_PIXCLK'
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.481
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'D5M_IP:b2v_inst|rClk[0]'
-Slack : 1.944
+Slack : 0.467
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -5.533
-TNS   : -173.193
+Slack : -5.188
+TNS   : -173.844
 
 Type  : Slow 1100mV 0C Model Recovery 'CCD_PIXCLK'
-Slack : -1.004
-TNS   : -87.529
+Slack : -0.941
+TNS   : -27.970
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : 15.994
+Slack : 15.444
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'CCD_PIXCLK'
-Slack : 0.275
+Slack : 0.314
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.647
+Slack : 1.015
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 3.182
+Slack : 2.832
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CCD_PIXCLK'
-Slack : -2.636
-TNS   : -956.113
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -2.174
-TNS   : -24933.365
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -50.220
+TNS   : -52.476
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : -0.394
+TNS   : -17.612
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Ext_Clock'
 Slack : -0.394
-TNS   : -9.419
+TNS   : -9.448
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'b2v_inst9|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.816
+Slack : 8.983
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.737
+Slack : 19.235
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'Ext_Clock'
-Slack : -4.062
-TNS   : -17.786
+Slack : -4.093
+TNS   : -17.423
 
 Type  : Fast 1100mV 85C Model Setup 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -2.866
-TNS   : -165.051
-
-Type  : Fast 1100mV 85C Model Setup 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -2.568
-TNS   : -13734.923
+Slack : -2.875
+TNS   : -160.316
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.071
-TNS   : -3.174
+Slack : -1.722
+TNS   : -1.722
 
 Type  : Fast 1100mV 85C Model Setup 'CCD_PIXCLK'
-Slack : -1.413
-TNS   : -124.582
+Slack : -0.623
+TNS   : -14.559
 
 Type  : Fast 1100mV 85C Model Setup 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 32.232
+Slack : 38.398
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -0.245
-TNS   : -0.245
+Slack : -0.185
+TNS   : -0.185
 
 Type  : Fast 1100mV 85C Model Hold 'Ext_Clock'
-Slack : -0.185
-TNS   : -0.552
+Slack : -0.150
+TNS   : -0.443
 
 Type  : Fast 1100mV 85C Model Hold 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 0.114
+Slack : 0.083
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CCD_PIXCLK'
-Slack : 0.182
+Slack : 0.199
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.269
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'D5M_IP:b2v_inst|rClk[0]'
-Slack : 0.873
+Slack : 0.274
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -2.819
-TNS   : -85.762
+Slack : -2.676
+TNS   : -87.247
 
 Type  : Fast 1100mV 85C Model Recovery 'CCD_PIXCLK'
-Slack : -0.249
-TNS   : -16.378
+Slack : -0.163
+TNS   : -4.462
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : 17.473
+Slack : 17.280
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CCD_PIXCLK'
-Slack : 0.035
+Slack : 0.072
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.180
+Slack : 0.660
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 1.509
+Slack : 1.235
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CCD_PIXCLK'
-Slack : -2.636
-TNS   : -898.188
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -2.174
-TNS   : -24881.301
-
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Ext_Clock'
-Slack : -0.265
-TNS   : -4.794
+Slack : -0.267
+TNS   : -4.804
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : -0.088
+TNS   : -2.784
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -0.038
-TNS   : -1.202
+Slack : -0.072
+TNS   : -3.515
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'b2v_inst9|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.863
+Slack : 8.989
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.880
+Slack : 19.543
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'Ext_Clock'
-Slack : -3.308
-TNS   : -14.090
+Slack : -3.347
+TNS   : -13.769
 
 Type  : Fast 1100mV 0C Model Setup 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -2.703
-TNS   : -153.431
-
-Type  : Fast 1100mV 0C Model Setup 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -2.351
-TNS   : -12742.516
+Slack : -2.727
+TNS   : -149.317
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -1.686
-TNS   : -2.573
+Slack : -1.378
+TNS   : -1.378
 
 Type  : Fast 1100mV 0C Model Setup 'CCD_PIXCLK'
-Slack : -1.271
-TNS   : -91.680
+Slack : -0.501
+TNS   : -11.159
 
 Type  : Fast 1100mV 0C Model Setup 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 33.190
+Slack : 38.529
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'Ext_Clock'
-Slack : -0.506
-TNS   : -1.516
+Slack : -0.466
+TNS   : -1.389
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.319
-TNS   : -0.319
+Slack : -0.307
+TNS   : -0.307
 
 Type  : Fast 1100mV 0C Model Hold 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 0.094
+Slack : 0.082
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CCD_PIXCLK'
-Slack : 0.146
+Slack : 0.190
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.256
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'D5M_IP:b2v_inst|rClk[0]'
-Slack : 0.873
+Slack : 0.246
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -2.658
-TNS   : -81.593
+Slack : -2.513
+TNS   : -82.211
 
 Type  : Fast 1100mV 0C Model Recovery 'CCD_PIXCLK'
-Slack : -0.174
-TNS   : -10.281
+Slack : -0.100
+TNS   : -2.796
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : 17.699
+Slack : 17.440
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'CCD_PIXCLK'
-Slack : -0.001
-TNS   : -0.008
+Slack : 0.034
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.273
+Slack : 0.567
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 1.473
+Slack : 1.250
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CCD_PIXCLK'
-Slack : -2.636
-TNS   : -898.751
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'D5M_IP:b2v_inst|rClk[0]'
-Slack : -2.174
-TNS   : -24813.462
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Ext_Clock'
-Slack : -0.254
-TNS   : -4.578
+Slack : -0.252
+TNS   : -4.534
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : -0.090
+TNS   : -2.843
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 0.002
-TNS   : 0.000
+Slack : -0.015
+TNS   : -0.383
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'b2v_inst9|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.893
+Slack : 9.032
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'b2v_inst9|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.881
+Slack : 19.536
 TNS   : 0.000
 
 ------------------------------------------------------------

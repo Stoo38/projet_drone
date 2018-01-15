@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CAMERA_IP_512x512
-Thu Oct 26 09:19:19 2017
+Mon Jan  8 12:12:47 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -13,9 +13,9 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |TOP_D5M_IP|PWM_cycle:b2v_inst10|etat
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |TOP_D5M_IP|PWM_cycle:b2v_inst10|etat
+ 10. State Machine - |TOP_D5M_IP|position:b2v_inst4|state
  11. State Machine - |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|mSetup_ST
  12. Registers Removed During Synthesis
  13. Removed Registers Triggering Further Register Optimizations
@@ -35,16 +35,17 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
  27. altpll Parameter Settings by Entity Instance
  28. Port Connectivity Checks: "PWM_cycle:b2v_inst10"
  29. Port Connectivity Checks: "altpll0:b2v_inst9"
- 30. Port Connectivity Checks: "gensync:b2v_inst2"
- 31. Port Connectivity Checks: "D5M_IP:b2v_inst|I2C_CCD_Config:u8"
- 32. Port Connectivity Checks: "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0"
- 33. Port Connectivity Checks: "D5M_IP:b2v_inst|RAW2RGB:u4"
- 34. Port Connectivity Checks: "D5M_IP:b2v_inst|CCD_Capture:u3"
- 35. Port Connectivity Checks: "D5M_IP:b2v_inst|Reset_Delay:u2"
- 36. Port Connectivity Checks: "D5M_IP:b2v_inst"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
+ 30. Port Connectivity Checks: "position:b2v_inst4"
+ 31. Port Connectivity Checks: "gensync:b2v_inst2"
+ 32. Port Connectivity Checks: "D5M_IP:b2v_inst|I2C_CCD_Config:u8"
+ 33. Port Connectivity Checks: "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0"
+ 34. Port Connectivity Checks: "D5M_IP:b2v_inst|RAW2RGB:u4"
+ 35. Port Connectivity Checks: "D5M_IP:b2v_inst|CCD_Capture:u3"
+ 36. Port Connectivity Checks: "D5M_IP:b2v_inst|Reset_Delay:u2"
+ 37. Port Connectivity Checks: "D5M_IP:b2v_inst"
+ 38. Post-Synthesis Netlist Statistics for Top Partition
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
 
 
 
@@ -71,16 +72,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 26 09:19:19 2017       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jan  8 12:12:47 2018       ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                   ; CAMERA_IP_512x512                           ;
 ; Top-level Entity Name           ; TOP_D5M_IP                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 372                                         ;
+; Total registers                 ; 267                                         ;
 ; Total pins                      ; 76                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 2,127,824                                   ;
+; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -214,6 +215,7 @@ agreement for further details.
 ; vhdl/gensync.vhd                 ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/projet_drone/DE1_SOC_CAMERA_IP_Vhdl/vhdl/gensync.vhd         ;         ;
 ; vhdl/dpram_512x512.vhd           ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/projet_drone/DE1_SOC_CAMERA_IP_Vhdl/vhdl/dpram_512x512.vhd   ;         ;
 ; vhdl/altpll0.vhd                 ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/projet_drone/DE1_SOC_CAMERA_IP_Vhdl/vhdl/altpll0.vhd         ;         ;
+; vhdl/position.vhd                ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/projet_drone/DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd        ;         ;
 ; altshift_taps.tdf                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altshift_taps.tdf              ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altdpram.inc                   ;         ;
 ; lpm_counter.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_counter.inc                ;         ;
@@ -243,77 +245,53 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                    ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                            ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 445                                                                                              ;
-;                                             ;                                                                                                  ;
-; Combinational ALUT usage for logic          ; 635                                                                                              ;
-;     -- 7 input functions                    ; 13                                                                                               ;
-;     -- 6 input functions                    ; 231                                                                                              ;
-;     -- 5 input functions                    ; 77                                                                                               ;
-;     -- 4 input functions                    ; 57                                                                                               ;
-;     -- <=3 input functions                  ; 257                                                                                              ;
-;                                             ;                                                                                                  ;
-; Dedicated logic registers                   ; 372                                                                                              ;
-;                                             ;                                                                                                  ;
-; I/O pins                                    ; 76                                                                                               ;
-; Total MLAB memory bits                      ; 0                                                                                                ;
-; Total block memory bits                     ; 2127824                                                                                          ;
-; Total DSP Blocks                            ; 0                                                                                                ;
-; Total PLLs                                  ; 1                                                                                                ;
-;     -- PLLs                                 ; 1                                                                                                ;
-;                                             ;                                                                                                  ;
-; Maximum fan-out node                        ; altpll0:b2v_inst9|altpll:altpll_component|altpll0_altpll:auto_generated|wire_generic_pll1_outclk ;
-; Maximum fan-out                             ; 324                                                                                              ;
-; Total fan-out                               ; 12336                                                                                            ;
-; Average fan-out                             ; 8.55                                                                                             ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 215            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 358            ;
+;     -- 7 input functions                    ; 13             ;
+;     -- 6 input functions                    ; 54             ;
+;     -- 5 input functions                    ; 38             ;
+;     -- 4 input functions                    ; 40             ;
+;     -- <=3 input functions                  ; 213            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 267            ;
+;                                             ;                ;
+; I/O pins                                    ; 76             ;
+; Total DSP Blocks                            ; 0              ;
+; Total PLLs                                  ; 1              ;
+;     -- PLLs                                 ; 1              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 119            ;
+; Total fan-out                               ; 2278           ;
+; Average fan-out                             ; 2.92           ;
++---------------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
-+-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                      ; Library Name ;
-+-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TOP_D5M_IP                                         ; 635 (5)           ; 372 (0)      ; 2127824           ; 0          ; 76   ; 0            ; |TOP_D5M_IP                                                                                                                                              ; work         ;
-;    |D5M_IP:b2v_inst|                                ; 299 (1)           ; 267 (15)     ; 30672             ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst                                                                                                                              ; work         ;
-;       |CCD_Capture:u3|                              ; 38 (38)           ; 42 (42)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|CCD_Capture:u3                                                                                                               ; work         ;
-;       |I2C_CCD_Config:u8|                           ; 175 (125)         ; 132 (94)     ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8                                                                                                            ; work         ;
-;          |I2C_Controller:u0|                        ; 50 (50)           ; 38 (38)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0                                                                                          ; work         ;
-;       |RAW2RGB:u4|                                  ; 41 (26)           ; 44 (33)      ; 30672             ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4                                                                                                                   ; work         ;
-;          |Line_Buffer:u0|                           ; 15 (0)            ; 11 (0)       ; 30672             ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0                                                                                                    ; work         ;
-;             |altshift_taps:ALTSHIFT_TAPS_component| ; 15 (0)            ; 11 (0)       ; 30672             ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component                                                              ; work         ;
-;                |shift_taps_nv51:auto_generated|     ; 15 (0)            ; 11 (0)       ; 30672             ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated                               ; work         ;
-;                   |altsyncram_6tg1:altsyncram2|     ; 0 (0)             ; 0 (0)        ; 30672             ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2   ; work         ;
-;                   |cntr_7of:cntr1|                  ; 15 (13)           ; 11 (11)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|cntr_7of:cntr1                ; work         ;
-;                      |cmpr_qac:cmpr4|               ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|cntr_7of:cntr1|cmpr_qac:cmpr4 ; work         ;
-;       |Reset_Delay:u2|                              ; 44 (44)           ; 34 (34)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|Reset_Delay:u2                                                                                                               ; work         ;
-;    |PWM_cycle:b2v_inst10|                           ; 65 (65)           ; 40 (40)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|PWM_cycle:b2v_inst10                                                                                                                         ; work         ;
-;    |altpll0:b2v_inst9|                              ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|altpll0:b2v_inst9                                                                                                                            ; work         ;
-;       |altpll:altpll_component|                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|altpll0:b2v_inst9|altpll:altpll_component                                                                                                    ; work         ;
-;          |altpll0_altpll:auto_generated|            ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|altpll0:b2v_inst9|altpll:altpll_component|altpll0_altpll:auto_generated                                                                      ; work         ;
-;    |dpram_512x512:b2v_inst1|                        ; 64 (0)            ; 10 (0)       ; 2097152           ; 0          ; 0    ; 0            ; |TOP_D5M_IP|dpram_512x512:b2v_inst1                                                                                                                      ; work         ;
-;       |altsyncram:altsyncram_component|             ; 64 (0)            ; 10 (0)       ; 2097152           ; 0          ; 0    ; 0            ; |TOP_D5M_IP|dpram_512x512:b2v_inst1|altsyncram:altsyncram_component                                                                                      ; work         ;
-;          |altsyncram_c2q1:auto_generated|           ; 64 (0)            ; 10 (10)      ; 2097152           ; 0          ; 0    ; 0            ; |TOP_D5M_IP|dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated                                                       ; work         ;
-;             |decode_l2a:rden_decode_b|              ; 32 (32)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|decode_l2a:rden_decode_b                              ; work         ;
-;             |decode_sma:decode2|                    ; 32 (32)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|decode_sma:decode2                                    ; work         ;
-;    |gensync:b2v_inst2|                              ; 64 (64)           ; 22 (22)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|gensync:b2v_inst2                                                                                                                            ; work         ;
-;    |image_process:b2v_inst3|                        ; 138 (138)         ; 33 (33)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|image_process:b2v_inst3                                                                                                                      ; work         ;
-+-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
++------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------+
+; |TOP_D5M_IP                              ; 358 (4)           ; 267 (0)      ; 0                 ; 0          ; 76   ; 0            ; |TOP_D5M_IP                                                                         ; work         ;
+;    |D5M_IP:b2v_inst|                     ; 255 (1)           ; 197 (3)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst                                                         ; work         ;
+;       |CCD_Capture:u3|                   ; 35 (35)           ; 28 (28)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|CCD_Capture:u3                                          ; work         ;
+;       |I2C_CCD_Config:u8|                ; 175 (125)         ; 132 (94)     ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8                                       ; work         ;
+;          |I2C_Controller:u0|             ; 50 (50)           ; 38 (38)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0                     ; work         ;
+;       |Reset_Delay:u2|                   ; 44 (44)           ; 34 (34)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|D5M_IP:b2v_inst|Reset_Delay:u2                                          ; work         ;
+;    |PWM_cycle:b2v_inst10|                ; 65 (65)           ; 40 (40)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|PWM_cycle:b2v_inst10                                                    ; work         ;
+;    |altpll0:b2v_inst9|                   ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|altpll0:b2v_inst9                                                       ; work         ;
+;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|altpll0:b2v_inst9|altpll:altpll_component                               ; work         ;
+;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|altpll0:b2v_inst9|altpll:altpll_component|altpll0_altpll:auto_generated ; work         ;
+;    |gensync:b2v_inst2|                   ; 34 (34)           ; 22 (22)      ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|gensync:b2v_inst2                                                       ; work         ;
+;    |position:b2v_inst4|                  ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |TOP_D5M_IP|position:b2v_inst4                                                      ; work         ;
++------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                             ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
-; Name                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
-; D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1278         ; 24           ; 1278         ; 24           ; 30672   ; None ;
-; dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ALTSYNCRAM                                                     ; AUTO ; Simple Dual Port ; 262144       ; 8            ; 262144       ; 8            ; 2097152 ; None ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -340,6 +318,19 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |TOP_D5M_IP|position:b2v_inst4|state                                                        ;
++-------------------------+-------------------------+--------------------+----------------------+-------------+
+; Name                    ; state.calcul_barycentre ; state.boucle_image ; state.nouvelle_image ; state.reset ;
++-------------------------+-------------------------+--------------------+----------------------+-------------+
+; state.reset             ; 0                       ; 0                  ; 0                    ; 0           ;
+; state.nouvelle_image    ; 0                       ; 0                  ; 1                    ; 1           ;
+; state.boucle_image      ; 0                       ; 1                  ; 0                    ; 1           ;
+; state.calcul_barycentre ; 1                       ; 0                  ; 0                    ; 1           ;
++-------------------------+-------------------------+--------------------+----------------------+-------------+
+
+
+Encoding Type:  One-Hot
 +-------------------------------------------------------------------------+
 ; State Machine - |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|mSetup_ST ;
 +----------------+----------------+----------------+----------------------+
@@ -351,62 +342,92 @@ Encoding Type:  One-Hot
 +----------------+----------------+----------------+----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                ;
-+----------------------------------------------------------------+------------------------------------------------------------------+
-; Register name                                                  ; Reason for Removal                                               ;
-+----------------------------------------------------------------+------------------------------------------------------------------+
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[31]                ; Stuck at VCC due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[30]                ; Stuck at GND due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[27..29]            ; Stuck at VCC due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[26]                ; Stuck at GND due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[25]                ; Stuck at VCC due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[24]                ; Stuck at GND due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[31]     ; Stuck at VCC due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[30]     ; Stuck at GND due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[27..29] ; Stuck at VCC due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[26]     ; Stuck at GND due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[25]     ; Stuck at VCC due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[24]     ; Stuck at GND due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[1]           ; Merged with D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[0] ;
-; D5M_IP:b2v_inst|rClk[1]                                        ; Lost fanout                                                      ;
-; image_process:b2v_inst3|bi[0..7]                               ; Stuck at GND due to stuck port data_in                           ;
-; image_process:b2v_inst3|ri[0..7]                               ; Stuck at GND due to stuck port data_in                           ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mSetup_ST~9                  ; Lost fanout                                                      ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mSetup_ST~10                 ; Lost fanout                                                      ;
-; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[10..15]                  ; Lost fanout                                                      ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|LUT_INDEX[5]                 ; Stuck at GND due to stuck port data_in                           ;
-; Total Number of Removed Registers = 43                         ;                                                                  ;
-+----------------------------------------------------------------+------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                      ;
++------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Register name                                                                                                                                        ; Reason for Removal                                               ;
++------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+; position:b2v_inst4|b_bout[0..7]                                                                                                                      ; Stuck at GND due to stuck port data_in                           ;
+; position:b2v_inst4|r_bout[0..7]                                                                                                                      ; Stuck at GND due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mwrite_DPRAM                                                                                                              ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|rCCD_DATA[0..11]                                                                                                                     ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mCCD_G[5..12]                                                                                                             ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_0[0..11]                                                                                                           ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[0..11]                                                                                                           ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|cntr_7of:cntr1|counter_reg_bit[0..10] ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[0..11]                                                                                                      ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[31]                                                                                                      ; Stuck at VCC due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[30]                                                                                                      ; Stuck at GND due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[27..29]                                                                                                  ; Stuck at VCC due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[26]                                                                                                      ; Stuck at GND due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[25]                                                                                                      ; Stuck at VCC due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[24]                                                                                                      ; Stuck at GND due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[31]                                                                                           ; Stuck at VCC due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[30]                                                                                           ; Stuck at GND due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[27..29]                                                                                       ; Stuck at VCC due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[26]                                                                                           ; Stuck at GND due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[25]                                                                                           ; Stuck at VCC due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[24]                                                                                           ; Stuck at GND due to stuck port data_in                           ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[1]                                                                                                 ; Merged with D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[0] ;
+; D5M_IP:b2v_inst|rClk[1]                                                                                                                              ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mSetup_ST~9                                                                                                        ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mSetup_ST~10                                                                                                       ; Lost fanout                                                      ;
+; position:b2v_inst4|count_x[0..8]                                                                                                                     ; Lost fanout                                                      ;
+; position:b2v_inst4|count_y[0..8]                                                                                                                     ; Lost fanout                                                      ;
+; position:b2v_inst4|state.reset                                                                                                                       ; Lost fanout                                                      ;
+; position:b2v_inst4|state.nouvelle_image                                                                                                              ; Lost fanout                                                      ;
+; position:b2v_inst4|state.boucle_image                                                                                                                ; Lost fanout                                                      ;
+; position:b2v_inst4|state.calcul_barycentre                                                                                                           ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[8..15]                                                                                                         ; Lost fanout                                                      ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|LUT_INDEX[5]                                                                                                       ; Stuck at GND due to stuck port data_in                           ;
+; Total Number of Removed Registers = 135                                                                                                              ;                                                                  ;
++------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                              ;
-+-------------------------------------------------+---------------------------+------------------------------------------------------------+
-; Register name                                   ; Reason for Removal        ; Registers Removed due to This Register                     ;
-+-------------------------------------------------+---------------------------+------------------------------------------------------------+
-; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[15]       ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[14],                 ;
-;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[13],                 ;
-;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[12],                 ;
-;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[11],                 ;
-;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[10]                  ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[31] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[31] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[30] ; Stuck at GND              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[30] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[29] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[29] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[28] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[28] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[27] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[27] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[26] ; Stuck at GND              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[26] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[25] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[25] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[24] ; Stuck at GND              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[24] ;
-;                                                 ; due to stuck port data_in ;                                                            ;
-+-------------------------------------------------+---------------------------+------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                     ;
++-------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                   ; Reason for Removal        ; Registers Removed due to This Register                                                                                                            ;
++-------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[15]       ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[14],                                                                                                        ;
+;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[13],                                                                                                        ;
+;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[12],                                                                                                        ;
+;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[11],                                                                                                        ;
+;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[10],                                                                                                        ;
+;                                                 ;                           ; D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[9], D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[8]                                                                ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_0[11]         ; Lost Fanouts              ; D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|cntr_7of:cntr1|counter_reg_bit[3], ;
+;                                                 ;                           ; D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|cntr_7of:cntr1|counter_reg_bit[2], ;
+;                                                 ;                           ; D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|cntr_7of:cntr1|counter_reg_bit[1], ;
+;                                                 ;                           ; D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|cntr_7of:cntr1|counter_reg_bit[0]  ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[11]         ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[11]                                                                                                      ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[10]         ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[10]                                                                                                      ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[9]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[9]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[8]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[8]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[7]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[7]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[6]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[6]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[5]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[5]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[4]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[4]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[3]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[3]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[2]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[2]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[1]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[1]                                                                                                       ;
+; D5M_IP:b2v_inst|RAW2RGB:u4|mDATAd_1[0]          ; Lost Fanouts              ; D5M_IP:b2v_inst|CCD_Capture:u3|mCCD_DATA[0]                                                                                                       ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[31] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[31]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[30] ; Stuck at GND              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[30]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[29] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[29]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[28] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[28]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[27] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[27]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[26] ; Stuck at GND              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[26]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[25] ; Stuck at VCC              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[25]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[24] ; Stuck at GND              ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD[24]                                                                                        ;
+;                                                 ; due to stuck port data_in ;                                                                                                                                                   ;
++-------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -414,12 +435,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 372   ;
-; Number of registers using Synchronous Clear  ; 155   ;
-; Number of registers using Synchronous Load   ; 11    ;
-; Number of registers using Asynchronous Clear ; 193   ;
+; Total registers                              ; 267   ;
+; Number of registers using Synchronous Clear  ; 133   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 146   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 184   ;
+; Number of registers using Clock Enable       ; 147   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -438,9 +459,9 @@ Encoding Type:  One-Hot
 ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[0] ; 19      ;
 ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[1] ; 19      ;
 ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|END           ; 5       ;
-; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[8]              ; 4       ;
 ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[10]             ; 4       ;
 ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[9]              ; 4       ;
+; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[8]              ; 4       ;
 ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[7]              ; 4       ;
 ; D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[6]              ; 4       ;
 ; Total number of inverted registers = 14                           ;         ;
@@ -452,24 +473,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|CCD_Capture:u3|X_Cont[0]                          ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[2]                          ;
-; 4:1                ; 21 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |TOP_D5M_IP|PWM_cycle:b2v_inst10|cnt[8]                                       ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[13]             ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |TOP_D5M_IP|PWM_cycle:b2v_inst10|pwm_number[0]                                ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|mCCD_G[12]                             ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TOP_D5M_IP|PWM_cycle:b2v_inst10|count_pwm[7]                                 ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|CCD_Capture:u3|X_Cont[7]                          ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|CCD_Capture:u3|Y_Cont[1]                          ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |TOP_D5M_IP|PWM_cycle:b2v_inst10|cnt[4]                                       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[15]             ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |TOP_D5M_IP|position:b2v_inst4|count_y[3]                                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |TOP_D5M_IP|PWM_cycle:b2v_inst10|pwm_number[2]                                ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TOP_D5M_IP|position:b2v_inst4|count_x[0]                                     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TOP_D5M_IP|PWM_cycle:b2v_inst10|count_pwm[0]                                 ;
 ; 64:1               ; 5 bits    ; 210 LEs       ; 60 LEs               ; 150 LEs                ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|mI2C_DATA[15]                   ;
-; 33:1               ; 8 bits    ; 176 LEs       ; 168 LEs              ; 8 LEs                  ; Yes        ; |TOP_D5M_IP|image_process:b2v_inst3|gi[4]                                     ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[4] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[2] ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|senosr_exposure[10]             ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |TOP_D5M_IP|gensync:b2v_inst2|Y[6]                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TOP_D5M_IP|gensync:b2v_inst2|Y[3]                                            ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |TOP_D5M_IP|D5M_IP:b2v_inst|RAW2RGB:u4|Add0                                   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |TOP_D5M_IP|gensync:b2v_inst2|X[5]                                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |TOP_D5M_IP|image_process:b2v_inst3|ngi[0]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |TOP_D5M_IP|image_process:b2v_inst3|nbi[1]                                    ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |TOP_D5M_IP|image_process:b2v_inst3|nri[7]                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
 
@@ -1117,6 +1131,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "position:b2v_inst4"                                                                         ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; x_barycentre ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_barycentre ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "gensync:b2v_inst2"                                                                      ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1197,39 +1221,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 372                         ;
-;     CLR               ; 57                          ;
-;     CLR SCLR          ; 53                          ;
-;     ENA               ; 68                          ;
+; arriav_ff             ; 267                         ;
+;     CLR               ; 24                          ;
+;     CLR SCLR          ; 41                          ;
+;     ENA               ; 44                          ;
 ;     ENA CLR           ; 48                          ;
-;     ENA CLR SCLR      ; 35                          ;
+;     ENA CLR SCLR      ; 33                          ;
 ;     ENA SCLR          ; 22                          ;
-;     ENA SLD           ; 11                          ;
-;     SCLR              ; 45                          ;
-;     plain             ; 33                          ;
+;     SCLR              ; 37                          ;
+;     plain             ; 18                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 637                         ;
-;     arith             ; 202                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 174                         ;
+; arriav_lcell_comb     ; 361                         ;
+;     arith             ; 166                         ;
+;         1 data inputs ; 152                         ;
 ;         2 data inputs ; 14                          ;
-;         5 data inputs ; 12                          ;
 ;     extend            ; 13                          ;
 ;         7 data inputs ; 13                          ;
-;     normal            ; 422                         ;
+;     normal            ; 182                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 32                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 57                          ;
-;         5 data inputs ; 65                          ;
-;         6 data inputs ; 231                         ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 40                          ;
+;         5 data inputs ; 38                          ;
+;         6 data inputs ; 54                          ;
 ; boundary_port         ; 76                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 280                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 2.53                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1238,7 +1258,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1248,7 +1268,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Thu Oct 26 09:19:08 2017
+    Info: Processing started: Mon Jan  8 12:12:38 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CAMERA_IP_512x512 -c CAMERA_IP_512x512
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/VGA_Controller.v
@@ -1297,16 +1317,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file vhdl/de
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/altpll0.vhd
     Info (12022): Found design unit 1: altpll0-SYN
     Info (12023): Found entity 1: altpll0
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/position.vhd
+    Info (12022): Found design unit 1: position-det
+    Info (12023): Found entity 1: position
 Warning (10236): Verilog HDL Implicit Net warning at D5M_IP.v(186): created implicit net for "R"
 Warning (10236): Verilog HDL Implicit Net warning at D5M_IP.v(187): created implicit net for "G"
 Warning (10236): Verilog HDL Implicit Net warning at D5M_IP.v(188): created implicit net for "B"
 Info (12127): Elaborating entity "TOP_D5M_IP" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(194): object "sCCD_VAL" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(196): object "VGA_B_i" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(197): object "VGA_NB_i" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at TOP_D5M_IP.vhd(208): used implicit default value for signal "b" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at TOP_D5M_IP.vhd(208): used implicit default value for signal "r" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(211): object "IMGY_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(215): object "sCCD_VAL" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(217): object "VGA_B_i" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(218): object "VGA_NB_i" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at TOP_D5M_IP.vhd(229): used implicit default value for signal "b" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at TOP_D5M_IP.vhd(229): used implicit default value for signal "r" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at TOP_D5M_IP.vhd(233): object "IMGY_out" assigned a value but never read
 Info (12128): Elaborating entity "D5M_IP" for hierarchy "D5M_IP:b2v_inst"
 Warning (10036): Verilog HDL or VHDL warning at D5M_IP.v(186): object "R" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at D5M_IP.v(187): object "G" assigned a value but never read
@@ -1394,6 +1417,118 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
 Info (12128): Elaborating entity "mux_chb" for hierarchy "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|mux_chb:mux3"
 Info (12128): Elaborating entity "gensync" for hierarchy "gensync:b2v_inst2"
 Info (12128): Elaborating entity "image_process" for hierarchy "image_process:b2v_inst3"
+Info (12128): Elaborating entity "position" for hierarchy "position:b2v_inst4"
+Warning (10036): Verilog HDL or VHDL warning at position.vhd(33): object "ri" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at position.vhd(33): object "bi" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at position.vhd(40): object "vga_im" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at position.vhd(85): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(100): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(100): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(102): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(103): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(106): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(107): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(110): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(111): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(116): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(116): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(118): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(119): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(122): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(123): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(126): signal "count_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at position.vhd(127): signal "count_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at position.vhd(82): inferring latch(es) for signal or variable "next_x_bar", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at position.vhd(82): inferring latch(es) for signal or variable "next_y_bar", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at position.vhd(82): inferring latch(es) for signal or variable "next_count", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at position.vhd(82): inferring latch(es) for signal or variable "next_x_sum", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at position.vhd(82): inferring latch(es) for signal or variable "next_y_sum", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "next_y_sum[0]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[1]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[2]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[3]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[4]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[5]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[6]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[7]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[8]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[9]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[10]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[11]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[12]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[13]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[14]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[15]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[16]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[17]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[18]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[19]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[20]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[21]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[22]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[23]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_sum[24]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[0]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[1]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[2]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[3]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[4]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[5]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[6]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[7]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[8]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[9]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[10]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[11]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[12]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[13]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[14]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[15]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[16]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[17]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[18]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[19]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[20]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[21]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[22]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[23]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_sum[24]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[0]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[1]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[2]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[3]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[4]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[5]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[6]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[7]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[8]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[9]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[10]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[11]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[12]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[13]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[14]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[15]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[16]" at position.vhd(82)
+Info (10041): Inferred latch for "next_count[17]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[0]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[1]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[2]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[3]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[4]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[5]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[6]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[7]" at position.vhd(82)
+Info (10041): Inferred latch for "next_y_bar[8]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[0]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[1]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[2]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[3]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[4]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[5]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[6]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[7]" at position.vhd(82)
+Info (10041): Inferred latch for "next_x_bar[8]" at position.vhd(82)
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:b2v_inst9"
 Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:b2v_inst9|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "altpll0:b2v_inst9|altpll:altpll_component"
@@ -1456,6 +1591,290 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
     Info (12023): Found entity 1: altpll0_altpll
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:b2v_inst9|altpll:altpll_component|altpll0_altpll:auto_generated"
 Info (12128): Elaborating entity "PWM_cycle" for hierarchy "PWM_cycle:b2v_inst10"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a0"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a1"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a2"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a3"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a4"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a5"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a6"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a7"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a8"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a9"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a10"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a11"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a12"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a13"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a14"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a15"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a16"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a17"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a18"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a19"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a20"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a21"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a22"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a23"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a24"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a25"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a26"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a27"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a28"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a29"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a30"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a31"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a32"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a33"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a34"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a35"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a36"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a37"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a38"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a39"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a40"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a41"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a42"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a43"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a44"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a45"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a46"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a47"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a48"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a49"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a50"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a51"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a52"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a53"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a54"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a55"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a56"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a57"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a58"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a59"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a60"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a61"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a62"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a63"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a64"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a65"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a66"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a67"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a68"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a69"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a70"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a71"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a72"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a73"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a74"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a75"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a76"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a77"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a78"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a79"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a80"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a81"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a82"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a83"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a84"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a85"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a86"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a87"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a88"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a89"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a90"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a91"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a92"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a93"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a94"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a95"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a96"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a97"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a98"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a99"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a100"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a101"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a102"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a103"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a104"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a105"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a106"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a107"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a108"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a109"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a110"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a111"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a112"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a113"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a114"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a115"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a116"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a117"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a118"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a119"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a120"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a121"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a122"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a123"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a124"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a125"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a126"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a127"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a128"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a129"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a130"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a131"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a132"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a133"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a134"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a135"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a136"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a137"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a138"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a139"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a140"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a141"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a142"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a143"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a144"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a145"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a146"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a147"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a148"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a149"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a150"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a151"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a152"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a153"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a154"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a155"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a156"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a157"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a158"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a159"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a160"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a161"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a162"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a163"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a164"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a165"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a166"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a167"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a168"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a169"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a170"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a171"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a172"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a173"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a174"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a175"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a176"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a177"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a178"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a179"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a180"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a181"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a182"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a183"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a184"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a185"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a186"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a187"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a188"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a189"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a190"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a191"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a192"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a193"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a194"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a195"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a196"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a197"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a198"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a199"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a200"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a201"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a202"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a203"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a204"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a205"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a206"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a207"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a208"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a209"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a210"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a211"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a212"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a213"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a214"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a215"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a216"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a217"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a218"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a219"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a220"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a221"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a222"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a223"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a224"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a225"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a226"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a227"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a228"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a229"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a230"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a231"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a232"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a233"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a234"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a235"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a236"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a237"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a238"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a239"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a240"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a241"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a242"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a243"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a244"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a245"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a246"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a247"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a248"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a249"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a250"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a251"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a252"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a253"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a254"
+        Warning (14320): Synthesized away node "dpram_512x512:b2v_inst1|altsyncram:altsyncram_component|altsyncram_c2q1:auto_generated|ram_block1a255"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[0]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[1]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[2]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[3]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[4]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[5]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[6]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[7]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[8]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[9]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[10]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[11]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[12]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[13]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[14]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[15]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[16]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[17]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[18]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[19]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[20]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[21]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[22]"
+        Warning (14320): Synthesized away node "D5M_IP:b2v_inst|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_nv51:auto_generated|altsyncram_6tg1:altsyncram2|q_b[23]"
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "I2C_SCLK" and its non-tri-state driver.
@@ -1463,25 +1882,52 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "I2C_SCLK~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "TRIGGER" is stuck at VCC
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (17049): 101 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance altpll0:b2v_inst9|altpll:altpll_component|altpll0_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock.
     Info: Must be connected
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CCD_DATA[0]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[1]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[2]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[3]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[4]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[5]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[6]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[7]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[8]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[9]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[10]"
+    Warning (15610): No output dependent on input pin "CCD_DATA[11]"
     Warning (15610): No output dependent on input pin "SW[8]"
-Info (21057): Implemented 1080 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 475 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 31 input pins
     Info (21059): Implemented 43 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 723 logic cells
-    Info (21064): Implemented 280 RAM segments
+    Info (21061): Implemented 398 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 949 megabytes
-    Info: Processing ended: Thu Oct 26 09:19:19 2017
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 379 warnings
+    Info: Peak virtual memory: 944 megabytes
+    Info: Processing ended: Mon Jan  8 12:12:47 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
 
 

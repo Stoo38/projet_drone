@@ -65,6 +65,9 @@ begin
 
 		when S1 =>
 		next_state <= S1;
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------TRAITEMENT RGB----------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------	
 			if (X_Cont >= x"0" and X_Cont <= x"0FE" and Y_Cont >= x"0" and  Y_Cont <= x"0FE" and SW1='0' ) then
 			nri <= gi; ngi <= gi;  nbi <= gi; 						-- quart sup gauche image N & B
 
@@ -72,7 +75,7 @@ begin
 			nri <= x"FF"-gi; ngi <= x"FF"-gi;  nbi <= x"FF"-gi; -- quart sup droit image N & B negatif
 
 			elsif (X_Cont >= x"0" and X_Cont <= x"AA" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
-			nri <= gi; ngi <= x"00";  nbi <= x"00";				-- tiers inf gauche  image rouge
+			nri <= ri; ngi <= x"00";  nbi <= x"00";				-- tiers inf gauche  image rouge
 
 			elsif (X_Cont >=x"AB" and X_Cont <= x"154" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
 			nri <= x"00"; ngi <= gi;  nbi <= x"00";				-- tiers centre image vert
@@ -80,45 +83,28 @@ begin
 			--		  elsif (X_Cont >=x"155" and X_Cont <= x"1FF" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF" ) then
 			--		  else  -- le reste
 			elsif ( SW1='0') then  
-			nri <= x"00"; ngi <= x"00";  nbi <= gi;				-- tiers droit image bleu		  
+			nri <= x"00"; ngi <= x"00";  nbi <= bi;				-- tiers droit image bleu	
+			
+			
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------TRAITEMENT D'IMAGE------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------	
+
 			else  -- le reste soit  SW1='1'
-
----------------------------------------------------------------------------------------------------------------------------			
-				--if (ri <= x"20") then
-				--nri <= x"00";
-				--else 
-				--nri <= x"FF";
-				--end if;
-
-				--if (gi <= x"20") then
-				--ngi <= x"00";
-				--else 
-				--ngi <= x"FF";
-				--end if;
-
-				--if (bi <= x"20") then
-				--nbi <= x"00";
-				--else 
-				--nbi <= x"FF";
-				--end if;
-				
-
-				--if (nri = x"00" and ngi = x"00" ) then 
-				--nbi <= x"00";
-				--elsif (nri = x"00" and nbi = x"00" ) then
-				--ngi <= x"00";
-				--elsif (ngi = x"00" and nbi = x"00" ) then
-				--nri <= x"00";
-				--end if;
----------------------------------------------------------------------------------------------------------------------------
-				if ((ri <= x"08") or (gi <= x"08") or (bi <= x"08")) then
+				-- seul le niveau de vert est pris en compte par la caméra
+				-- le traitement d'image ne se fait donc que sur ce niveau
+				if ((gi <= x"08") ) then
 				nri <= x"00";
 				ngi <= x"00";
 				nbi <= x"00";
-				elsif ((ri <= x"25") or (gi <= x"25") or (bi <= x"25")) then
-				nri <= x"50";
-				ngi <= x"50";
-				nbi <= x"50";
+				elsif ((gi <= x"25")) then
+				nri <= x"35";
+				ngi <= x"35";
+				nbi <= x"35";
+				elsif ((gi <= x"50")) then
+				nri <= x"70";
+				ngi <= x"70";
+				nbi <= x"70";
 				else 
 				nri <= x"FF";
 				ngi <= x"FF";
@@ -127,7 +113,9 @@ begin
 
 
 			end if;	 
-
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------	
+-------------------------------------------------------------------------------------------------------------------	
 	end case;
  
 end process gen;

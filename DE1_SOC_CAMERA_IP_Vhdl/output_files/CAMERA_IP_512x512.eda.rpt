@@ -1,5 +1,5 @@
 EDA Netlist Writer report for CAMERA_IP_512x512
-Thu Oct 26 09:23:16 2017
+Mon Jan  8 12:14:48 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Oct 26 09:23:16 2017 ;
+; EDA Netlist Writer Status ; Successful - Mon Jan  8 12:14:48 2018 ;
 ; Revision Name             ; CAMERA_IP_512x512                     ;
 ; Top-level Entity Name     ; TOP_D5M_IP                            ;
 ; Family                    ; Cyclone V                             ;
@@ -82,14 +82,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Thu Oct 26 09:23:12 2017
+    Info: Processing started: Mon Jan  8 12:14:44 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off CAMERA_IP_512x512 -c CAMERA_IP_512x512
 Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
 Info (204019): Generated file CAMERA_IP_512x512.vho in folder "/tp/xph3app/xph3app602/projet_drone/DE1_SOC_CAMERA_IP_Vhdl/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1142 megabytes
-    Info: Processing ended: Thu Oct 26 09:23:16 2017
+    Info: Peak virtual memory: 1099 megabytes
+    Info: Processing ended: Mon Jan  8 12:14:48 2018
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
