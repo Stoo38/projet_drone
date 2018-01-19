@@ -21,14 +21,18 @@ LIB_NAME="LIB_VHD"													# Name of the Library
 																	# List of the different VHDL Files describing the design
 VHDL_FILES="
 			constants.vhd
+			altpll0.vhd
 			local_counter.vhd
 			global_counter.vhd
 			send_ppm.vhd
+			decoder.vhd
+			top_ppm.vhd
 			"
 
 BENCH_VHD_FILES="														
 				test_counter.vhd
 				test_ppm.vhd
+				bench_top_ppm.vhd
 				"													#List of the different VHDL Files used for the bench
 
 #BENCH_VERILOG_FILES="

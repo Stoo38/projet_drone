@@ -22,25 +22,111 @@ Vmd>BLjlHNXQ=o<b22ClDz1
 !s100 3X:MlHfER=ogMl6UGDgoV2
 Z4 OL;C;10.5c;63
 31
-Z5 !s110 1516016399
+Z5 !s110 1516391843
 !i10b 1
-Z6 !s108 1516016399.000000
+Z6 !s108 1516391843.000000
 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd|
 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd|
 !i113 0
 Z7 o-93 -work LIB_VHD
 Z8 tExplicit 1 CvgOpt 0
-Eglobal_counter
-Z9 w1513855380
-Z10 DPx7 lib_vhd 17 constants_package 0 22 md>BLjlHNXQ=o<b22ClDz1
+Ediv_binary
+Z9 w1513851732
+Z10 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z11 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z12 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+R0
+Z12 8/tp/xph3app/xph3app602/projet_drone/VHD/div.vhd
+Z13 F/tp/xph3app/xph3app602/projet_drone/VHD/div.vhd
+l0
+L11
+V_O@?X_DnR@43<kAZK2Fhi2
+!s100 PmoTZ6fn8h]neVPc0eDEN1
+R4
+31
+R5
+!i10b 1
+R6
+Z14 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/div.vhd|
+Z15 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/div.vhd|
+!i113 0
+R7
+R8
+Abehavioral
+R10
+R11
+R2
+R3
+DEx4 work 10 div_binary 0 22 _O@?X_DnR@43<kAZK2Fhi2
+l24
+L21
+Vz7lOHJ4:7E>E9m5_ab0@c0
+!s100 ih9Pl<E2DLeE[5af9<dXY0
+R4
+31
+R5
+!i10b 1
+R6
+R14
+R15
+!i113 0
+R7
+R8
+Egensync
+Z16 w1513091045
+R10
+R11
+R2
+R3
+R0
+Z17 8/tp/xph3app/xph3app602/projet_drone/VHD/gensync.vhd
+Z18 F/tp/xph3app/xph3app602/projet_drone/VHD/gensync.vhd
+l0
+L6
+VOjR1J^01:jmo=VbMd[X0Q2
+!s100 JnK5i1Ye`d3M^H581C;<F0
+R4
+31
+R5
+!i10b 1
+R6
+Z19 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/gensync.vhd|
+Z20 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/gensync.vhd|
+!i113 0
+R7
+R8
+Abehavioral
+R10
+R11
+R2
+R3
+DEx4 work 7 gensync 0 22 OjR1J^01:jmo=VbMd[X0Q2
+31
+R5
+l28
+L20
+VcQkId71o9>0RfE`j[059Z1
+!s100 TbOCV?NCEncbP`XaTk<=I3
+R4
+!i10b 1
+R6
+R19
+R20
+!i113 0
+R7
+R8
+Eglobal_counter
+Z21 w1513855380
+Z22 DPx7 lib_vhd 17 constants_package 0 22 md>BLjlHNXQ=o<b22ClDz1
+R11
+R10
 R1
 R2
 R3
 R0
-Z13 8/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd
-Z14 F/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd
+Z23 8/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd
+Z24 F/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd
 l0
 L9
 VP_G[Bk0:39m5_Lj^b7W111
@@ -50,15 +136,15 @@ R4
 R5
 !i10b 1
 R6
-Z15 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd|
-Z16 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd|
+Z25 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd|
+Z26 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd|
 !i113 0
 R7
 R8
 Aa
-R10
+R22
 R11
-R12
+R10
 R1
 R2
 R3
@@ -72,22 +158,67 @@ R4
 R5
 !i10b 1
 R6
-R15
-R16
+R25
+R26
+!i113 0
+R7
+R8
+Eimage_process
+Z27 w1516368253
+R1
+R10
+R11
+R2
+R3
+R0
+Z28 8/tp/xph3app/xph3app602/projet_drone/VHD/image_process.vhd
+Z29 F/tp/xph3app/xph3app602/projet_drone/VHD/image_process.vhd
+l0
+L11
+VLfX;RO4EnlW96z2Lg6;6]2
+!s100 KM_R5B0J9in30abLYjL_j3
+R4
+31
+R5
+!i10b 1
+R6
+Z30 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/image_process.vhd|
+Z31 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/image_process.vhd|
+!i113 0
+R7
+R8
+Artl
+R1
+R10
+R11
+R2
+R3
+DEx4 work 13 image_process 0 22 LfX;RO4EnlW96z2Lg6;6]2
+31
+R5
+l40
+L33
+VRPDY0j;gSXSi0X1F^9<_=2
+!s100 AE[eDHF5T2>8@Q<LOV=fP1
+R4
+!i10b 1
+R6
+R30
+R31
 !i113 0
 R7
 R8
 Elocal_counter
-R9
-R10
+R21
+R22
 R11
-R12
+R10
 R1
 R2
 R3
 R0
-Z17 8/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd
-Z18 F/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd
+Z32 8/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd
+Z33 F/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd
 l0
 L9
 VAFA5<YkKCYEkD_T3?]3>P1
@@ -97,15 +228,15 @@ R4
 R5
 !i10b 1
 R6
-Z19 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd|
-Z20 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd|
+Z34 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd|
+Z35 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd|
 !i113 0
 R7
 R8
 Ab
-R10
+R22
 R11
-R12
+R10
 R1
 R2
 R3
@@ -119,55 +250,98 @@ R4
 R5
 !i10b 1
 R6
-R19
-R20
+R34
+R35
 !i113 0
 R7
 R8
-Esend_ppm
-Z21 w1516011833
-R10
+Eposition
+Z36 w1516373257
 R1
+R10
 R11
-R12
 R2
 R3
 R0
-Z22 8/tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd
-Z23 F/tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd
+Z37 8/tp/xph3app/xph3app602/projet_drone/VHD/position.vhd
+Z38 F/tp/xph3app/xph3app602/projet_drone/VHD/position.vhd
 l0
-L12
-VSWGdF9_]ROYgUV_:EM8O?2
-!s100 cennZQ3mSWSc3UzU?HV?;0
+L8
+ViinFNkJm@?h0fAEV]<^[d2
+!s100 F]nF>oNMQ2H4l`Encg2V@2
 R4
 31
 R5
 !i10b 1
 R6
-Z24 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd|
-Z25 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd|
+Z39 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/position.vhd|
+Z40 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/position.vhd|
 !i113 0
 R7
 R8
-Artl
-R10
+Adet
 R1
+R10
 R11
-R12
 R2
 R3
-DEx4 work 8 send_ppm 0 22 SWGdF9_]ROYgUV_:EM8O?2
-l91
-L24
-V6;J[I]BcC4]edFCT4dKRe2
-!s100 hQ98?Te_^E?LSD^A70?]f1
+DEx4 work 8 position 0 22 iinFNkJm@?h0fAEV]<^[d2
+31
+R5
+l58
+L30
+VoOnJGGm3kdlUa6]AF`H5z1
+!s100 DBAgY@RWX=amGkMY;Lec^2
+R4
+!i10b 1
+R6
+R39
+R40
+!i113 0
+R7
+R8
+Etop_bar
+Z41 w1516359175
+R1
+R10
+R11
+R2
+R3
+R0
+Z42 8/tp/xph3app/xph3app602/projet_drone/VHD/top.vhd
+Z43 F/tp/xph3app/xph3app602/projet_drone/VHD/top.vhd
+l0
+L11
+V5KbE5PJ>j@INXh8:5CGZ51
+!s100 17FGN0;cMcZ>7>NMR14:40
 R4
 31
 R5
 !i10b 1
 R6
-R24
-R25
+Z44 !s90 -93|-work|LIB_VHD|/tp/xph3app/xph3app602/projet_drone/VHD/top.vhd|
+Z45 !s107 /tp/xph3app/xph3app602/projet_drone/VHD/top.vhd|
+!i113 0
+R7
+R8
+Abar
+R1
+R10
+R11
+R2
+R3
+DEx4 work 7 top_bar 0 22 5KbE5PJ>j@INXh8:5CGZ51
+l92
+L33
+VbY1fEilO_9[Ze3C[>^8nE0
+!s100 i]^ofOkKaQW1BoCL7`MT61
+R4
+31
+R5
+!i10b 1
+R6
+R44
+R45
 !i113 0
 R7
 R8

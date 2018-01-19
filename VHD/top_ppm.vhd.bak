@@ -1,0 +1,58 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+library LIB_VHD;
+use LIB_VHD.constants_package.all;
+use LIB_VHD.all;
+
+entity top_ppm is
+	port
+	(
+		i_clk_top			: in std_logic;
+		i_reset_n_top	: in std_logic;
+		i_sel_top			: in std_logic_vector(1 downto 0);
+		o_ppm_top			: out std_logic
+	);
+end entity top_ppm;
+
+architecture rtl of top_ppm is
+	component decoder
+		port
+		(
+			i_sel	: in std_logic_vector(1 downto 0);
+			o_val : out std_logic_vector(31 downto 0)
+		);
+	end component;
+
+	component send_ppm
+		port
+		(
+			i_clk				: in std_logic;
+			i_reset_n		: in std_logic;
+			i_reg				: in std_logic_vector(31 downto 0);
+			o_ppm				: out std_logic
+		);
+	end component;
+
+--	signal sig_clk			: std_logic;
+--	signal sig_reset_n	: std_logic;
+--	signal sig_i_sel		: std_logic_vector(1 downto 0);
+	signal sig_reg			: std_logic_vector(31 downto 0);
+--	signal sig_o_ppm		: std_logic;
+
+	begin
+		decoder1 : decoder port map (
+			i_sel => i_sel_top,
+			o_val => sig_reg
+			);
+		
+		send_ppm1 : send_ppm port map (	
+			i_clk			=> i_clk_top,
+			i_reset_n => i_reset_n_top,
+			i_reg			=> sig_reg,
+			o_ppm			=> o_ppm_top
+			);
+
+end rtl;

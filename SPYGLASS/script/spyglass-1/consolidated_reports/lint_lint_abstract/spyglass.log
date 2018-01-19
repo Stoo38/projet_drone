@@ -1,4 +1,4 @@
-SpyGlass run started at 10:22:26 AM on Jan 15 2018 
+SpyGlass run started at 12:03:45 PM on Jan 18 2018 
 
 SpyGlass Predictive Analyzer(R) - Version 5.6.0
 Last compiled on Dec 15 2015
@@ -21,7 +21,7 @@ Loading Shared library libCoreRules-Linux4.spyso from /softl3/spyglass5_6_0/SpyG
 Loading Shared library libVeLint-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/lib/libVeLint-Linux4.spyso 
 Loading Shared library libVhLint-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/lib/libVhLint-Linux4.spyso 
 ##build_id : 5.6.0
-##system   : Linux ocaepc26 3.2.0-4-amd64 #1 SMP Debian 3.2.60-1+deb7u3 x86_64
+##system   : Linux cimepc66 3.2.0-4-amd64 #1 SMP Debian 3.2.68-1+deb7u2 x86_64
 ##cwd      : /tp/xph3app/xph3app602/projet_drone/SPYGLASS/script
 ##lang     : Verilog+VHDL
 ##args     : -mSpyGlass::Compatibility::v2_7_3 \
@@ -46,12 +46,10 @@ Loading Shared library libVhLint-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlas
              -enable_save_restore \
              -enable_save_restore_builtin 'true' \
              -64bit  \
-             ../../VHD/constants.vhd \
-             ../../VHD/local_counter.vhd \
-             ../../VHD/global_counter.vhd \
-             ../../VHD/send_ppm.vhd
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd \
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd
 \
-             -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd'
+             -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd'
 ##verbosity level   : 2
 ##exact cmdline arg : -batch -project spyglass-1.prj -goal lint/lint_abstract -64bit
 ##spyglass_run.csh begins :
@@ -61,108 +59,107 @@ Loading Shared library libVhLint-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlas
 ;	setenv SPYGLASS_DW_PATH /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/dw_support
 ;	/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/bin/spyglass  -batch -project spyglass-1.prj -goal lint/lint_abstract -64bit
 ##spyglass_run.csh ends
-##files    : ../../VHD/constants.vhd \
-             ../../VHD/local_counter.vhd \
-             ../../VHD/global_counter.vhd \
-             ../../VHD/send_ppm.vhd
+##files    : ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd \
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd
 
 
 INFO [76]    Using `./spyglass-1/WORK/64' as the Work Directory for 64bit precompiled dump.
-Checking Rule PrecompileLibCheck01 (Rule 1 of total 116) .... done (Time = 0.00s, Memory = -2.5K)
-Checking Rule PrecompileLibCheck02 (Rule 2 of total 116) .... done (Time = 0.01s, Memory = 0.0K)
-Checking Rule PrecompileLibCheck03 (Rule 3 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule PrecompileLibCheck04 (Rule 4 of total 116) .... done (Time = 0.00s, Memory = -2.1K)
+Checking Rule PrecompileLibCheck01 (Rule 1 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck02 (Rule 2 of total 116) .... done (Time = 0.00s, Memory = -1.3K)
+Checking Rule PrecompileLibCheck03 (Rule 3 of total 116) .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck04 (Rule 4 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ElabSummary (Rule 5 of total 116)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/lint/lint_abstract/spyglass_reports/SpyGlass/elab_summary.rpt' in "w" mode ...
- .... done (Time = 0.01s, Memory = -3.8K)
+ .... done (Time = 0.00s, Memory = -0.5K)
 Checking Rule SGDC_assume_path01 (Rule 6 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_sdcschema02 (Rule 7 of total 116) .... done (Time = 0.00s, Memory = 2.3K)
+Checking Rule SGDC_sdcschema02 (Rule 7 of total 116) .... done (Time = 0.00s, Memory = -2.4K)
 Checking Rule SGDC_clock05 (Rule 8 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_clock09 (Rule 9 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_force_ta05 (Rule 10 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_force_ta05 (Rule 10 of total 116) .... done (Time = 0.00s, Memory = 7.5K)
 Checking Rule SGDC_require_path03 (Rule 11 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_require_value03 (Rule 12 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_voltagedomain05 (Rule 13 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_voltagedomain06 (Rule 14 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_voltagedomain07 (Rule 15 of total 116) .... done (Time = 0.00s, Memory = 14.6K)
+Checking Rule SGDC_voltagedomain05 (Rule 13 of total 116) .... done (Time = 0.00s, Memory = -8.0K)
+Checking Rule SGDC_voltagedomain06 (Rule 14 of total 116) .... done (Time = 0.00s, Memory = -7.6K)
+Checking Rule SGDC_voltagedomain07 (Rule 15 of total 116) .... done (Time = 0.00s, Memory = 2.0K)
 Checking Rule SGDC_powerdomainoutputs02 (Rule 16 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_supply01 (Rule 17 of total 116) .... done (Time = 0.00s, Memory = 1.6K)
-Checking Rule SGDC_waive01 (Rule 18 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_supply01 (Rule 17 of total 116) .... done (Time = 0.00s, Memory = 16.0K)
+Checking Rule SGDC_waive01 (Rule 18 of total 116) .... done (Time = 0.00s, Memory = 8.0K)
 Checking Rule SGDC_waive02 (Rule 19 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive03 (Rule 20 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive03 (Rule 20 of total 116) .... done (Time = 0.00s, Memory = -2.1K)
 Checking Rule SGDC_waive04 (Rule 21 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive05 (Rule 22 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive06 (Rule 23 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive07 (Rule 24 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive08 (Rule 25 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive09 (Rule 26 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive09 (Rule 26 of total 116) .... done (Time = 0.00s, Memory = -0.5K)
 Checking Rule SGDC_waive10 (Rule 27 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive11 (Rule 28 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive11 (Rule 28 of total 116) .... done (Time = 0.00s, Memory = -4.1K)
 Checking Rule SGDC_waive12 (Rule 29 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive13 (Rule 30 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive21 (Rule 31 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive22 (Rule 32 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive30 (Rule 33 of total 116) .... done (Time = 0.00s, Memory = -3.0K)
-Checking Rule SGDC_waive32 (Rule 34 of total 116) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_waive30 (Rule 33 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive32 (Rule 34 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive33 (Rule 35 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive36 (Rule 36 of total 116) .... done (Time = 0.00s, Memory = -8.0K)
+Checking Rule SGDC_waive36 (Rule 36 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive38 (Rule 37 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_fifo01 (Rule 38 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_libgroup01 (Rule 39 of total 116) .... done (Time = 0.00s, Memory = -8.0K)
-Checking Rule SGDC_libgroup02 (Rule 40 of total 116) .... done (Time = 0.00s, Memory = 1.0K)
-Checking Rule SGDC_libgroup04 (Rule 41 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_power_data01 (Rule 42 of total 116) .... done (Time = 0.00s, Memory = 18.8K)
+Checking Rule SGDC_libgroup01 (Rule 39 of total 116) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule SGDC_libgroup02 (Rule 40 of total 116) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_libgroup04 (Rule 41 of total 116) .... done (Time = 0.00s, Memory = -0.3K)
+Checking Rule SGDC_power_data01 (Rule 42 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_ungroup01 (Rule 43 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port06 (Rule 44 of total 116) .... done (Time = 0.00s, Memory = 15.0K)
+Checking Rule SGDC_abstract_port06 (Rule 44 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port14 (Rule 45 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port15 (Rule 46 of total 116) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule SGDC_abstract_port15 (Rule 46 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port18 (Rule 47 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule sdc_init_rule (Rule 48 of total 116) .... done (Time = 0.00s, Memory = 0.6K)
+Checking Rule sdc_init_rule (Rule 48 of total 116) .... done (Time = 0.00s, Memory = 3.8K)
 Checking Rule CMD_ignorelibs01 (Rule 49 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportRuleNotRun (Rule 50 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
  Reading waiver file "./spyglass-1/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver.swl" ...
  Reading included SGDC file "./spyglass-1/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver_varfile.swl" ....
 Checking Rule ReportStopSummary (Rule 51 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportIgnoreSummary (Rule 52 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 3 sec, 548125 KB, 2132888 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 3 sec, 548125 KB, 2132888 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 3 sec, 544440 KB, 2130108 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 3 sec, 544440 KB, 2130108 KB
 
 INFO [235]    Restoring design database from directory './spyglass-1/.SG_SaveRestoreDB/autogenerated__default_snapshot' ...
               done
 
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 3 sec, 577005 KB, 2161560 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 28880 KB, 28672 KB
-     (Memory Used = 28879.9K(incr), 577005.5K(tot), Cpu Time = 0.02s(incr))
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 3 sec, 573326 KB, 2158780 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 28886 KB, 28672 KB
+     (Memory Used = 28886.1K(incr), 573326.3K(tot), Cpu Time = 0.03s(incr))
 Checking Rule InferBlackBox (Rule 53 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 3
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 500
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 1203
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 3258
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 322, 166
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 3 sec, 580494 KB, 2164888 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 3489 KB, 3328 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 3 sec, 580495 KB, 2164888 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 1 KB, 0 KB
-     (Memory Used = 0.5K(incr), 580495.3K(tot), Cpu Time = 0.00s(incr))
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 2
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 1841
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 3002
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 11309
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 1559, 920
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 3 sec, 576799 KB, 2162108 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 3473 KB, 3328 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 3 sec, 576801 KB, 2162108 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 2 KB, 0 KB
+     (Memory Used = 1.9K(incr), 576801.0K(tot), Cpu Time = 0.00s(incr))
 Checking Rule SGDC_waive37 (Rule 54 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive24 (Rule 55 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive25 (Rule 56 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive31 (Rule 57 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive35 (Rule 58 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule DetectTopDesignUnits (Rule 59 of total 116) Detected 1 top level design units: 
-     send_ppm.rtl
- .... done (Time = 0.00s, Memory = 2.0K)
-Checking Rule GenerateConfMap (Rule 60 of total 116) .... done (Time = 0.00s, Memory = -0.9K)
+Checking Rule DetectTopDesignUnits (Rule 59 of total 116) Detected 2 top level design units: 
+     image_process.rtl
+     position.det
+ .... done (Time = 0.00s, Memory = 1.1K)
+Checking Rule GenerateConfMap (Rule 60 of total 116) .... done (Time = 0.00s, Memory = 16.0K)
 Performing semantic checks on SGDC contents
-..... SGDC semantic checks completed. (Time = 0.00s, Memory = 51.6K)
-Checking Rule SGDC_testmode03 (Rule 61 of total 116) .... done (Time = 0.00s, Memory = 17.5K)
+..... SGDC semantic checks completed. (Time = 0.00s, Memory = 51.2K)
+Checking Rule SGDC_testmode03 (Rule 61 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule CheckCelldefine (Rule 62 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule checkSGDC_01 (Rule 63 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule checkSGDC_03 (Rule 64 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule checkSGDC_08 (Rule 65 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_memorywritepin04 (Rule 66 of total 116) .... done (Time = 0.00s, Memory = 15.0K)
-Checking Rule SGDC_reset02 (Rule 67 of total 116) .... done (Time = 0.00s, Memory = 15.0K)
-Checking Rule SGDC_reset03 (Rule 68 of total 116) .... done (Time = 0.00s, Memory = -0.2K)
-Checking Rule SGDC_waive23 (Rule 69 of total 116) .... done (Time = 0.00s, Memory = 3.1K)
+Checking Rule SGDC_memorywritepin04 (Rule 66 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset02 (Rule 67 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset03 (Rule 68 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive23 (Rule 69 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive26 (Rule 70 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive27 (Rule 71 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive29 (Rule 72 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
@@ -170,46 +167,63 @@ Checking Rule SGDC_libgroup03 (Rule 73 of total 116) .... done (Time = 0.00s, Me
 Checking Rule SGDC_ungroup02 (Rule 74 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule _abstractPortSGDC (Rule 75 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port03 (Rule 76 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port04 (Rule 77 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port05 (Rule 78 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port04 (Rule 77 of total 116) .... done (Time = 0.00s, Memory = -2.4K)
+Checking Rule SGDC_abstract_port05 (Rule 78 of total 116) .... done (Time = 0.00s, Memory = 0.9K)
 Checking Rule SGDC_abstract_port07 (Rule 79 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port08 (Rule 80 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port08 (Rule 80 of total 116) .... done (Time = 0.00s, Memory = 26.5K)
 Checking Rule SGDC_abstract_port10 (Rule 81 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port11 (Rule 82 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port12 (Rule 83 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port11 (Rule 82 of total 116) .... done (Time = 0.00s, Memory = -8.0K)
+Checking Rule SGDC_abstract_port12 (Rule 83 of total 116) .... done (Time = 0.00s, Memory = -4.0K)
 Checking Rule SGDC_abstract_port13 (Rule 84 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportUngroup (Rule 85 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule LINT_portReten (Rule 86 of total 116) .... done (Time = 0.00s, Memory = 3.8K)
-Checking Rule SGDC_abstract_port21 (Rule 87 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 3 sec, 581490 KB, 2164888 KB
-##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 0 sec, 995 KB, 0 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 3 sec, 582347 KB, 2165656 KB
-##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, 857 KB, 768 KB
- Flattening send_ppm (.lib instances separately flattened) ....
-     (Memory Used = 1495.7K(incr), 583842.8K(tot), Cpu Time = 0.02s(incr))
+Checking Rule SGDC_abstract_port21 (Rule 87 of total 116) .... done (Time = 0.00s, Memory = 32.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 3 sec, 577794 KB, 2162108 KB
+##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 0 sec, 993 KB, 0 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 3 sec, 578695 KB, 2162876 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, 901 KB, 768 KB
+ Flattening image_process (.lib instances separately flattened) ....
+     (Memory Used = 1358.3K(incr), 580054.2K(tot), Cpu Time = 0.02s(incr))
  Flattening completed
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 498
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 1118
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 3126
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 3
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 37
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 282
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 339
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 1223
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 1
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 80
 ##SGDEBUG [BENCHMARK_DATA]: Number of Black-Box Instances = 0
 ##SGDEBUG [BENCHMARK_DATA]: Number of Lib Instances = 0
 ##SGDEBUG [BENCHMARK_DATA]: Number of ILM Instances = 0
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 3 sec, 583843 KB, 2166936 KB
-##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 1496 KB, 1280 KB
-Checking Rule SGDC_set_case_analysis_LC (Rule 88 of total 116) .... done (Time = 0.00s, Memory = 0.1K)
-Checking Rule LINT_abstract01 (Rule 89 of total 116) .... done (Time = 0.01s, Memory = 1606.7K)
-Checking Rule AnalyzeBBox (Rule 90 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule ReportCheckDataSummary (Rule 91 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 3 sec, 580086 KB, 2164156 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 1391 KB, 1280 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 3 sec, 580054 KB, 2164156 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, -32 KB, 0 KB
+ Flattening position (.lib instances separately flattened) ....
+     (Memory Used = 717.2K(incr), 580771.4K(tot), Cpu Time = 0.04s(incr))
+ Flattening completed
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 1559
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 2579
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 9578
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 1
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 97
+##SGDEBUG [BENCHMARK_DATA]: Number of Black-Box Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of Lib Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of ILM Instances = 0
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 3 sec, 580770 KB, 2164668 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 716 KB, 512 KB
+Checking Rule SGDC_set_case_analysis_LC (Rule 88 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule LINT_abstract01 (Rule 89 of total 116) .... done (Time = 0.02s, Memory = 1055.0K)
+Checking Rule SGDC_set_case_analysis_LC (Rule 88 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule LINT_abstract01 (Rule 89 of total 116) .... done (Time = 0.05s, Memory = 641.4K)
+Checking Rule AnalyzeBBox (Rule 90 of total 116) .... done (Time = 0.01s, Memory = 0.5K)
+Checking Rule ReportCheckDataSummary (Rule 91 of total 116) .... done (Time = 0.00s, Memory = 32.0K)
 
 Applying user specified and internally generated waivers on violation database .... done (Time = 0.03s)
 
 Generating data for Console...
-##SGDEBUG [PEAK_MEMORY]: 2172312 KB for entire run at 'just before destroying nvn arrays in flattener' stage
-##SGDEBUG [VMPEAK_MEMORY]: 2531332 KB for entire run
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 3 sec, 583859 KB, 2160792 KB
-##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 0 sec, 16 KB, -6144 KB
+##SGDEBUG [PEAK_MEMORY]: 2170044 KB for entire run at 'just before destroying nvn arrays in flattener' stage
+##SGDEBUG [VMPEAK_MEMORY]: 2526020 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 4 sec, 581071 KB, 2158524 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 1 sec, 301 KB, -6144 KB
 
 
 =====================================================================================
@@ -522,9 +536,9 @@ Generating data for Console...
  LINT_portReten                 lint            Yes            0 SETUP          -               
  Postreqs_CheckFuncTask(Verilog) lint            Yes            0 ELABDU         -               
  Prereqs_Usage        (Verilog) lint            Yes            0 ELABDU         -               
- LINT_abstract01                lint            Yes            1 FLATDU2_WL     -               
+ LINT_abstract01                lint            Yes            2 FLATDU2_WL     -               
  ElabSummary                    SpyGlass        Yes            1 SETUP          -               
- DetectTopDesignUnits           SpyGlass        Yes            1 SETUP          -               
+ DetectTopDesignUnits           SpyGlass        Yes            2 SETUP          -               
 -------------------------------------------------------------------------------------
 Note: VSDU type of rules (as seen in the above table) are not run on
       unsynthesized modules reported by 'ErrorAnalyzeBBox/InfoAnalyzeBBox' messages
@@ -537,18 +551,19 @@ Results Summary:
 ---------------------------------------------------------------------------------------------
    Goal Run           :      lint/lint_abstract
    Command-line read  :      0 error,      0 warning,      0 information message 
-   Design Read        :      0 error,      0 warning,      2 information messages
-      Found 1 top module:
-         send_ppm.rtl   (file: ../../VHD/send_ppm.vhd)
+   Design Read        :      0 error,      0 warning,      3 information messages
+      Found 2 top modules:
+         image_process.rtl   (file: ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd)
+         position.det        (file: ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd)
 
    Blackbox Resolution:      0 error,      0 warning,      0 information message 
    SGDC Checks        :      0 error,      0 warning,      0 information message 
-   Policy lint        :      0 error,      0 warning,      1 information message 
+   Policy lint        :      0 error,      0 warning,      2 information messages
    -------------------------------------------------------------------------------------
-   Total              :      0 error,      0 warning,      3 information messages
+   Total              :      0 error,      0 warning,      5 information messages
 
-  Total Number of Generated Messages     :         3 (0 error, 0 warning, 3 Infos)
-  Number of Reported Messages            :         3 (0 error, 0 warning, 3 Infos)
+  Total Number of Generated Messages     :         5 (0 error, 0 warning, 5 Infos)
+  Number of Reported Messages            :         5 (0 error, 0 warning, 5 Infos)
 
 ---------------------------------------------------------------------------------------------
 
@@ -567,5 +582,5 @@ Policy specific data (reports) are present in the directory './spyglass-1/lint/l
 SpyGlass critical reports for the current run are present in directory './spyglass-1/consolidated_reports/lint_lint_abstract/'.
 
 SpyGlass Exit Code 0 (Rule-checking completed without errors or warnings)
-SpyGlass total run-time is 0:0:3 (3 secs)
-SpyGlass run completed at 10:23:17 AM on Jan 15 2018
+SpyGlass total run-time is 0:0:4 (4 secs)
+SpyGlass run completed at 00:05:21 PM on Jan 18 2018

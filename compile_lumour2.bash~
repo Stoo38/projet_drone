@@ -14,21 +14,31 @@ else
 	CHOICE_COMPIL="all"												# By default, Benches and Design Files are compiled
 fi
 
-PROJECT_PATH="/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl"		# Path of the Project Directory
+PROJECT_PATH="/tp/xph3app/xph3app602/projet_drone"					# Path of the Project Directory
 LIB_NAME="LIB_VHD"													# Name of the Library 
 #LIB_NAME_TEST="DRONE_LIB"											# Name of the Library 
 #VHDL_FILES=`ls -l vhd/ | awk {'print$9'} | grep .vhd`
 																	# List of the different VHDL Files describing the design
 VHDL_FILES="
-			CAMERA_IP_512x512.vho
+			constants.vhd
+			local_counter.vhd
+			global_counter.vhd
+			image_process.vhd
+			gensync.vhd
+			position.vhd
+			div.vhd
+			top.vhd
 			"
 
 BENCH_VHD_FILES="														
-
+				test_bench.vhd
+				bench_position.vhd
+				test_counter.vhd
+				test_div.vhd
 				"													#List of the different VHDL Files used for the bench
 
 BENCH_VERILOG_FILES="
-					tbench.sv"										#List of the different Verilog Files used for the bench
+					tbench_sans_top.sv"										#List of the different Verilog Files used for the bench
 
 OPT_VCOM="-93 -work" #+acc											# List of the different options of ModelSim used for Compilation
 OPT_VLOG="-sv -work"
@@ -52,17 +62,9 @@ then
 	#vmap /softslin/altera14_0/quartus/eda/sim_lib 
 	vmap ${LIB_NAME} ${PROJECT_PATH}/LIBS/${LIB_NAME}					>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Creates a link between the name of the library and its path
 
-
-		vcom ${OPT_VLOG} ${LIB_NAME} /softslin/altera14_0/quartus/eda/sim_lib/altera_lnsim_components.vhd	>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Compile all the Verilog files contained on the VHDL_FILES variable
-
-		vcom ${OPT_VLOG} ${LIB_NAME} /softslin/altera14_0/quartus/eda/sim_lib/altera_primitives_components.vhd	>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Compile all the Verilog files contained on the VHDL_FILES variable
-
-		vcom ${OPT_VLOG} ${LIB_NAME} /softslin/altera14_0/quartus/eda/sim_lib/cyclonev_components.vhd	>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Compile all the Verilog files contained on the VHDL_FILES variable
-																															
-
 	for file in ${VHDL_FILES}
 	do
-		vcom ${OPT_VCOM} ${LIB_NAME} ${PROJECT_PATH}/vhdl/${file}		>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Compiles all the VHDL files contained on the VHDL_FILES variable
+		vcom ${OPT_VCOM} ${LIB_NAME} ${PROJECT_PATH}/VHD/${file}		>> ${PROJECT_PATH}/LOG/${LOG_FILE}	# Compiles all the VHDL files contained on the VHDL_FILES variable
 																									# Uses the options on OPT_VCOM variable
 	done
 fi
@@ -135,7 +137,7 @@ cat ${PROJECT_PATH}/LOG/${LOG_FILE}
 ##################################################
 
 #vsim -c -L LIB_VHD -do runSim.do LIB_VHD_BENCH.tbench 	#Ligne de commandes
-vsim -L LIB_VHD -do runSimLu.do LIB_VHD_BENCH.tbench 	#Interface graphique sans warnings
+vsim -L LIB_VHD -do runSimLu2.do -novopt LIB_VHD_BENCH.tbench 	#Interface graphique sans warnings
 #vsim -L LIB_VHD LIB_VHD_BENCH.tbench 					#Interface graphique
 #vsim -L LIB_VHD -novopt LIB_VHD_BENCH.tbench
 

@@ -1,0 +1,8 @@
+
+State Machine - |top_ppm|send_ppm:send_ppm1|current_state
+Name current_state.fin_trame current_state.tempo current_state.synchro current_state.pulse current_state.reset 
+current_state.reset 0 0 0 0 0 
+current_state.pulse 0 0 0 1 1 
+current_state.synchro 0 0 1 0 1 
+current_state.tempo 0 1 0 0 1 
+current_state.fin_trame 1 0 0 0 1 

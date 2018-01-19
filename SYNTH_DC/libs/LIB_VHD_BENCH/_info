@@ -1,0 +1,61 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/tp/xph3app/xph3app602/projet_drone/SYNTH_DC
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1516275834
+V9CcD0ZihT4Oz9:XfRS_Xg2
+04 13 10 work bench_top_ppm tb_top_ppm 1
+=1-f04da2368ce5-5a608876-641f5-45f4
+o-quiet -auto_acc_if_foreign -work LIB_VHD_BENCH -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/top_ppm.sdf -suppress 1948
+n@_opt
+OL;O;10.2c;57
+Ebench_top_ppm
+Z1 w1516271752
+Z2 DPx7 lib_vhd 17 constants_package 0 22 nL@L18@RBcB0k5MCNa]JV2
+Z3 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z4 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z6 d/tp/xph3app/xph3app602/projet_drone/SYNTH_DC
+Z7 8/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/bench/bench_top_ppm.vhd
+Z8 F/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/bench/bench_top_ppm.vhd
+l0
+L9
+VN1HG:I^;bZjdI`]jE>@Bb0
+Z9 OL;C;10.2c;57
+32
+Z10 !s110 1516275784
+Z11 !s108 1516275784.687057
+Z12 !s90 +acc|-work|LIB_VHD_BENCH|/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/bench/bench_top_ppm.vhd|
+Z13 !s107 /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/bench/bench_top_ppm.vhd|
+Z14 o+acc -work LIB_VHD_BENCH
+Z15 tExplicit 1
+!s100 8A6M^E4@2iJ^a400@cd2W3
+!i10b 1
+!i111 0
+Atb_top_ppm
+R2
+R3
+R4
+R5
+DEx4 work 13 bench_top_ppm 0 22 N1HG:I^;bZjdI`]jE>@Bb0
+l25
+L11
+VBLL1>UADKP]4MQgkJR=N73
+R9
+32
+R10
+R11
+R12
+R13
+R14
+R15
+!s100 D=OcFeFhZmSz9;0OTD@mS0
+!i10b 1
+!i111 0

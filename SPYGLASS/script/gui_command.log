@@ -1,4 +1,4 @@
-source run_Spyglass.tcl
+source run_Luglass.tcl 
 
 
 
@@ -7,5 +7,3 @@ source run_Spyglass.tcl
 
 
 
-gui_exit
-gui_exit

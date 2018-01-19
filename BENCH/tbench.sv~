@@ -37,12 +37,12 @@ pixel_t img_vga_2    [int][int]; // VGA screen is 640x480
 initial begin
   for (int y=0; y < 480; y++) begin
     for (int x=0; x < 640; x++) begin
-      img_vga[x][y].b = 0;
-      img_vga[x][y].g = 0;
-      img_vga[x][y].r = 0;
-      img_vga_2[x][y].b = 0;
-      img_vga_2[x][y].g = 0;
-      img_vga_2[x][y].r = 0;
+      img_vga[x][y].b = "FF";
+      img_vga[x][y].g = "FF";
+      img_vga[x][y].r = "FF";
+      img_vga_2[x][y].b = "FF";
+      img_vga_2[x][y].g = "FF";
+      img_vga_2[x][y].r = "FF";
     end
   end
 end
@@ -52,8 +52,7 @@ end
 // lorsque le canon à électrons est dans une zone visible de l'image. Si IMG est à 0, alors
 // les signaux R, G et B doivent obligatoirement être à 0 aussi. Les signaux X et Y désignent
 // les coordonnées du pixel de couleurs R, G et B à l'instant considéré.
-/*
-vga_sync u_vga_sync (
+/*vga_sync u_vga_sync (
   .clk   (vga_clk),     // VGA clock (must be set at 25Mhz)
   .rst_n (reset),       // Active Low Reset
   .hsync (vga_hsync),   // VGA Horizontal Synchronisation
@@ -67,9 +66,9 @@ vga_sync u_vga_sync (
 assign cam_x   = (vga_x > 128 && vga_x < 640) ?  vga_x - 128 : 0; // 128 = 640 (vga) - 512 (camera)
 assign cam_y   =                                 vga_y;           // same Y as 512 (canera)  > 480 (vga)
 
-assign cam_img = (vga_x > 128) && vga_img;         // Force vga pixel out of camera to 0
-*/
-gensync u_gsync (
+assign cam_img = (vga_x > 128) && vga_img;         // Force vga pixel out of camera to 0*/
+
+/*gensync u_gsync (
   .CLK          (vga_clk),
   .reset        (reset),
   .HSYNC        (vga_hsync),
@@ -78,11 +77,11 @@ gensync u_gsync (
   .IMGY_out     (),
   .X            (cam_x),
   .Y            (cam_y)
-);
+);*/
 assign vga_x   = (cam_x < 640) ? cam_x + 128: 0;
 assign vga_y   = cam_y;
 assign cam_img = vga_img;
-
+/*
 // We analyze and process image send to VGA screen
 // Another possibilite should be to analyse picture coming from camera
 image_process duv (
@@ -133,8 +132,22 @@ position barycentre (
   .g_bout   (img_barycentre.g),
   .b_bout   (img_barycentre.b)
 
-);
+);*/
 
+
+top_bar top (
+	.CLK_top (vga_clk),
+	.reset_top (reset),
+	.SW1_top (1'b1),
+	.r_top (img_camera[cam_x][cam_y].r), // Input Red Pixel
+	.g_top (img_camera[cam_x][cam_y].g), // Input Green Pixel
+	.b_top (img_camera[cam_x][cam_y].b), // Input Blue Pixel
+	.rout_top (img_barycentre.r),
+	.gout_top (img_barycentre.g),
+	.bout_top (img_barycentre.b),
+	.HSYNC_top (vga_hsync),
+	.VSYNC_top (vga_vsync)
+);
 // Re-use Hsync and Vsync to re-build pixel array
 
 
@@ -159,7 +172,7 @@ always #10 vga_clk2x <= ~vga_clk2x;
 
 // Read Image From File
 initial begin
-  read_bmp(img_camera,"/tp/xph3app/xph3app602/projet_drone/IMG/drone1.bmp");//selection image
+  read_bmp(img_camera,"/tp/xph3app/xph3app602/projet_drone/IMG/blanche_4points.bmp");//selection image
 end
 
 // Write image

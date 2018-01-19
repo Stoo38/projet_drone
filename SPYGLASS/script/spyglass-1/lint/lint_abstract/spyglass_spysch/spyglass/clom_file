@@ -19,7 +19,7 @@ Option          Value             Origin  File                           LineNo
                 LIB_VHD=>./../libs/LIB_VHD CmdLine -                              -
                 WORK=>./spyglass-1/WORK CmdLine -                              -
                 SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
--libhdlfiles    LIB_VHD=>"../../VHD/constants.vhd ../../VHD/local_counter.vhd ../../VHD/global_counter.vhd ../../VHD/send_ppm.vhd" CmdLine -                              -
+-libhdlfiles    LIB_VHD=>"../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd" CmdLine -                              -
 -mixed          <ON>              CmdLine -                              -
 -nl             <ON>              CmdLine -                              -
 -policy         lint              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_abstract.spq 30
@@ -30,10 +30,8 @@ Option          Value             Origin  File                           LineNo
 -template       lint/lint_abstract CmdLine -                              -
 -templatedir    /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
 -wdir           ./spyglass-1/lint/lint_abstract CmdLine -                              -
-<design_files>  ../../VHD/constants.vhd APICall -                              -
-                ../../VHD/global_counter.vhd APICall -                              -
-                ../../VHD/local_counter.vhd APICall -                              -
-                ../../VHD/send_ppm.vhd APICall -                              -
+<design_files>  ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd APICall -                              -
+                ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd APICall -                              -
 
 
 Rules Parameter

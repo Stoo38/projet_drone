@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : cell
+Design : top_ppm
+Version: J-2014.09-SP2
+Date   : Thu Jan 18 12:30:06 2018
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+decoder1                  decoder                         236.599998
+                                                                    h
+send_ppm1                 send_ppm                        91273.000458
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 2 cells                                             91509.600456
+1

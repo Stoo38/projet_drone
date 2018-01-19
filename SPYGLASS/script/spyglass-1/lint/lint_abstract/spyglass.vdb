@@ -1,9 +1,9 @@
 ##spyglass_version: 5.6.0
-##date: Mon Jan 15 10:23:15 2018
+##date: Thu Jan 18 12:05:19 2018
 ##user: xph3app602
 ##cwd: /tp/xph3app/xph3app602/projet_drone/SPYGLASS/script
 ##lang: verilog+vhdl
-##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_abstract' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='LINT_abstract01' -policy='lint' --goal_info 'lint/lint_abstract@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_abstract' -enable_save_restore -enable_save_restore_builtin 'true' -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd'
+##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_abstract' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='LINT_abstract01' -policy='lint' --goal_info 'lint/lint_abstract@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_abstract' -enable_save_restore -enable_save_restore_builtin 'true' -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd'
 ##verbosity level: 2
 ##spysch_dirname: ./spyglass-1/lint/lint_abstract/spyglass_spysch
 ##vdb_delimiter: @@
@@ -940,41 +940,33 @@
 ElabSummary@@ElabSummary@@Info@@./spyglass-1/lint/lint_abstract/spyglass_reports/SpyGlass/elab_summary.rpt@@0@@1@@2@@Please refer file './spyglass-1/lint/lint_abstract/spyglass_reports/SpyGlass/elab_summary.rpt' for elab summary report
 ##sde_property: msg_label DEFAULT
 ##sde_property: msg_id DEFAULT
-#top_modules send_ppm
+#top_modules image_process position
 #bbox_modules
-##files_vhdl: ../../VHD/send_ppm.vhd ../../VHD/global_counter.vhd ../../VHD/local_counter.vhd ../../VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd
-##sde_property: file ../../VHD/constants.vhd -id 1 -precompiled=LIB_VHD -inactiveList slc 3 4 0 slc 3 4 0 slc 10 10 49 slc 10 10 49 slc 12 12 80 slc 12 12 80 slc 13 13 107 slc 13 13 107 slc 14 15 0 slc 14 15 0 slc 16 16 111 slc 16 16 111 slc 17 18 113 slc 17 18 113 slc 19 19 107 slc 19 19 107 slc 21 21 114 slc 21 21 114 slc 23 23 114 slc 23 23 114 slc 25 25 110 slc 25 25 110 slc 27 27 110 slc 27 27 110
-##sde_property: file ../../VHD/local_counter.vhd -id 2 -inactiveList slc 13 13 74
-##sde_property: file ../../VHD/global_counter.vhd -id 3 -inactiveList slc 12 12 72
-##sde_property: file ../../VHD/send_ppm.vhd -id 4 -inactiveList slc 3 3 0 slc 26 26 0 slc 37 47 0 slc 51 51 0 slc 54 54 0 slc 61 61 0 slc 65 65 0 slc 68 68 0 slc 81 81 0 slc 85 85 0 slc 111 112 0 slc 129 130 0 slc 132 136 0 slc 139 139 0 slc 144 144 59 slc 153 153 0 slc 169 169 26 slc 182 182 149 slc 191 191 0 slc 194 194 0 slc 212 212 0 slc 233 233 0 slc 235 235 0 slc 239 239 0 slc 249 249 0
-#span WORK.constants_package ../../VHD/constants.vhd 8 30 ../../VHD/constants.vhd 1 30
-#rtl_idmap WORK.constants_package 1 -lang 2 -type pack
-#span LIB_VHD.constants_package /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 8 30 /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 1 30
-#rtl_idmap LIB_VHD.constants_package 2 -lang 2 -type pack
-#span WORK.send_ppm.rtl ../../VHD/send_ppm.vhd 12 22 ../../VHD/send_ppm.vhd 1 22 ../../VHD/send_ppm.vhd 24 256
-#rtl_idmap WORK.send_ppm 3 -lang 2
-#rtl_idmap WORK.send_ppm.rtl 4 -entityid 3 -dep_ids 1 2
-#span WORK.global_counter.a ../../VHD/global_counter.vhd 9 14 ../../VHD/global_counter.vhd 1 14 ../../VHD/global_counter.vhd 16 39
-#rtl_idmap WORK.global_counter 5 -lang 2 -dep_ids 1 2
-#rtl_idmap WORK.global_counter.a 6 -entityid 5 -dep_ids 1 2
-#span WORK.local_counter.b ../../VHD/local_counter.vhd 9 14 ../../VHD/local_counter.vhd 1 14 ../../VHD/local_counter.vhd 16 41
-#rtl_idmap WORK.local_counter 7 -lang 2 -dep_ids 1 2
-#rtl_idmap WORK.local_counter.b 8 -entityid 7 -dep_ids 1 2
-#greybox WORK.send_ppm.rtl 15
-#greybox WORK.global_counter.a 15
-#greybox WORK.local_counter.b 15
-#child local_counter WORK.local_counter.b WORK.local_counter.b -elabDuId 3
-#child global_counter WORK.global_counter.a WORK.global_counter.a -elabDuId 2
-#child send_ppm WORK.send_ppm.rtl WORK.send_ppm.rtl -elabDuId 1 global_counter1 global_counter local_counter1 local_counter
+##files_vhdl: ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd
+##sde_property: file ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd -id 1 -inactiveList slc 1 2 0 slc 22 22 47 slc 68 70 0 slc 72 72 43 slc 75 75 55 slc 78 78 46 slc 81 81 46 slc 83 84 0 slc 86 86 46 slc 89 91 0 slc 93 93 9 slc 94 95 0 slc 108 111 0 slc 120 122 0
+##sde_property: file ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd -id 2 -inactiveList slc 16 16 47 slc 32 34 0 slc 36 36 0 slc 38 38 0 slc 40 40 0 slc 42 42 0 slc 44 44 0 slc 46 46 0 slc 48 48 0 slc 50 50 0 slc 60 62 0 slc 68 68 23 slc 78 78 6 slc 98 100 0 slc 119 119 16 slc 132 132 25 slc 145 145 23 slc 157 159 0 slc 164 164 0 slc 167 168 0 slc 182 182 0 slc 185 185 0 slc 200 200 0 slc 249 250 0 slc 254 257 0 slc 264 266 0 slc 268 276 0
+#span WORK.position.det ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd 8 28 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd 1 28 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd 30 284
+#rtl_idmap WORK.position 1 -lang 2
+#rtl_idmap WORK.position.det 2 -entityid 1
+#span WORK.image_process.rtl ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd 11 31 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd 1 31 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd 33 127
+#rtl_idmap WORK.image_process 3 -lang 2
+#rtl_idmap WORK.image_process.rtl 4 -entityid 3
+#greybox WORK.position.det 15
+#greybox WORK.image_process.rtl 15
+#child image_process WORK.image_process.rtl WORK.image_process.rtl -elabDuId 1
+#child position WORK.position.det WORK.position.det -elabDuId 2
 #precompiled_dulist
-DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@../../VHD/send_ppm.vhd@@24@@29@@2@@Architecture send_ppm.rtl is a top level design unit
+DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@33@@34@@2@@Architecture image_process.rtl is a top level design unit
 ##sde_property: violation -duId 4 
-#rtl_top_modules send_ppm
-##sde_property: file ./spyglass-1/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver.swl -id 7
-##sde_property: file pragma2Waiver_varfile.swl -id 8
-LINT_abstract01@@@@Info@@./spyglass-1/lint/lint_abstract/spyglass_reports/abstract_view/send_ppm_lint_abstract.sgdc@@0@@1@@2@@Abstract view for design 'send_ppm' succesfully created
-##totalGeneratedCount:         3
+DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@30@@29@@2@@Architecture position.det is a top level design unit
+##sde_property: violation -duId 2 
+#rtl_top_modules image_process position
+##sde_property: file ./spyglass-1/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver.swl -id 5
+##sde_property: file pragma2Waiver_varfile.swl -id 6
+LINT_abstract01@@@@Info@@./spyglass-1/lint/lint_abstract/spyglass_reports/abstract_view/image_process_lint_abstract.sgdc@@0@@1@@2@@Abstract view for design 'image_process' succesfully created
+LINT_abstract01@@@@Info@@./spyglass-1/lint/lint_abstract/spyglass_reports/abstract_view/position_lint_abstract.sgdc@@0@@1@@2@@Abstract view for design 'position' succesfully created
+##totalGeneratedCount:         5
 ##totalWaivedViolationCount:         0
-##totalReportCount:         3
+##totalReportCount:         5
 ##totalSuppressedCount:         0
 ##Active_Rules  LINT_abstract01

@@ -1,0 +1,13 @@
+read_file: info: using default project `spyglass-1.prj'
+Detailed Error Trace
+--------------------
+
+  `vhdl' file `../../VHD/send_ppm.vhd' does not exist
+      while executing
+      invoked from within
+  "read_file -type vhdl $VHDL_FILES"
+      (file "script/run_Spyglass.tcl" line 14)
+      invoked from within
+  "source script/run_Spyglass.tcl"
+
+Error: `vhdl' file `../../VHD/send_ppm.vhd' does not exist

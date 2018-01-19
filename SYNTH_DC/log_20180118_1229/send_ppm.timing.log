@@ -1,0 +1,897 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : send_ppm
+Version: J-2014.09-SP2
+Date   : Tue Jan 16 15:57:44 2018
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB_TYP
+Wire Load Model Mode: enclosed
+
+  Startpoint: sig_reg_storage_reg[16]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[16]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[16]/Q (DFE1)                        1.82       1.82 f
+  mult_120/A[0] (send_ppm_DW02_mult_1)                    0.00       1.82 f
+  mult_120/PRODUCT[1] (send_ppm_DW02_mult_1)              0.00       1.82 f
+  U414/Q (NAND20)                                         1.09       2.91 r
+  U416/Q (CLKIN0)                                         0.70       3.61 f
+  U411/Q (NOR20)                                          0.57       4.18 r
+  U413/Q (CLKIN0)                                         0.68       4.86 f
+  U408/Q (NOR20)                                          0.56       5.43 r
+  U410/Q (CLKIN0)                                         0.70       6.12 f
+  U405/Q (NAND20)                                         0.82       6.94 r
+  U407/Q (CLKIN0)                                         0.67       7.61 f
+  U402/Q (NOR20)                                          0.56       8.17 r
+  U404/Q (CLKIN0)                                         0.68       8.84 f
+  U399/Q (NAND20)                                         0.80       9.65 r
+  U401/Q (CLKIN0)                                         0.68      10.33 f
+  U396/Q (NAND20)                                         0.81      11.13 r
+  U398/Q (CLKIN0)                                         0.68      11.81 f
+  U393/Q (NAND20)                                         0.81      12.62 r
+  U395/Q (CLKIN0)                                         0.66      13.29 f
+  U390/Q (NOR20)                                          0.56      13.84 r
+  U392/Q (CLKIN0)                                         0.68      14.52 f
+  U373/Q (NAND20)                                         0.80      15.32 r
+  U375/Q (CLKIN0)                                         0.68      16.00 f
+  U348/Q (NAND20)                                         0.81      16.81 r
+  U350/Q (CLKIN0)                                         0.68      17.49 f
+  U345/Q (NAND20)                                         0.81      18.30 r
+  U347/Q (CLKIN0)                                         0.66      18.96 f
+  U331/Q (XNR20)                                          1.73      20.69 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.90      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.03      23.63 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[14] (send_ppm_DW01_add_8)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_sub_0)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/U8/Q (INV3)            0.19      23.81 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_14/CO (ADD32)       0.71      24.52 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.67      25.20 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.87 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.55 f
+  sub_0_root_sub_0_root_sub_235_cf/U23/Q (NOR21)          0.39      26.94 r
+  sub_0_root_sub_0_root_sub_235_cf/U22/Q (XNR21)          0.86      27.81 f
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[19] (send_ppm_DW01_sub_0)
+                                                          0.00      27.81 f
+  U637/Q (XNR20)                                          0.82      28.62 f
+  U641/Q (NAND40)                                         0.90      29.53 r
+  U649/Q (NOR40)                                          1.39      30.92 f
+  U185/Q (NOR31)                                          0.62      31.54 r
+  U184/Q (AOI211)                                         0.53      32.06 f
+  U53/Q (OAI212)                                          0.68      32.74 r
+  U219/Q (AOI211)                                         0.41      33.15 f
+  U48/Q (OAI212)                                          0.52      33.67 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.67 r
+  data arrival time                                                 33.67
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.69
+
+
+  Startpoint: sig_reg_storage_reg[24]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[24]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[24]/Q (DFE1)                        1.82       1.82 f
+  mult_123/A[0] (send_ppm_DW02_mult_0)                    0.00       1.82 f
+  mult_123/PRODUCT[1] (send_ppm_DW02_mult_0)              0.00       1.82 f
+  U441/Q (NAND20)                                         1.09       2.91 r
+  U443/Q (CLKIN0)                                         0.70       3.61 f
+  U438/Q (NOR20)                                          0.57       4.18 r
+  U440/Q (CLKIN0)                                         0.68       4.86 f
+  U435/Q (NOR20)                                          0.56       5.43 r
+  U437/Q (CLKIN0)                                         0.70       6.12 f
+  U432/Q (NAND20)                                         0.82       6.94 r
+  U434/Q (CLKIN0)                                         0.67       7.61 f
+  U429/Q (NOR20)                                          0.56       8.17 r
+  U431/Q (CLKIN0)                                         0.68       8.84 f
+  U426/Q (NAND20)                                         0.80       9.65 r
+  U428/Q (CLKIN0)                                         0.68      10.33 f
+  U423/Q (NAND20)                                         0.81      11.13 r
+  U425/Q (CLKIN0)                                         0.68      11.81 f
+  U420/Q (NAND20)                                         0.81      12.62 r
+  U422/Q (CLKIN0)                                         0.66      13.29 f
+  U417/Q (NOR20)                                          0.56      13.84 r
+  U419/Q (CLKIN0)                                         0.68      14.52 f
+  U376/Q (NAND20)                                         0.80      15.32 r
+  U378/Q (CLKIN0)                                         0.68      16.00 f
+  U354/Q (NAND20)                                         0.81      16.81 r
+  U356/Q (CLKIN0)                                         0.68      17.49 f
+  U351/Q (NAND20)                                         0.81      18.30 r
+  U353/Q (CLKIN0)                                         0.66      18.96 f
+  U334/Q (XNR20)                                          1.80      20.77 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.69      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.03      23.49 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[14] (send_ppm_DW01_add_8)
+                                                          0.00      23.49 r
+  sub_0_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_sub_0)
+                                                          0.00      23.49 r
+  sub_0_root_sub_0_root_sub_235_cf/U8/Q (INV3)            0.19      23.67 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_14/CO (ADD32)       0.71      24.38 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.67      25.06 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.73 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.41 f
+  sub_0_root_sub_0_root_sub_235_cf/U23/Q (NOR21)          0.39      26.80 r
+  sub_0_root_sub_0_root_sub_235_cf/U22/Q (XNR21)          0.86      27.67 f
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[19] (send_ppm_DW01_sub_0)
+                                                          0.00      27.67 f
+  U637/Q (XNR20)                                          0.82      28.48 f
+  U641/Q (NAND40)                                         0.90      29.38 r
+  U649/Q (NOR40)                                          1.39      30.78 f
+  U185/Q (NOR31)                                          0.62      31.39 r
+  U184/Q (AOI211)                                         0.53      31.92 f
+  U53/Q (OAI212)                                          0.68      32.60 r
+  U219/Q (AOI211)                                         0.41      33.01 f
+  U48/Q (OAI212)                                          0.52      33.53 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.53 r
+  data arrival time                                                 33.53
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.83
+
+
+  Startpoint: sig_reg_storage_reg[16]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_add_8
+                     10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[16]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[16]/Q (DFE1)                        1.82       1.82 f
+  mult_120/A[0] (send_ppm_DW02_mult_1)                    0.00       1.82 f
+  mult_120/PRODUCT[1] (send_ppm_DW02_mult_1)              0.00       1.82 f
+  U414/Q (NAND20)                                         1.09       2.91 r
+  U416/Q (CLKIN0)                                         0.70       3.61 f
+  U411/Q (NOR20)                                          0.57       4.18 r
+  U413/Q (CLKIN0)                                         0.68       4.86 f
+  U408/Q (NOR20)                                          0.56       5.43 r
+  U410/Q (CLKIN0)                                         0.70       6.12 f
+  U405/Q (NAND20)                                         0.82       6.94 r
+  U407/Q (CLKIN0)                                         0.67       7.61 f
+  U402/Q (NOR20)                                          0.56       8.17 r
+  U404/Q (CLKIN0)                                         0.68       8.84 f
+  U399/Q (NAND20)                                         0.80       9.65 r
+  U401/Q (CLKIN0)                                         0.68      10.33 f
+  U396/Q (NAND20)                                         0.81      11.13 r
+  U398/Q (CLKIN0)                                         0.68      11.81 f
+  U393/Q (NAND20)                                         0.81      12.62 r
+  U395/Q (CLKIN0)                                         0.66      13.29 f
+  U390/Q (NOR20)                                          0.56      13.84 r
+  U392/Q (CLKIN0)                                         0.68      14.52 f
+  U373/Q (NAND20)                                         0.80      15.32 r
+  U375/Q (CLKIN0)                                         0.68      16.00 f
+  U348/Q (NAND20)                                         0.81      16.81 r
+  U350/Q (CLKIN0)                                         0.68      17.49 f
+  U345/Q (NAND20)                                         0.81      18.30 r
+  U347/Q (CLKIN0)                                         0.66      18.96 f
+  U331/Q (XNR20)                                          1.73      20.69 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.90      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/CO (ADD32)       0.64      23.24 r
+  add_1_root_sub_0_root_sub_235_cf/U1_15/S (ADD32)        0.92      24.16 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[15] (send_ppm_DW01_add_8)
+                                                          0.00      24.16 r
+  sub_0_root_sub_0_root_sub_235_cf/B[15] (send_ppm_DW01_sub_0)
+                                                          0.00      24.16 r
+  sub_0_root_sub_0_root_sub_235_cf/U7/Q (INV3)            0.19      24.34 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.71      25.05 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.72 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.41 f
+  sub_0_root_sub_0_root_sub_235_cf/U23/Q (NOR21)          0.39      26.80 r
+  sub_0_root_sub_0_root_sub_235_cf/U22/Q (XNR21)          0.86      27.66 f
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[19] (send_ppm_DW01_sub_0)
+                                                          0.00      27.66 f
+  U637/Q (XNR20)                                          0.82      28.48 f
+  U641/Q (NAND40)                                         0.90      29.38 r
+  U649/Q (NOR40)                                          1.39      30.77 f
+  U185/Q (NOR31)                                          0.62      31.39 r
+  U184/Q (AOI211)                                         0.53      31.91 f
+  U53/Q (OAI212)                                          0.68      32.59 r
+  U219/Q (AOI211)                                         0.41      33.00 f
+  U48/Q (OAI212)                                          0.52      33.52 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.52 r
+  data arrival time                                                 33.52
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.84
+
+
+  Startpoint: sig_reg_storage_reg[16]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[16]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[16]/Q (DFE1)                        1.82       1.82 f
+  mult_120/A[0] (send_ppm_DW02_mult_1)                    0.00       1.82 f
+  mult_120/PRODUCT[1] (send_ppm_DW02_mult_1)              0.00       1.82 f
+  U414/Q (NAND20)                                         1.09       2.91 r
+  U416/Q (CLKIN0)                                         0.70       3.61 f
+  U411/Q (NOR20)                                          0.57       4.18 r
+  U413/Q (CLKIN0)                                         0.68       4.86 f
+  U408/Q (NOR20)                                          0.56       5.43 r
+  U410/Q (CLKIN0)                                         0.70       6.12 f
+  U405/Q (NAND20)                                         0.82       6.94 r
+  U407/Q (CLKIN0)                                         0.67       7.61 f
+  U402/Q (NOR20)                                          0.56       8.17 r
+  U404/Q (CLKIN0)                                         0.68       8.84 f
+  U399/Q (NAND20)                                         0.80       9.65 r
+  U401/Q (CLKIN0)                                         0.68      10.33 f
+  U396/Q (NAND20)                                         0.81      11.13 r
+  U398/Q (CLKIN0)                                         0.68      11.81 f
+  U393/Q (NAND20)                                         0.81      12.62 r
+  U395/Q (CLKIN0)                                         0.66      13.29 f
+  U390/Q (NOR20)                                          0.56      13.84 r
+  U392/Q (CLKIN0)                                         0.68      14.52 f
+  U373/Q (NAND20)                                         0.80      15.32 r
+  U375/Q (CLKIN0)                                         0.68      16.00 f
+  U348/Q (NAND20)                                         0.81      16.81 r
+  U350/Q (CLKIN0)                                         0.68      17.49 f
+  U345/Q (NAND20)                                         0.81      18.30 r
+  U347/Q (CLKIN0)                                         0.66      18.96 f
+  U331/Q (XNR20)                                          1.73      20.69 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.90      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.03      23.63 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[14] (send_ppm_DW01_add_8)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_sub_0)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/U8/Q (INV3)            0.19      23.81 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_14/CO (ADD32)       0.71      24.52 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.67      25.20 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.87 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.55 f
+  sub_0_root_sub_0_root_sub_235_cf/U21/Q (XNR21)          0.61      27.16 f
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[18] (send_ppm_DW01_sub_0)
+                                                          0.00      27.16 f
+  U632/Q (XNR20)                                          0.81      27.98 f
+  U634/Q (NAND20)                                         0.63      28.60 r
+  U635/Q (NOR40)                                          0.63      29.23 f
+  U180/Q (INV3)                                           0.39      29.63 r
+  U649/Q (NOR40)                                          1.13      30.76 f
+  U185/Q (NOR31)                                          0.62      31.37 r
+  U184/Q (AOI211)                                         0.53      31.90 f
+  U53/Q (OAI212)                                          0.68      32.58 r
+  U219/Q (AOI211)                                         0.41      32.99 f
+  U48/Q (OAI212)                                          0.52      33.51 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.51 r
+  data arrival time                                                 33.51
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.85
+
+
+  Startpoint: sig_reg_storage_reg[16]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[16]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[16]/Q (DFE1)                        1.82       1.82 f
+  mult_120/A[0] (send_ppm_DW02_mult_1)                    0.00       1.82 f
+  mult_120/PRODUCT[1] (send_ppm_DW02_mult_1)              0.00       1.82 f
+  U414/Q (NAND20)                                         1.09       2.91 r
+  U416/Q (CLKIN0)                                         0.70       3.61 f
+  U411/Q (NOR20)                                          0.57       4.18 r
+  U413/Q (CLKIN0)                                         0.68       4.86 f
+  U408/Q (NOR20)                                          0.56       5.43 r
+  U410/Q (CLKIN0)                                         0.70       6.12 f
+  U405/Q (NAND20)                                         0.82       6.94 r
+  U407/Q (CLKIN0)                                         0.67       7.61 f
+  U402/Q (NOR20)                                          0.56       8.17 r
+  U404/Q (CLKIN0)                                         0.68       8.84 f
+  U399/Q (NAND20)                                         0.80       9.65 r
+  U401/Q (CLKIN0)                                         0.68      10.33 f
+  U396/Q (NAND20)                                         0.81      11.13 r
+  U398/Q (CLKIN0)                                         0.68      11.81 f
+  U393/Q (NAND20)                                         0.81      12.62 r
+  U395/Q (CLKIN0)                                         0.66      13.29 f
+  U390/Q (NOR20)                                          0.56      13.84 r
+  U392/Q (CLKIN0)                                         0.68      14.52 f
+  U373/Q (NAND20)                                         0.80      15.32 r
+  U375/Q (CLKIN0)                                         0.68      16.00 f
+  U348/Q (NAND20)                                         0.81      16.81 r
+  U350/Q (CLKIN0)                                         0.68      17.49 f
+  U345/Q (NAND20)                                         0.81      18.30 r
+  U347/Q (CLKIN0)                                         0.66      18.96 f
+  U331/Q (XNR20)                                          1.73      20.69 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.90      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.03      23.63 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[14] (send_ppm_DW01_add_8)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_sub_0)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/U8/Q (INV3)            0.19      23.81 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_14/CO (ADD32)       0.71      24.52 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.67      25.20 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.87 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.55 f
+  sub_0_root_sub_0_root_sub_235_cf/U21/Q (XNR21)          0.51      27.07 r
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[18] (send_ppm_DW01_sub_0)
+                                                          0.00      27.07 r
+  U632/Q (XNR20)                                          0.87      27.94 f
+  U634/Q (NAND20)                                         0.63      28.56 r
+  U635/Q (NOR40)                                          0.63      29.19 f
+  U180/Q (INV3)                                           0.39      29.59 r
+  U649/Q (NOR40)                                          1.13      30.72 f
+  U185/Q (NOR31)                                          0.62      31.34 r
+  U184/Q (AOI211)                                         0.53      31.86 f
+  U53/Q (OAI212)                                          0.68      32.54 r
+  U219/Q (AOI211)                                         0.41      32.95 f
+  U48/Q (OAI212)                                          0.52      33.47 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.47 r
+  data arrival time                                                 33.47
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.89
+
+
+  Startpoint: sig_reg_storage_reg[24]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_add_8
+                     10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[24]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[24]/Q (DFE1)                        1.82       1.82 f
+  mult_123/A[0] (send_ppm_DW02_mult_0)                    0.00       1.82 f
+  mult_123/PRODUCT[1] (send_ppm_DW02_mult_0)              0.00       1.82 f
+  U441/Q (NAND20)                                         1.09       2.91 r
+  U443/Q (CLKIN0)                                         0.70       3.61 f
+  U438/Q (NOR20)                                          0.57       4.18 r
+  U440/Q (CLKIN0)                                         0.68       4.86 f
+  U435/Q (NOR20)                                          0.56       5.43 r
+  U437/Q (CLKIN0)                                         0.70       6.12 f
+  U432/Q (NAND20)                                         0.82       6.94 r
+  U434/Q (CLKIN0)                                         0.67       7.61 f
+  U429/Q (NOR20)                                          0.56       8.17 r
+  U431/Q (CLKIN0)                                         0.68       8.84 f
+  U426/Q (NAND20)                                         0.80       9.65 r
+  U428/Q (CLKIN0)                                         0.68      10.33 f
+  U423/Q (NAND20)                                         0.81      11.13 r
+  U425/Q (CLKIN0)                                         0.68      11.81 f
+  U420/Q (NAND20)                                         0.81      12.62 r
+  U422/Q (CLKIN0)                                         0.66      13.29 f
+  U417/Q (NOR20)                                          0.56      13.84 r
+  U419/Q (CLKIN0)                                         0.68      14.52 f
+  U376/Q (NAND20)                                         0.80      15.32 r
+  U378/Q (CLKIN0)                                         0.68      16.00 f
+  U354/Q (NAND20)                                         0.81      16.81 r
+  U356/Q (CLKIN0)                                         0.68      17.49 f
+  U351/Q (NAND20)                                         0.81      18.30 r
+  U353/Q (CLKIN0)                                         0.66      18.96 f
+  U334/Q (XNR20)                                          1.80      20.77 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.69      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/CO (ADD32)       0.64      23.10 r
+  add_1_root_sub_0_root_sub_235_cf/U1_15/S (ADD32)        0.92      24.02 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[15] (send_ppm_DW01_add_8)
+                                                          0.00      24.02 r
+  sub_0_root_sub_0_root_sub_235_cf/B[15] (send_ppm_DW01_sub_0)
+                                                          0.00      24.02 r
+  sub_0_root_sub_0_root_sub_235_cf/U7/Q (INV3)            0.19      24.20 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.71      24.91 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.58 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.27 f
+  sub_0_root_sub_0_root_sub_235_cf/U23/Q (NOR21)          0.39      26.66 r
+  sub_0_root_sub_0_root_sub_235_cf/U22/Q (XNR21)          0.86      27.52 f
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[19] (send_ppm_DW01_sub_0)
+                                                          0.00      27.52 f
+  U637/Q (XNR20)                                          0.82      28.34 f
+  U641/Q (NAND40)                                         0.90      29.24 r
+  U649/Q (NOR40)                                          1.39      30.63 f
+  U185/Q (NOR31)                                          0.62      31.25 r
+  U184/Q (AOI211)                                         0.53      31.77 f
+  U53/Q (OAI212)                                          0.68      32.45 r
+  U219/Q (AOI211)                                         0.41      32.86 f
+  U48/Q (OAI212)                                          0.52      33.38 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.38 r
+  data arrival time                                                 33.38
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.98
+
+
+  Startpoint: sig_reg_storage_reg[24]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[24]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[24]/Q (DFE1)                        1.82       1.82 f
+  mult_123/A[0] (send_ppm_DW02_mult_0)                    0.00       1.82 f
+  mult_123/PRODUCT[1] (send_ppm_DW02_mult_0)              0.00       1.82 f
+  U441/Q (NAND20)                                         1.09       2.91 r
+  U443/Q (CLKIN0)                                         0.70       3.61 f
+  U438/Q (NOR20)                                          0.57       4.18 r
+  U440/Q (CLKIN0)                                         0.68       4.86 f
+  U435/Q (NOR20)                                          0.56       5.43 r
+  U437/Q (CLKIN0)                                         0.70       6.12 f
+  U432/Q (NAND20)                                         0.82       6.94 r
+  U434/Q (CLKIN0)                                         0.67       7.61 f
+  U429/Q (NOR20)                                          0.56       8.17 r
+  U431/Q (CLKIN0)                                         0.68       8.84 f
+  U426/Q (NAND20)                                         0.80       9.65 r
+  U428/Q (CLKIN0)                                         0.68      10.33 f
+  U423/Q (NAND20)                                         0.81      11.13 r
+  U425/Q (CLKIN0)                                         0.68      11.81 f
+  U420/Q (NAND20)                                         0.81      12.62 r
+  U422/Q (CLKIN0)                                         0.66      13.29 f
+  U417/Q (NOR20)                                          0.56      13.84 r
+  U419/Q (CLKIN0)                                         0.68      14.52 f
+  U376/Q (NAND20)                                         0.80      15.32 r
+  U378/Q (CLKIN0)                                         0.68      16.00 f
+  U354/Q (NAND20)                                         0.81      16.81 r
+  U356/Q (CLKIN0)                                         0.68      17.49 f
+  U351/Q (NAND20)                                         0.81      18.30 r
+  U353/Q (CLKIN0)                                         0.66      18.96 f
+  U334/Q (XNR20)                                          1.80      20.77 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.69      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.03      23.49 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[14] (send_ppm_DW01_add_8)
+                                                          0.00      23.49 r
+  sub_0_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_sub_0)
+                                                          0.00      23.49 r
+  sub_0_root_sub_0_root_sub_235_cf/U8/Q (INV3)            0.19      23.67 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_14/CO (ADD32)       0.71      24.38 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.67      25.06 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.73 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.41 f
+  sub_0_root_sub_0_root_sub_235_cf/U21/Q (XNR21)          0.61      27.02 f
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[18] (send_ppm_DW01_sub_0)
+                                                          0.00      27.02 f
+  U632/Q (XNR20)                                          0.81      27.84 f
+  U634/Q (NAND20)                                         0.63      28.46 r
+  U635/Q (NOR40)                                          0.63      29.09 f
+  U180/Q (INV3)                                           0.39      29.49 r
+  U649/Q (NOR40)                                          1.13      30.62 f
+  U185/Q (NOR31)                                          0.62      31.23 r
+  U184/Q (AOI211)                                         0.53      31.76 f
+  U53/Q (OAI212)                                          0.68      32.44 r
+  U219/Q (AOI211)                                         0.41      32.85 f
+  U48/Q (OAI212)                                          0.52      33.37 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.37 r
+  data arrival time                                                 33.37
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.99
+
+
+  Startpoint: sig_reg_storage_reg[16]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_add_8
+                     10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[16]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[16]/Q (DFE1)                        1.82       1.82 f
+  mult_120/A[0] (send_ppm_DW02_mult_1)                    0.00       1.82 f
+  mult_120/PRODUCT[1] (send_ppm_DW02_mult_1)              0.00       1.82 f
+  U414/Q (NAND20)                                         1.09       2.91 r
+  U416/Q (CLKIN0)                                         0.70       3.61 f
+  U411/Q (NOR20)                                          0.57       4.18 r
+  U413/Q (CLKIN0)                                         0.68       4.86 f
+  U408/Q (NOR20)                                          0.56       5.43 r
+  U410/Q (CLKIN0)                                         0.70       6.12 f
+  U405/Q (NAND20)                                         0.82       6.94 r
+  U407/Q (CLKIN0)                                         0.67       7.61 f
+  U402/Q (NOR20)                                          0.56       8.17 r
+  U404/Q (CLKIN0)                                         0.68       8.84 f
+  U399/Q (NAND20)                                         0.80       9.65 r
+  U401/Q (CLKIN0)                                         0.68      10.33 f
+  U396/Q (NAND20)                                         0.81      11.13 r
+  U398/Q (CLKIN0)                                         0.68      11.81 f
+  U393/Q (NAND20)                                         0.81      12.62 r
+  U395/Q (CLKIN0)                                         0.66      13.29 f
+  U390/Q (NOR20)                                          0.56      13.84 r
+  U392/Q (CLKIN0)                                         0.68      14.52 f
+  U373/Q (NAND20)                                         0.80      15.32 r
+  U375/Q (CLKIN0)                                         0.68      16.00 f
+  U348/Q (NAND20)                                         0.81      16.81 r
+  U350/Q (CLKIN0)                                         0.68      17.49 f
+  U345/Q (NAND20)                                         0.81      18.30 r
+  U347/Q (CLKIN0)                                         0.66      18.96 f
+  U331/Q (XNR20)                                          1.73      20.69 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.90      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/CO (ADD32)       0.64      23.24 r
+  add_1_root_sub_0_root_sub_235_cf/U1_15/S (ADD32)        0.92      24.16 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[15] (send_ppm_DW01_add_8)
+                                                          0.00      24.16 r
+  sub_0_root_sub_0_root_sub_235_cf/B[15] (send_ppm_DW01_sub_0)
+                                                          0.00      24.16 r
+  sub_0_root_sub_0_root_sub_235_cf/U7/Q (INV3)            0.19      24.34 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.71      25.05 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.72 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.41 f
+  sub_0_root_sub_0_root_sub_235_cf/U21/Q (XNR21)          0.61      27.02 f
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[18] (send_ppm_DW01_sub_0)
+                                                          0.00      27.02 f
+  U632/Q (XNR20)                                          0.81      27.83 f
+  U634/Q (NAND20)                                         0.63      28.46 r
+  U635/Q (NOR40)                                          0.63      29.09 f
+  U180/Q (INV3)                                           0.39      29.48 r
+  U649/Q (NOR40)                                          1.13      30.61 f
+  U185/Q (NOR31)                                          0.62      31.23 r
+  U184/Q (AOI211)                                         0.53      31.75 f
+  U53/Q (OAI212)                                          0.68      32.43 r
+  U219/Q (AOI211)                                         0.41      32.84 f
+  U48/Q (OAI212)                                          0.52      33.36 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.36 r
+  data arrival time                                                 33.36
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.00
+
+
+  Startpoint: sig_reg_storage_reg[16]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[16]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[16]/Q (DFE1)                        1.82       1.82 f
+  mult_120/A[0] (send_ppm_DW02_mult_1)                    0.00       1.82 f
+  mult_120/PRODUCT[1] (send_ppm_DW02_mult_1)              0.00       1.82 f
+  U414/Q (NAND20)                                         1.09       2.91 r
+  U416/Q (CLKIN0)                                         0.70       3.61 f
+  U411/Q (NOR20)                                          0.57       4.18 r
+  U413/Q (CLKIN0)                                         0.68       4.86 f
+  U408/Q (NOR20)                                          0.56       5.43 r
+  U410/Q (CLKIN0)                                         0.70       6.12 f
+  U405/Q (NAND20)                                         0.82       6.94 r
+  U407/Q (CLKIN0)                                         0.67       7.61 f
+  U402/Q (NOR20)                                          0.56       8.17 r
+  U404/Q (CLKIN0)                                         0.68       8.84 f
+  U399/Q (NAND20)                                         0.80       9.65 r
+  U401/Q (CLKIN0)                                         0.68      10.33 f
+  U396/Q (NAND20)                                         0.81      11.13 r
+  U398/Q (CLKIN0)                                         0.68      11.81 f
+  U393/Q (NAND20)                                         0.81      12.62 r
+  U395/Q (CLKIN0)                                         0.66      13.29 f
+  U390/Q (NOR20)                                          0.56      13.84 r
+  U392/Q (CLKIN0)                                         0.68      14.52 f
+  U373/Q (NAND20)                                         0.80      15.32 r
+  U375/Q (CLKIN0)                                         0.68      16.00 f
+  U348/Q (NAND20)                                         0.81      16.81 r
+  U350/Q (CLKIN0)                                         0.68      17.49 f
+  U345/Q (NAND20)                                         0.81      18.30 r
+  U347/Q (CLKIN0)                                         0.66      18.96 f
+  U331/Q (XNR20)                                          1.73      20.69 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.90      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.60 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.03      23.63 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[14] (send_ppm_DW01_add_8)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_sub_0)
+                                                          0.00      23.63 r
+  sub_0_root_sub_0_root_sub_235_cf/U8/Q (INV3)            0.19      23.81 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_14/CO (ADD32)       0.71      24.52 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.67      25.20 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.87 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.55 f
+  sub_0_root_sub_0_root_sub_235_cf/U23/Q (NOR21)          0.39      26.94 r
+  sub_0_root_sub_0_root_sub_235_cf/U22/Q (XNR21)          0.49      27.43 r
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[19] (send_ppm_DW01_sub_0)
+                                                          0.00      27.43 r
+  U637/Q (XNR20)                                          0.87      28.30 f
+  U641/Q (NAND40)                                         0.90      29.21 r
+  U649/Q (NOR40)                                          1.39      30.60 f
+  U185/Q (NOR31)                                          0.62      31.22 r
+  U184/Q (AOI211)                                         0.53      31.74 f
+  U53/Q (OAI212)                                          0.68      32.42 r
+  U219/Q (AOI211)                                         0.41      32.83 f
+  U48/Q (OAI212)                                          0.52      33.35 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.35 r
+  data arrival time                                                 33.35
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.35
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.01
+
+
+  Startpoint: sig_reg_storage_reg[24]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+  send_ppm_DW01_sub_0
+                     10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  sig_reg_storage_reg[24]/C (DFE1)                        0.00       0.00 r
+  sig_reg_storage_reg[24]/Q (DFE1)                        1.82       1.82 f
+  mult_123/A[0] (send_ppm_DW02_mult_0)                    0.00       1.82 f
+  mult_123/PRODUCT[1] (send_ppm_DW02_mult_0)              0.00       1.82 f
+  U441/Q (NAND20)                                         1.09       2.91 r
+  U443/Q (CLKIN0)                                         0.70       3.61 f
+  U438/Q (NOR20)                                          0.57       4.18 r
+  U440/Q (CLKIN0)                                         0.68       4.86 f
+  U435/Q (NOR20)                                          0.56       5.43 r
+  U437/Q (CLKIN0)                                         0.70       6.12 f
+  U432/Q (NAND20)                                         0.82       6.94 r
+  U434/Q (CLKIN0)                                         0.67       7.61 f
+  U429/Q (NOR20)                                          0.56       8.17 r
+  U431/Q (CLKIN0)                                         0.68       8.84 f
+  U426/Q (NAND20)                                         0.80       9.65 r
+  U428/Q (CLKIN0)                                         0.68      10.33 f
+  U423/Q (NAND20)                                         0.81      11.13 r
+  U425/Q (CLKIN0)                                         0.68      11.81 f
+  U420/Q (NAND20)                                         0.81      12.62 r
+  U422/Q (CLKIN0)                                         0.66      13.29 f
+  U417/Q (NOR20)                                          0.56      13.84 r
+  U419/Q (CLKIN0)                                         0.68      14.52 f
+  U376/Q (NAND20)                                         0.80      15.32 r
+  U378/Q (CLKIN0)                                         0.68      16.00 f
+  U354/Q (NAND20)                                         0.81      16.81 r
+  U356/Q (CLKIN0)                                         0.68      17.49 f
+  U351/Q (NAND20)                                         0.81      18.30 r
+  U353/Q (CLKIN0)                                         0.66      18.96 f
+  U334/Q (XNR20)                                          1.80      20.77 r
+  add_2_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.69      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_add_8)
+                                                          0.00      22.46 r
+  add_1_root_sub_0_root_sub_235_cf/U1_14/S (ADD32)        1.03      23.49 r
+  add_1_root_sub_0_root_sub_235_cf/SUM[14] (send_ppm_DW01_add_8)
+                                                          0.00      23.49 r
+  sub_0_root_sub_0_root_sub_235_cf/B[14] (send_ppm_DW01_sub_0)
+                                                          0.00      23.49 r
+  sub_0_root_sub_0_root_sub_235_cf/U8/Q (INV3)            0.19      23.67 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_14/CO (ADD32)       0.71      24.38 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_15/CO (ADD32)       0.67      25.06 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_16/CO (ADD32)       0.67      25.73 f
+  sub_0_root_sub_0_root_sub_235_cf/U2_17/CO (ADD32)       0.68      26.41 f
+  sub_0_root_sub_0_root_sub_235_cf/U21/Q (XNR21)          0.51      26.93 r
+  sub_0_root_sub_0_root_sub_235_cf/DIFF[18] (send_ppm_DW01_sub_0)
+                                                          0.00      26.93 r
+  U632/Q (XNR20)                                          0.87      27.80 f
+  U634/Q (NAND20)                                         0.63      28.42 r
+  U635/Q (NOR40)                                          0.63      29.05 f
+  U180/Q (INV3)                                           0.39      29.45 r
+  U649/Q (NOR40)                                          1.13      30.58 f
+  U185/Q (NOR31)                                          0.62      31.19 r
+  U184/Q (AOI211)                                         0.53      31.72 f
+  U53/Q (OAI212)                                          0.68      32.40 r
+  U219/Q (AOI211)                                         0.41      32.81 f
+  U48/Q (OAI212)                                          0.52      33.33 r
+  sig_state_reg[2]/D (DFE1)                               0.00      33.33 r
+  data arrival time                                                 33.33
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  sig_state_reg[2]/C (DFE1)                               0.00      39.50 r
+  library setup time                                     -0.14      39.36
+  data required time                                                39.36
+  --------------------------------------------------------------------------
+  data required time                                                39.36
+  data arrival time                                                -33.33
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.03
+
+
+1

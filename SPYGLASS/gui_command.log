@@ -1,0 +1,4 @@
+run script/run_Spyglass.tcl
+source script/run_Spyglass.tcl
+gui_exit
+gui_exit

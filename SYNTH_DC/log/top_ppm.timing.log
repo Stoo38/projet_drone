@@ -1,0 +1,744 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : top_ppm
+Version: J-2014.09-SP2
+Date   : Thu Jan 18 12:42:51 2018
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB_TYP
+Wire Load Model Mode: enclosed
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U389/Q (NOR21)                                          0.95       3.40 f
+  U406/Q (NOR21)                                          0.71       4.11 r
+  U405/Q (INV3)                                           0.20       4.30 f
+  U450/Q (NOR21)                                          0.56       4.87 r
+  U239/Q (NOR21)                                          0.61       5.47 f
+  U261/Q (NOR21)                                          0.69       6.16 r
+  U247/Q (NOR21)                                          0.62       6.78 f
+  U245/Q (INV3)                                           0.33       7.12 r
+  U244/Q (NOR21)                                          0.48       7.60 f
+  U126/Q (INV3)                                           0.29       7.89 r
+  U125/Q (NOR21)                                          0.45       8.33 f
+  U131/Q (NOR21)                                          0.62       8.95 r
+  U130/Q (INV3)                                           0.13       9.08 f
+  U102/Q (XOR21)                                          0.95      10.03 r
+  U27/Q (NOR21)                                           0.69      10.72 f
+  U11/Q (INV3)                                            0.37      11.08 r
+  U10/Q (NOR21)                                           0.45      11.53 f
+  U26/Q (INV3)                                            0.37      11.89 r
+  U25/Q (NOR21)                                           0.45      12.34 f
+  U63/Q (INV3)                                            0.37      12.70 r
+  U62/Q (NOR21)                                           0.45      13.15 f
+  U83/Q (XOR21)                                           0.93      14.08 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.29 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.83 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.40 r
+  U22/Q (NOR21)                                           0.37      16.77 f
+  U21/Q (INV3)                                            0.35      17.12 r
+  U9/Q (NOR21)                                            0.36      17.48 f
+  U404/Q (INV3)                                           0.28      17.76 r
+  U402/Q (XNR21)                                          0.66      18.42 f
+  U401/Q (XNR21)                                          0.66      19.08 f
+  U173/Q (NAND41)                                         0.65      19.73 r
+  U169/Q (NOR40)                                          1.20      20.93 f
+  U96/Q (INV3)                                            0.60      21.52 r
+  U383/Q (NAND31)                                         0.15      21.68 f
+  U381/Q (OAI2111)                                        0.70      22.38 r
+  U380/Q (INV3)                                           0.16      22.55 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.98 r
+  U392/Q (AOI211)                                         0.39      23.36 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.73 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.73 r
+  data arrival time                                                 23.73
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.76
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U389/Q (NOR21)                                          0.95       3.40 f
+  U406/Q (NOR21)                                          0.71       4.11 r
+  U405/Q (INV3)                                           0.20       4.30 f
+  U450/Q (NOR21)                                          0.56       4.87 r
+  U239/Q (NOR21)                                          0.61       5.47 f
+  U261/Q (NOR21)                                          0.69       6.16 r
+  U247/Q (NOR21)                                          0.62       6.78 f
+  U245/Q (INV3)                                           0.33       7.12 r
+  U244/Q (NOR21)                                          0.48       7.60 f
+  U126/Q (INV3)                                           0.29       7.89 r
+  U125/Q (NOR21)                                          0.45       8.33 f
+  U108/Q (XNR21)                                          0.88       9.22 r
+  U29/Q (NOR21)                                           0.69       9.90 f
+  U28/Q (INV3)                                            0.36      10.26 r
+  U27/Q (NOR21)                                           0.44      10.71 f
+  U11/Q (INV3)                                            0.37      11.07 r
+  U10/Q (NOR21)                                           0.45      11.52 f
+  U26/Q (INV3)                                            0.37      11.88 r
+  U25/Q (NOR21)                                           0.45      12.33 f
+  U63/Q (INV3)                                            0.37      12.70 r
+  U62/Q (NOR21)                                           0.45      13.14 f
+  U83/Q (XOR21)                                           0.93      14.07 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.28 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.82 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.39 r
+  U22/Q (NOR21)                                           0.37      16.76 f
+  U21/Q (INV3)                                            0.35      17.11 r
+  U9/Q (NOR21)                                            0.36      17.47 f
+  U404/Q (INV3)                                           0.28      17.76 r
+  U402/Q (XNR21)                                          0.66      18.41 f
+  U401/Q (XNR21)                                          0.66      19.07 f
+  U173/Q (NAND41)                                         0.65      19.72 r
+  U169/Q (NOR40)                                          1.20      20.92 f
+  U96/Q (INV3)                                            0.60      21.51 r
+  U383/Q (NAND31)                                         0.15      21.67 f
+  U381/Q (OAI2111)                                        0.70      22.37 r
+  U380/Q (INV3)                                           0.16      22.54 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.97 r
+  U392/Q (AOI211)                                         0.39      23.36 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.72 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.72 r
+  data arrival time                                                 23.72
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.76
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U431/Q (NOR21)                                          1.02       3.46 f
+  send_ppm1/dp_cluster_1/mult_114/S3_2_5/CO (ADD32)       1.19       4.65 f
+  send_ppm1/dp_cluster_1/mult_114/S3_3_5/CO (ADD32)       0.77       5.42 f
+  send_ppm1/dp_cluster_1/mult_114/S3_4_5/CO (ADD32)       0.77       6.20 f
+  send_ppm1/dp_cluster_1/mult_114/S3_5_5/CO (ADD32)       0.77       6.97 f
+  send_ppm1/dp_cluster_1/mult_114/S3_6_5/S (ADD32)        1.16       8.13 r
+  U234/Q (XOR21)                                          0.92       9.05 f
+  U129/Q (INV3)                                           0.29       9.34 r
+  U128/Q (NOR21)                                          0.43       9.78 f
+  U54/Q (XOR21)                                           1.01      10.79 r
+  U10/Q (NOR21)                                           0.69      11.48 f
+  U26/Q (INV3)                                            0.37      11.84 r
+  U25/Q (NOR21)                                           0.45      12.29 f
+  U63/Q (INV3)                                            0.37      12.65 r
+  U62/Q (NOR21)                                           0.45      13.10 f
+  U83/Q (XOR21)                                           0.93      14.03 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.24 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.78 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.35 r
+  U22/Q (NOR21)                                           0.37      16.72 f
+  U21/Q (INV3)                                            0.35      17.07 r
+  U9/Q (NOR21)                                            0.36      17.43 f
+  U404/Q (INV3)                                           0.28      17.71 r
+  U402/Q (XNR21)                                          0.66      18.37 f
+  U401/Q (XNR21)                                          0.66      19.03 f
+  U173/Q (NAND41)                                         0.65      19.68 r
+  U169/Q (NOR40)                                          1.20      20.88 f
+  U96/Q (INV3)                                            0.60      21.47 r
+  U383/Q (NAND31)                                         0.15      21.63 f
+  U381/Q (OAI2111)                                        0.70      22.33 r
+  U380/Q (INV3)                                           0.16      22.50 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.93 r
+  U392/Q (AOI211)                                         0.39      23.31 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.68 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.68 r
+  data arrival time                                                 23.68
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.81
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U389/Q (NOR21)                                          0.95       3.40 f
+  U406/Q (NOR21)                                          0.71       4.11 r
+  U405/Q (INV3)                                           0.20       4.30 f
+  U450/Q (NOR21)                                          0.56       4.87 r
+  U239/Q (NOR21)                                          0.61       5.47 f
+  U261/Q (NOR21)                                          0.69       6.16 r
+  U247/Q (NOR21)                                          0.62       6.78 f
+  U245/Q (INV3)                                           0.33       7.12 r
+  U244/Q (NOR21)                                          0.48       7.60 f
+  U126/Q (INV3)                                           0.29       7.89 r
+  U125/Q (NOR21)                                          0.45       8.33 f
+  U131/Q (NOR21)                                          0.62       8.95 r
+  U130/Q (INV3)                                           0.13       9.08 f
+  U102/Q (XOR21)                                          0.95      10.03 r
+  U27/Q (NOR21)                                           0.69      10.72 f
+  U11/Q (INV3)                                            0.37      11.08 r
+  U10/Q (NOR21)                                           0.45      11.53 f
+  U26/Q (INV3)                                            0.37      11.89 r
+  U25/Q (NOR21)                                           0.45      12.34 f
+  U63/Q (INV3)                                            0.37      12.70 r
+  U62/Q (NOR21)                                           0.45      13.15 f
+  U83/Q (XOR21)                                           0.93      14.08 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.29 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.83 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.40 r
+  U22/Q (NOR21)                                           0.37      16.77 f
+  U21/Q (INV3)                                            0.35      17.12 r
+  U9/Q (NOR21)                                            0.36      17.48 f
+  U404/Q (INV3)                                           0.28      17.76 r
+  U402/Q (XNR21)                                          0.53      18.29 r
+  U401/Q (XNR21)                                          0.73      19.02 f
+  U173/Q (NAND41)                                         0.65      19.67 r
+  U169/Q (NOR40)                                          1.20      20.87 f
+  U96/Q (INV3)                                            0.60      21.46 r
+  U383/Q (NAND31)                                         0.15      21.62 f
+  U381/Q (OAI2111)                                        0.70      22.32 r
+  U380/Q (INV3)                                           0.16      22.49 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.92 r
+  U392/Q (AOI211)                                         0.39      23.31 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.67 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.67 r
+  data arrival time                                                 23.67
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.82
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U389/Q (NOR21)                                          0.95       3.40 f
+  U406/Q (NOR21)                                          0.71       4.11 r
+  U405/Q (INV3)                                           0.20       4.30 f
+  U450/Q (NOR21)                                          0.56       4.87 r
+  U239/Q (NOR21)                                          0.61       5.47 f
+  U261/Q (NOR21)                                          0.69       6.16 r
+  U247/Q (NOR21)                                          0.62       6.78 f
+  U245/Q (INV3)                                           0.33       7.12 r
+  U244/Q (NOR21)                                          0.48       7.60 f
+  U126/Q (INV3)                                           0.29       7.89 r
+  U125/Q (NOR21)                                          0.45       8.33 f
+  U108/Q (XNR21)                                          0.88       9.22 r
+  U29/Q (NOR21)                                           0.69       9.90 f
+  U28/Q (INV3)                                            0.36      10.26 r
+  U27/Q (NOR21)                                           0.44      10.71 f
+  U11/Q (INV3)                                            0.37      11.07 r
+  U10/Q (NOR21)                                           0.45      11.52 f
+  U26/Q (INV3)                                            0.37      11.88 r
+  U25/Q (NOR21)                                           0.45      12.33 f
+  U63/Q (INV3)                                            0.37      12.70 r
+  U62/Q (NOR21)                                           0.45      13.14 f
+  U83/Q (XOR21)                                           0.93      14.07 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.28 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.82 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.39 r
+  U22/Q (NOR21)                                           0.37      16.76 f
+  U21/Q (INV3)                                            0.35      17.11 r
+  U9/Q (NOR21)                                            0.36      17.47 f
+  U404/Q (INV3)                                           0.28      17.76 r
+  U402/Q (XNR21)                                          0.53      18.28 r
+  U401/Q (XNR21)                                          0.73      19.01 f
+  U173/Q (NAND41)                                         0.65      19.66 r
+  U169/Q (NOR40)                                          1.20      20.86 f
+  U96/Q (INV3)                                            0.60      21.46 r
+  U383/Q (NAND31)                                         0.15      21.61 f
+  U381/Q (OAI2111)                                        0.70      22.31 r
+  U380/Q (INV3)                                           0.16      22.48 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.91 r
+  U392/Q (AOI211)                                         0.39      23.30 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.66 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.66 r
+  data arrival time                                                 23.66
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.82
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U431/Q (NOR21)                                          1.02       3.46 f
+  send_ppm1/dp_cluster_1/mult_114/S3_2_5/CO (ADD32)       1.19       4.65 f
+  send_ppm1/dp_cluster_1/mult_114/S3_3_5/CO (ADD32)       0.77       5.42 f
+  send_ppm1/dp_cluster_1/mult_114/S3_4_5/CO (ADD32)       0.77       6.20 f
+  send_ppm1/dp_cluster_1/mult_114/S3_5_5/CO (ADD32)       0.77       6.97 f
+  send_ppm1/dp_cluster_1/mult_114/S3_6_5/S (ADD32)        1.16       8.13 r
+  U234/Q (XOR21)                                          0.92       9.05 f
+  U102/Q (XOR21)                                          0.91       9.96 r
+  U27/Q (NOR21)                                           0.69      10.65 f
+  U11/Q (INV3)                                            0.37      11.01 r
+  U10/Q (NOR21)                                           0.45      11.46 f
+  U26/Q (INV3)                                            0.37      11.82 r
+  U25/Q (NOR21)                                           0.45      12.27 f
+  U63/Q (INV3)                                            0.37      12.63 r
+  U62/Q (NOR21)                                           0.45      13.08 f
+  U83/Q (XOR21)                                           0.93      14.01 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.22 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.76 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.33 r
+  U22/Q (NOR21)                                           0.37      16.70 f
+  U21/Q (INV3)                                            0.35      17.05 r
+  U9/Q (NOR21)                                            0.36      17.41 f
+  U404/Q (INV3)                                           0.28      17.70 r
+  U402/Q (XNR21)                                          0.66      18.35 f
+  U401/Q (XNR21)                                          0.66      19.01 f
+  U173/Q (NAND41)                                         0.65      19.66 r
+  U169/Q (NOR40)                                          1.20      20.86 f
+  U96/Q (INV3)                                            0.60      21.45 r
+  U383/Q (NAND31)                                         0.15      21.61 f
+  U381/Q (OAI2111)                                        0.70      22.31 r
+  U380/Q (INV3)                                           0.16      22.48 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.91 r
+  U392/Q (AOI211)                                         0.39      23.30 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.66 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.66 r
+  data arrival time                                                 23.66
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.83
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U431/Q (NOR21)                                          1.02       3.46 f
+  send_ppm1/dp_cluster_1/mult_114/S3_2_5/CO (ADD32)       1.19       4.65 f
+  send_ppm1/dp_cluster_1/mult_114/S3_3_5/CO (ADD32)       0.77       5.42 f
+  send_ppm1/dp_cluster_1/mult_114/S3_4_5/CO (ADD32)       0.77       6.20 f
+  send_ppm1/dp_cluster_1/mult_114/S3_5_5/CO (ADD32)       0.77       6.97 f
+  send_ppm1/dp_cluster_1/mult_114/S3_6_5/S (ADD32)        1.16       8.13 r
+  U234/Q (XOR21)                                          0.92       9.05 f
+  U129/Q (INV3)                                           0.29       9.34 r
+  U128/Q (NOR21)                                          0.43       9.78 f
+  U69/Q (INV3)                                            0.33      10.11 r
+  U68/Q (NOR21)                                           0.48      10.59 f
+  U101/Q (XOR21)                                          0.99      11.57 r
+  U25/Q (NOR21)                                           0.69      12.27 f
+  U63/Q (INV3)                                            0.37      12.63 r
+  U62/Q (NOR21)                                           0.45      13.08 f
+  U83/Q (XOR21)                                           0.93      14.01 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.22 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.76 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.33 r
+  U22/Q (NOR21)                                           0.37      16.70 f
+  U21/Q (INV3)                                            0.35      17.05 r
+  U9/Q (NOR21)                                            0.36      17.41 f
+  U404/Q (INV3)                                           0.28      17.69 r
+  U402/Q (XNR21)                                          0.66      18.35 f
+  U401/Q (XNR21)                                          0.66      19.01 f
+  U173/Q (NAND41)                                         0.65      19.66 r
+  U169/Q (NOR40)                                          1.20      20.86 f
+  U96/Q (INV3)                                            0.60      21.45 r
+  U383/Q (NAND31)                                         0.15      21.61 f
+  U381/Q (OAI2111)                                        0.70      22.31 r
+  U380/Q (INV3)                                           0.16      22.47 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.91 r
+  U392/Q (AOI211)                                         0.39      23.29 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.66 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.66 r
+  data arrival time                                                 23.66
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.83
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U431/Q (NOR21)                                          1.02       3.46 f
+  send_ppm1/dp_cluster_1/mult_114/S3_2_5/CO (ADD32)       1.19       4.65 f
+  send_ppm1/dp_cluster_1/mult_114/S3_3_5/CO (ADD32)       0.77       5.42 f
+  send_ppm1/dp_cluster_1/mult_114/S3_4_5/CO (ADD32)       0.77       6.20 f
+  send_ppm1/dp_cluster_1/mult_114/S3_5_5/CO (ADD32)       0.77       6.97 f
+  send_ppm1/dp_cluster_1/mult_114/S3_6_5/S (ADD32)        1.16       8.13 r
+  U234/Q (XOR21)                                          0.92       9.05 f
+  U129/Q (INV3)                                           0.29       9.34 r
+  U128/Q (NOR21)                                          0.43       9.78 f
+  U69/Q (INV3)                                            0.33      10.11 r
+  U68/Q (NOR21)                                           0.48      10.59 f
+  U111/Q (INV3)                                           0.29      10.88 r
+  U109/Q (NOR21)                                          0.45      11.32 f
+  U231/Q (XNR21)                                          0.97      12.29 f
+  U124/Q (INV3)                                           0.35      12.64 r
+  U87/Q (XOR21)                                           0.81      13.45 f
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_14/CO (ADD32)
+                                                          0.76      14.21 f
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.00      15.22 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.76 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.33 r
+  U22/Q (NOR21)                                           0.37      16.70 f
+  U21/Q (INV3)                                            0.35      17.05 r
+  U9/Q (NOR21)                                            0.36      17.41 f
+  U404/Q (INV3)                                           0.28      17.69 r
+  U402/Q (XNR21)                                          0.66      18.35 f
+  U401/Q (XNR21)                                          0.66      19.01 f
+  U173/Q (NAND41)                                         0.65      19.66 r
+  U169/Q (NOR40)                                          1.20      20.86 f
+  U96/Q (INV3)                                            0.60      21.45 r
+  U383/Q (NAND31)                                         0.15      21.61 f
+  U381/Q (OAI2111)                                        0.70      22.31 r
+  U380/Q (INV3)                                           0.16      22.47 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.90 r
+  U392/Q (AOI211)                                         0.39      23.29 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.66 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.66 r
+  data arrival time                                                 23.66
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.83
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U431/Q (NOR21)                                          1.02       3.46 f
+  send_ppm1/dp_cluster_1/mult_114/S3_2_5/CO (ADD32)       1.19       4.65 f
+  send_ppm1/dp_cluster_1/mult_114/S3_3_5/CO (ADD32)       0.77       5.42 f
+  send_ppm1/dp_cluster_1/mult_114/S3_4_5/CO (ADD32)       0.77       6.20 f
+  send_ppm1/dp_cluster_1/mult_114/S3_5_5/CO (ADD32)       0.77       6.97 f
+  send_ppm1/dp_cluster_1/mult_114/S3_6_5/S (ADD32)        1.16       8.13 r
+  U234/Q (XOR21)                                          0.92       9.05 f
+  U129/Q (INV3)                                           0.29       9.34 r
+  U128/Q (NOR21)                                          0.43       9.78 f
+  U69/Q (INV3)                                            0.33      10.11 r
+  U68/Q (NOR21)                                           0.48      10.59 f
+  U111/Q (INV3)                                           0.29      10.88 r
+  U109/Q (NOR21)                                          0.45      11.32 f
+  U231/Q (XNR21)                                          0.97      12.29 f
+  U124/Q (INV3)                                           0.35      12.64 r
+  U87/Q (XOR21)                                           0.78      13.42 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_14/S (ADD32)
+                                                          1.21      14.63 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_14/CO (ADD32)
+                                                          0.54      15.17 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.56      15.73 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.30 r
+  U22/Q (NOR21)                                           0.37      16.68 f
+  U21/Q (INV3)                                            0.35      17.02 r
+  U9/Q (NOR21)                                            0.36      17.38 f
+  U404/Q (INV3)                                           0.28      17.67 r
+  U402/Q (XNR21)                                          0.66      18.33 f
+  U401/Q (XNR21)                                          0.66      18.98 f
+  U173/Q (NAND41)                                         0.65      19.63 r
+  U169/Q (NOR40)                                          1.20      20.83 f
+  U96/Q (INV3)                                            0.60      21.43 r
+  U383/Q (NAND31)                                         0.15      21.58 f
+  U381/Q (OAI2111)                                        0.70      22.29 r
+  U380/Q (INV3)                                           0.16      22.45 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.88 r
+  U392/Q (AOI211)                                         0.39      23.27 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.64 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.64 r
+  data arrival time                                                 23.64
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.85
+
+
+  Startpoint: send_ppm1/sig_reg_storage_reg[0]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: send_ppm1/sig_state_reg[2]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  send_ppm1/sig_reg_storage_reg[0]/C (DFE1)               0.00       0.00 r
+  send_ppm1/sig_reg_storage_reg[0]/QN (DFE1)              2.44       2.44 r
+  U431/Q (NOR21)                                          1.02       3.46 f
+  send_ppm1/dp_cluster_1/mult_114/S3_2_5/CO (ADD32)       1.19       4.65 f
+  send_ppm1/dp_cluster_1/mult_114/S3_3_5/CO (ADD32)       0.77       5.42 f
+  send_ppm1/dp_cluster_1/mult_114/S3_4_5/CO (ADD32)       0.77       6.20 f
+  send_ppm1/dp_cluster_1/mult_114/S3_5_5/CO (ADD32)       0.77       6.97 f
+  send_ppm1/dp_cluster_1/mult_114/S3_6_5/S (ADD32)        1.16       8.13 r
+  U234/Q (XOR21)                                          0.92       9.05 f
+  U129/Q (INV3)                                           0.29       9.34 r
+  U128/Q (NOR21)                                          0.43       9.78 f
+  U54/Q (XOR21)                                           1.01      10.79 r
+  U10/Q (NOR21)                                           0.69      11.48 f
+  U26/Q (INV3)                                            0.37      11.84 r
+  U25/Q (NOR21)                                           0.45      12.29 f
+  U63/Q (INV3)                                            0.37      12.65 r
+  U62/Q (NOR21)                                           0.45      13.10 f
+  U83/Q (XOR21)                                           0.93      14.03 r
+  send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15/S (ADD32)
+                                                          1.21      15.24 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15/CO (ADD32)
+                                                          0.54      15.78 r
+  send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16/CO (ADD32)
+                                                          0.57      16.35 r
+  U22/Q (NOR21)                                           0.37      16.72 f
+  U21/Q (INV3)                                            0.35      17.07 r
+  U9/Q (NOR21)                                            0.36      17.43 f
+  U404/Q (INV3)                                           0.28      17.71 r
+  U402/Q (XNR21)                                          0.53      18.24 r
+  U401/Q (XNR21)                                          0.73      18.97 f
+  U173/Q (NAND41)                                         0.65      19.62 r
+  U169/Q (NOR40)                                          1.20      20.82 f
+  U96/Q (INV3)                                            0.60      21.41 r
+  U383/Q (NAND31)                                         0.15      21.57 f
+  U381/Q (OAI2111)                                        0.70      22.27 r
+  U380/Q (INV3)                                           0.16      22.44 f
+  send_ppm1/U16/Q (OAI212)                                0.43      22.87 r
+  U392/Q (AOI211)                                         0.39      23.26 f
+  send_ppm1/U13/Q (OAI212)                                0.37      23.62 r
+  send_ppm1/sig_state_reg[2]/D (DF3)                      0.00      23.62 r
+  data arrival time                                                 23.62
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  send_ppm1/sig_state_reg[2]/C (DF3)                      0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -23.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                       15.87
+
+
+1

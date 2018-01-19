@@ -1,4 +1,4 @@
-SpyGlass run started at 10:22:26 AM on Jan 15 2018 
+SpyGlass run started at 12:03:45 PM on Jan 18 2018 
 
 SpyGlass Predictive Analyzer(R) - Version 5.6.0
 Last compiled on Dec 15 2015
@@ -30,7 +30,7 @@ Enabling Following Rules Only For Save:
  GenTopLevelBlocksForAutoSoc
 Total Rules Enabled Only For Save : 1
 ##build_id : 5.6.0
-##system   : Linux ocaepc26 3.2.0-4-amd64 #1 SMP Debian 3.2.60-1+deb7u3 x86_64
+##system   : Linux cimepc66 3.2.0-4-amd64 #1 SMP Debian 3.2.68-1+deb7u2 x86_64
 ##cwd      : /tp/xph3app/xph3app602/projet_drone/SPYGLASS/script
 ##lang     : Verilog+VHDL
 ##args     : -mSpyGlass::Compatibility::v2_7_3 \
@@ -63,12 +63,10 @@ Total Rules Enabled Only For Save : 1
              -enable_save_restore_builtin 'true' \
              -audit=yes \
              -64bit  \
-             ../../VHD/constants.vhd \
-             ../../VHD/local_counter.vhd \
-             ../../VHD/global_counter.vhd \
-             ../../VHD/send_ppm.vhd
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd \
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd
 \
-             -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd'
+             -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd'
 ##verbosity level   : 2
 ##exact cmdline arg : -batch -project spyglass-1.prj -goal adv_lint/adv_lint_struct -64bit
 ##spyglass_run.csh begins :
@@ -78,10 +76,8 @@ Total Rules Enabled Only For Save : 1
 ;	setenv SPYGLASS_DW_PATH /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/dw_support
 ;	/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/bin/spyglass  -batch -project spyglass-1.prj -goal adv_lint/adv_lint_struct -64bit
 ##spyglass_run.csh ends
-##files    : ../../VHD/constants.vhd \
-             ../../VHD/local_counter.vhd \
-             ../../VHD/global_counter.vhd \
-             ../../VHD/send_ppm.vhd
+##files    : ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd \
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd
 
 ##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/adv_lint/adv_lint_struct/spyglass_spysch/auto-verify/width01.txt' in "w" mode ...
 ##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/adv_lint/adv_lint_struct/spyglass_spysch/auto-verify/width01_en.txt' in "r" mode ...
@@ -127,58 +123,58 @@ Total Rules Enabled Only For Save : 1
 Performing unification checks on SGDC... done
 
 INFO [76]    Using `./spyglass-1/WORK/64' as the Work Directory for 64bit precompiled dump.
-Checking Rule PrecompileLibCheck01 (Rule 1 of total 180) .... done (Time = 0.01s, Memory = -0.9K)
-Checking Rule PrecompileLibCheck02 (Rule 2 of total 180) .... done (Time = 0.00s, Memory = 2.3K)
-Checking Rule PrecompileLibCheck03 (Rule 3 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule PrecompileLibCheck04 (Rule 4 of total 180) .... done (Time = 0.00s, Memory = -1.3K)
-Checking Rule SGDC_assume_path01 (Rule 5 of total 180) .... done (Time = 0.00s, Memory = 8.0K)
-Checking Rule SGDC_sdcschema02 (Rule 6 of total 180) .... done (Time = 0.00s, Memory = -41.8K)
+Checking Rule PrecompileLibCheck01 (Rule 1 of total 180) .... done (Time = 0.01s, Memory = -0.3K)
+Checking Rule PrecompileLibCheck02 (Rule 2 of total 180) .... done (Time = 0.00s, Memory = 4.1K)
+Checking Rule PrecompileLibCheck03 (Rule 3 of total 180) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule PrecompileLibCheck04 (Rule 4 of total 180) .... done (Time = 0.00s, Memory = 23.1K)
+Checking Rule SGDC_assume_path01 (Rule 5 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_sdcschema02 (Rule 6 of total 180) .... done (Time = 0.01s, Memory = -25.5K)
 Checking Rule SGDC_clock05 (Rule 7 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_clock09 (Rule 8 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_force_ta05 (Rule 9 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_require_path03 (Rule 10 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_require_value03 (Rule 11 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_voltagedomain05 (Rule 12 of total 180) .... done (Time = 0.00s, Memory = 1.6K)
+Checking Rule SGDC_voltagedomain05 (Rule 12 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_voltagedomain06 (Rule 13 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_voltagedomain07 (Rule 14 of total 180) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_powerdomainoutputs02 (Rule 15 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_supply01 (Rule 16 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive01 (Rule 17 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive02 (Rule 18 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive03 (Rule 19 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive04 (Rule 20 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive05 (Rule 21 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive06 (Rule 22 of total 180) .... done (Time = 0.00s, Memory = 8.0K)
-Checking Rule SGDC_waive07 (Rule 23 of total 180) .... done (Time = 0.00s, Memory = -8.0K)
-Checking Rule SGDC_waive08 (Rule 24 of total 180) .... done (Time = 0.00s, Memory = -8.0K)
-Checking Rule SGDC_waive09 (Rule 25 of total 180) .... done (Time = 0.00s, Memory = 24.0K)
+Checking Rule SGDC_waive01 (Rule 17 of total 180) .... done (Time = 0.00s, Memory = 24.0K)
+Checking Rule SGDC_waive02 (Rule 18 of total 180) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_waive03 (Rule 19 of total 180) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_waive04 (Rule 20 of total 180) .... done (Time = 0.00s, Memory = -0.5K)
+Checking Rule SGDC_waive05 (Rule 21 of total 180) .... done (Time = 0.00s, Memory = 1.8K)
+Checking Rule SGDC_waive06 (Rule 22 of total 180) .... done (Time = 0.00s, Memory = -24.0K)
+Checking Rule SGDC_waive07 (Rule 23 of total 180) .... done (Time = 0.00s, Memory = 4.0K)
+Checking Rule SGDC_waive08 (Rule 24 of total 180) .... done (Time = 0.00s, Memory = 6.2K)
+Checking Rule SGDC_waive09 (Rule 25 of total 180) .... done (Time = 0.00s, Memory = -1.0K)
 Checking Rule SGDC_waive10 (Rule 26 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive11 (Rule 27 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive12 (Rule 28 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive13 (Rule 29 of total 180) .... done (Time = 0.00s, Memory = 32.0K)
-Checking Rule SGDC_waive21 (Rule 30 of total 180) .... done (Time = 0.00s, Memory = -2.0K)
-Checking Rule SGDC_waive22 (Rule 31 of total 180) .... done (Time = 0.00s, Memory = 8.0K)
-Checking Rule SGDC_waive30 (Rule 32 of total 180) .... done (Time = 0.00s, Memory = 0.5K)
-Checking Rule SGDC_waive32 (Rule 33 of total 180) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_waive13 (Rule 29 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive21 (Rule 30 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive22 (Rule 31 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive30 (Rule 32 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive32 (Rule 33 of total 180) .... done (Time = 0.00s, Memory = 0.4K)
 Checking Rule SGDC_waive33 (Rule 34 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive36 (Rule 35 of total 180) .... done (Time = 0.00s, Memory = 0.4K)
-Checking Rule SGDC_waive38 (Rule 36 of total 180) .... done (Time = 0.01s, Memory = 0.0K)
-Checking Rule SGDC_fifo01 (Rule 37 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive36 (Rule 35 of total 180) .... done (Time = 0.00s, Memory = 0.1K)
+Checking Rule SGDC_waive38 (Rule 36 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_fifo01 (Rule 37 of total 180) .... done (Time = 0.00s, Memory = 0.5K)
 Checking Rule SGDC_libgroup01 (Rule 38 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_libgroup02 (Rule 39 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_libgroup04 (Rule 40 of total 180) .... done (Time = 0.00s, Memory = 3.1K)
+Checking Rule SGDC_libgroup04 (Rule 40 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_power_data01 (Rule 41 of total 180) .... done (Time = 0.00s, Memory = 15.0K)
-Checking Rule SGDC_ungroup01 (Rule 42 of total 180) .... done (Time = 0.00s, Memory = -0.3K)
-Checking Rule SGDC_abstract_port06 (Rule 43 of total 180) .... done (Time = 0.00s, Memory = 15.0K)
-Checking Rule SGDC_abstract_port14 (Rule 44 of total 180) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_ungroup01 (Rule 42 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port06 (Rule 43 of total 180) .... done (Time = 0.00s, Memory = 15.8K)
+Checking Rule SGDC_abstract_port14 (Rule 44 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port15 (Rule 45 of total 180) .... done (Time = 0.00s, Memory = 32.0K)
-Checking Rule SGDC_abstract_port18 (Rule 46 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port18 (Rule 46 of total 180) .... done (Time = 0.00s, Memory = 1.6K)
 Checking Rule sdc_init_rule (Rule 47 of total 180) .... done (Time = 0.00s, Memory = 0.6K)
 Checking Rule CMD_ignorelibs01 (Rule 48 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule ReportRuleNotRun (Rule 49 of total 180) .... done (Time = 0.00s, Memory = 1.6K)
-Checking Rule Av_license01 (Rule 50 of total 180) .... done (Time = 0.00s, Memory = 54.5K)
+Checking Rule ReportRuleNotRun (Rule 49 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Av_license01 (Rule 50 of total 180) .... done (Time = 0.01s, Memory = 69.1K)
 Checking Rule Av_sanity01 (Rule 51 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule AnalyzeBBox (Rule 52 of total 180) .... done (Time = 0.00s, Memory = -0.8K)
+Checking Rule AnalyzeBBox (Rule 52 of total 180) .... done (Time = 0.00s, Memory = 0.0K)
 
 SpyGlass Rule Checking ABORTED.
 
@@ -199,10 +195,10 @@ Generating auto_verify report from './spyglass-1/adv_lint/adv_lint_struct/spygla
 Policy specific data (reports) are present in the directory './spyglass-1/adv_lint/adv_lint_struct/spyglass_reports'.
 
 SpyGlass critical reports for the current run are present in directory './spyglass-1/consolidated_reports/adv_lint_adv_lint_struct/'.
-##SGDEBUG [PEAK_MEMORY]: 2077020 KB for entire run at 'GenerateConfMap.Init' stage
-##SGDEBUG [VMPEAK_MEMORY]: 2531332 KB for entire run
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking aborted: 2 sec, 450228 KB, 2059868 KB
-##SGDEBUG [BENCHMARK_INCR]: Rule checking aborted: 2 sec, 450228 KB, 2059868 KB
+##SGDEBUG [PEAK_MEMORY]: 2074240 KB for entire run at 'GenerateConfMap.Init' stage
+##SGDEBUG [VMPEAK_MEMORY]: 2526020 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking aborted: 3 sec, 446549 KB, 2056832 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking aborted: 3 sec, 446549 KB, 2056832 KB
 
 
 =====================================================================================
@@ -399,4 +395,4 @@ Av_license01   FATAL      N.A.   0      'Advanced Lint Policy' not run due to un
 FATAL : Rule-checking aborted - usage or run error
 SpyGlass Exit Code 7 (Rule-checking terminated due to FATAL errors - usage or run error)
 SpyGlass total run-time is 0:0:3 (3 secs)
-SpyGlass run completed at 10:23:25 AM on Jan 15 2018
+SpyGlass run completed at 00:05:29 PM on Jan 18 2018

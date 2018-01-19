@@ -1,12 +1,68 @@
 #x HLBEGIN S.1
 #x {}
-#x 77 { @@n 1 @@p 1 }
+#x 64 { @@n 0 @@p 0 }
 #x HLEND
 #x HLBEGIN S.2
 #x {}
-#x 77 { @@n 2 @@p 2 }
+#x 64 { @@n 1 @@p 1 }
 #x HLEND
 #x HLBEGIN S.3
 #x {}
-#x 77 { @@n 4 @@p 4 }
+#x 64 { @@n 2 @@p 2 }
+#x HLEND
+#x HLBEGIN S.4
+#x {}
+#x 64 { @@n 3 @@p 3 }
+#x HLEND
+#x HLBEGIN S.5
+#x {}
+#x 64 { @@n 4 @@p 4 }
+#x HLEND
+#x HLBEGIN S.6
+#x {}
+#x 64 { @@n 7 @@p 7 }
+#x HLEND
+#x HLBEGIN S.7
+#x {}
+#x 64 { @@n 17 @@p 17 }
+#x HLEND
+#x HLBEGIN S.8
+#x {}
+#x 64 { @@n 27 @@p 27 }
+#x HLEND
+#x HLBEGIN S.9
+#x {}
+#x 64 { @@n 36 @@p 36 }
+#x HLEND
+#x HLBEGIN S.10
+#x {}
+#x 64 { @@n 45 @@p 45 }
+#x HLEND
+#x HLBEGIN S.11
+#x {}
+#x 82 { @@n 0 @@p 0 }
+#x HLEND
+#x HLBEGIN S.12
+#x {}
+#x 82 { @@n 2 @@p 2 }
+#x HLEND
+#x HLBEGIN S.13
+#x {}
+#x 82 { @@n 4 @@p 4 }
+#x HLEND
+#x HLBEGIN S.14
+#x {}
+#x 82 { @@n 14 @@p 14 }
+#x HLEND
+#x HLBEGIN S.15
+#x {}
+#x 82 { @@n 24 @@p 24 }
+#x HLEND
+#x HLBEGIN S.16
+#x {}
+#x 82 { @@n 33 @@p 33 }
+#x HLEND
+#x HLBEGIN S.17
+#x {}
+#x 82 { @@n 42 @@p 42 }
 #x HLEND

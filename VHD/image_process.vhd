@@ -65,25 +65,11 @@ begin
 
 		when S1 =>
 		next_state <= S1;
--------------------------------------------------------------------------------------------------------------------
--------------------------------------------TRAITEMENT RGB----------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------	
-			if (X_Cont >= x"0" and X_Cont <= x"0FE" and Y_Cont >= x"0" and  Y_Cont <= x"0FE" and SW1='0' ) then
-			nri <= gi; ngi <= gi;  nbi <= gi; 						-- quart sup gauche image N & B
 
-			elsif (X_Cont >= x"FF" and X_Cont <= x"1FF" and Y_Cont >= x"0"  and Y_Cont <= x"0FE"  and SW1='0' ) then
-			nri <= x"FF"-gi; ngi <= x"FF"-gi;  nbi <= x"FF"-gi; -- quart sup droit image N & B negatif
 
-			elsif (X_Cont >= x"0" and X_Cont <= x"AA" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
-			nri <= ri; ngi <= x"00";  nbi <= x"00";				-- tiers inf gauche  image rouge
-
-			elsif (X_Cont >=x"AB" and X_Cont <= x"154" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF"  and SW1='0' ) then
-			nri <= x"00"; ngi <= gi;  nbi <= x"00";				-- tiers centre image vert
-
-			--		  elsif (X_Cont >=x"155" and X_Cont <= x"1FF" and Y_Cont >= x"0FF" and Y_Cont <= x"1FF" ) then
-			--		  else  -- le reste
-			elsif ( SW1='0') then  
-			nri <= x"00"; ngi <= x"00";  nbi <= bi;				-- tiers droit image bleu	
+	
+			if ( SW1='0' ) then -- si SW1 = 0 on ne fait pas de traitement d'image
+			nri <= gi; ngi <= gi;  nbi <= gi; 						
 			
 			
 -------------------------------------------------------------------------------------------------------------------
@@ -94,9 +80,9 @@ begin
 				-- seul le niveau de vert est pris en compte par la caméra
 				-- le traitement d'image ne se fait donc que sur ce niveau
 				if ((gi <= x"08") ) then
-				nri <= x"00";
-				ngi <= x"00";
-				nbi <= x"00";
+				nri <= x"01";
+				ngi <= x"01";
+				nbi <= x"01";
 				elsif ((gi <= x"25")) then
 				nri <= x"35";
 				ngi <= x"35";

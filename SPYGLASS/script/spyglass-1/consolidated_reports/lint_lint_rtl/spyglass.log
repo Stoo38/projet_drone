@@ -1,4 +1,4 @@
-SpyGlass run started at 10:22:26 AM on Jan 15 2018 
+SpyGlass run started at 12:03:45 PM on Jan 18 2018 
 
 SpyGlass Predictive Analyzer(R) - Version 5.6.0
 Last compiled on Dec 15 2015
@@ -1896,7 +1896,7 @@ Version of Policy 'starc2002': 5.6.0
 ------------------------------------------------------
 
 ##build_id : 5.6.0
-##system   : Linux ocaepc26 3.2.0-4-amd64 #1 SMP Debian 3.2.60-1+deb7u3 x86_64
+##system   : Linux cimepc66 3.2.0-4-amd64 #1 SMP Debian 3.2.68-1+deb7u2 x86_64
 ##cwd      : /tp/xph3app/xph3app602/projet_drone/SPYGLASS/script
 ##lang     : Verilog+VHDL
 ##args     : -mSpyGlass::Compatibility::v2_7_3 \
@@ -1936,12 +1936,10 @@ Version of Policy 'starc2002': 5.6.0
              -strict=W342,W343 \
              -treat_latch_as_combinational=yes \
              -64bit  \
-             ../../VHD/constants.vhd \
-             ../../VHD/local_counter.vhd \
-             ../../VHD/global_counter.vhd \
-             ../../VHD/send_ppm.vhd
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd \
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd
 \
-             -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/global_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd'
+             -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd'
 ##verbosity level   : 2
 ##exact cmdline arg : -batch -project spyglass-1.prj -goal lint/lint_rtl -64bit
 ##spyglass_run.csh begins :
@@ -1951,10 +1949,8 @@ Version of Policy 'starc2002': 5.6.0
 ;	setenv SPYGLASS_DW_PATH /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/dw_support
 ;	/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/bin/spyglass  -batch -project spyglass-1.prj -goal lint/lint_rtl -64bit
 ##spyglass_run.csh ends
-##files    : ../../VHD/constants.vhd \
-             ../../VHD/local_counter.vhd \
-             ../../VHD/global_counter.vhd \
-             ../../VHD/send_ppm.vhd
+##files    : ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd \
+             ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd
 
 
 WARNING [237]    Following rules can not run on restored design database. Hence, HDL being re-read:
@@ -2041,56 +2037,56 @@ INFO [76]    Using `./spyglass-1/WORK/64' as the Work Directory for 64bit precom
 Checking Rule PrecompileLibCheck01 (Rule 1 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule PrecompileLibCheck02 (Rule 2 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule PrecompileLibCheck03 (Rule 3 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule PrecompileLibCheck04 (Rule 4 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck04 (Rule 4 of total 230) .... done (Time = 0.01s, Memory = 0.0K)
 Checking Rule SGDC_assume_path01 (Rule 5 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_sdcschema02 (Rule 6 of total 230) .... done (Time = 0.01s, Memory = -23.8K)
+Checking Rule SGDC_sdcschema02 (Rule 6 of total 230) .... done (Time = 0.00s, Memory = 7.9K)
 Checking Rule SGDC_clock05 (Rule 7 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_clock09 (Rule 8 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_force_ta05 (Rule 9 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_require_path03 (Rule 10 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_require_value03 (Rule 11 of total 230) .... done (Time = 0.00s, Memory = 7.5K)
-Checking Rule SGDC_voltagedomain05 (Rule 12 of total 230) .... done (Time = 0.00s, Memory = 9.1K)
-Checking Rule SGDC_voltagedomain06 (Rule 13 of total 230) .... done (Time = 0.00s, Memory = 0.9K)
+Checking Rule SGDC_require_value03 (Rule 11 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain05 (Rule 12 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain06 (Rule 13 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_voltagedomain07 (Rule 14 of total 230) .... done (Time = 0.00s, Memory = 8.0K)
 Checking Rule SGDC_powerdomainoutputs02 (Rule 15 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_supply01 (Rule 16 of total 230) .... done (Time = 0.00s, Memory = 31.5K)
+Checking Rule SGDC_supply01 (Rule 16 of total 230) .... done (Time = 0.00s, Memory = 24.0K)
 Checking Rule SGDC_waive01 (Rule 17 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive02 (Rule 18 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive03 (Rule 19 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive04 (Rule 20 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive05 (Rule 21 of total 230) .... done (Time = 0.00s, Memory = -7.8K)
+Checking Rule SGDC_waive05 (Rule 21 of total 230) .... done (Time = 0.00s, Memory = -8.0K)
 Checking Rule SGDC_waive06 (Rule 22 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive07 (Rule 23 of total 230) .... done (Time = 0.00s, Memory = 29.0K)
-Checking Rule SGDC_waive08 (Rule 24 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
+Checking Rule SGDC_waive07 (Rule 23 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive08 (Rule 24 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive09 (Rule 25 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive10 (Rule 26 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive11 (Rule 27 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive12 (Rule 28 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive12 (Rule 28 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
 Checking Rule SGDC_waive13 (Rule 29 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive21 (Rule 30 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive22 (Rule 31 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive22 (Rule 31 of total 230) .... done (Time = 0.00s, Memory = -27.0K)
 Checking Rule SGDC_waive30 (Rule 32 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive32 (Rule 33 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive33 (Rule 34 of total 230) .... done (Time = 0.00s, Memory = 1.6K)
+Checking Rule SGDC_waive33 (Rule 34 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive36 (Rule 35 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive38 (Rule 36 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-Checking Rule SGDC_fifo01 (Rule 37 of total 230) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_waive38 (Rule 36 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_fifo01 (Rule 37 of total 230) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_libgroup01 (Rule 38 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_libgroup02 (Rule 39 of total 230) .... done (Time = 0.00s, Memory = -0.4K)
-Checking Rule SGDC_libgroup04 (Rule 40 of total 230) .... done (Time = 0.00s, Memory = 7.5K)
-Checking Rule SGDC_power_data01 (Rule 41 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_ungroup01 (Rule 42 of total 230) .... done (Time = 0.00s, Memory = 7.5K)
+Checking Rule SGDC_libgroup02 (Rule 39 of total 230) .... done (Time = 0.00s, Memory = 2.3K)
+Checking Rule SGDC_libgroup04 (Rule 40 of total 230) .... done (Time = 0.00s, Memory = 15.0K)
+Checking Rule SGDC_power_data01 (Rule 41 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
+Checking Rule SGDC_ungroup01 (Rule 42 of total 230) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_abstract_port06 (Rule 43 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port14 (Rule 44 of total 230) .... done (Time = 0.00s, Memory = 23.5K)
-Checking Rule SGDC_abstract_port15 (Rule 45 of total 230) .... done (Time = 0.00s, Memory = -8.0K)
-Checking Rule SGDC_abstract_port18 (Rule 46 of total 230) .... done (Time = 0.00s, Memory = 0.3K)
+Checking Rule SGDC_abstract_port14 (Rule 44 of total 230) .... done (Time = 0.00s, Memory = 23.0K)
+Checking Rule SGDC_abstract_port15 (Rule 45 of total 230) .... done (Time = 0.00s, Memory = -8.1K)
+Checking Rule SGDC_abstract_port18 (Rule 46 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule sdc_init_rule (Rule 47 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
 Checking Rule CMD_ignorelibs01 (Rule 48 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule ReportRuleNotRun (Rule 49 of total 230) .... done (Time = 0.01s, Memory = -15.9K)
-Checking Rule STARC05-2.3.1.2c (Rule 50 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule W442a (Rule 51 of total 230) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule ReportRuleNotRun (Rule 49 of total 230) .... done (Time = 0.02s, Memory = -1.7K)
+Checking Rule STARC05-2.3.1.2c (Rule 50 of total 230) .... done (Time = 0.00s, Memory = -2.0K)
+Checking Rule W442a (Rule 51 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule W442b (Rule 52 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule W442c (Rule 53 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule W442c (Rule 53 of total 230) .... done (Time = 0.00s, Memory = -1.5K)
 Checking Rule W442f (Rule 54 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule badimplicitSM1 (Rule 55 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule badimplicitSM2 (Rule 56 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
@@ -2120,87 +2116,88 @@ INFO [323]    Following built-in checks are performed only on libraries
               If you want to perform these checks on all RTL libraries,
               please specify option 'force_compile', which recompiles
               all the libraries.
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 3 sec, 460891 KB, 2079936 KB
-##SGDEBUG [BENCHMARK_INCR]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 3 sec, 460891 KB, 2079936 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 3 sec, 460965 KB, 2081252 KB
+##SGDEBUG [BENCHMARK_INCR]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 3 sec, 460965 KB, 2081252 KB
 
 
 Started Processing RTL Library LIB_VHD to check if it needs compilation
 
 INFO [76]    Using `./../libs/LIB_VHD/64' as the Work Directory for 64bit precompiled dump.
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Deffering compilation decision for RTL Library LIB_VHD to Analysis Stage: 3 sec, 460932 KB, 2079936 KB
-##SGDEBUG [BENCHMARK_INCR]: Deffering compilation decision for RTL Library LIB_VHD to Analysis Stage: 0 sec, 41 KB, 0 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Deffering compilation decision for RTL Library LIB_VHD to Analysis Stage: 3 sec, 461004 KB, 2081252 KB
+##SGDEBUG [BENCHMARK_INCR]: Deffering compilation decision for RTL Library LIB_VHD to Analysis Stage: 0 sec, 39 KB, 0 KB
 Deffering compilation decision for RTL Library LIB_VHD to Analysis Stage
 
 Checking Rule ReportStopSummary (Rule 62 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportIgnoreSummary (Rule 63 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 3 sec, 593836 KB, 2212288 KB
-##SGDEBUG [BENCHMARK_INCR]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 0 sec, 132904 KB, 132352 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Library LIB_VHD would not be compiled: 3 sec, 593836 KB, 2212288 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 3 sec, 594015 KB, 2213604 KB
+##SGDEBUG [BENCHMARK_INCR]: Started Processing RTL Library LIB_VHD to check if it needs compilation: 0 sec, 133011 KB, 132352 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Library LIB_VHD would not be compiled: 3 sec, 594015 KB, 2213604 KB
 ##SGDEBUG [BENCHMARK_INCR]: RTL Library LIB_VHD would not be compiled: 0 sec, 0 KB, 0 KB
 RTL Library Precompilation Skipped For Library: LIB_VHD
 Processed 1 Libraries for Compilation out of total 1
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis started: 3 sec, 593801 KB, 2212288 KB
-##SGDEBUG [BENCHMARK_INCR]: Analysis started: 0 sec, -35 KB, 0 KB
- Analyzing input file "../../VHD/constants.vhd" ...
- Analyzing input file "../../VHD/local_counter.vhd" ...
- Analyzing input file "../../VHD/global_counter.vhd" ...
- Analyzing input file "../../VHD/send_ppm.vhd" ...
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis finished: 3 sec, 599761 KB, 2216896 KB
-##SGDEBUG [BENCHMARK_INCR]: Analysis finished: 0 sec, 5960 KB, 4608 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration started: 3 sec, 599761 KB, 2216896 KB
-##SGDEBUG [BENCHMARK_INCR]: Elaboration started: 0 sec, 0 KB, 0 KB
- Elaborating Top VHDL Design Unit 'send_ppm.rtl' .....
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis started: 3 sec, 593964 KB, 2213604 KB
+##SGDEBUG [BENCHMARK_INCR]: Analysis started: 0 sec, -51 KB, 0 KB
+ Analyzing input file "../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd" ...
+ Analyzing input file "../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd" ...
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis finished: 3 sec, 599664 KB, 2217956 KB
+##SGDEBUG [BENCHMARK_INCR]: Analysis finished: 0 sec, 5700 KB, 4352 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration started: 3 sec, 599665 KB, 2217956 KB
+##SGDEBUG [BENCHMARK_INCR]: Elaboration started: 0 sec, 1 KB, 0 KB
+ Elaborating Top VHDL Design Unit 'image_process.rtl' .....
  done
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration finished: 3 sec, 665667 KB, 2282688 KB
-##SGDEBUG [BENCHMARK_INCR]: Elaboration finished: 0 sec, 65906 KB, 65792 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker started: 3 sec, 665667 KB, 2282688 KB
+ Elaborating Top VHDL Design Unit 'position.det' .....
+ done
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration finished: 3 sec, 665569 KB, 2283748 KB
+##SGDEBUG [BENCHMARK_INCR]: Elaboration finished: 0 sec, 65904 KB, 65792 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker started: 3 sec, 665569 KB, 2283748 KB
 ##SGDEBUG [BENCHMARK_INCR]: RTL Semantic Checker started: 0 sec, 0 KB, 0 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker finished: 3 sec, 665667 KB, 2282688 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker finished: 3 sec, 665569 KB, 2283748 KB
 ##SGDEBUG [BENCHMARK_INCR]: RTL Semantic Checker finished: 0 sec, 0 KB, 0 KB
 Checking Rule ElabSummary (Rule 64 of total 230)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/lint/lint_rtl/spyglass_reports/SpyGlass/elab_summary.rpt' in "w" mode ...
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_reports/SpyGlass/elab_summary.rpt' closed.
- .... done (Time = 0.00s, Memory = -1.3K)
+ .... done (Time = 0.00s, Memory = 0.5K)
 Checking Rule ReportCheckDataSummary (Rule 65 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
  Reading waiver file "./spyglass-1/lint/lint_rtl/spyglass_spysch/constraint/spg_autogenerated_waivers.sgdc" ...
  Generating SGDC file "./spyglass-1/lint/lint_rtl/spyglass_spysch/constraint/pragma2Constraint.sgdc" from pragmas in HDL source files ....
  Generating WAIVER file "./spyglass-1/lint/lint_rtl/spyglass_spysch/waiver/pragma2Waiver.swl" from pragmas in HDL source files ....
-Checking Rule DetectTopDesignUnits (Rule 66 of total 230) Detected 1 top level design units: 
-     send_ppm.rtl
- .... done (Time = 0.00s, Memory = 1.9K)
+Checking Rule DetectTopDesignUnits (Rule 66 of total 230) Detected 2 top level design units: 
+     image_process.rtl
+     position.det
+ .... done (Time = 0.00s, Memory = 4.1K)
 Performing semantic checks on SGDC contents
-..... SGDC semantic checks completed. (Time = 0.00s, Memory = 49.3K)
+..... SGDC semantic checks completed. (Time = 0.00s, Memory = 20.0K)
 Checking Rule SGDC_testmode03 (Rule 67 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule ReportObsoletePragmas (Rule 68 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportObsoletePragmas (Rule 68 of total 230) .... done (Time = 0.00s, Memory = -24.0K)
 Checking Rule checkSGDC_01 (Rule 69 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule checkSGDC_03 (Rule 70 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule checkSGDC_08 (Rule 71 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule GenerateConfMap (Rule 72 of total 230) .... done (Time = 0.00s, Memory = 401.5K)
-Checking Rule SGDC_memorywritepin04 (Rule 73 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule GenerateConfMap (Rule 72 of total 230) .... done (Time = 0.00s, Memory = 402.7K)
+Checking Rule SGDC_memorywritepin04 (Rule 73 of total 230) .... done (Time = 0.00s, Memory = -0.4K)
 Checking Rule SGDC_reset02 (Rule 74 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_reset03 (Rule 75 of total 230) .... done (Time = 0.00s, Memory = 7.5K)
+Checking Rule SGDC_reset03 (Rule 75 of total 230) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_libgroup03 (Rule 76 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_ungroup02 (Rule 77 of total 230) .... done (Time = 0.00s, Memory = 32.0K)
-Checking Rule HdlLibDuCheck (Rule 78 of total 230) .... done (Time = 0.00s, Memory = -0.4K)
+Checking Rule SGDC_ungroup02 (Rule 77 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule HdlLibDuCheck (Rule 78 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
 Checking Rule RtlDesignInfo (Rule 79 of total 230)
-##SGDEBUG [BENCHMARK_DATA]: Number of RTL Design Units = 3
+##SGDEBUG [BENCHMARK_DATA]: Number of RTL Design Units = 2
  .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule sim_race02 (Rule 80 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule W416 (Rule 81 of total 230) .... done (Time = 0.01s, Memory = -19.5K)
-Checking Rule W110a (Rule 82 of total 230) .... done (Time = 0.00s, Memory = 0.9K)
+Checking Rule W416 (Rule 81 of total 230) .... done (Time = 0.00s, Memory = -14.5K)
+Checking Rule W110a (Rule 82 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
 Checking Rule preReq_ConsCase2 (Rule 83 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule preReq_ConsCase (Rule 84 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule STARC05-AlwaysParamSetup (Rule 85 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-ProcessParamSetup (Rule 86 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
+Checking Rule STARC05-ProcessParamSetup (Rule 86 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule Latch_VePreReqRule (Rule 87 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule CheckCelldefine (Rule 88 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive23 (Rule 89 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive26 (Rule 90 of total 230) .... done (Time = 0.00s, Memory = 0.3K)
-Checking Rule SGDC_waive27 (Rule 91 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive27 (Rule 91 of total 230) .... done (Time = 0.00s, Memory = 1.6K)
 Checking Rule SGDC_waive29 (Rule 92 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule Prereqs_RegOutputs (Rule 93 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule STARC05-2.1.4.5 (Rule 94 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule STARC05-2.3.1.5b (Rule 95 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-2.11.3.1 (Rule 96 of total 230) .... done (Time = 0.01s, Memory = -0.4K)
+Checking Rule STARC05-2.11.3.1 (Rule 96 of total 230) .... done (Time = 0.01s, Memory = -3.0K)
 Checking Rule W496b (Rule 97 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule W317 (Rule 98 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule W422 (Rule 99 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
@@ -2208,149 +2205,53 @@ Checking Rule W426 (Rule 100 of total 230) .... done (Time = 0.00s, Memory = 0.0
 Checking Rule W480 (Rule 101 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule W481a (Rule 102 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule W481b (Rule 103 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule W422 (Rule 104 of total 230) .... done (Time = 0.00s, Memory = 3.0K)
-Checking Rule W292 (Rule 105 of total 230) .... done (Time = 0.00s, Memory = -2.9K)
-Checking Rule W71 (Rule 106 of total 230) .... done (Time = 0.00s, Memory = -0.7K)
-Checking Rule W293 (Rule 107 of total 230) .... done (Time = 0.00s, Memory = -0.9K)
-Checking Rule W398 (Rule 108 of total 230) .... done (Time = 0.00s, Memory = -0.7K)
+Checking Rule W422 (Rule 104 of total 230) .... done (Time = 0.00s, Memory = 5.7K)
+Checking Rule W292 (Rule 105 of total 230) .... done (Time = 0.00s, Memory = -36.5K)
+Checking Rule W71 (Rule 106 of total 230) .... done (Time = 0.00s, Memory = 29.0K)
+Checking Rule W293 (Rule 107 of total 230) .... done (Time = 0.00s, Memory = 8.9K)
+Checking Rule W398 (Rule 108 of total 230) .... done (Time = 0.00s, Memory = -0.5K)
 Checking Rule W421 (Rule 109 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule W424 (Rule 110 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule W467 (Rule 111 of total 230) .... done (Time = 0.02s, Memory = 7.2K)
+Checking Rule W467 (Rule 111 of total 230) .... done (Time = 0.04s, Memory = 3211.4K)
 Checking Rule Prereqs_RegInputOutputs (Rule 112 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule PragmaComments-ML (Rule 113 of total 230) .... done (Time = 0.00s, Memory = 70.0K)
 Checking Rule PragmaComments-ML (Rule 114 of total 230)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/lint/lint_rtl/spyglass_spysch/morelint/PragmaComments' in "a" mode ...
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_spysch/morelint/PragmaComments' closed.
- .... done (Time = 0.00s, Memory = 1.1K)
+ .... done (Time = 0.00s, Memory = 0.7K)
 Checking Rule CheckDelayTimescale-ML (Rule 115 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule Prereqs_InclFileSetup-ML (Rule 116 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking ELABDU Rules for designUnit global_counter
+Checking ELABDU Rules for designUnit position
     Checking Rule Prereqs_STARC-2.3.6.1 (Rule 117 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.9K)
     Checking Rule STARC05-2.2.3.3 (Rule 119 of total 230) .... done (Time = 0.00s, Memory = 16.0K)
     Checking Rule STARC05-2.3.1.6 (Rule 120 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 4.3K)
     Checking Rule STARC05-2.11.3.1 (Rule 122 of total 230) .... done (Time = 0.00s, Memory = 5.4K)
     Checking Rule STARC05-2.1.3.1 (Rule 123 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W110 (Rule 124 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
     Checking Rule W122 (Rule 125 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W19 (Rule 127 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 2.2K)
+    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
     Checking Rule W116 (Rule 129 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
-    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.01s, Memory = 3.3K)
-    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.00s, Memory = 5.2K)
+    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W218 (Rule 133 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W263 (Rule 134 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W337 (Rule 136 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
+    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 5.1K)
+    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W486 (Rule 139 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W499 (Rule 140 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W502 (Rule 141 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
-    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
-    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = 0.3K)
-    Checking Rule W293 (Rule 148 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W398 (Rule 149 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W424 (Rule 150 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W467 (Rule 151 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W505 (Rule 152 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W505 (Rule 153 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_Usage (Rule 154 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Postreqs_CheckFuncTask (Rule 155 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 156 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = 0.3K)
-    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = 1.6K)
-    Checking Rule NoAssignX-ML (Rule 159 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule ParamWidthMismatch-ML (Rule 160 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule DuplicateCaseLabel-ML (Rule 161 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Postreqs_Usage_ML (Rule 162 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -7.5K)
-Checking ELABDU Rules for designUnit global_counter
-    Checking Rule Prereqs_STARC-2.3.6.1 (Rule 117 of total 230) .... done (Time = 0.00s, Memory = 8.0K)
-    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.2.3.3 (Rule 119 of total 230) .... done (Time = 0.00s, Memory = 16.0K)
-    Checking Rule STARC05-2.3.1.6 (Rule 120 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
-    Checking Rule STARC05-2.11.3.1 (Rule 122 of total 230) .... done (Time = 0.00s, Memory = 5.4K)
-    Checking Rule STARC05-2.1.3.1 (Rule 123 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
-    Checking Rule W110 (Rule 124 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W122 (Rule 125 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W19 (Rule 127 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 2.2K)
-    Checking Rule W116 (Rule 129 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
-    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.01s, Memory = 3.3K)
-    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W218 (Rule 133 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W263 (Rule 134 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W337 (Rule 136 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
-    Checking Rule W486 (Rule 139 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W499 (Rule 140 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W502 (Rule 141 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = 7.4K)
-    Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = 0.1K)
-    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = -1.1K)
-    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = 2.0K)
-    Checking Rule W293 (Rule 148 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W398 (Rule 149 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W424 (Rule 150 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W467 (Rule 151 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W505 (Rule 152 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W505 (Rule 153 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_Usage (Rule 154 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Postreqs_CheckFuncTask (Rule 155 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 156 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule NoAssignX-ML (Rule 159 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule ParamWidthMismatch-ML (Rule 160 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule DuplicateCaseLabel-ML (Rule 161 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Postreqs_Usage_ML (Rule 162 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking ELABDU Rules for designUnit local_counter
-    Checking Rule Prereqs_STARC-2.3.6.1 (Rule 117 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.2.3.3 (Rule 119 of total 230) .... done (Time = 0.00s, Memory = 16.0K)
-    Checking Rule STARC05-2.3.1.6 (Rule 120 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
-    Checking Rule STARC05-2.11.3.1 (Rule 122 of total 230) .... done (Time = 0.00s, Memory = 5.4K)
-    Checking Rule STARC05-2.1.3.1 (Rule 123 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
-    Checking Rule W110 (Rule 124 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W122 (Rule 125 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W19 (Rule 127 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 2.2K)
-    Checking Rule W116 (Rule 129 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
-    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.01s, Memory = 3.3K)
-    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W218 (Rule 133 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W263 (Rule 134 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W337 (Rule 136 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
-    Checking Rule W486 (Rule 139 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W499 (Rule 140 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W502 (Rule 141 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
     Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = 0.8K)
+    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
+    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 3.3K)
+    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = -1.1K)
     Checking Rule W293 (Rule 148 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W398 (Rule 149 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W424 (Rule 150 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
@@ -2360,93 +2261,93 @@ Checking ELABDU Rules for designUnit local_counter
     Checking Rule Prereqs_Usage (Rule 154 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_CheckFuncTask (Rule 155 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Prereqs_ConstantInput-ML (Rule 156 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = 4.0K)
-    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = 8.0K)
+    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = -33.7K)
+    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = 7.9K)
     Checking Rule NoAssignX-ML (Rule 159 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule ParamWidthMismatch-ML (Rule 160 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule DuplicateCaseLabel-ML (Rule 161 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_Usage_ML (Rule 162 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -5.2K)
-Checking ELABDU Rules for designUnit local_counter
+    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -0.0K)
+Checking ELABDU Rules for designUnit position
     Checking Rule Prereqs_STARC-2.3.6.1 (Rule 117 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.9K)
     Checking Rule STARC05-2.2.3.3 (Rule 119 of total 230) .... done (Time = 0.00s, Memory = 16.0K)
     Checking Rule STARC05-2.3.1.6 (Rule 120 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 4.3K)
     Checking Rule STARC05-2.11.3.1 (Rule 122 of total 230) .... done (Time = 0.00s, Memory = 5.4K)
     Checking Rule STARC05-2.1.3.1 (Rule 123 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W110 (Rule 124 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
     Checking Rule W122 (Rule 125 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W19 (Rule 127 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 2.2K)
+    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
     Checking Rule W116 (Rule 129 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
-    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.01s, Memory = 3.3K)
-    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.00s, Memory = 5.2K)
+    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W218 (Rule 133 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W263 (Rule 134 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W337 (Rule 136 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
+    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 5.1K)
+    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W486 (Rule 139 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W499 (Rule 140 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W502 (Rule 141 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = -1.8K)
-    Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = 32.0K)
-    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = -1.2K)
-    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = -0.2K)
+    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = 26.9K)
+    Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = -8.2K)
+    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = 8.8K)
+    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
+    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 3.3K)
+    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = -3.9K)
     Checking Rule W293 (Rule 148 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W398 (Rule 149 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W424 (Rule 150 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W467 (Rule 151 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W505 (Rule 152 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W505 (Rule 153 of total 230) .... done (Time = 0.00s, Memory = -0.1K)
+    Checking Rule W505 (Rule 153 of total 230) .... done (Time = 0.00s, Memory = -3.1K)
     Checking Rule Prereqs_Usage (Rule 154 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_CheckFuncTask (Rule 155 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Prereqs_ConstantInput-ML (Rule 156 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = -1.1K)
+    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = -1.2K)
     Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule NoAssignX-ML (Rule 159 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule ParamWidthMismatch-ML (Rule 160 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule DuplicateCaseLabel-ML (Rule 161 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_Usage_ML (Rule 162 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -32.0K)
-Checking ELABDU Rules for designUnit send_ppm
-    Checking Rule Prereqs_STARC-2.3.6.1 (Rule 117 of total 230) .... done (Time = 0.00s, Memory = 0.1K)
-    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -4.1K)
+Checking ELABDU Rules for designUnit image_process
+    Checking Rule Prereqs_STARC-2.3.6.1 (Rule 117 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.9K)
     Checking Rule STARC05-2.2.3.3 (Rule 119 of total 230) .... done (Time = 0.00s, Memory = 16.0K)
     Checking Rule STARC05-2.3.1.6 (Rule 120 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 4.3K)
     Checking Rule STARC05-2.11.3.1 (Rule 122 of total 230) .... done (Time = 0.00s, Memory = 5.4K)
     Checking Rule STARC05-2.1.3.1 (Rule 123 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W110 (Rule 124 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
     Checking Rule W122 (Rule 125 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W19 (Rule 127 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 2.2K)
+    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
     Checking Rule W116 (Rule 129 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
-    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.01s, Memory = 3.3K)
-    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.00s, Memory = 5.2K)
+    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W218 (Rule 133 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W263 (Rule 134 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W337 (Rule 136 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
+    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 5.1K)
+    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W486 (Rule 139 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W499 (Rule 140 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W502 (Rule 141 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = -6.1K)
     Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = 32.0K)
+    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
+    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 3.3K)
+    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = -0.4K)
     Checking Rule W293 (Rule 148 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W398 (Rule 149 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W424 (Rule 150 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
@@ -2456,169 +2357,195 @@ Checking ELABDU Rules for designUnit send_ppm
     Checking Rule Prereqs_Usage (Rule 154 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_CheckFuncTask (Rule 155 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Prereqs_ConstantInput-ML (Rule 156 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = -8.6K)
-    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = 3.2K)
+    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = 16.0K)
+    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = -58.8K)
     Checking Rule NoAssignX-ML (Rule 159 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule ParamWidthMismatch-ML (Rule 160 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule DuplicateCaseLabel-ML (Rule 161 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_Usage_ML (Rule 162 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -0.3K)
-Checking ELABDU Rules for designUnit send_ppm
+    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -8.0K)
+Checking ELABDU Rules for designUnit image_process
     Checking Rule Prereqs_STARC-2.3.6.1 (Rule 117 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule STARC05-2.1.5.3 (Rule 118 of total 230) .... done (Time = 0.00s, Memory = 0.9K)
     Checking Rule STARC05-2.2.3.3 (Rule 119 of total 230) .... done (Time = 0.00s, Memory = 16.0K)
     Checking Rule STARC05-2.3.1.6 (Rule 120 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule STARC05-2.10.2.3 (Rule 121 of total 230) .... done (Time = 0.00s, Memory = 4.3K)
     Checking Rule STARC05-2.11.3.1 (Rule 122 of total 230) .... done (Time = 0.00s, Memory = 5.4K)
     Checking Rule STARC05-2.1.3.1 (Rule 123 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W110 (Rule 124 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
     Checking Rule W122 (Rule 125 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W496a (Rule 126 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W19 (Rule 127 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 2.2K)
+    Checking Rule W66 (Rule 128 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
     Checking Rule W116 (Rule 129 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
-    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.01s, Memory = 3.3K)
-    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
+    Checking Rule W123 (Rule 130 of total 230) .... done (Time = 0.00s, Memory = 5.2K)
+    Checking Rule W215 (Rule 131 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
+    Checking Rule W216 (Rule 132 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W218 (Rule 133 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W263 (Rule 134 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W289 (Rule 135 of total 230) .... done (Time = 0.00s, Memory = 3.5K)
     Checking Rule W337 (Rule 136 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 7.0K)
-    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
+    Checking Rule W352 (Rule 137 of total 230) .... done (Time = 0.00s, Memory = 5.1K)
+    Checking Rule W362 (Rule 138 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
     Checking Rule W486 (Rule 139 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W499 (Rule 140 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W502 (Rule 141 of total 230) .... done (Time = 0.00s, Memory = 28.0K)
-    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.10s, Memory = 3111.2K)
-    Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = -1.7K)
-    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.01s, Memory = -6.9K)
-    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
-    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = -15.6K)
+    Checking Rule W116 (Rule 142 of total 230) .... done (Time = 0.00s, Memory = 4.0K)
+    Checking Rule W122 (Rule 143 of total 230) .... done (Time = 0.00s, Memory = -1.0K)
+    Checking Rule W123 (Rule 144 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule W71 (Rule 145 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
+    Checking Rule W240 (Rule 146 of total 230) .... done (Time = 0.00s, Memory = 3.3K)
+    Checking Rule W240 (Rule 147 of total 230) .... done (Time = 0.00s, Memory = -13.3K)
     Checking Rule W293 (Rule 148 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W398 (Rule 149 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W424 (Rule 150 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W467 (Rule 151 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule W505 (Rule 152 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule W505 (Rule 153 of total 230) .... done (Time = 0.00s, Memory = 3.6K)
+    Checking Rule W505 (Rule 153 of total 230) .... done (Time = 0.00s, Memory = 0.8K)
     Checking Rule Prereqs_Usage (Rule 154 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_CheckFuncTask (Rule 155 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Prereqs_ConstantInput-ML (Rule 156 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = -0.8K)
-    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+    Checking Rule Prereqs_ConstantInput-ML (Rule 157 of total 230) .... done (Time = 0.00s, Memory = -0.0K)
+    Checking Rule ReportPortInfo-ML (Rule 158 of total 230) .... done (Time = 0.00s, Memory = -8.0K)
     Checking Rule NoAssignX-ML (Rule 159 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule ParamWidthMismatch-ML (Rule 160 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule DuplicateCaseLabel-ML (Rule 161 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
     Checking Rule Postreqs_Usage_ML (Rule 162 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -9.7K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 5 sec, 671068 KB, 2286272 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 2 sec, 5401 KB, 3584 KB
+    Checking Rule NoXInCase-ML (Rule 163 of total 230) .... done (Time = 0.00s, Memory = -3.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 4 sec, 671155 KB, 2287332 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 1 sec, 5586 KB, 3584 KB
 
 INFO [235]    Restoring design database from directory './spyglass-1/.SG_SaveRestoreDB/autogenerated__default_snapshot' ...
               done
 
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 5 sec, 704050 KB, 2319040 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 32982 KB, 32768 KB
-     (Memory Used = 32981.4K(incr), 704050.4K(tot), Cpu Time = 0.03s(incr))
-Checking Rule InferBlackBox (Rule 164 of total 230) .... done (Time = 0.00s, Memory = 1.0K)
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 3
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 500
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 1203
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 3258
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 322, 166
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 5 sec, 708307 KB, 2322368 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 4257 KB, 3328 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 5 sec, 708332 KB, 2322368 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 25 KB, 0 KB
-     (Memory Used = 25.5K(incr), 708332.9K(tot), Cpu Time = 0.00s(incr))
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 4 sec, 700036 KB, 2316004 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 28881 KB, 28672 KB
+     (Memory Used = 28881.0K(incr), 700036.0K(tot), Cpu Time = 0.03s(incr))
+Checking Rule InferBlackBox (Rule 164 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 2
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 1841
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 3002
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 11309
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 1559, 920
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 4 sec, 704197 KB, 2319332 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 4161 KB, 3328 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 4 sec, 704204 KB, 2319332 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 7 KB, 0 KB
+     (Memory Used = 7.2K(incr), 704212.2K(tot), Cpu Time = 0.00s(incr))
 Checking Rule SGDC_waive37 (Rule 165 of total 230) .... done (Time = 0.00s, Memory = 0.6K)
 Checking Rule SGDC_waive24 (Rule 166 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive25 (Rule 167 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive31 (Rule 168 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive35 (Rule 169 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule InferLatch for module local_counter.b (Rule 170 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-2.3.4.1v for module local_counter.b (Rule 171 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule RegInputOutput-ML for module local_counter.b (Rule 172 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-2.5.1.7 for module local_counter.b (Rule 173 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule InferLatch for module global_counter.a (Rule 170 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-2.3.4.1v for module global_counter.a (Rule 171 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule RegInputOutput-ML for module global_counter.a (Rule 172 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-2.5.1.7 for module global_counter.a (Rule 173 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule InferLatch for module send_ppm.rtl (Rule 170 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-2.3.4.1v for module send_ppm.rtl (Rule 171 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule RegInputOutput-ML for module send_ppm.rtl (Rule 172 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-2.5.1.7 for module send_ppm.rtl (Rule 173 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule InferLatch for module image_process.rtl (Rule 170 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule STARC05-2.3.4.1v for module image_process.rtl (Rule 171 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule RegInputOutput-ML for module image_process.rtl (Rule 172 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule STARC05-2.5.1.7 for module image_process.rtl (Rule 173 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule InferLatch for module position.det (Rule 170 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule STARC05-2.3.4.1v for module position.det (Rule 171 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule RegInputOutput-ML for module position.det (Rule 172 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule STARC05-2.5.1.7 for module position.det (Rule 173 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Performing semantic checks on SGDC contents
-..... SGDC semantic checks completed. (Time = 0.00s, Memory = 0.6K)
+..... SGDC semantic checks completed. (Time = 0.00s, Memory = -0.6K)
 Checking Rule SGDC_testmode03 (Rule 67 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule LogNMuxPrereq (Rule 174 of total 230) .... done (Time = 0.00s, Memory = -16.4K)
+Checking Rule LogNMuxPrereq (Rule 174 of total 230) .... done (Time = 0.00s, Memory = -1.9K)
 Checking Rule _abstractPortSGDC (Rule 175 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port03 (Rule 176 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port04 (Rule 177 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port05 (Rule 178 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port07 (Rule 179 of total 230) .... done (Time = 0.00s, Memory = -8.0K)
-Checking Rule SGDC_abstract_port08 (Rule 180 of total 230) .... done (Time = 0.00s, Memory = 8.9K)
+Checking Rule SGDC_abstract_port07 (Rule 179 of total 230) .... done (Time = 0.00s, Memory = -1.4K)
+Checking Rule SGDC_abstract_port08 (Rule 180 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port10 (Rule 181 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port11 (Rule 182 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port12 (Rule 183 of total 230) .... done (Time = 0.00s, Memory = -8.0K)
-Checking Rule SGDC_abstract_port13 (Rule 184 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule HangingNetPreReq-ML (Rule 185 of total 230) .... done (Time = 0.00s, Memory = -0.4K)
-Checking Rule ReportUngroup (Rule 186 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule LINT_portReten (Rule 187 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
+Checking Rule SGDC_abstract_port12 (Rule 183 of total 230) .... done (Time = 0.00s, Memory = -16.0K)
+Checking Rule SGDC_abstract_port13 (Rule 184 of total 230) .... done (Time = 0.00s, Memory = 0.9K)
+Checking Rule HangingNetPreReq-ML (Rule 185 of total 230) .... done (Time = 0.00s, Memory = 0.4K)
+Checking Rule ReportUngroup (Rule 186 of total 230) .... done (Time = 0.00s, Memory = -8.0K)
+Checking Rule LINT_portReten (Rule 187 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port21 (Rule 188 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule UndrivenInTerm-ML (Rule 189 of total 230) .... done (Time = 0.00s, Memory = 34.5K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 5 sec, 708434 KB, 2323392 KB
-##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 0 sec, 102 KB, 1024 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Elab View Deletion Finished: 5 sec, 642534 KB, 2257600 KB
-##SGDEBUG [BENCHMARK_INCR]: Elab View Deletion Finished: 0 sec, -65900 KB, -65792 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: After deleting RTL view: 5 sec, 566196 KB, 2183360 KB
-##SGDEBUG [BENCHMARK_INCR]: After deleting RTL view: 0 sec, -76338 KB, -74240 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 5 sec, 567103 KB, 2184128 KB
-##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, 907 KB, 768 KB
- Flattening send_ppm (.lib instances separately flattened) ....
-     (Memory Used = 1406.2K(incr), 568509.6K(tot), Cpu Time = 0.02s(incr))
+Checking Rule UndrivenInTerm-ML (Rule 189 of total 230) .... done (Time = 0.03s, Memory = 51.1K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 5 sec, 704439 KB, 2320356 KB
+##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 1 sec, 235 KB, 1024 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Elab View Deletion Finished: 5 sec, 638535 KB, 2254564 KB
+##SGDEBUG [BENCHMARK_INCR]: Elab View Deletion Finished: 0 sec, -65904 KB, -65792 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: After deleting RTL view: 5 sec, 562368 KB, 2180580 KB
+##SGDEBUG [BENCHMARK_INCR]: After deleting RTL view: 0 sec, -76167 KB, -73984 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 5 sec, 563279 KB, 2181348 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, 911 KB, 768 KB
+ Flattening image_process (.lib instances separately flattened) ....
+     (Memory Used = 1324.1K(incr), 564598.7K(tot), Cpu Time = 0.01s(incr))
  Flattening completed
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 498
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 1118
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 3126
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 3
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 37
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 282
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 339
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 1223
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 1
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 80
 ##SGDEBUG [BENCHMARK_DATA]: Number of Black-Box Instances = 0
 ##SGDEBUG [BENCHMARK_DATA]: Number of Lib Instances = 0
 ##SGDEBUG [BENCHMARK_DATA]: Number of ILM Instances = 0
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 5 sec, 568509 KB, 2185408 KB
-##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 1406 KB, 1280 KB
-Checking Rule SGDC_set_case_analysis_LC (Rule 190 of total 230) .... done (Time = 0.00s, Memory = 0.1K)
-Checking Rule BufClock (Rule 191 of total 230) .... done (Time = 0.02s, Memory = 1059.7K)
-Checking Rule CombLoop (Rule 192 of total 230) .... done (Time = 0.01s, Memory = 577.3K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 5 sec, 564630 KB, 2182628 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 1351 KB, 1280 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 5 sec, 564598 KB, 2182628 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, -32 KB, 0 KB
+ Flattening position (.lib instances separately flattened) ....
+     (Memory Used = 718.1K(incr), 565316.4K(tot), Cpu Time = 0.03s(incr))
+ Flattening completed
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 1559
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 2579
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 9578
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 1
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 97
+##SGDEBUG [BENCHMARK_DATA]: Number of Black-Box Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of Lib Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of ILM Instances = 0
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 5 sec, 565316 KB, 2183140 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 718 KB, 512 KB
+Checking Rule SGDC_set_case_analysis_LC (Rule 190 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule BufClock (Rule 191 of total 230) .... done (Time = 0.00s, Memory = 1056.4K)
+Checking Rule CombLoop (Rule 192 of total 230) .... done (Time = 0.00s, Memory = 517.8K)
 Checking Rule STARC05-2.5.1.2 (Rule 193 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule STARC05-1.3.1.3 (Rule 194 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-1.4.3.4 (Rule 195 of total 230) .... done (Time = 0.01s, Memory = 0.9K)
-Checking Rule FlopClockConstant (Rule 196 of total 230) .... done (Time = 0.00s, Memory = 17.7K)
-Checking Rule FlopSRConst (Rule 197 of total 230) .... done (Time = 0.00s, Memory = -1.8K)
-Checking Rule FlopEConst (Rule 198 of total 230) .... done (Time = 0.00s, Memory = 1.9K)
-Checking Rule checkPinConnectedToSupply (Rule 199 of total 230) .... done (Time = 0.00s, Memory = -12.9K)
-Checking Rule W392 (Rule 200 of total 230) .... done (Time = 0.01s, Memory = 32.4K)
-Checking Rule W415 (Rule 201 of total 230) .... done (Time = 0.01s, Memory = -7.9K)
-Checking Rule LatchFeedback (Rule 202 of total 230) .... done (Time = 0.00s, Memory = 2.6K)
+Checking Rule STARC05-1.4.3.4 (Rule 195 of total 230) .... done (Time = 0.00s, Memory = 3.6K)
+Checking Rule FlopClockConstant (Rule 196 of total 230) .... done (Time = 0.00s, Memory = 20.2K)
+Checking Rule FlopSRConst (Rule 197 of total 230) .... done (Time = 0.00s, Memory = -1.5K)
+Checking Rule FlopEConst (Rule 198 of total 230) .... done (Time = 0.00s, Memory = -3.3K)
+Checking Rule checkPinConnectedToSupply (Rule 199 of total 230) .... done (Time = 0.00s, Memory = 12.0K)
+Checking Rule W392 (Rule 200 of total 230) .... done (Time = 0.00s, Memory = -18.9K)
+Checking Rule W415 (Rule 201 of total 230) .... done (Time = 0.00s, Memory = -25.0K)
+Checking Rule LatchFeedback (Rule 202 of total 230) .... done (Time = 0.00s, Memory = 8.8K)
+Checking Rule STARC05-2.4.1.5 (Rule 203 of total 230) .... done (Time = 0.00s, Memory = -1.0K)
+Checking Rule STARC05-1.2.1.2 (Rule 204 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
+Checking Rule SGDC_set_case_analysis_LC (Rule 190 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule BufClock (Rule 191 of total 230) .... done (Time = 0.02s, Memory = 527.1K)
+Checking Rule CombLoop (Rule 192 of total 230) .... done (Time = 0.02s, Memory = 560.6K)
+Checking Rule STARC05-2.5.1.2 (Rule 193 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule STARC05-1.3.1.3 (Rule 194 of total 230) .... done (Time = 0.00s, Memory = 0.2K)
+Checking Rule STARC05-1.4.3.4 (Rule 195 of total 230) .... done (Time = 0.00s, Memory = 4.9K)
+Checking Rule FlopClockConstant (Rule 196 of total 230) .... done (Time = 0.00s, Memory = 13.3K)
+Checking Rule FlopSRConst (Rule 197 of total 230) .... done (Time = 0.00s, Memory = 0.5K)
+Checking Rule FlopEConst (Rule 198 of total 230) .... done (Time = 0.00s, Memory = -4.3K)
+Checking Rule checkPinConnectedToSupply (Rule 199 of total 230) .... done (Time = 0.00s, Memory = -14.6K)
+Checking Rule W392 (Rule 200 of total 230) .... done (Time = 0.03s, Memory = 98.5K)
+Checking Rule W415 (Rule 201 of total 230) .... done (Time = 0.01s, Memory = -6.2K)
+Checking Rule LatchFeedback (Rule 202 of total 230) .... done (Time = 0.01s, Memory = 13.0K)
 Checking Rule STARC05-2.4.1.5 (Rule 203 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule STARC05-1.2.1.2 (Rule 204 of total 230) .... done (Time = 0.00s, Memory = 7.7K)
-Checking Rule AnalyzeBBox (Rule 205 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule STARC05-1.2.1.2 (Rule 204 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule AnalyzeBBox (Rule 205 of total 230) .... done (Time = 0.00s, Memory = -7.8K)
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_reports/openmore/CombLoopReport.rpt' closed.
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_reports/lint/SignalUsageReport.rpt' closed.
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_spysch/morelint/RegInputOutput' closed.
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_reports/morelint/ReportPortInfo' closed.
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_reports/morelint/ReportPortInfo.csv' closed.
 ##FILEDEBUG[sgCloseFile]: File './spyglass-1/lint/lint_rtl/spyglass_spysch/morelint/ReportPorts' closed.
-Checking Rule ReportCheckDataSummary (Rule 65 of total 230) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule ReportCheckDataSummary (Rule 65 of total 230) .... done (Time = 0.00s, Memory = 0.0K)
 
 Applying user specified and internally generated waivers on violation database .... done (Time = 0.03s)
 
 Generating data for Console...
-##SGDEBUG [PEAK_MEMORY]: 2323392 KB for entire run at 'SGDC_testmode03' stage
-##SGDEBUG [VMPEAK_MEMORY]: 2531332 KB for entire run
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 5 sec, 568364 KB, 2173120 KB
-##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 0 sec, -145 KB, -12288 KB
+##SGDEBUG [PEAK_MEMORY]: 2320356 KB for entire run at 'SGDC_testmode03' stage
+##SGDEBUG [VMPEAK_MEMORY]: 2526020 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 5 sec, 565234 KB, 2170852 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 0 sec, -82 KB, -12288 KB
 
 
 =====================================================================================
@@ -4209,7 +4136,7 @@ Generating data for Console...
  W398                 (Verilog) lint            Yes            0 ELABDU         -               
  W293                 (VHDL   ) lint            Yes            0 RTLDULIST      -               
  W293                 (Verilog) lint            Yes            0 ELABDU         -               
- W240                 (VHDL   ) lint            Yes            0 ELABDU         -               
+ W240                 (VHDL   ) lint            Yes            2 ELABDU         -               
  W240                 (Verilog) lint            Yes            0 ELABDU         -               
  W71                  (VHDL   ) lint            Yes            0 RTLDULIST      -               
  W71                  (Verilog) lint            Yes            0 ELABDU         -               
@@ -4284,8 +4211,9 @@ Generating data for Console...
  Prereqs_RegOutputs             openmore        Yes            0 RTLDULIST      -               
  InferLatch                     openmore        Yes            0 VSDU           -               
  preReq_ConsCase2     (VHDL   ) openmore        Yes            0 RTLDULIST      -               
+ HdlLibDuCheck_03               SpyGlass        Yes            1 SETUP          -               
  ElabSummary                    SpyGlass        Yes            1 SETUP          -               
- DetectTopDesignUnits           SpyGlass        Yes            1 RTLALLDULIST   -               
+ DetectTopDesignUnits           SpyGlass        Yes            2 RTLALLDULIST   -               
 -------------------------------------------------------------------------------------
 Note: VSDU type of rules (as seen in the above table) are not run on
       unsynthesized modules reported by 'ErrorAnalyzeBBox/InfoAnalyzeBBox' messages
@@ -4297,18 +4225,20 @@ Note: VSDU type of rules (as seen in the above table) are not run on
 Results Summary:
 ---------------------------------------------------------------------------------------------
    Goal Run           :      lint/lint_rtl
-   Command-line read  :      0 error,      0 warning,      0 information message 
-   Design Read        :      0 error,      0 warning,      2 information messages
-      Found 1 top module:
-         send_ppm.rtl   (file: ../../VHD/send_ppm.vhd)
+   Command-line read  :      0 error,      0 warning,      1 information message 
+   Design Read        :      0 error,      0 warning,      3 information messages
+      Found 2 top modules:
+         image_process.rtl   (file: ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd)
+         position.det        (file: ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd)
 
    Blackbox Resolution:      0 error,      0 warning,      0 information message 
    SGDC Checks        :      0 error,      0 warning,      0 information message 
+   Policy lint        :      0 error,      2 warnings,     0 information message 
    -------------------------------------------------------------------------------------
-   Total              :      0 error,      0 warning,      2 information messages
+   Total              :      0 error,      2 warnings,     4 information messages
 
-  Total Number of Generated Messages     :         2 (0 error, 0 warning, 2 Infos)
-  Number of Reported Messages            :         2 (0 error, 0 warning, 2 Infos)
+  Total Number of Generated Messages     :         6 (0 error, 2 warnings, 4 Infos)
+  Number of Reported Messages            :         6 (0 error, 2 warnings, 4 Infos)
 
 ---------------------------------------------------------------------------------------------
 
@@ -4326,6 +4256,6 @@ Policy specific data (reports) are present in the directory './spyglass-1/lint/l
 
 SpyGlass critical reports for the current run are present in directory './spyglass-1/consolidated_reports/lint_lint_rtl/'.
 
-SpyGlass Exit Code 0 (Rule-checking completed without errors or warnings)
-SpyGlass total run-time is 0:0:6 (6 secs)
-SpyGlass run completed at 10:23:09 AM on Jan 15 2018
+SpyGlass Exit Code 0 (Rule-checking completed with warnings)
+SpyGlass total run-time is 0:0:7 (7 secs)
+SpyGlass run completed at 00:05:13 PM on Jan 18 2018

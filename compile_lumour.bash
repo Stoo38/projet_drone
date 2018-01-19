@@ -27,6 +27,7 @@ VHDL_FILES="
 			gensync.vhd
 			position.vhd
 			div.vhd
+			top.vhd
 			"
 
 BENCH_VHD_FILES="														
@@ -136,7 +137,7 @@ cat ${PROJECT_PATH}/LOG/${LOG_FILE}
 ##################################################
 
 #vsim -c -L LIB_VHD -do runSim.do LIB_VHD_BENCH.tbench 	#Ligne de commandes
-vsim -L LIB_VHD -do runSimLu.do LIB_VHD_BENCH.tbench 	#Interface graphique sans warnings
-#vsim -L LIB_VHD LIB_VHD_BENCH.tbench 					#Interface graphique
+#vsim -L LIB_VHD -do runSimLu.do -novopt LIB_VHD_BENCH.tbench 	#Interface graphique sans warnings
+vsim -L LIB_VHD LIB_VHD_BENCH.tbench 					#Interface graphique
 #vsim -L LIB_VHD -novopt LIB_VHD_BENCH.tbench
 

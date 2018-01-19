@@ -2,12 +2,12 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
---library LIB_VHD;
---use LIB_VHD.constants_package.all;
---use LIB_VHD.all;
+library LIB_VHD;
+use LIB_VHD.constants_package.all;
+use LIB_VHD.all;
 
-library LIB_SYNTH;
-use LIB_SYNTH.all;
+--library LIB_SYNTH;
+--use LIB_SYNTH.all;
 
 entity bench_send_ppm is end bench_send_ppm;
 
@@ -42,16 +42,16 @@ architecture tb_ppm of bench_send_ppm is
 			wait for 200 ns;
 			--sig_i_reg <= "11111111111111111111111111111111";
 			sig_i_reg <= "00000000000000000000000000000000";
-			wait for 1000000 ns;
-			--sig_i_reg <= "01101100111010111000101110110101";
-			--wait for 25 ns;
-			--sig_i_reg <= "00000000000000000000000000000000";
-			--wait for 250 ns;	
+			wait for 10000 ns;
+			sig_i_reg <= "01101100111010111000101110110101";
+			wait for 25000 ns;
+			sig_i_reg <= "00000000000000000000000000000000";
+			wait for 250 ns;	
 			sig_i_reg <= "11111111111111111111111111111111";
-			wait for 1000000000 ns;
+			wait for 10000000 ns;
 		  --wait for 25 ns;
-			--sig_i_reg <= "00000000000000000000000000000000";
-			--wait for 100000 ns;
+			sig_i_reg <= "01101100111010111000101110110101";
+			wait for 1000000000 ns;
 			--sig_i_reg <= "00000000001111111111111111111110";
 			--wait for 30000000 ns;
 

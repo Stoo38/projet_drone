@@ -8,6 +8,11 @@
 ["Design Read"]
 "BUILTIN"
 "1"
+-1 "HdlLibDuCheck_03" 2
+"RULEGROUP"
+["Command-line read"]
+"BUILTIN"
+"1"
 -1 "RegInputOutput-ML" 3
 "TEMPLATE"
 ["lint/lint_rtl"]
@@ -22,3 +27,10 @@
 [43]
 "RULEGROUP"
 ["morelint"]
+-1 "W240" 3
+"TEMPLATE"
+["lint/lint_rtl"]
+"RULE_ORDER"
+[54]
+"RULEGROUP"
+["lint/Lint_Elab_Rules","lint/Usage"]

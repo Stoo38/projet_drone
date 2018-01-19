@@ -140,18 +140,19 @@ architecture rtl of send_ppm is
 	reg: process(sig_in_clk)	
 	begin
 		if (sig_in_clk'event and sig_in_clk ='1') then	
-			if (sig_in_reset_n='0') then
-				sig_reg_storage <= "10000000100000001000000010000000"; --valeur "milieu" de chaque trame
-			else
-				if(current_state = fin_trame) then 
+			--if (sig_in_reset_n='0') then
+	--			sig_reg_storage <= "10000000100000001000000010000000"; --valeur "milieu" de chaque trame
+			--		sig_reg_storage <= "00000000000000000000000000000000";
+			--else
+				if(current_state = fin_trame) or (current_state = reset) then 
 					sig_reg_storage <= sig_in_reg;
 				end if;
-			end if;
+			--end if;
 		end if;
 	end process reg;
 
--- process sequentiel pour generer ppm_out sans alea (glitch)
-	ppm_o: process(sig_in_clk)	
+				
+	ppm_o: process(sig_in_clk)-- process sequentiel pour generer ppm_out sans alea (glitch)
 	begin
 		if (sig_in_clk'event and sig_in_clk ='1') then	
 			if (sig_in_reset_n='0') then

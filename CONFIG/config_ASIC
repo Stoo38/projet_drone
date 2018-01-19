@@ -36,10 +36,10 @@ source /softslin/configCAO/Cadence/config_EDISystem10_10
 source /softslin/configCAO/Cadence/config_QRC
 source /softslin/configCAO/AMS/config_AMS
 
-#source /softslin/configCAO/MentorGraphics/licence_mentor_graphics
+source /softslin/configCAO/MentorGraphics/licence_mentor_graphics
 	# ATTENTION à l'ordre : en interne modelsim.ini utilise des variables définies dans
 	# config_ISE et dans config_AMS
 #source /softslin/configCAO/Xilinx/config_ISE
-#source /softslin/configCAO/MentorGraphics/config_ModelSim
-export MODELSIM="${TP_PATH}/config/modelsim.ini"
+source /softslin/configCAO/MentorGraphics/config_ModelSim
+export MODELSIM="${TP_PATH}/CONFIG/modelsim.ini"
 
