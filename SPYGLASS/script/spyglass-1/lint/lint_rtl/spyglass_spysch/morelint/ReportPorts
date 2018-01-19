@@ -1,29 +1,5 @@
 SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
-VALUE@@n_reset@@INPUT@@0@@0@@-@@position@@No
-VALUE@@VGA_CLK@@INPUT@@0@@0@@-@@position@@No
-VALUE@@IMG@@INPUT@@0@@0@@-@@position@@No
-VALUE@@X_Cont@@INPUT@@8@@0@@-@@position@@No
-VALUE@@Y_Cont@@INPUT@@8@@0@@image 512 x 512 @@position@@No
-VALUE@@r_proc@@INPUT@@7@@0@@-@@position@@No
-VALUE@@g_proc@@INPUT@@7@@0@@-@@position@@No
-VALUE@@b_proc@@INPUT@@7@@0@@-@@position@@No
-VALUE@@r_bout@@OUTPUT@@7@@0@@-@@position@@No
-VALUE@@g_bout@@OUTPUT@@7@@0@@-@@position@@No
-VALUE@@b_bout@@OUTPUT@@7@@0@@-@@position@@No
-VALUE@@X_barycentre@@OUTPUT@@8@@0@@-@@position@@No
-VALUE@@Y_barycentre@@OUTPUT@@8@@0@@-@@position@@No
-SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
-VALUE@@IMG@@INPUT@@0@@0@@-@@image_process@@No
-VALUE@@reset@@INPUT@@0@@0@@-@@image_process@@No
-VALUE@@SW1@@INPUT@@0@@0@@-@@image_process@@No
-VALUE@@VGA_HS@@INPUT@@0@@0@@-@@image_process@@No
-VALUE@@VGA_VS@@INPUT@@0@@0@@-@@image_process@@No
-VALUE@@VGA_CLK@@INPUT@@0@@0@@-@@image_process@@No
-VALUE@@X_Cont@@INPUT@@8@@0@@-@@image_process@@No
-VALUE@@Y_Cont@@INPUT@@8@@0@@image 512 x 512@@image_process@@No
-VALUE@@r@@INPUT@@7@@0@@-@@image_process@@No
-VALUE@@g@@INPUT@@7@@0@@-@@image_process@@No
-VALUE@@b@@INPUT@@7@@0@@-@@image_process@@No
-VALUE@@r_out@@OUTPUT@@7@@0@@-@@image_process@@No
-VALUE@@g_out@@OUTPUT@@7@@0@@-@@image_process@@No
-VALUE@@b_out@@OUTPUT@@7@@0@@-@@image_process@@No
+VALUE@@i_clk_top@@INPUT@@0@@0@@-@@top_ppm@@No
+VALUE@@i_reset_n_top@@INPUT@@0@@0@@-@@top_ppm@@No
+VALUE@@i_sel_top@@INPUT@@3@@0@@-@@top_ppm@@No
+VALUE@@o_ppm_top@@OUTPUT@@0@@0@@-@@top_ppm@@No

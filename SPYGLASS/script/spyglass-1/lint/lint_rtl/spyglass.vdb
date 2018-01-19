@@ -1,9 +1,9 @@
 ##spyglass_version: 5.6.0
-##date: Thu Jan 18 12:05:09 2018
+##date: Fri Jan 19 21:53:39 2018
 ##user: xph3app602
 ##cwd: /tp/xph3app/xph3app602/projet_drone/SPYGLASS/script
 ##lang: verilog+vhdl
-##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_rtl' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='badimplicitSM1,badimplicitSM2,badimplicitSM4,BlockHeader,bothedges,STARC05-2.1.6.5,STARC05-2.3.1.2c,W421,W442a,W442b,W442c,W442f,sim_race02,W110a,W416,CheckDelayTimescale-ML,PragmaComments-ML,STARC05-2.10.2.3,STARC05-2.11.3.1,STARC05-2.3.1.5b,W215,W216,W289,W292,W293,W317,W352,W398,W422,W424,W426,W467,W480,W481a,W481b,W496a,W496b,W71,DuplicateCaseLabel-ML,NoAssignX-ML,NoXInCase-ML,ParamWidthMismatch-ML,ReportPortInfo-ML,STARC05-2.1.3.1,STARC05-2.1.5.3,STARC05-2.2.3.3,STARC05-2.3.1.6,W110,W116,W122,W123,W19,W218,W240,W263,W337,W362,W486,W499,W502,W505,W66,InferLatch,RegInputOutput-ML,STARC05-2.3.4.1v,STARC05-2.5.1.7,STARC05-2.5.1.9,W336,W414,W450L,UndrivenInTerm-ML,BufClock,checkPinConnectedToSupply,CombLoop,FlopClockConstant,FlopEConst,FlopSRConst,LatchFeedback,STARC05-1.2.1.2,STARC05-1.3.1.3,STARC05-1.4.3.4,STARC05-2.1.4.5,STARC05-2.4.1.5,STARC05-2.5.1.2,W392,W415' -policy='openmore,starc,starc2005,erc,simulation,lint,latch,spyglass,morelint,timing' --goal_info 'lint/lint_rtl@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_rtl' -overloadrules 'STARC05-2.1.6.5+severity=Warning,STARC05-2.3.1.2c+severity=Error,W421+severity=Error,sim_race02+severity=Warning,W416+severity=Error,PragmaComments-ML+severity=Data,STARC05-2.10.2.3+severity=Warning,STARC05-2.11.3.1+severity=Warning,STARC05-2.3.1.5b+severity=Error,W289+severity=Error,W293+severity=Error,W352+severity=Error,W398+severity=Error,W422+severity=Error,W71+severity=Error,ParamWidthMismatch-ML+severity=Warning,ReportPortInfo-ML+severity=Data,STARC05-2.1.3.1+severity=Warning,STARC05-2.1.5.3+severity=Warning,STARC05-2.2.3.3+severity=Warning,STARC05-2.3.1.6+severity=Warning,W110+severity=Error,W122+severity=Error,W123+severity=Error,W19+severity=Error,W218+severity=Error,W505+severity=Error,W66+severity=Error,InferLatch+severity=Error,RegInputOutput-ML+severity=Data,STARC05-2.3.4.1v+severity=Warning,STARC05-2.5.1.7+severity=Warning,STARC05-2.5.1.9+severity=Warning,W336+severity=Error,W414+severity=Error,W450L+severity=Warning,UndrivenInTerm-ML+severity=Error,BufClock+severity=Warning,checkPinConnectedToSupply+severity=Error,CombLoop+msgLabel=CombLoop+severity=Error,FlopClockConstant+msgLabel=FlopClockConstant+severity=Error,LatchFeedback+severity=Error,STARC05-1.2.1.2+severity=Error,STARC05-1.3.1.3+severity=Warning,STARC05-1.4.3.4+severity=Warning,STARC05-2.1.4.5+severity=Warning,STARC05-2.4.1.5+severity=Error,W415+msgLabel=W415+severity=Error' -enable_save_restore -enable_save_restore_builtin 'true' -assume_driver_load=yes -checkInHierarchy=yes -checkRTLCInst=yes -checkalldimension=yes -checkconstassign=yes -chkTopModule=yes -enableE2Q=yes -ignoreModuleInstance=yes -new_flow_width=yes -nocheckoverflow=yes -report_inferred_cell=yes -reportundrivenout=no -strict=W342,W343 -treat_latch_as_combinational=yes -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd'
+##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_rtl' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='badimplicitSM1,badimplicitSM2,badimplicitSM4,BlockHeader,bothedges,STARC05-2.1.6.5,STARC05-2.3.1.2c,W421,W442a,W442b,W442c,W442f,sim_race02,W110a,W416,CheckDelayTimescale-ML,PragmaComments-ML,STARC05-2.10.2.3,STARC05-2.11.3.1,STARC05-2.3.1.5b,W215,W216,W289,W292,W293,W317,W352,W398,W422,W424,W426,W467,W480,W481a,W481b,W496a,W496b,W71,DuplicateCaseLabel-ML,NoAssignX-ML,NoXInCase-ML,ParamWidthMismatch-ML,ReportPortInfo-ML,STARC05-2.1.3.1,STARC05-2.1.5.3,STARC05-2.2.3.3,STARC05-2.3.1.6,W110,W116,W122,W123,W19,W218,W240,W263,W337,W362,W486,W499,W502,W505,W66,InferLatch,RegInputOutput-ML,STARC05-2.3.4.1v,STARC05-2.5.1.7,STARC05-2.5.1.9,W336,W414,W450L,UndrivenInTerm-ML,BufClock,checkPinConnectedToSupply,CombLoop,FlopClockConstant,FlopEConst,FlopSRConst,LatchFeedback,STARC05-1.2.1.2,STARC05-1.3.1.3,STARC05-1.4.3.4,STARC05-2.1.4.5,STARC05-2.4.1.5,STARC05-2.5.1.2,W392,W415' -policy='openmore,starc,starc2005,erc,simulation,lint,latch,spyglass,morelint,timing' --goal_info 'lint/lint_rtl@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_rtl' -overloadrules 'STARC05-2.1.6.5+severity=Warning,STARC05-2.3.1.2c+severity=Error,W421+severity=Error,sim_race02+severity=Warning,W416+severity=Error,PragmaComments-ML+severity=Data,STARC05-2.10.2.3+severity=Warning,STARC05-2.11.3.1+severity=Warning,STARC05-2.3.1.5b+severity=Error,W289+severity=Error,W293+severity=Error,W352+severity=Error,W398+severity=Error,W422+severity=Error,W71+severity=Error,ParamWidthMismatch-ML+severity=Warning,ReportPortInfo-ML+severity=Data,STARC05-2.1.3.1+severity=Warning,STARC05-2.1.5.3+severity=Warning,STARC05-2.2.3.3+severity=Warning,STARC05-2.3.1.6+severity=Warning,W110+severity=Error,W122+severity=Error,W123+severity=Error,W19+severity=Error,W218+severity=Error,W505+severity=Error,W66+severity=Error,InferLatch+severity=Error,RegInputOutput-ML+severity=Data,STARC05-2.3.4.1v+severity=Warning,STARC05-2.5.1.7+severity=Warning,STARC05-2.5.1.9+severity=Warning,W336+severity=Error,W414+severity=Error,W450L+severity=Warning,UndrivenInTerm-ML+severity=Error,BufClock+severity=Warning,checkPinConnectedToSupply+severity=Error,CombLoop+msgLabel=CombLoop+severity=Error,FlopClockConstant+msgLabel=FlopClockConstant+severity=Error,LatchFeedback+severity=Error,STARC05-1.2.1.2+severity=Error,STARC05-1.3.1.3+severity=Warning,STARC05-1.4.3.4+severity=Warning,STARC05-2.1.4.5+severity=Warning,STARC05-2.4.1.5+severity=Error,W415+msgLabel=W415+severity=Error' -enable_save_restore -enable_save_restore_builtin 'true' -assume_driver_load=yes -checkInHierarchy=yes -checkRTLCInst=yes -checkalldimension=yes -checkconstassign=yes -chkTopModule=yes -enableE2Q=yes -ignoreModuleInstance=yes -new_flow_width=yes -nocheckoverflow=yes -report_inferred_cell=yes -reportundrivenout=no -strict=W342,W343 -treat_latch_as_combinational=yes -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd /tp/xph3app/xph3app602/projet_drone/VHD/decoder.vhd /tp/xph3app/xph3app602/projet_drone/VHD/top_ppm.vhd'
 ##verbosity level: 2
 ##spysch_dirname: ./spyglass-1/lint/lint_rtl/spyglass_spysch
 ##vdb_delimiter: @@
@@ -1259,145 +1259,59 @@
 ElabSummary@@ElabSummary@@Info@@./spyglass-1/lint/lint_rtl/spyglass_reports/SpyGlass/elab_summary.rpt@@0@@1@@2@@Please refer file './spyglass-1/lint/lint_rtl/spyglass_reports/SpyGlass/elab_summary.rpt' for elab summary report
 ##sde_property: msg_label DEFAULT
 ##sde_property: msg_id DEFAULT
-##files_vhdl: ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd
-##sde_property: file /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd -id 1 -inactiveList slc 1 2 0 slc 22 22 47 slc 68 70 0 slc 72 72 43 slc 75 75 55 slc 78 78 46 slc 81 81 46 slc 83 84 0 slc 86 86 46 slc 89 91 0 slc 93 93 9 slc 94 95 0 slc 108 111 0 slc 120 122 0
-##sde_property: file /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd -id 2 -inactiveList slc 16 16 47 slc 32 34 0 slc 36 36 0 slc 38 38 0 slc 40 40 0 slc 42 42 0 slc 44 44 0 slc 46 46 0 slc 48 48 0 slc 50 50 0 slc 60 62 0 slc 68 68 23 slc 78 78 6 slc 98 100 0 slc 119 119 16 slc 132 132 25 slc 145 145 23 slc 157 159 0 slc 164 164 0 slc 167 168 0 slc 182 182 0 slc 185 185 0 slc 200 200 0 slc 249 250 0 slc 254 257 0 slc 264 266 0 slc 268 276 0
-#span WORK.position.det ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd 8 28 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd 1 28 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd 30 284
-#rtl_idmap WORK.position 1 -lang 2
-#rtl_idmap WORK.position.det 2 -entityid 1
-#span WORK.image_process.rtl ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd 11 31 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd 1 31 ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd 33 127
-#rtl_idmap WORK.image_process 3 -lang 2
-#rtl_idmap WORK.image_process.rtl 4 -entityid 3
-#greybox WORK.position.det 15
-#greybox WORK.image_process.rtl 15
-DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@33@@34@@2@@Architecture image_process.rtl is a top level design unit
+##files_vhdl: ../../VHD/top_ppm.vhd ../../VHD/decoder.vhd ../../VHD/send_ppm.vhd ../../VHD/local_counter.vhd ../../VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd
+##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd -id 1 -precompiled=LIB_VHD -inactiveList slc 3 4 0 slc 3 4 0 slc 10 10 49 slc 10 10 49 slc 12 12 80 slc 12 12 80 slc 13 13 107 slc 13 13 107 slc 14 15 0 slc 14 15 0 slc 16 16 111 slc 16 16 111 slc 17 18 113 slc 17 18 113 slc 19 19 107 slc 19 19 107 slc 21 21 114 slc 21 21 114 slc 23 23 114 slc 23 23 114 slc 25 25 110 slc 25 25 110 slc 27 27 110 slc 27 27 110
+##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd -id 2 -inactiveList slc 13 13 74
+##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd -id 3 -inactiveList slc 3 3 0 slc 17 17 0 slc 26 30 0 slc 37 47 0 slc 51 51 0 slc 54 54 0 slc 57 57 0 slc 61 61 0 slc 64 65 0 slc 68 68 0 slc 81 81 0 slc 85 85 0 slc 95 95 0 slc 99 102 0 slc 111 112 0 slc 129 130 0 slc 132 136 0 slc 139 139 0 slc 143 146 0 slc 150 150 0 slc 155 155 27 slc 170 170 26 slc 183 183 149 slc 192 192 0 slc 195 195 0 slc 213 213 0 slc 234 234 0 slc 236 236 0 slc 240 240 0 slc 250 250 0
+##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/decoder.vhd -id 4 -inactiveList slc 3 3 0 slc 22 25 0
+##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/top_ppm.vhd -id 5 -inactiveList slc 17 22 0 slc 28 28 0 slc 30 42 0 slc 62 64 0 slc 66 66 0 slc 70 83 0
+#span WORK.constants_package ../../VHD/constants.vhd 8 30 ../../VHD/constants.vhd 1 30
+#rtl_idmap WORK.constants_package 1 -lang 2 -type pack
+#span LIB_VHD.constants_package /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 8 30 /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 1 30
+#rtl_idmap LIB_VHD.constants_package 2 -lang 2 -type pack
+#span WORK.top_ppm.rtl ../../VHD/top_ppm.vhd 10 24 ../../VHD/top_ppm.vhd 1 24 ../../VHD/top_ppm.vhd 26 98
+#rtl_idmap WORK.top_ppm 3 -lang 2
+#rtl_idmap WORK.top_ppm.rtl 4 -entityid 3
+#span WORK.decoder.rtl ../../VHD/decoder.vhd 11 18 ../../VHD/decoder.vhd 1 18 ../../VHD/decoder.vhd 20 43
+#rtl_idmap WORK.decoder 5 -lang 2
+#rtl_idmap WORK.decoder.rtl 6 -entityid 5
+#span WORK.send_ppm.rtl ../../VHD/send_ppm.vhd 12 22 ../../VHD/send_ppm.vhd 1 22 ../../VHD/send_ppm.vhd 24 257
+#rtl_idmap WORK.send_ppm 7 -lang 2
+#rtl_idmap WORK.send_ppm.rtl 8 -entityid 7 -dep_ids 1 2
+#span WORK.local_counter.b ../../VHD/local_counter.vhd 9 14 ../../VHD/local_counter.vhd 1 14 ../../VHD/local_counter.vhd 16 41
+#rtl_idmap WORK.local_counter 9 -lang 2 -dep_ids 1 2
+#rtl_idmap WORK.local_counter.b 10 -entityid 9 -dep_ids 1 2
+#greybox WORK.top_ppm.rtl 15
+#greybox WORK.decoder.rtl 15
+#greybox WORK.send_ppm.rtl 15
+#greybox WORK.local_counter.b 15
+DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@../../VHD/top_ppm.vhd@@26@@28@@2@@Architecture top_ppm.rtl is a top level design unit
 ##sde_property: violation -duId 4 
-DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@30@@29@@2@@Architecture position.det is a top level design unit
-##sde_property: violation -duId 2 
-#rtl_top_modules image_process position
-HdlLibDuCheck_03@@HdlLibDuCheck_03@@Info@@N.A.@@0@@1@@10@@No need to set option 'hdllibdu' since no precompiled design unit is being used in current run
-##sde_property: msg_label DEFAULT
-##sde_property: msg_id DEFAULT
+#rtl_top_modules top_ppm
 ReportPortInfo-ML@@@@Data@@./spyglass-1/lint/lint_rtl/spyglass_reports/morelint/ReportPortInfo@@1@@1@@2@@Port Information for top design unit has been generated. For details see report ReportPortInfo.rpt
 ##sde_property: violation -elabDuId 2 
-W240@@@@Warning@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@18@@2@@2@@Not all the elements of in port 'VGA_HS' are read. [Hierarchy: ':image_process(rtl):']
-##sde_property: violation -ruleLang 2 -duId 3 -elabDuId 1 
-##sde_property: msg_label vhLintArray_Viol_Msg
-##sde_property: msg_id vhLintArray_Viol_Msg
-W240@@@@Warning@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@19@@2@@2@@Not all the elements of in port 'VGA_VS' are read. [Hierarchy: ':image_process(rtl):']
-##sde_property: violation -ruleLang 2 -duId 3 -elabDuId 1 
-##sde_property: msg_label vhLintArray_Viol_Msg
-##sde_property: msg_id vhLintArray_Viol_Msg
-#top_modules image_process position
+#top_modules top_ppm
 #bbox_modules
-#child image_process WORK.image_process.rtl WORK.image_process.rtl -elabDuId 1
-#child position WORK.position.det WORK.position.det -elabDuId 2
+#child local_counter WORK.local_counter.b WORK.local_counter.b -elabDuId 4
+#child send_ppm WORK.send_ppm.rtl WORK.send_ppm.rtl -elabDuId 3 local_counter1 local_counter
+#child decoder WORK.decoder.rtl WORK.decoder.rtl -elabDuId 2
+#child top_ppm WORK.top_ppm.rtl WORK.top_ppm.rtl -elabDuId 1 decoder1 decoder send_ppm1 send_ppm
 #precompiled_dulist
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@51@@1@@10@@Port 'IMG' is not registered [Hierarchy: 'image_process']@@0
+RegInputOutput-ML@@@@Data@@../../VHD/local_counter.vhd@@34@@1@@10@@Port 'i_reset_n_top' is not registered [Hierarchy: 'top_ppm']@@0
 ##continue: S.1
 ##sde_property: container S.1 -rtlpath 4 -nonprob
-##sde_property: violation -duId 4 -elabDuId 1 
+##sde_property: violation -duId 10 -elabDuId 1 
 ##sde_property: msg_label RegInputOutput-ML
 ##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@49@@1@@10@@Port 'reset' is not registered [Hierarchy: 'image_process']@@0
+RegInputOutput-ML@@@@Data@@../../VHD/decoder.vhd@@34@@1@@10@@Port 'i_sel_top[3:0]' is not registered [Hierarchy: 'top_ppm']@@0
 ##continue: S.2
-##sde_property: container S.2 -rtlpath 4 -nonprob
-##sde_property: violation -duId 4 -elabDuId 1 
+##sde_property: container S.2 -rtlpath 4 
+##sde_property: violation -duId 6 -elabDuId 1 -type 1WBusMerge -mergeStr1 i_sel_top -mergeRange1 3:0 -completeRange1 3:0  
 ##sde_property: msg_label RegInputOutput-ML
 ##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@114@@1@@10@@Port 'SW1' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.3
-##sde_property: container S.3 -rtlpath 4 -nonprob
-##sde_property: violation -duId 4 -elabDuId 1 
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@18@@1@@10@@Port 'VGA_HS' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.4
-##sde_property: container S.4 -rtlpath 4 -nonprob
-##sde_property: violation -duId 3 -elabDuId 1 
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@19@@1@@10@@Port 'VGA_VS' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.5
-##sde_property: container S.5 -rtlpath 4 -nonprob
-##sde_property: violation -duId 3 -elabDuId 1 
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@49@@1@@10@@Port 'b[7:0]' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.10
-##sde_property: container S.10 -rtlpath 4 
-##sde_property: violation -duId 4 -elabDuId 1 -type 1WBusMerge -mergeStr1 b -mergeRange1 7:0 -completeRange1 7:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@49@@1@@10@@Port 'g[7:0]' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.9
-##sde_property: container S.9 -rtlpath 4 
-##sde_property: violation -duId 4 -elabDuId 1 -type 1WBusMerge -mergeStr1 g -mergeRange1 7:0 -completeRange1 7:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@49@@1@@10@@Port 'r[7:0]' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.8
-##sde_property: container S.8 -rtlpath 4 
-##sde_property: violation -duId 4 -elabDuId 1 -type 1WBusMerge -mergeStr1 r -mergeRange1 7:0 -completeRange1 7:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@77@@1@@10@@Port 'Y_Cont[8:0]' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.7
-##sde_property: container S.7 -rtlpath 4 
-##sde_property: violation -duId 4 -elabDuId 1 -type 1WBusMerge -mergeStr1 Y_Cont -mergeRange1 8:0 -completeRange1 8:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd@@80@@1@@10@@Port 'X_Cont[8:0]' is not registered [Hierarchy: 'image_process']@@0
-##continue: S.6
-##sde_property: container S.6 -rtlpath 4 
-##sde_property: violation -duId 4 -elabDuId 1 -type 1WBusMerge -mergeStr1 X_Cont -mergeRange1 8:0 -completeRange1 8:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@79@@1@@10@@Port 'n_reset' is not registered [Hierarchy: 'position']@@0
-##continue: S.11
-##sde_property: container S.11 -rtlpath 2 -nonprob
-##sde_property: violation -duId 2 -elabDuId 2 
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@165@@1@@10@@Port 'IMG' is not registered [Hierarchy: 'position']@@0
-##continue: S.12
-##sde_property: container S.12 -rtlpath 2 -nonprob
-##sde_property: violation -duId 2 -elabDuId 2 
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@81@@1@@10@@Port 'b_proc[7:0]' is not registered [Hierarchy: 'position']@@0
-##continue: S.17
-##sde_property: container S.17 -rtlpath 2 
-##sde_property: violation -duId 2 -elabDuId 2 -type 1WBusMerge -mergeStr1 b_proc -mergeRange1 7:0 -completeRange1 7:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@80@@1@@10@@Port 'g_proc[7:0]' is not registered [Hierarchy: 'position']@@0
-##continue: S.16
-##sde_property: container S.16 -rtlpath 2 
-##sde_property: violation -duId 2 -elabDuId 2 -type 1WBusMerge -mergeStr1 g_proc -mergeRange1 7:0 -completeRange1 7:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@79@@1@@10@@Port 'r_proc[7:0]' is not registered [Hierarchy: 'position']@@0
-##continue: S.15
-##sde_property: container S.15 -rtlpath 2 
-##sde_property: violation -duId 2 -elabDuId 2 -type 1WBusMerge -mergeStr1 r_proc -mergeRange1 7:0 -completeRange1 7:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@189@@1@@10@@Port 'Y_Cont[8:0]' is not registered [Hierarchy: 'position']@@0
-##continue: S.14
-##sde_property: container S.14 -rtlpath 2 
-##sde_property: violation -duId 2 -elabDuId 2 -type 1WBusMerge -mergeStr1 Y_Cont -mergeRange1 8:0 -completeRange1 8:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd@@188@@1@@10@@Port 'X_Cont[8:0]' is not registered [Hierarchy: 'position']@@0
-##continue: S.13
-##sde_property: container S.13 -rtlpath 2 
-##sde_property: violation -duId 2 -elabDuId 2 -type 1WBusMerge -mergeStr1 X_Cont -mergeRange1 8:0 -completeRange1 8:0  
-##sde_property: msg_label RegInputOutput-ML
-##sde_property: msg_id RegInputOutput-ML
-##totalGeneratedCount:         6
+##totalGeneratedCount:         2
 ##totalWaivedViolationCount:         0
-##totalReportCount:         6
-##totalDataSeverityCount:        18
+##totalReportCount:         2
+##totalDataSeverityCount:         3
 ##totalSuppressedCount:         0
 ##Active_Rules  BlockHeader BufClock CheckDelayTimescale-ML CombLoop DuplicateCaseLabel-ML LatchFeedback NoAssignX-ML NoXInCase-ML ParamWidthMismatch-ML STARC05-1.2.1.2 STARC05-1.3.1.3 STARC05-2.1.3.1 STARC05-2.1.4.5 STARC05-2.1.5.3 STARC05-2.1.6.5 STARC05-2.10.2.3 STARC05-2.11.3.1 STARC05-2.2.3.3 STARC05-2.3.1.2c STARC05-2.3.1.5b STARC05-2.3.1.6 STARC05-2.3.4.1v STARC05-2.4.1.5 STARC05-2.5.1.2 STARC05-2.5.1.7 STARC05-2.5.1.9 UndrivenInTerm-ML W110 W110a W116 W122 W123 W19 W215 W216 W218 W240 W263 W289 W292 W293 W317 W336 W337 W352 W362 W392 W398 W414 W415 W416 W421 W422 W424 W426 W442a W442b W442c W442f W450L W467 W480 W481a W481b W486 W496a W496b W499 W502 W505 W66 W71 badimplicitSM1 badimplicitSM2 badimplicitSM4 bothedges sim_race02

@@ -1,29 +1,5 @@
 Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
-position,Top_Level,n_reset,INPUT,1,-,port definition,- 
-position,Top_Level,VGA_CLK,INPUT,1,-,port definition,- 
-position,Top_Level,IMG,INPUT,1,-,port definition,- 
-position,Top_Level,X_Cont,INPUT,9,(8:0),port definition,- 
-position,Top_Level,Y_Cont,INPUT,9,(8:0),port definition,image 512 x 512  
-position,Top_Level,r_proc,INPUT,8,(7:0),port definition,- 
-position,Top_Level,g_proc,INPUT,8,(7:0),port definition,- 
-position,Top_Level,b_proc,INPUT,8,(7:0),port definition,- 
-position,Top_Level,r_bout,OUTPUT,8,(7:0),port definition,- 
-position,Top_Level,g_bout,OUTPUT,8,(7:0),port definition,- 
-position,Top_Level,b_bout,OUTPUT,8,(7:0),port definition,- 
-position,Top_Level,X_barycentre,OUTPUT,9,(8:0),port definition,- 
-position,Top_Level,Y_barycentre,OUTPUT,9,(8:0),port definition,- 
-Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
-image_process,Top_Level,IMG,INPUT,1,-,port definition,- 
-image_process,Top_Level,reset,INPUT,1,-,port definition,- 
-image_process,Top_Level,SW1,INPUT,1,-,port definition,- 
-image_process,Top_Level,VGA_HS,INPUT,1,-,port definition,- 
-image_process,Top_Level,VGA_VS,INPUT,1,-,port definition,- 
-image_process,Top_Level,VGA_CLK,INPUT,1,-,port definition,- 
-image_process,Top_Level,X_Cont,INPUT,9,(8:0),port definition,- 
-image_process,Top_Level,Y_Cont,INPUT,9,(8:0),port definition,image 512 x 512 
-image_process,Top_Level,r,INPUT,8,(7:0),port definition,- 
-image_process,Top_Level,g,INPUT,8,(7:0),port definition,- 
-image_process,Top_Level,b,INPUT,8,(7:0),port definition,- 
-image_process,Top_Level,r_out,OUTPUT,8,(7:0),port definition,- 
-image_process,Top_Level,g_out,OUTPUT,8,(7:0),port definition,- 
-image_process,Top_Level,b_out,OUTPUT,8,(7:0),port definition,- 
+top_ppm,Top_Level,i_clk_top,INPUT,1,-,port definition,- 
+top_ppm,Top_Level,i_reset_n_top,INPUT,1,-,port definition,- 
+top_ppm,Top_Level,i_sel_top,INPUT,4,(3:0),port definition,- 
+top_ppm,Top_Level,o_ppm_top,OUTPUT,1,-,port definition,- 

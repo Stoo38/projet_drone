@@ -19,7 +19,7 @@ Option          Value             Origin  File                           LineNo
                 LIB_VHD=>./../libs/LIB_VHD CmdLine -                              -
                 WORK=>./spyglass-1/WORK CmdLine -                              -
                 SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
--libhdlfiles    LIB_VHD=>"../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd" CmdLine -                              -
+-libhdlfiles    LIB_VHD=>"../../VHD/constants.vhd ../../VHD/local_counter.vhd ../../VHD/send_ppm.vhd ../../VHD/decoder.vhd ../../VHD/top_ppm.vhd" CmdLine -                              -
 -mixed          <ON>              CmdLine -                              -
 -nl             <ON>              CmdLine -                              -
 -policy         none              CmdFile $SPYGLASS_HOME/auxi/policy_data/spyglass/design_read/Design_Read-mixed.spq 1
@@ -29,8 +29,11 @@ Option          Value             Origin  File                           LineNo
 -template       Design_Read       CmdLine -                              -
 -templatedir    /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/policy_data/spyglass/design_read CmdLine -                              -
 -wdir           ./spyglass-1/Design_Read CmdLine -                              -
-<design_files>  ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd APICall -                              -
-                ../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd APICall -                              -
+<design_files>  ../../VHD/constants.vhd APICall -                              -
+                ../../VHD/decoder.vhd APICall -                              -
+                ../../VHD/local_counter.vhd APICall -                              -
+                ../../VHD/send_ppm.vhd APICall -                              -
+                ../../VHD/top_ppm.vhd APICall -                              -
 
 
 Rules Parameter
