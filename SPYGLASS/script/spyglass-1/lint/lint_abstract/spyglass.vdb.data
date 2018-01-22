@@ -1,9 +1,9 @@
 ##spyglass_version: 5.6.0
-##date: Fri Jan 19 21:53:48 2018
+##date: Mon Jan 22 11:31:17 2018
 ##user: xph3app602
 ##cwd: /tp/xph3app/xph3app602/projet_drone/SPYGLASS/script
 ##lang: verilog+vhdl
-##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_abstract' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='LINT_abstract01' -policy='lint' --goal_info 'lint/lint_abstract@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_abstract' -enable_save_restore -enable_save_restore_builtin 'true' -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd /tp/xph3app/xph3app602/projet_drone/VHD/decoder.vhd /tp/xph3app/xph3app602/projet_drone/VHD/top_ppm.vhd'
+##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_abstract' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='LINT_abstract01' -policy='lint' --goal_info 'lint/lint_abstract@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_abstract' -enable_save_restore -enable_save_restore_builtin 'true' -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd /tp/xph3app/xph3app602/projet_drone/VHD/decoder.vhd'
 ##spysch_dirname: ./spyglass-1/lint/lint_abstract/spyglass_spysch
 ##vdb_delimiter: @@
 ##run_mode: SINGLE_WORKSPACE
@@ -12,43 +12,37 @@
 ##sde_property: rule DetectTopDesignUnits -policy SpyGlass -highProfile
 ##sde_property: rule AnalyzeBBox -policy SpyGlass -highProfile
 ##file_label: SPG_ELAB_SUMMARY_FILE -file ./spyglass-1/lint/lint_abstract/spyglass_reports/SpyGlass/elab_summary.rpt -policy SpyGlass -external
-#top_modules top_ppm
+#top_modules send_ppm decoder
 #bbox_modules
-##files_vhdl: ../../VHD/top_ppm.vhd ../../VHD/decoder.vhd ../../VHD/send_ppm.vhd ../../VHD/local_counter.vhd ../../VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd
+##files_vhdl: ../../VHD/decoder.vhd ../../VHD/send_ppm.vhd ../../VHD/local_counter.vhd ../../VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd
 ##sde_property: file ../../VHD/constants.vhd -id 1 -precompiled=LIB_VHD -inactiveList slc 3 4 0 slc 3 4 0 slc 10 10 49 slc 10 10 49 slc 12 12 80 slc 12 12 80 slc 13 13 107 slc 13 13 107 slc 14 15 0 slc 14 15 0 slc 16 16 111 slc 16 16 111 slc 17 18 113 slc 17 18 113 slc 19 19 107 slc 19 19 107 slc 21 21 114 slc 21 21 114 slc 23 23 114 slc 23 23 114 slc 25 25 110 slc 25 25 110 slc 27 27 110 slc 27 27 110
 ##sde_property: file ../../VHD/local_counter.vhd -id 2 -inactiveList slc 13 13 74
 ##sde_property: file ../../VHD/send_ppm.vhd -id 3 -inactiveList slc 3 3 0 slc 17 17 0 slc 26 30 0 slc 37 47 0 slc 51 51 0 slc 54 54 0 slc 57 57 0 slc 61 61 0 slc 64 65 0 slc 68 68 0 slc 81 81 0 slc 85 85 0 slc 95 95 0 slc 99 102 0 slc 111 112 0 slc 129 130 0 slc 132 136 0 slc 139 139 0 slc 143 146 0 slc 150 150 0 slc 155 155 27 slc 170 170 26 slc 183 183 149 slc 192 192 0 slc 195 195 0 slc 213 213 0 slc 234 234 0 slc 236 236 0 slc 240 240 0 slc 250 250 0
 ##sde_property: file ../../VHD/decoder.vhd -id 4 -inactiveList slc 3 3 0 slc 22 25 0
-##sde_property: file ../../VHD/top_ppm.vhd -id 5 -inactiveList slc 17 22 0 slc 28 28 0 slc 30 42 0 slc 62 64 0 slc 66 66 0 slc 70 83 0
 #span WORK.constants_package ../../VHD/constants.vhd 8 30 ../../VHD/constants.vhd 1 30
 #rtl_idmap WORK.constants_package 1 -lang 2 -type pack
 #span LIB_VHD.constants_package /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 8 30 /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 1 30
 #rtl_idmap LIB_VHD.constants_package 2 -lang 2 -type pack
-#span WORK.top_ppm.rtl ../../VHD/top_ppm.vhd 10 24 ../../VHD/top_ppm.vhd 1 24 ../../VHD/top_ppm.vhd 26 98
-#rtl_idmap WORK.top_ppm 3 -lang 2
-#rtl_idmap WORK.top_ppm.rtl 4 -entityid 3
 #span WORK.decoder.rtl ../../VHD/decoder.vhd 11 18 ../../VHD/decoder.vhd 1 18 ../../VHD/decoder.vhd 20 43
-#rtl_idmap WORK.decoder 5 -lang 2
-#rtl_idmap WORK.decoder.rtl 6 -entityid 5
+#rtl_idmap WORK.decoder 3 -lang 2
+#rtl_idmap WORK.decoder.rtl 4 -entityid 3
 #span WORK.send_ppm.rtl ../../VHD/send_ppm.vhd 12 22 ../../VHD/send_ppm.vhd 1 22 ../../VHD/send_ppm.vhd 24 257
-#rtl_idmap WORK.send_ppm 7 -lang 2
-#rtl_idmap WORK.send_ppm.rtl 8 -entityid 7 -dep_ids 1 2
+#rtl_idmap WORK.send_ppm 5 -lang 2
+#rtl_idmap WORK.send_ppm.rtl 6 -entityid 5 -dep_ids 1 2
 #span WORK.local_counter.b ../../VHD/local_counter.vhd 9 14 ../../VHD/local_counter.vhd 1 14 ../../VHD/local_counter.vhd 16 41
-#rtl_idmap WORK.local_counter 9 -lang 2 -dep_ids 1 2
-#rtl_idmap WORK.local_counter.b 10 -entityid 9 -dep_ids 1 2
-#greybox WORK.top_ppm.rtl 15
+#rtl_idmap WORK.local_counter 7 -lang 2 -dep_ids 1 2
+#rtl_idmap WORK.local_counter.b 8 -entityid 7 -dep_ids 1 2
 #greybox WORK.decoder.rtl 15
 #greybox WORK.send_ppm.rtl 15
 #greybox WORK.local_counter.b 15
-#child local_counter WORK.local_counter.b WORK.local_counter.b -elabDuId 4
-#child send_ppm WORK.send_ppm.rtl WORK.send_ppm.rtl -elabDuId 3 local_counter1 local_counter
-#child decoder WORK.decoder.rtl WORK.decoder.rtl -elabDuId 2
-#child top_ppm WORK.top_ppm.rtl WORK.top_ppm.rtl -elabDuId 1 decoder1 decoder send_ppm1 send_ppm
-#rtl_top_modules top_ppm
-##sde_property: file ./spyglass-1/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver.swl -id 8
-##sde_property: file pragma2Waiver_varfile.swl -id 9
-##totalGeneratedCount:         3
+#child local_counter WORK.local_counter.b WORK.local_counter.b -elabDuId 2
+#child send_ppm WORK.send_ppm.rtl WORK.send_ppm.rtl -elabDuId 1 local_counter1 local_counter
+#child decoder WORK.decoder.rtl WORK.decoder.rtl -elabDuId 3
+#rtl_top_modules send_ppm decoder
+##sde_property: file ./spyglass-1/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver.swl -id 7
+##sde_property: file pragma2Waiver_varfile.swl -id 8
+##totalGeneratedCount:         5
 ##totalWaivedViolationCount:         0
-##totalReportCount:         3
+##totalReportCount:         5
 ##totalSuppressedCount:         0
 ##Active_Rules  LINT_abstract01

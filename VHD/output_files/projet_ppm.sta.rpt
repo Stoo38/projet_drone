@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for projet_ppm
-Fri Jan 19 17:37:17 2018
+Mon Jan 22 10:59:36 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -124,12 +124,12 @@ agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.09        ;
+; Average used               ; 1.18        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   9.1%      ;
+;     Processor 2            ;  18.2%      ;
 +----------------------------+-------------+
 
 
@@ -139,16 +139,17 @@ agreement for further details.
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
 ; i_clk_top  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_clk_top } ;
+; sig_clk25  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sig_clk25 } ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
 
 
-+------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary             ;
-+----------+-----------------+------------+------+
-; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
-+----------+-----------------+------------+------+
-; 64.0 MHz ; 64.0 MHz        ; i_clk_top  ;      ;
-+----------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 61.81 MHz ; 61.81 MHz       ; sig_clk25  ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -163,17 +164,19 @@ HTML report is unavailable in plain text report export.
 +-----------+---------+---------------+
 ; Clock     ; Slack   ; End Point TNS ;
 +-----------+---------+---------------+
-; i_clk_top ; -14.624 ; -381.433      ;
+; sig_clk25 ; -15.178 ; -405.756      ;
+; i_clk_top ; -1.580  ; -1.580        ;
 +-----------+---------+---------------+
 
 
 +------------------------------------+
 ; Slow 1100mV 85C Model Hold Summary ;
-+-----------+-------+----------------+
-; Clock     ; Slack ; End Point TNS  ;
-+-----------+-------+----------------+
-; i_clk_top ; 0.375 ; 0.000          ;
-+-----------+-------+----------------+
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; i_clk_top ; -0.105 ; -0.105        ;
+; sig_clk25 ; 0.572  ; 0.000         ;
++-----------+--------+---------------+
 
 
 ------------------------------------------
@@ -193,7 +196,8 @@ No paths to report.
 +-----------+--------+------------------------------+
 ; Clock     ; Slack  ; End Point TNS                ;
 +-----------+--------+------------------------------+
-; i_clk_top ; -2.225 ; -95.212                      ;
+; sig_clk25 ; -2.225 ; -95.548                      ;
+; i_clk_top ; -0.635 ; -1.029                       ;
 +-----------+--------+------------------------------+
 
 
@@ -202,45 +206,47 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 2.022 ; 2.486 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.823 ; 1.203 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.732 ; 1.119 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.823 ; 1.203 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.580 ; 0.949 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.469 ; 0.870 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; i_clk_top  ; 2.786 ; 4.026 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; 4.287 ; 4.962 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; 4.649 ; 4.913 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; 4.253 ; 4.866 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; 4.649 ; 4.913 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; 4.412 ; 4.601 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; 3.987 ; 4.499 ; Rise       ; sig_clk25       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
-+----------------------------------------------------------------------------+
-; Hold Times                                                                 ;
-+---------------+------------+-------+--------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+--------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 0.329 ; -0.160 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.610 ; 0.262  ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.388 ; 0.062  ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.317 ; -0.002 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.555 ; 0.245  ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.610 ; 0.262  ; Rise       ; i_clk_top       ;
-+---------------+------------+-------+--------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; i_reset_n_top ; i_clk_top  ; -1.258 ; -2.192 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; -1.877 ; -2.382 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; -1.819 ; -2.085 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; -1.819 ; -2.085 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; -2.811 ; -3.362 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; -1.945 ; -2.298 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; -2.525 ; -2.930 ; Rise       ; sig_clk25       ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 10.290 ; 11.452 ; Rise       ; i_clk_top       ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_ppm_top ; sig_clk25  ; 6.824 ; 7.682 ; Rise       ; sig_clk25       ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
-+------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                          ;
-+-----------+------------+-------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+--------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 9.369 ; 10.358 ; Rise       ; i_clk_top       ;
-+-----------+------------+-------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_ppm_top ; sig_clk25  ; 6.182 ; 6.880 ; Rise       ; sig_clk25       ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------+
@@ -284,7 +290,7 @@ No synchronizer chains to report.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 62.06 MHz ; 62.06 MHz       ; i_clk_top  ;      ;
+; 60.18 MHz ; 60.18 MHz       ; sig_clk25  ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -294,17 +300,19 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+---------+---------------+
 ; Clock     ; Slack   ; End Point TNS ;
 +-----------+---------+---------------+
-; i_clk_top ; -15.113 ; -394.144      ;
+; sig_clk25 ; -15.617 ; -416.566      ;
+; i_clk_top ; -1.523  ; -1.523        ;
 +-----------+---------+---------------+
 
 
-+-----------------------------------+
-; Slow 1100mV 0C Model Hold Summary ;
-+-----------+-------+---------------+
-; Clock     ; Slack ; End Point TNS ;
-+-----------+-------+---------------+
-; i_clk_top ; 0.392 ; 0.000         ;
-+-----------+-------+---------------+
++------------------------------------+
+; Slow 1100mV 0C Model Hold Summary  ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; i_clk_top ; -0.095 ; -0.095        ;
+; sig_clk25 ; 0.560  ; 0.000         ;
++-----------+--------+---------------+
 
 
 -----------------------------------------
@@ -324,7 +332,8 @@ No paths to report.
 +-----------+--------+-----------------------------+
 ; Clock     ; Slack  ; End Point TNS               ;
 +-----------+--------+-----------------------------+
-; i_clk_top ; -2.225 ; -96.336                     ;
+; sig_clk25 ; -2.225 ; -95.199                     ;
+; i_clk_top ; -0.626 ; -1.039                      ;
 +-----------+--------+-----------------------------+
 
 
@@ -333,45 +342,47 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 1.725 ; 2.192 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.495 ; 0.897 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.373 ; 0.802 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.495 ; 0.897 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.238 ; 0.629 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.168 ; 0.589 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; i_clk_top  ; 2.680 ; 3.967 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; 4.184 ; 4.897 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; 4.428 ; 4.707 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; 4.001 ; 4.633 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; 4.428 ; 4.707 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; 4.148 ; 4.403 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; 3.759 ; 4.253 ; Rise       ; sig_clk25       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
-+---------------------------------------------------------------------------+
-; Hold Times                                                                ;
-+---------------+------------+-------+-------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+-------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 0.584 ; 0.086 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.899 ; 0.566 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.729 ; 0.379 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.620 ; 0.303 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.876 ; 0.566 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.899 ; 0.549 ; Rise       ; i_clk_top       ;
-+---------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; i_reset_n_top ; i_clk_top  ; -1.199 ; -2.159 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; -1.811 ; -2.305 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; -1.642 ; -1.934 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; -1.642 ; -1.934 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; -2.634 ; -3.184 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; -1.727 ; -2.095 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; -2.332 ; -2.706 ; Rise       ; sig_clk25       ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 10.017 ; 11.152 ; Rise       ; i_clk_top       ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_ppm_top ; sig_clk25  ; 6.444 ; 7.297 ; Rise       ; sig_clk25       ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
-+------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                          ;
-+-----------+------------+-------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+--------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 9.119 ; 10.091 ; Rise       ; i_clk_top       ;
-+-----------+------------+-------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_ppm_top ; sig_clk25  ; 5.821 ; 6.521 ; Rise       ; sig_clk25       ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------+
@@ -415,7 +426,8 @@ No synchronizer chains to report.
 +-----------+--------+----------------+
 ; Clock     ; Slack  ; End Point TNS  ;
 +-----------+--------+----------------+
-; i_clk_top ; -7.491 ; -192.893       ;
+; sig_clk25 ; -7.888 ; -210.596       ;
+; i_clk_top ; -1.313 ; -1.313         ;
 +-----------+--------+----------------+
 
 
@@ -424,7 +436,8 @@ No synchronizer chains to report.
 +-----------+-------+----------------+
 ; Clock     ; Slack ; End Point TNS  ;
 +-----------+-------+----------------+
-; i_clk_top ; 0.182 ; 0.000          ;
+; i_clk_top ; 0.225 ; 0.000          ;
+; sig_clk25 ; 0.290 ; 0.000          ;
 +-----------+-------+----------------+
 
 
@@ -445,7 +458,8 @@ No paths to report.
 +-----------+--------+------------------------------+
 ; Clock     ; Slack  ; End Point TNS                ;
 +-----------+--------+------------------------------+
-; i_clk_top ; -1.702 ; -63.887                      ;
+; sig_clk25 ; -1.702 ; -61.272                      ;
+; i_clk_top ; -0.572 ; -0.792                       ;
 +-----------+--------+------------------------------+
 
 
@@ -454,27 +468,29 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 1.129 ; 1.746 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.466 ; 1.121 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.416 ; 1.089 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.466 ; 1.121 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.318 ; 0.963 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.261 ; 0.924 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; i_clk_top  ; 1.710 ; 3.073 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; 2.392 ; 3.315 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; 2.723 ; 3.338 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; 2.304 ; 3.226 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; 2.723 ; 3.338 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; 2.487 ; 2.977 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; 2.262 ; 3.014 ; Rise       ; sig_clk25       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
-+----------------------------------------------------------------------------+
-; Hold Times                                                                 ;
-+---------------+------------+-------+--------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+--------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 0.158 ; -0.513 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.312 ; -0.285 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.197 ; -0.421 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.153 ; -0.441 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.300 ; -0.285 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.312 ; -0.308 ; Rise       ; i_clk_top       ;
-+---------------+------------+-------+--------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; i_reset_n_top ; i_clk_top  ; -0.845 ; -1.981 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; -1.046 ; -1.720 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; -0.957 ; -1.514 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; -0.957 ; -1.514 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; -1.652 ; -2.436 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; -1.050 ; -1.672 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; -1.374 ; -2.043 ; Rise       ; sig_clk25       ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
 +-----------------------------------------------------------------------+
@@ -482,7 +498,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 6.395 ; 7.474 ; Rise       ; i_clk_top       ;
+; o_ppm_top ; sig_clk25  ; 4.280 ; 5.048 ; Rise       ; sig_clk25       ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -491,7 +507,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 5.884 ; 6.827 ; Rise       ; i_clk_top       ;
+; o_ppm_top ; sig_clk25  ; 3.892 ; 4.542 ; Rise       ; sig_clk25       ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -536,7 +552,8 @@ No synchronizer chains to report.
 +-----------+--------+---------------+
 ; Clock     ; Slack  ; End Point TNS ;
 +-----------+--------+---------------+
-; i_clk_top ; -7.004 ; -180.287      ;
+; sig_clk25 ; -7.381 ; -196.409      ;
+; i_clk_top ; -1.069 ; -1.069        ;
 +-----------+--------+---------------+
 
 
@@ -545,7 +562,8 @@ No synchronizer chains to report.
 +-----------+-------+---------------+
 ; Clock     ; Slack ; End Point TNS ;
 +-----------+-------+---------------+
-; i_clk_top ; 0.173 ; 0.000         ;
+; i_clk_top ; 0.048 ; 0.000         ;
+; sig_clk25 ; 0.262 ; 0.000         ;
 +-----------+-------+---------------+
 
 
@@ -566,7 +584,8 @@ No paths to report.
 +-----------+--------+-----------------------------+
 ; Clock     ; Slack  ; End Point TNS               ;
 +-----------+--------+-----------------------------+
-; i_clk_top ; -1.702 ; -63.842                     ;
+; sig_clk25 ; -1.702 ; -61.272                     ;
+; i_clk_top ; -0.541 ; -0.740                      ;
 +-----------+--------+-----------------------------+
 
 
@@ -575,27 +594,29 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 0.917 ; 1.539 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.287 ; 0.945 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.252 ; 0.925 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.287 ; 0.945 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.135 ; 0.785 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.109 ; 0.766 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; i_clk_top  ; 1.553 ; 2.795 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; 2.244 ; 3.123 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; 2.486 ; 3.070 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; 2.111 ; 2.977 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; 2.486 ; 3.070 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; 2.226 ; 2.764 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; 2.051 ; 2.759 ; Rise       ; sig_clk25       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
-+----------------------------------------------------------------------------+
-; Hold Times                                                                 ;
-+---------------+------------+-------+--------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+--------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 0.287 ; -0.369 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.464 ; -0.124 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.342 ; -0.275 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.313 ; -0.281 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.464 ; -0.124 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.450 ; -0.158 ; Rise       ; i_clk_top       ;
-+---------------+------------+-------+--------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; i_reset_n_top ; i_clk_top  ; -0.742 ; -1.777 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; -0.985 ; -1.638 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; -0.875 ; -1.444 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; -0.875 ; -1.444 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; -1.516 ; -2.265 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; -0.921 ; -1.544 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; -1.239 ; -1.879 ; Rise       ; sig_clk25       ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
 +-----------------------------------------------------------------------+
@@ -603,7 +624,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 5.962 ; 6.817 ; Rise       ; i_clk_top       ;
+; o_ppm_top ; sig_clk25  ; 3.874 ; 4.507 ; Rise       ; sig_clk25       ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -612,7 +633,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 5.477 ; 6.223 ; Rise       ; i_clk_top       ;
+; o_ppm_top ; sig_clk25  ; 3.510 ; 4.045 ; Rise       ; sig_clk25       ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -652,16 +673,18 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                            ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -15.113  ; 0.173 ; N/A      ; N/A     ; -2.225              ;
-;  i_clk_top       ; -15.113  ; 0.173 ; N/A      ; N/A     ; -2.225              ;
-; Design-wide TNS  ; -394.144 ; 0.0   ; 0.0      ; 0.0     ; -96.336             ;
-;  i_clk_top       ; -394.144 ; 0.000 ; N/A      ; N/A     ; -96.336             ;
-+------------------+----------+-------+----------+---------+---------------------+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+----------+--------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -15.617  ; -0.105 ; N/A      ; N/A     ; -2.225              ;
+;  i_clk_top       ; -1.580   ; -0.105 ; N/A      ; N/A     ; -0.635              ;
+;  sig_clk25       ; -15.617  ; 0.262  ; N/A      ; N/A     ; -2.225              ;
+; Design-wide TNS  ; -418.089 ; -0.105 ; 0.0      ; 0.0     ; -96.577             ;
+;  i_clk_top       ; -1.580   ; -0.105 ; N/A      ; N/A     ; -1.039              ;
+;  sig_clk25       ; -416.566 ; 0.000  ; N/A      ; N/A     ; -95.548             ;
++------------------+----------+--------+----------+---------+---------------------+
 
 
 +---------------------------------------------------------------------------+
@@ -669,36 +692,38 @@ No synchronizer chains to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 2.022 ; 2.486 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.823 ; 1.203 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.732 ; 1.119 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.823 ; 1.203 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.580 ; 0.963 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.469 ; 0.924 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; i_clk_top  ; 2.786 ; 4.026 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; 4.287 ; 4.962 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; 4.649 ; 4.913 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; 4.253 ; 4.866 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; 4.649 ; 4.913 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; 4.412 ; 4.601 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; 3.987 ; 4.499 ; Rise       ; sig_clk25       ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
-+---------------------------------------------------------------------------+
-; Hold Times                                                                ;
-+---------------+------------+-------+-------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+-------+------------+-----------------+
-; i_reset_n_top ; i_clk_top  ; 0.584 ; 0.086 ; Rise       ; i_clk_top       ;
-; i_sel_top[*]  ; i_clk_top  ; 0.899 ; 0.566 ; Rise       ; i_clk_top       ;
-;  i_sel_top[0] ; i_clk_top  ; 0.729 ; 0.379 ; Rise       ; i_clk_top       ;
-;  i_sel_top[1] ; i_clk_top  ; 0.620 ; 0.303 ; Rise       ; i_clk_top       ;
-;  i_sel_top[2] ; i_clk_top  ; 0.876 ; 0.566 ; Rise       ; i_clk_top       ;
-;  i_sel_top[3] ; i_clk_top  ; 0.899 ; 0.549 ; Rise       ; i_clk_top       ;
-+---------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; i_reset_n_top ; i_clk_top  ; -0.742 ; -1.777 ; Rise       ; i_clk_top       ;
+; i_reset_n_top ; sig_clk25  ; -0.985 ; -1.638 ; Rise       ; sig_clk25       ;
+; i_sel_top[*]  ; sig_clk25  ; -0.875 ; -1.444 ; Rise       ; sig_clk25       ;
+;  i_sel_top[0] ; sig_clk25  ; -0.875 ; -1.444 ; Rise       ; sig_clk25       ;
+;  i_sel_top[1] ; sig_clk25  ; -1.516 ; -2.265 ; Rise       ; sig_clk25       ;
+;  i_sel_top[2] ; sig_clk25  ; -0.921 ; -1.544 ; Rise       ; sig_clk25       ;
+;  i_sel_top[3] ; sig_clk25  ; -1.239 ; -1.879 ; Rise       ; sig_clk25       ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 10.290 ; 11.452 ; Rise       ; i_clk_top       ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_ppm_top ; sig_clk25  ; 6.824 ; 7.682 ; Rise       ; sig_clk25       ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-----------------------------------------------------------------------+
@@ -706,7 +731,7 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_ppm_top ; i_clk_top  ; 5.477 ; 6.223 ; Rise       ; i_clk_top       ;
+; o_ppm_top ; sig_clk25  ; 3.510 ; 4.045 ; Rise       ; sig_clk25       ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -762,7 +787,6 @@ No synchronizer chains to report.
 +---------------+--------------+-----------------+-----------------+
 ; Pin           ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------+--------------+-----------------+-----------------+
-; servo         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[2]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -772,9 +796,9 @@ No synchronizer chains to report.
 ; i_reset_n_top ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; i_clk_top     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; i_sel_top[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; i_sel_top[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; i_sel_top[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; i_sel_top[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_sel_top[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_sel_top[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +---------------+--------------+-----------------+-----------------+
 
 
@@ -851,7 +875,8 @@ No synchronizer chains to report.
 +------------+-----------+----------+----------+----------+----------+
 ; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-----------+----------+----------+----------+----------+
-; i_clk_top  ; i_clk_top ; 51317072 ; 0        ; 0        ; 0        ;
+; sig_clk25  ; i_clk_top ; 1        ; 1        ; 0        ; 0        ;
+; sig_clk25  ; sig_clk25 ; 51317072 ; 0        ; 0        ; 0        ;
 +------------+-----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -861,7 +886,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+-----------+----------+----------+----------+----------+
 ; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-----------+----------+----------+----------+----------+
-; i_clk_top  ; i_clk_top ; 51317072 ; 0        ; 0        ; 0        ;
+; sig_clk25  ; i_clk_top ; 1        ; 1        ; 0        ; 0        ;
+; sig_clk25  ; sig_clk25 ; 51317072 ; 0        ; 0        ; 0        ;
 +------------+-----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -886,7 +912,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 11    ; 11   ;
-; Unconstrained Input Port Paths  ; 68    ; 68   ;
+; Unconstrained Input Port Paths  ; 138   ; 138  ;
 ; Unconstrained Output Ports      ; 8     ; 8    ;
 ; Unconstrained Output Port Paths ; 8     ; 8    ;
 +---------------------------------+-------+------+
@@ -898,7 +924,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Fri Jan 19 17:37:04 2018
+    Info: Processing started: Mon Jan 22 10:59:22 2018
 Info: Command: quartus_sta projet_ppm -c projet_ppm
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -907,6 +933,7 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'projet_ppm.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name sig_clk25 sig_clk25
     Info (332105): create_clock -period 1.000 -name i_clk_top i_clk_top
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
@@ -914,84 +941,96 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -14.624
+Info (332146): Worst-case setup slack is -15.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.624            -381.433 i_clk_top 
-Info (332146): Worst-case hold slack is 0.375
+    Info (332119):   -15.178            -405.756 sig_clk25 
+    Info (332119):    -1.580              -1.580 i_clk_top 
+Info (332146): Worst-case hold slack is -0.105
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.375               0.000 i_clk_top 
+    Info (332119):    -0.105              -0.105 i_clk_top 
+    Info (332119):     0.572               0.000 sig_clk25 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225             -95.212 i_clk_top 
+    Info (332119):    -2.225             -95.548 sig_clk25 
+    Info (332119):    -0.635              -1.029 i_clk_top 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -15.113
+Info (332146): Worst-case setup slack is -15.617
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -15.113            -394.144 i_clk_top 
-Info (332146): Worst-case hold slack is 0.392
+    Info (332119):   -15.617            -416.566 sig_clk25 
+    Info (332119):    -1.523              -1.523 i_clk_top 
+Info (332146): Worst-case hold slack is -0.095
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.392               0.000 i_clk_top 
+    Info (332119):    -0.095              -0.095 i_clk_top 
+    Info (332119):     0.560               0.000 sig_clk25 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225             -96.336 i_clk_top 
+    Info (332119):    -2.225             -95.199 sig_clk25 
+    Info (332119):    -0.626              -1.039 i_clk_top 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.491
+Info (332146): Worst-case setup slack is -7.888
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.491            -192.893 i_clk_top 
-Info (332146): Worst-case hold slack is 0.182
+    Info (332119):    -7.888            -210.596 sig_clk25 
+    Info (332119):    -1.313              -1.313 i_clk_top 
+Info (332146): Worst-case hold slack is 0.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.182               0.000 i_clk_top 
+    Info (332119):     0.225               0.000 i_clk_top 
+    Info (332119):     0.290               0.000 sig_clk25 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702             -63.887 i_clk_top 
+    Info (332119):    -1.702             -61.272 sig_clk25 
+    Info (332119):    -0.572              -0.792 i_clk_top 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.004
+Info (332146): Worst-case setup slack is -7.381
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.004            -180.287 i_clk_top 
-Info (332146): Worst-case hold slack is 0.173
+    Info (332119):    -7.381            -196.409 sig_clk25 
+    Info (332119):    -1.069              -1.069 i_clk_top 
+Info (332146): Worst-case hold slack is 0.048
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.173               0.000 i_clk_top 
+    Info (332119):     0.048               0.000 i_clk_top 
+    Info (332119):     0.262               0.000 sig_clk25 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702             -63.842 i_clk_top 
+    Info (332119):    -1.702             -61.272 sig_clk25 
+    Info (332119):    -0.541              -0.740 i_clk_top 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1044 megabytes
-    Info: Processing ended: Fri Jan 19 17:37:17 2018
-    Info: Elapsed time: 00:00:13
+    Info: Peak virtual memory: 1047 megabytes
+    Info: Processing ended: Mon Jan 22 10:59:36 2018
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:12
 
 

@@ -1,27 +1,27 @@
 |top_ppm
-i_clk_top => send_ppm:send_ppm1.i_clk
+i_clk_top => sig_clk25.CLK
 i_reset_n_top => send_ppm:send_ppm1.i_reset_n
+i_reset_n_top => sig_clk25.OUTPUTSELECT
 i_reset_n_top => LEDR[7].DATAIN
 i_sel_top[0] => decoder:decoder1.i_sel[0]
 i_sel_top[1] => decoder:decoder1.i_sel[1]
 i_sel_top[2] => decoder:decoder1.i_sel[2]
 i_sel_top[3] => decoder:decoder1.i_sel[3]
-o_ppm_top <= send_ppm:send_ppm1.o_ppm
-servo => ~NO_FANOUT~
+o_ppm_top << send_ppm:send_ppm1.o_ppm
 SW[0] => LEDR[0].DATAIN
 SW[1] => LEDR[1].DATAIN
 SW[2] => LEDR[2].DATAIN
 SW[3] => LEDR[3].DATAIN
 SW[4] => LEDR[4].DATAIN
 SW[5] => LEDR[5].DATAIN
-LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[6] <= <GND>
-LEDR[7] <= i_reset_n_top.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] << SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] << SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] << SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] << <GND>
+LEDR[7] << i_reset_n_top.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_ppm|decoder:decoder1

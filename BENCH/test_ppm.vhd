@@ -40,15 +40,20 @@ architecture tb_ppm of bench_send_ppm is
  	process
 		begin
 			wait for 200 ns;
-			--sig_i_reg <= "11111111111111111111111111111111";
+			sig_i_reg <= "11111111111111111111111111111111";
+			wait for 3000 ns;
+			sig_i_reg <= "01101100111010111000101110110101";
+			wait for 2500 ns;
+			sig_i_reg <= "10111110101110111100001010110110";		
+			wait for 10000 ns;	
 			sig_i_reg <= "00000000000000000000000000000000";
-			wait for 100000 ns;
+			wait for 900000 ns;
 			sig_i_reg <= "01101100111010111000101110110101";
 			wait for 2500000 ns;
-			sig_i_reg <= "00000000000000000000000000000000";
-			wait for 250 ns;	
+			--sig_i_reg <= "00000000000000000000000000000000";
+			--wait for 250 ns;	
 			sig_i_reg <= "11111111111111111111111111111111";
-			wait for 100000000 ns;
+			wait for 50000000 ns;
 		--	sig_i_reset_n <= '0';
 		 -- wait for 10000 ns;
     --	sig_i_reset_n <= '1';

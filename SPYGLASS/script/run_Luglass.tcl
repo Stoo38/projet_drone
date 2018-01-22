@@ -2,8 +2,10 @@
 
 
 set VHDL_FILES {	
-									../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/image_process.vhd
-									../../../DE1_SOC_CAMERA_IP_Vhdl/vhdl/position.vhd
+									../../VHD/gensync.vhd
+									../../VHD/image_process.vhd
+									../../VHD/position.vhd
+									../../VHD/top.vhd
 							 }
 
 set LIBRARY_NAME LIB_VHD

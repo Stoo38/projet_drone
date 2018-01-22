@@ -1,0 +1,5 @@
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)

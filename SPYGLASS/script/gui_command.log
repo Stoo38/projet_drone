@@ -1,12 +1,1 @@
-source run_Stooglass.tcl
-
-
-
-
-
-
-
-
-capture ./spyglass-1/lint/lint_rtl/spyglass_reports/SignalUsageReport.rpt {write_report SignalUsageReport}
-gui_exit
 gui_exit

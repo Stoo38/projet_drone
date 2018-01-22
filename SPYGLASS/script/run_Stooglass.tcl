@@ -5,7 +5,7 @@ set VHDL_FILES {
 									../../VHD/local_counter.vhd
 									../../VHD/send_ppm.vhd
 									../../VHD/decoder.vhd
-									../../VHD/top_ppm.vhd
+								  ../../VHD/top_ppm.vhd
 							 }
 
 set LIBRARY_NAME LIB_VHD

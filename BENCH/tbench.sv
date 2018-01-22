@@ -37,12 +37,12 @@ pixel_t img_vga_2    [int][int]; // VGA screen is 640x480
 initial begin
   for (int y=0; y < 480; y++) begin
     for (int x=0; x < 640; x++) begin
-      img_vga[x][y].b = "FF";
-      img_vga[x][y].g = "FF";
-      img_vga[x][y].r = "FF";
-      img_vga_2[x][y].b = "FF";
-      img_vga_2[x][y].g = "FF";
-      img_vga_2[x][y].r = "FF";
+      img_vga[x][y].b = "00";
+      img_vga[x][y].g = "00";
+      img_vga[x][y].r = "00";
+      img_vga_2[x][y].b = "00";
+      img_vga_2[x][y].g = "00";
+      img_vga_2[x][y].r = "00";
     end
   end
 end
@@ -145,8 +145,14 @@ top_bar top (
 	.rout_top (img_barycentre.r),
 	.gout_top (img_barycentre.g),
 	.bout_top (img_barycentre.b),
+	.r_out_proc (img_out.r),
+	.g_out_proc (img_out.g),
+	.b_out_proc (img_out.b),
 	.HSYNC_top (vga_hsync),
-	.VSYNC_top (vga_vsync)
+	.VSYNC_top (vga_vsync),
+	.cam_x (cam_x),
+	.cam_y (cam_y),
+	.IMG_top (vga_img)
 );
 // Re-use Hsync and Vsync to re-build pixel array
 
@@ -172,7 +178,7 @@ always #10 vga_clk2x <= ~vga_clk2x;
 
 // Read Image From File
 initial begin
-  read_bmp(img_camera,"/tp/xph3app/xph3app602/projet_drone/IMG/blanche_4points.bmp");//selection image
+  read_bmp(img_camera,"/tp/xph3app/xph3app602/projet_drone/IMG/drone3.bmp");//selection image
 end
 
 // Write image

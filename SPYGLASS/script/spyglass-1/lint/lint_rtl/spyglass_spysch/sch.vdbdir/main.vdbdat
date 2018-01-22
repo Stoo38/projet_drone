@@ -1,8 +1,12 @@
 #x HLBEGIN S.1
 #x {}
-#x 79 { @@n 1 @@p 1 }
+#x 76 { @@n 1 @@p 1 }
 #x HLEND
 #x HLBEGIN S.2
 #x {}
-#x 79 { @@n 3 @@p 3 }
+#x 78 { @@n 1 @@p 1 }
+#x HLEND
+#x HLBEGIN S.3
+#x {}
+#x 78 { @@n 6 @@p 6 }
 #x HLEND

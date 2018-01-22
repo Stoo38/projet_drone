@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projet_ppm
-Fri Jan 19 17:35:31 2018
+Mon Jan 22 10:57:49 2018
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -48,14 +48,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jan 19 17:35:31 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jan 22 10:57:49 2018       ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                   ; projet_ppm                                  ;
 ; Top-level Entity Name           ; top_ppm                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 33                                          ;
-; Total pins                      ; 22                                          ;
+; Total registers                 ; 38                                          ;
+; Total pins                      ; 21                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 4                                           ;
@@ -186,29 +186,29 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 174             ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 307             ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 39              ;
-;     -- 5 input functions                    ; 12              ;
-;     -- 4 input functions                    ; 6               ;
-;     -- <=3 input functions                  ; 250             ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 33              ;
-;                                             ;                 ;
-; I/O pins                                    ; 22              ;
-; Total DSP Blocks                            ; 4               ;
-; Maximum fan-out node                        ; i_clk_top~input ;
-; Maximum fan-out                             ; 33              ;
-; Total fan-out                               ; 984             ;
-; Average fan-out                             ; 2.54            ;
-+---------------------------------------------+-----------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 177       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 313       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 39        ;
+;     -- 5 input functions                    ; 12        ;
+;     -- 4 input functions                    ; 11        ;
+;     -- <=3 input functions                  ; 251       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 38        ;
+;                                             ;           ;
+; I/O pins                                    ; 21        ;
+; Total DSP Blocks                            ; 4         ;
+; Maximum fan-out node                        ; sig_clk25 ;
+; Maximum fan-out                             ; 38        ;
+; Total fan-out                               ; 1023      ;
+; Average fan-out                             ; 2.58      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -216,8 +216,9 @@ agreement for further details.
 +--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Library Name ;
 +--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------+--------------+
-; |top_ppm                             ; 307 (0)           ; 33 (0)       ; 0                 ; 4          ; 22   ; 0            ; |top_ppm                                                 ; work         ;
-;    |send_ppm:send_ppm1|              ; 307 (285)         ; 33 (13)      ; 0                 ; 4          ; 0    ; 0            ; |top_ppm|send_ppm:send_ppm1                              ; work         ;
+; |top_ppm                             ; 313 (1)           ; 38 (1)       ; 0                 ; 4          ; 21   ; 0            ; |top_ppm                                                 ; work         ;
+;    |decoder:decoder1|                ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |top_ppm|decoder:decoder1                                ; work         ;
+;    |send_ppm:send_ppm1|              ; 307 (285)         ; 37 (17)      ; 0                 ; 4          ; 0    ; 0            ; |top_ppm|send_ppm:send_ppm1                              ; work         ;
 ;       |local_counter:local_counter1| ; 22 (22)           ; 20 (20)      ; 0                 ; 0          ; 0    ; 0            ; |top_ppm|send_ppm:send_ppm1|local_counter:local_counter1 ; work         ;
 +--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -274,11 +275,11 @@ Encoding Type:  One-Hot
 ; send_ppm:send_ppm1|local_counter:local_counter1|v_val[2]  ; Merged with send_ppm:send_ppm1|local_counter:local_counter1|o_count[2]  ;
 ; send_ppm:send_ppm1|local_counter:local_counter1|v_val[1]  ; Merged with send_ppm:send_ppm1|local_counter:local_counter1|o_count[1]  ;
 ; send_ppm:send_ppm1|local_counter:local_counter1|v_val[0]  ; Merged with send_ppm:send_ppm1|local_counter:local_counter1|o_count[0]  ;
-; send_ppm:send_ppm1|sig_reg_storage[25..31]                ; Merged with send_ppm:send_ppm1|sig_reg_storage[24]                      ;
-; send_ppm:send_ppm1|sig_reg_storage[17..23]                ; Merged with send_ppm:send_ppm1|sig_reg_storage[16]                      ;
-; send_ppm:send_ppm1|sig_reg_storage[8,9,11..15]            ; Merged with send_ppm:send_ppm1|sig_reg_storage[10]                      ;
-; send_ppm:send_ppm1|sig_reg_storage[1..7]                  ; Merged with send_ppm:send_ppm1|sig_reg_storage[0]                       ;
-; Total Number of Removed Registers = 48                    ;                                                                         ;
+; send_ppm:send_ppm1|sig_reg_storage[25..30]                ; Merged with send_ppm:send_ppm1|sig_reg_storage[24]                      ;
+; send_ppm:send_ppm1|sig_reg_storage[17..22]                ; Merged with send_ppm:send_ppm1|sig_reg_storage[16]                      ;
+; send_ppm:send_ppm1|sig_reg_storage[8,9,11..14]            ; Merged with send_ppm:send_ppm1|sig_reg_storage[10]                      ;
+; send_ppm:send_ppm1|sig_reg_storage[1..6]                  ; Merged with send_ppm:send_ppm1|sig_reg_storage[0]                       ;
+; Total Number of Removed Registers = 44                    ;                                                                         ;
 +-----------------------------------------------------------+-------------------------------------------------------------------------+
 
 
@@ -287,25 +288,25 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
+; Total registers                              ; 38    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 11    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |top_ppm|send_ppm:send_ppm1|local_counter:local_counter1|o_count[9] ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |top_ppm|send_ppm:send_ppm1|sig_state[2]                            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_ppm|send_ppm:send_ppm1|next_state                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |top_ppm|send_ppm:send_ppm1|local_counter:local_counter1|o_count[17] ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |top_ppm|send_ppm:send_ppm1|sig_state[2]                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_ppm|send_ppm:send_ppm1|next_state                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
 +---------------------------------------------------+
@@ -334,7 +335,6 @@ Encoding Type:  One-Hot
 ; LOCATION   ; Pin_AF14 ; -    ; i_clk_top          ;
 ; LOCATION   ; Pin_Y16  ; -    ; i_reset_n_top      ;
 ; LOCATION   ; Pin_AB17 ; -    ; o_ppm_top          ;
-; LOCATION   ; Pin_AA21 ; -    ; servo              ;
 +------------+----------+------+--------------------+
 
 
@@ -343,29 +343,29 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 33                          ;
-;     ENA               ; 7                           ;
+; arriav_ff             ; 38                          ;
+;     ENA               ; 11                          ;
 ;     SCLR              ; 20                          ;
-;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 308                         ;
+;     plain             ; 7                           ;
+; arriav_lcell_comb     ; 314                         ;
 ;     arith             ; 202                         ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 174                         ;
 ;         2 data inputs ; 20                          ;
-;     normal            ; 87                          ;
+;     normal            ; 93                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 27                          ;
+;         2 data inputs ; 28                          ;
 ;         3 data inputs ; 2                           ;
-;         4 data inputs ; 6                           ;
+;         4 data inputs ; 11                          ;
 ;         5 data inputs ; 12                          ;
 ;         6 data inputs ; 39                          ;
 ;     shared            ; 19                          ;
 ;         3 data inputs ; 19                          ;
 ; arriav_mac            ; 4                           ;
-; boundary_port         ; 22                          ;
+; boundary_port         ; 21                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.20                       ;
-; Average LUT depth     ; 8.47                        ;
+; Average LUT depth     ; 8.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -384,7 +384,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Fri Jan 19 17:35:26 2018
+    Info: Processing started: Mon Jan 22 10:57:43 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projet_ppm -c projet_ppm
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file top_ppm.vhd
@@ -412,17 +412,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "servo"
-Info (21057): Implemented 338 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 342 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 312 logic cells
+    Info (21061): Implemented 317 logic cells
     Info (21062): Implemented 4 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 855 megabytes
-    Info: Processing ended: Fri Jan 19 17:35:31 2018
-    Info: Elapsed time: 00:00:05
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 861 megabytes
+    Info: Processing ended: Mon Jan 22 10:57:49 2018
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:04
 
 

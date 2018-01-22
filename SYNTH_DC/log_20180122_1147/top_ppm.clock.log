@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : top_ppm
+Version: J-2014.09-SP2
+Date   : Mon Jan 22 11:47:48 2018
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+HCLK            40.00   {0 20}              d         {i_clk_top}
+--------------------------------------------------------------------------------
+1

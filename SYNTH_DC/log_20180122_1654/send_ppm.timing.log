@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : send_ppm
+Version: J-2014.09-SP2
+Date   : Mon Jan 22 16:55:00 2018
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB_TYP
+Wire Load Model Mode: enclosed
+
+  Startpoint: sig_out_ppm_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: o_ppm (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sig_out_ppm_reg/C (DF3)                  0.00       0.00 r
+  sig_out_ppm_reg/Q (DF3)                  0.99       0.99 f
+  o_ppm (out)                              0.00       0.99 f
+  data arrival time                                   0.99
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: sig_out_ppm_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: o_ppm (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  send_ppm           10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sig_out_ppm_reg/C (DF3)                  0.00       0.00 r
+  sig_out_ppm_reg/Q (DF3)                  0.88       0.88 r
+  o_ppm (out)                              0.00       0.88 r
+  data arrival time                                   0.88
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

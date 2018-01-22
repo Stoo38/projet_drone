@@ -4,10 +4,9 @@ read_file -type vhdl ../../VHD/constants.vhd
 read_file -type vhdl ../../VHD/local_counter.vhd
 read_file -type vhdl ../../VHD/send_ppm.vhd
 read_file -type vhdl ../../VHD/decoder.vhd
-read_file -type vhdl ../../VHD/top_ppm.vhd
 set_option lib LIB_VHD ./../libs/LIB_VHD
 set_option lib LIB_VHD ./../libs/LIB_VHD
-set_option libhdlfiles LIB_VHD { ../../VHD/constants.vhd ../../VHD/local_counter.vhd ../../VHD/send_ppm.vhd ../../VHD/decoder.vhd ../../VHD/top_ppm.vhd }
+set_option libhdlfiles LIB_VHD { ../../VHD/constants.vhd ../../VHD/local_counter.vhd ../../VHD/send_ppm.vhd ../../VHD/decoder.vhd }
 
 ##Common Options Section
 

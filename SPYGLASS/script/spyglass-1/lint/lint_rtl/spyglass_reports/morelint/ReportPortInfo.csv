@@ -1,5 +1,8 @@
 Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
-top_ppm,Top_Level,i_clk_top,INPUT,1,-,port definition,- 
-top_ppm,Top_Level,i_reset_n_top,INPUT,1,-,port definition,- 
-top_ppm,Top_Level,i_sel_top,INPUT,4,(3:0),port definition,- 
-top_ppm,Top_Level,o_ppm_top,OUTPUT,1,-,port definition,- 
+decoder,Top_Level,i_sel,INPUT,4,(3:0),port definition,- 
+decoder,Top_Level,o_val,OUTPUT,32,(31:0),port definition,- 
+Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
+send_ppm,Top_Level,i_clk,INPUT,1,-,port definition,- 
+send_ppm,Top_Level,i_reset_n,INPUT,1,-,port definition,- 
+send_ppm,Top_Level,i_reg,INPUT,32,(31:0),port definition,	i_enable	: in std_logic; 
+send_ppm,Top_Level,o_ppm,OUTPUT,1,-,port definition,- 

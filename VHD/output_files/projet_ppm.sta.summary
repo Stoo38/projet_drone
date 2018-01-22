@@ -2,52 +2,100 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'sig_clk25'
+Slack : -15.178
+TNS   : -405.756
+
 Type  : Slow 1100mV 85C Model Setup 'i_clk_top'
-Slack : -14.624
-TNS   : -381.433
+Slack : -1.580
+TNS   : -1.580
 
 Type  : Slow 1100mV 85C Model Hold 'i_clk_top'
-Slack : 0.375
+Slack : -0.105
+TNS   : -0.105
+
+Type  : Slow 1100mV 85C Model Hold 'sig_clk25'
+Slack : 0.572
 TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'sig_clk25'
+Slack : -2.225
+TNS   : -95.548
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'i_clk_top'
-Slack : -2.225
-TNS   : -95.212
+Slack : -0.635
+TNS   : -1.029
+
+Type  : Slow 1100mV 0C Model Setup 'sig_clk25'
+Slack : -15.617
+TNS   : -416.566
 
 Type  : Slow 1100mV 0C Model Setup 'i_clk_top'
-Slack : -15.113
-TNS   : -394.144
+Slack : -1.523
+TNS   : -1.523
 
 Type  : Slow 1100mV 0C Model Hold 'i_clk_top'
-Slack : 0.392
+Slack : -0.095
+TNS   : -0.095
+
+Type  : Slow 1100mV 0C Model Hold 'sig_clk25'
+Slack : 0.560
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'sig_clk25'
+Slack : -2.225
+TNS   : -95.199
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'i_clk_top'
-Slack : -2.225
-TNS   : -96.336
+Slack : -0.626
+TNS   : -1.039
+
+Type  : Fast 1100mV 85C Model Setup 'sig_clk25'
+Slack : -7.888
+TNS   : -210.596
 
 Type  : Fast 1100mV 85C Model Setup 'i_clk_top'
-Slack : -7.491
-TNS   : -192.893
+Slack : -1.313
+TNS   : -1.313
 
 Type  : Fast 1100mV 85C Model Hold 'i_clk_top'
-Slack : 0.182
+Slack : 0.225
 TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'sig_clk25'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'sig_clk25'
+Slack : -1.702
+TNS   : -61.272
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'i_clk_top'
-Slack : -1.702
-TNS   : -63.887
+Slack : -0.572
+TNS   : -0.792
+
+Type  : Fast 1100mV 0C Model Setup 'sig_clk25'
+Slack : -7.381
+TNS   : -196.409
 
 Type  : Fast 1100mV 0C Model Setup 'i_clk_top'
-Slack : -7.004
-TNS   : -180.287
+Slack : -1.069
+TNS   : -1.069
 
 Type  : Fast 1100mV 0C Model Hold 'i_clk_top'
-Slack : 0.173
+Slack : 0.048
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'i_clk_top'
+Type  : Fast 1100mV 0C Model Hold 'sig_clk25'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'sig_clk25'
 Slack : -1.702
-TNS   : -63.842
+TNS   : -61.272
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'i_clk_top'
+Slack : -0.541
+TNS   : -0.740
 
 ------------------------------------------------------------

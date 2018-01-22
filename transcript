@@ -1,45 +1,58 @@
-# //  ModelSim SE-64 10.5c Jul 20 2016Linux 3.2.0-4-amd64
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
 # //
-# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  Copyright 1991-2013 Mentor Graphics Corporation
 # //  All Rights Reserved.
 # //
-# //  ModelSim SE-64 and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L LIB_VHD -do "runSimLu2.do" -novopt LIB_VHD_BENCH.tbench 
-# Start time: 20:57:30 on Jan 19,2018
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD_BENCH.tbench
-# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD_BENCH.tbench_sans_top_sv_unit
-# Loading sv_std.std
-# Loading LIB_VHD_BENCH.tbench_sans_top_sv_unit
-# Loading LIB_VHD_BENCH.tbench
+vsim -novopt LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# vsim -novopt LIB_VHD_BENCH.bench_send_ppm(tb_ppm) 
 # Loading std.standard
-# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.gensync(behavioral)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.constants_package
+# Loading lib_vhd.constants_package
+# Loading LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.send_ppm(rtl)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading LIB_VHD.gensync(behavioral)
-# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.image_process(rtl)
-# Loading ieee.numeric_std(body)
-# Loading LIB_VHD.image_process(rtl)
-# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.position(det)
-# Loading LIB_VHD.position(det)
-# ** Warning: (vsim-8822) /tp/xph3app/xph3app602/projet_drone/BENCH/tbench_sans_top.sv(116): [TFMPC] - Missing Verilog connection for formal VHDL port 'X_barycentre'.
-#    Time: 0 ns  Iteration: 0  Instance: /tbench/barycentre File: /tp/xph3app/xph3app602/projet_drone/VHD/position.vhd
-# ** Warning: (vsim-8822) /tp/xph3app/xph3app602/projet_drone/BENCH/tbench_sans_top.sv(116): [TFMPC] - Missing Verilog connection for formal VHDL port 'Y_barycentre'.
-#    Time: 0 ns  Iteration: 0  Instance: /tbench/barycentre File: /tp/xph3app/xph3app602/projet_drone/VHD/position.vhd
-# do runSimLu2.do
-# 1
-# <BMP> Reading Image from /tp/xph3app/xph3app602/projet_drone/IMG/blanche_4points.bmp
-# 
-# ** Note: $finish    : /tp/xph3app/xph3app602/projet_drone/BENCH/tbench_sans_top.sv(174)
-#    Time: 33481980 ns  Iteration: 2  Instance: /tbench
-# End time: 20:57:47 on Jan 19,2018, Elapsed time: 0:00:17
-# Errors: 0, Warnings: 3
+# Loading lib_vhd.send_ppm(rtl)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.local_counter(b)
+# Loading lib_vhd.local_counter(b)
+add wave -position insertpoint  \
+sim:/bench_send_ppm/send_ppm1/i_clk \
+sim:/bench_send_ppm/send_ppm1/i_reset_n \
+sim:/bench_send_ppm/send_ppm1/i_reg \
+sim:/bench_send_ppm/send_ppm1/o_ppm \
+sim:/bench_send_ppm/send_ppm1/current_state \
+sim:/bench_send_ppm/send_ppm1/next_state \
+sim:/bench_send_ppm/send_ppm1/sig_in_clk \
+sim:/bench_send_ppm/send_ppm1/sig_in_reset_n \
+sim:/bench_send_ppm/send_ppm1/sig_in_reg \
+sim:/bench_send_ppm/send_ppm1/sig_out_ppm \
+sim:/bench_send_ppm/send_ppm1/sig_in_init \
+sim:/bench_send_ppm/send_ppm1/sig_out_local_count \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame1 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame2 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame3 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesTrame4 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesSynchro \
+sim:/bench_send_ppm/send_ppm1/sig_final1 \
+sim:/bench_send_ppm/send_ppm1/sig_final2 \
+sim:/bench_send_ppm/send_ppm1/sig_final3 \
+sim:/bench_send_ppm/send_ppm1/sig_final4 \
+sim:/bench_send_ppm/send_ppm1/sig_cyclesSynchro_final \
+sim:/bench_send_ppm/send_ppm1/sig_state \
+sim:/bench_send_ppm/send_ppm1/sig_state_inter \
+sim:/bench_send_ppm/send_ppm1/sig_reg_storage \
+sim:/bench_send_ppm/send_ppm1/sig_flag_ppm_ready
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 2  Instance: /bench_send_ppm/send_ppm1
+# Causality operation skipped due to absence of debug database file

@@ -13,32 +13,35 @@ entity top_ppm is
 		i_clk_top			: in std_logic;
 		i_reset_n_top		: in std_logic;
 		i_sel_top			: in std_logic_vector(3 downto 0);
-		o_ppm_top			: out std_logic
+		o_ppm_top			: out std_logic;
 		--KEY					: in std_logic_vector(3 downto 0);
 	--	servo_vdd			: in std_logic;
 	--	servo_gnd			: in std_logic;
 	--	servo					: in std_logic;
-		--SW						: in std_logic_vector(5 downto 0);
-		--LEDR					: out std_logic_vector(7 downto 0)
+		SW						: in std_logic_vector(5 downto 0);
+		LEDR					: out std_logic_vector(7 downto 0)
 	);
 end entity top_ppm;
 
 architecture rtl of top_ppm is
 
---attribute chip_pin : string;
+attribute chip_pin : string;
+
+attribute chip_pin of i_clk_top  : signal is "AF14";
+attribute chip_pin of i_reset_n_top  : signal is "Y16";
+attribute chip_pin of o_ppm_top : signal is "AB17";
+attribute chip_pin of i_sel_top : signal is "AE12,AD10,AC9,AE11";
+attribute chip_pin of LEDR  : signal is "W20,Y19,W19,W17,V18,V17,W16,V16";
+attribute chip_pin of SW  : signal is "AD12,AD11,AF10,AF9,AC12,AB12";
+
 
 --attribute chip_pin of i_clk_top  : signal is "AF14";
---attribute chip_pin of i_clk_top  : signal is "AF14";
 --attribute chip_pin of i_reset_n_top  : signal is "AJ26";
---attribute chip_pin of i_reset_n_top  : signal is "Y16";
 --attribute chip_pin of o_ppm_top : signal is "AC22";
---attribute chip_pin of o_ppm_top : signal is "AB17";
---attribute chip_pin of i_sel_top : signal is "AE12,AD10,AC9,AE11";
 --attribute chip_pin of LEDR  : signal is "Y21,W21,W20,Y19,W19,W17,V18,V17,W16,V16";
 --attribute chip_pin of KEY  : signal is "Y16,W15,AA15,AA14";
 --attribute chip_pin of SW  : signal is "AE12,AD10,AC9,AE11,AD12,AD11,AF10,AF9,AC12,AB12";
---attribute chip_pin of LEDR  : signal is "W20,Y19,W19,W17,V18,V17,W16,V16";
---attribute chip_pin of SW  : signal is "AD12,AD11,AF10,AF9,AC12,AB12";
+
 --attribute chip_pin of servo : signal is "AA21";
 
 	component decoder
@@ -62,25 +65,41 @@ architecture rtl of top_ppm is
 --	signal sig_clk			: std_logic;
 --	signal sig_reset_n	: std_logic;
 --	signal sig_i_sel		: std_logic_vector(1 downto 0);
-	signal sig_reg			: std_logic_vector(31 downto 0);
+	signal sig_reg				: std_logic_vector(31 downto 0);
 --	signal sig_o_ppm		: std_logic;
+	signal sig_clk50			: std_logic := '0';
+	signal sig_clk25			: std_logic;
 
 	begin
 	
-	--	LEDR(0) <=	'1' when SW(0) = '1' else
-	--					'0' when SW(0) = '0';
-	--	LEDR(1) <=	'1' when SW(1) = '1' else
-	--					'0' when SW(1) = '0';
-	--	LEDR(2) <=	'1' when SW(2) = '1' else
-	--					'0' when SW(2) = '0';						
-	--	LEDR(3) <=	'1' when SW(3) = '1' else
-	--					'0' when SW(3) = '0';						
-	--	LEDR(4) <=	'1' when SW(4) = '1' else
-	--					'0' when SW(4) = '0';						
-	--	LEDR(5) <=	'1' when SW(5) = '1' else
-	--					'0' when SW(5) = '0';
-	--	LEDR(7) <=	'1' when i_reset_n_top = '1' else
-	--					'0' when i_reset_n_top = '0';			
+		sig_clk50	<= i_clk_top;
+
+		clock: process(sig_clk50)
+		begin
+			if (sig_clk50'event and sig_clk50 = '1') then
+				if (i_reset_n_top='0') then
+					sig_clk25 <= '0';
+				else
+					sig_clk25 <= not(sig_clk25);
+				end if;
+			end if;
+		end process clock;
+
+
+		LEDR(0) <=	'1' when SW(0) = '1' else
+						'0' when SW(0) = '0';
+		LEDR(1) <=	'1' when SW(1) = '1' else
+						'0' when SW(1) = '0';
+		LEDR(2) <=	'1' when SW(2) = '1' else
+						'0' when SW(2) = '0';						
+		LEDR(3) <=	'1' when SW(3) = '1' else
+						'0' when SW(3) = '0';						
+	  LEDR(4) <=	'1' when SW(4) = '1' else
+						'0' when SW(4) = '0';						
+		LEDR(5) <=	'1' when SW(5) = '1' else
+						'0' when SW(5) = '0';
+		LEDR(7) <=	'1' when i_reset_n_top = '1' else
+						'0' when i_reset_n_top = '0';			
 
 						
 		decoder1 : decoder port map (
@@ -89,7 +108,7 @@ architecture rtl of top_ppm is
 			);
 		
 		send_ppm1 : send_ppm port map (	
-			i_clk			=> i_clk_top,
+			i_clk			=> sig_clk25,
 			i_reset_n => i_reset_n_top,
 			i_reg			=> sig_reg,
 			o_ppm			=> o_ppm_top

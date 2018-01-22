@@ -1,0 +1,321 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP2 for RHEL64 -- Nov 25, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+source ../scripts/define_variables.tcl
+LIB_VHD
+#cd $PROJECT_PATH$WORK_PATH
+#set_dont_use c35_CORELIB_TYP/XOR30
+#set_dont_use c35_CORELIB_TYP/XOR31
+define_design_lib $LIBRARY_NAME -path ../libs_synth/$LIBRARY_NAME
+1
+analyze -library $LIBRARY_NAME -format vhdl $VHDL_FILES 
+Running PRESTO HDLC
+-- Compiling Source File ../../VHD/constants.vhd
+Compiling Package Declaration CONSTANTS_PACKAGE
+-- Compiling Source File ../../VHD/local_counter.vhd
+Compiling Entity Declaration LOCAL_COUNTER
+Compiling Architecture B of LOCAL_COUNTER
+Warning:  ../../VHD/local_counter.vhd:16: The architecture b has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ../../VHD/decoder.vhd
+Compiling Entity Declaration DECODER
+Compiling Architecture RTL of DECODER
+Warning:  ../../VHD/decoder.vhd:20: The architecture rtl has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ../../VHD/send_ppm.vhd
+Compiling Entity Declaration SEND_PPM
+Compiling Architecture RTL of SEND_PPM
+Warning:  ../../VHD/send_ppm.vhd:24: The architecture rtl has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+1
+elaborate $DESIGN_NAME -architecture $ARCHI_TOP_NAME -library $LIBRARY_NAME
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/gtech.db'
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/standard.sldb'
+  Loading link library 'c35_CORELIB_TYP'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../../VHD/send_ppm.vhd:55: The initial value for signal 'sig_in_clk' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Statistics for case statements in always block at line 183 in file
+	'../../VHD/send_ppm.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           185            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine send_ppm line 140 in file
+		'../../VHD/send_ppm.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| sig_reg_storage_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine send_ppm line 155 in file
+		'../../VHD/send_ppm.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   sig_out_ppm_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine send_ppm line 170 in file
+		'../../VHD/send_ppm.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    sig_state_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'send_ppm'.
+Information: Building the design 'local_counter'. (HDL-193)
+
+Inferred memory devices in process
+	in routine local_counter line 19 in file
+		'../../VHD/local_counter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      v_val_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     o_count_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+source ../scripts/top_num.sdc
+Warning: Can't find object 'i_clk_top' in design 'send_ppm'. (UID-95)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+Warning: Can't find object 'HCLK' in design 'send_ppm'. (UID-95)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
+Warning: Can't find clock 'HCLK' in design 'send_ppm'. (UID-95)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+Warning: Can't find port 'i_clk_top' in design 'send_ppm'. (UID-95)
+Warning: Can't find clock 'HCLK' in design 'send_ppm'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Warning: Can't find clock 'HCLK' in design 'send_ppm'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+set_operating_conditions -library c35_CORELIB_TYP WORST
+Using operating conditions 'WORST' found in library 'c35_CORELIB_TYP'.
+1
+compile -exact_map -area_effort high -ungroup_all
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.2 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY12'. (OPT-1307)
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY22'. (OPT-1307)
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY32'. (OPT-1307)
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY42'. (OPT-1307)
+  Loading target library 'c35_CORELIB_TYP'
+Warning: Operating condition WORST set on design send_ppm has different process,
+voltage and temperatures parameters than the parameters at which target library 
+c35_CORELIB_TYP is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'local_counter'
+  Processing 'send_ppm'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'send_ppm' has no optimization constraints set. (OPT-108)
+Information: Ungrouping hierarchy local_counter1. (OPT-772)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'DW01_inc_width20'
+  Processing 'DW01_cmp6_width20'
+  Processing 'DW01_sub_width20'
+  Processing 'DW01_add_width20'
+  Processing 'DW01_add_width20'
+  Processing 'DW01_sub_width20'
+  Processing 'DW01_add_width17'
+  Processing 'DW02_mult_A_width8_B_width7'
+  Processing 'DW01_add_width13'
+  Processing 'DW01_sub_width20'
+  Processing 'DW01_cmp6_width20'
+  Processing 'DW01_add_width17'
+  Processing 'DW02_mult_A_width8_B_width7'
+  Processing 'DW01_add_width13'
+  Processing 'DW01_cmp6_width20'
+  Processing 'DW01_add_width17'
+  Processing 'DW02_mult_A_width8_B_width7'
+  Processing 'DW01_add_width13'
+  Processing 'DW01_cmp6_width20'
+  Processing 'DW01_add_width17'
+  Processing 'DW02_mult_A_width8_B_width7'
+  Processing 'DW01_add_width13'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'send_ppm'
+  Mapping 'send_ppm'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  121114.0      0.00       0.0      98.4                          
+    0:00:05  121114.0      0.00       0.0      98.4                          
+    0:00:05  121114.0      0.00       0.0      98.4                          
+    0:00:05  121114.0      0.00       0.0      98.4                          
+    0:00:05  121114.0      0.00       0.0      98.4                          
+    0:00:05  105145.0      0.00       0.0      87.7                          
+    0:00:05  105072.2      0.00       0.0      87.7                          
+    0:00:05  105072.2      0.00       0.0      25.8                          
+    0:00:05  105072.2      0.00       0.0      25.8                          
+    0:00:05  105072.2      0.00       0.0      25.8                          
+    0:00:05  105072.2      0.00       0.0      25.8                          
+    0:00:05  105072.2      0.00       0.0      25.8                          
+    0:00:05  105090.4      0.00       0.0       3.9                          
+    0:00:05  105163.2      0.00       0.0       0.0                          
+    0:00:05  105163.2      0.00       0.0       0.0                          
+    0:00:05  105163.2      0.00       0.0       0.0                          
+    0:00:05  105163.2      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  105163.2      0.00       0.0       0.0                          
+    0:00:05  105163.2      0.00       0.0       0.0                          
+    0:00:05  105163.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  105163.2      0.00       0.0       0.0                          
+    0:00:05  105163.2      0.00       0.0       0.0                          
+    0:00:05  102783.8      0.00       0.0       0.0                          
+    0:00:05  102193.6      0.00       0.0       0.0                          
+    0:00:05  101948.4      0.00       0.0       0.0                          
+    0:00:05  101812.2      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+    0:00:05  101721.4      0.00       0.0       0.0                          
+Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#compile -exact_map -area_effort high
+write_sdf ../results/$DESIGN_NAME.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/results/send_ppm.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+write -format ddc -hierarchy -output ../results/$DESIGN_NAME.ddc
+Writing ddc file '../results/send_ppm.ddc'.
+1
+#Genere la netlist au format VHDL
+write -hierarchy -format vhdl -output ../results/${DESIGN_NAME}.vhd
+Writing vhdl file '/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/results/send_ppm.vhd'.
+Warning: A dummy net 'n_1000' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1001' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1002' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1003' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1004' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1005' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1006' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1007' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1008' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1009' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1010' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1011' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1012' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1013' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1014' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1015' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1016' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1017' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1018' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1019' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1020' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1021' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1022' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1023' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1024' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1025' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1026' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1027' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1028' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1029' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1030' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1031' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1032' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1033' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1034' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1035' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1036' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1037' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1038' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1039' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1040' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1041' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1042' is created to connect open pin 'QN'. (VHDL-290)
+1
+write -hierarchy -format verilog -output ../results/$DESIGN_NAME.v		
+Writing verilog file '/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/results/send_ppm.v'.
+1
+report_timing -nworst 10	> ../log/$DESIGN_NAME.timing.log
+report_area					> ../log/$DESIGN_NAME.area.log
+report_power				> ../log/$DESIGN_NAME.power.log
+report_cell					> ../log/$DESIGN_NAME.cell.log
+report_clock				> ../log/$DESIGN_NAME.clock.log
+report_qor					> ../log/$DESIGN_NAME.qor.log
+quit
+
+Thank you...

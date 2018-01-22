@@ -19,7 +19,7 @@ Option          Value             Origin  File                           LineNo
                 LIB_VHD=>./../libs/LIB_VHD CmdLine -                              -
                 WORK=>./spyglass-1/WORK CmdLine -                              -
                 SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
--libhdlfiles    LIB_VHD=>"../../VHD/constants.vhd ../../VHD/local_counter.vhd ../../VHD/send_ppm.vhd ../../VHD/decoder.vhd ../../VHD/top_ppm.vhd" CmdLine -                              -
+-libhdlfiles    LIB_VHD=>"../../VHD/constants.vhd ../../VHD/local_counter.vhd ../../VHD/send_ppm.vhd ../../VHD/decoder.vhd" CmdLine -                              -
 -mixed          <ON>              CmdLine -                              -
 -nl             <ON>              CmdLine -                              -
 -overloadrules  STARC05-2.1.6.5+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_rtl.spq 108
@@ -176,7 +176,6 @@ Option          Value             Origin  File                           LineNo
                 ../../VHD/decoder.vhd APICall -                              -
                 ../../VHD/local_counter.vhd APICall -                              -
                 ../../VHD/send_ppm.vhd APICall -                              -
-                ../../VHD/top_ppm.vhd APICall -                              -
 
 
 Rules Parameter

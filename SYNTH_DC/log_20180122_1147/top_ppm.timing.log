@@ -1,0 +1,327 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : top_ppm
+Version: J-2014.09-SP2
+Date   : Mon Jan 22 11:47:47 2018
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB_TYP
+Wire Load Model Mode: enclosed
+
+  Startpoint: sig_clk25_reg
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_clk25_reg
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sig_clk25_reg/C (DF3)                    0.00       0.00 r
+  sig_clk25_reg/Q (DF3)                    1.46       1.46 r
+  U399/Q (BUF6)                            1.09       2.56 r
+  U400/Q (NOR21)                           0.45       3.01 f
+  sig_clk25_reg/D (DF3)                    0.00       3.01 f
+  data arrival time                                   3.01
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  sig_clk25_reg/C (DF3)                    0.00      39.50 r
+  library setup time                       0.00      39.50
+  data required time                                 39.50
+  -----------------------------------------------------------
+  data required time                                 39.50
+  data arrival time                                  -3.01
+  -----------------------------------------------------------
+  slack (MET)                                        36.49
+
+
+  Startpoint: sig_clk25_reg
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_clk25_reg
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sig_clk25_reg/C (DF3)                    0.00       0.00 r
+  sig_clk25_reg/Q (DF3)                    1.43       1.43 f
+  U399/Q (BUF6)                            1.06       2.50 f
+  U400/Q (NOR21)                           0.39       2.89 r
+  sig_clk25_reg/D (DF3)                    0.00       2.89 r
+  data arrival time                                   2.89
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  sig_clk25_reg/C (DF3)                    0.00      39.50 r
+  library setup time                      -0.01      39.49
+  data required time                                 39.49
+  -----------------------------------------------------------
+  data required time                                 39.49
+  data arrival time                                  -2.89
+  -----------------------------------------------------------
+  slack (MET)                                        36.60
+
+
+  Startpoint: i_reset_n_top
+              (input port clocked by HCLK)
+  Endpoint: LEDR[7] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  i_reset_n_top (in)                       0.00       1.00 r
+  LEDR[7] (out)                            0.00       1.00 r
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+  Startpoint: SW[5] (input port clocked by HCLK)
+  Endpoint: LEDR[5] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  SW[5] (in)                               0.00       1.00 r
+  LEDR[5] (out)                            0.00       1.00 r
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+  Startpoint: SW[4] (input port clocked by HCLK)
+  Endpoint: LEDR[4] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  SW[4] (in)                               0.00       1.00 r
+  LEDR[4] (out)                            0.00       1.00 r
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+  Startpoint: SW[3] (input port clocked by HCLK)
+  Endpoint: LEDR[3] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  SW[3] (in)                               0.00       1.00 r
+  LEDR[3] (out)                            0.00       1.00 r
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+  Startpoint: SW[2] (input port clocked by HCLK)
+  Endpoint: LEDR[2] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  SW[2] (in)                               0.00       1.00 r
+  LEDR[2] (out)                            0.00       1.00 r
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+  Startpoint: SW[1] (input port clocked by HCLK)
+  Endpoint: LEDR[1] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  SW[1] (in)                               0.00       1.00 r
+  LEDR[1] (out)                            0.00       1.00 r
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+  Startpoint: SW[0] (input port clocked by HCLK)
+  Endpoint: LEDR[0] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  SW[0] (in)                               0.00       1.00 r
+  LEDR[0] (out)                            0.00       1.00 r
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+  Startpoint: SW[0] (input port clocked by HCLK)
+  Endpoint: LEDR[0] (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 f
+  SW[0] (in)                               0.00       1.00 f
+  LEDR[0] (out)                            0.00       1.00 f
+  data arrival time                                   1.00
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  output external delay                   -1.00      38.50
+  data required time                                 38.50
+  -----------------------------------------------------------
+  data required time                                 38.50
+  data arrival time                                  -1.00
+  -----------------------------------------------------------
+  slack (MET)                                        37.50
+
+
+1

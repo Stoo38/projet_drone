@@ -1,9 +1,9 @@
 ##spyglass_version: 5.6.0
-##date: Fri Jan 19 21:53:39 2018
+##date: Mon Jan 22 11:31:08 2018
 ##user: xph3app602
 ##cwd: /tp/xph3app/xph3app602/projet_drone/SPYGLASS/script
 ##lang: verilog+vhdl
-##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_rtl' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='badimplicitSM1,badimplicitSM2,badimplicitSM4,BlockHeader,bothedges,STARC05-2.1.6.5,STARC05-2.3.1.2c,W421,W442a,W442b,W442c,W442f,sim_race02,W110a,W416,CheckDelayTimescale-ML,PragmaComments-ML,STARC05-2.10.2.3,STARC05-2.11.3.1,STARC05-2.3.1.5b,W215,W216,W289,W292,W293,W317,W352,W398,W422,W424,W426,W467,W480,W481a,W481b,W496a,W496b,W71,DuplicateCaseLabel-ML,NoAssignX-ML,NoXInCase-ML,ParamWidthMismatch-ML,ReportPortInfo-ML,STARC05-2.1.3.1,STARC05-2.1.5.3,STARC05-2.2.3.3,STARC05-2.3.1.6,W110,W116,W122,W123,W19,W218,W240,W263,W337,W362,W486,W499,W502,W505,W66,InferLatch,RegInputOutput-ML,STARC05-2.3.4.1v,STARC05-2.5.1.7,STARC05-2.5.1.9,W336,W414,W450L,UndrivenInTerm-ML,BufClock,checkPinConnectedToSupply,CombLoop,FlopClockConstant,FlopEConst,FlopSRConst,LatchFeedback,STARC05-1.2.1.2,STARC05-1.3.1.3,STARC05-1.4.3.4,STARC05-2.1.4.5,STARC05-2.4.1.5,STARC05-2.5.1.2,W392,W415' -policy='openmore,starc,starc2005,erc,simulation,lint,latch,spyglass,morelint,timing' --goal_info 'lint/lint_rtl@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_rtl' -overloadrules 'STARC05-2.1.6.5+severity=Warning,STARC05-2.3.1.2c+severity=Error,W421+severity=Error,sim_race02+severity=Warning,W416+severity=Error,PragmaComments-ML+severity=Data,STARC05-2.10.2.3+severity=Warning,STARC05-2.11.3.1+severity=Warning,STARC05-2.3.1.5b+severity=Error,W289+severity=Error,W293+severity=Error,W352+severity=Error,W398+severity=Error,W422+severity=Error,W71+severity=Error,ParamWidthMismatch-ML+severity=Warning,ReportPortInfo-ML+severity=Data,STARC05-2.1.3.1+severity=Warning,STARC05-2.1.5.3+severity=Warning,STARC05-2.2.3.3+severity=Warning,STARC05-2.3.1.6+severity=Warning,W110+severity=Error,W122+severity=Error,W123+severity=Error,W19+severity=Error,W218+severity=Error,W505+severity=Error,W66+severity=Error,InferLatch+severity=Error,RegInputOutput-ML+severity=Data,STARC05-2.3.4.1v+severity=Warning,STARC05-2.5.1.7+severity=Warning,STARC05-2.5.1.9+severity=Warning,W336+severity=Error,W414+severity=Error,W450L+severity=Warning,UndrivenInTerm-ML+severity=Error,BufClock+severity=Warning,checkPinConnectedToSupply+severity=Error,CombLoop+msgLabel=CombLoop+severity=Error,FlopClockConstant+msgLabel=FlopClockConstant+severity=Error,LatchFeedback+severity=Error,STARC05-1.2.1.2+severity=Error,STARC05-1.3.1.3+severity=Warning,STARC05-1.4.3.4+severity=Warning,STARC05-2.1.4.5+severity=Warning,STARC05-2.4.1.5+severity=Error,W415+msgLabel=W415+severity=Error' -enable_save_restore -enable_save_restore_builtin 'true' -assume_driver_load=yes -checkInHierarchy=yes -checkRTLCInst=yes -checkalldimension=yes -checkconstassign=yes -chkTopModule=yes -enableE2Q=yes -ignoreModuleInstance=yes -new_flow_width=yes -nocheckoverflow=yes -report_inferred_cell=yes -reportundrivenout=no -strict=W342,W343 -treat_latch_as_combinational=yes -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd /tp/xph3app/xph3app602/projet_drone/VHD/decoder.vhd /tp/xph3app/xph3app602/projet_drone/VHD/top_ppm.vhd'
+##args: -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -mSpyGlass::Compatibility::v2_7_3 -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' -nl -wdir './spyglass-1/lint/lint_rtl' -lib LIB_VHD ./../libs/LIB_VHD -lib LIB_VHD ./../libs/LIB_VHD -lib WORK ./spyglass-1/WORK -dbdir './spyglass-1/.SG_SaveRestoreDB' -mixed -batch -rules='badimplicitSM1,badimplicitSM2,badimplicitSM4,BlockHeader,bothedges,STARC05-2.1.6.5,STARC05-2.3.1.2c,W421,W442a,W442b,W442c,W442f,sim_race02,W110a,W416,CheckDelayTimescale-ML,PragmaComments-ML,STARC05-2.10.2.3,STARC05-2.11.3.1,STARC05-2.3.1.5b,W215,W216,W289,W292,W293,W317,W352,W398,W422,W424,W426,W467,W480,W481a,W481b,W496a,W496b,W71,DuplicateCaseLabel-ML,NoAssignX-ML,NoXInCase-ML,ParamWidthMismatch-ML,ReportPortInfo-ML,STARC05-2.1.3.1,STARC05-2.1.5.3,STARC05-2.2.3.3,STARC05-2.3.1.6,W110,W116,W122,W123,W19,W218,W240,W263,W337,W362,W486,W499,W502,W505,W66,InferLatch,RegInputOutput-ML,STARC05-2.3.4.1v,STARC05-2.5.1.7,STARC05-2.5.1.9,W336,W414,W450L,UndrivenInTerm-ML,BufClock,checkPinConnectedToSupply,CombLoop,FlopClockConstant,FlopEConst,FlopSRConst,LatchFeedback,STARC05-1.2.1.2,STARC05-1.3.1.3,STARC05-1.4.3.4,STARC05-2.1.4.5,STARC05-2.4.1.5,STARC05-2.5.1.2,W392,W415' -policy='openmore,starc,starc2005,erc,simulation,lint,latch,spyglass,morelint,timing' --goal_info 'lint/lint_rtl@' -projectwdir './spyglass-1' -hdllibdu -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' --template_info 'lint/lint_rtl' -overloadrules 'STARC05-2.1.6.5+severity=Warning,STARC05-2.3.1.2c+severity=Error,W421+severity=Error,sim_race02+severity=Warning,W416+severity=Error,PragmaComments-ML+severity=Data,STARC05-2.10.2.3+severity=Warning,STARC05-2.11.3.1+severity=Warning,STARC05-2.3.1.5b+severity=Error,W289+severity=Error,W293+severity=Error,W352+severity=Error,W398+severity=Error,W422+severity=Error,W71+severity=Error,ParamWidthMismatch-ML+severity=Warning,ReportPortInfo-ML+severity=Data,STARC05-2.1.3.1+severity=Warning,STARC05-2.1.5.3+severity=Warning,STARC05-2.2.3.3+severity=Warning,STARC05-2.3.1.6+severity=Warning,W110+severity=Error,W122+severity=Error,W123+severity=Error,W19+severity=Error,W218+severity=Error,W505+severity=Error,W66+severity=Error,InferLatch+severity=Error,RegInputOutput-ML+severity=Data,STARC05-2.3.4.1v+severity=Warning,STARC05-2.5.1.7+severity=Warning,STARC05-2.5.1.9+severity=Warning,W336+severity=Error,W414+severity=Error,W450L+severity=Warning,UndrivenInTerm-ML+severity=Error,BufClock+severity=Warning,checkPinConnectedToSupply+severity=Error,CombLoop+msgLabel=CombLoop+severity=Error,FlopClockConstant+msgLabel=FlopClockConstant+severity=Error,LatchFeedback+severity=Error,STARC05-1.2.1.2+severity=Error,STARC05-1.3.1.3+severity=Warning,STARC05-1.4.3.4+severity=Warning,STARC05-2.1.4.5+severity=Warning,STARC05-2.4.1.5+severity=Error,W415+msgLabel=W415+severity=Error' -enable_save_restore -enable_save_restore_builtin 'true' -assume_driver_load=yes -checkInHierarchy=yes -checkRTLCInst=yes -checkalldimension=yes -checkconstassign=yes -chkTopModule=yes -enableE2Q=yes -ignoreModuleInstance=yes -new_flow_width=yes -nocheckoverflow=yes -report_inferred_cell=yes -reportundrivenout=no -strict=W342,W343 -treat_latch_as_combinational=yes -64bit -libhdlfiles LIB_VHD '/tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd /tp/xph3app/xph3app602/projet_drone/VHD/decoder.vhd'
 ##spysch_dirname: ./spyglass-1/lint/lint_rtl/spyglass_spysch
 ##vdb_delimiter: @@
 ##run_mode: SINGLE_WORKSPACE
@@ -25,42 +25,36 @@
 ##file_label: multidim_array_data -file ./spyglass-1/lint/lint_rtl/spyglass_reports/lint/SignalUsageReport.rpt -policy lint -external
 ##file_label: morelint_ReportPortInfo -file ./spyglass-1/lint/lint_rtl/spyglass_reports/morelint/ReportPortInfo -policy morelint -external
 ##file_label: SPG_ELAB_SUMMARY_FILE -file ./spyglass-1/lint/lint_rtl/spyglass_reports/SpyGlass/elab_summary.rpt -policy SpyGlass -external
-##files_vhdl: ../../VHD/top_ppm.vhd ../../VHD/decoder.vhd ../../VHD/send_ppm.vhd ../../VHD/local_counter.vhd ../../VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd
+##files_vhdl: ../../VHD/decoder.vhd ../../VHD/send_ppm.vhd ../../VHD/local_counter.vhd ../../VHD/constants.vhd /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd
 ##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd -id 1 -precompiled=LIB_VHD -inactiveList slc 3 4 0 slc 3 4 0 slc 10 10 49 slc 10 10 49 slc 12 12 80 slc 12 12 80 slc 13 13 107 slc 13 13 107 slc 14 15 0 slc 14 15 0 slc 16 16 111 slc 16 16 111 slc 17 18 113 slc 17 18 113 slc 19 19 107 slc 19 19 107 slc 21 21 114 slc 21 21 114 slc 23 23 114 slc 23 23 114 slc 25 25 110 slc 25 25 110 slc 27 27 110 slc 27 27 110
 ##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/local_counter.vhd -id 2 -inactiveList slc 13 13 74
 ##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/send_ppm.vhd -id 3 -inactiveList slc 3 3 0 slc 17 17 0 slc 26 30 0 slc 37 47 0 slc 51 51 0 slc 54 54 0 slc 57 57 0 slc 61 61 0 slc 64 65 0 slc 68 68 0 slc 81 81 0 slc 85 85 0 slc 95 95 0 slc 99 102 0 slc 111 112 0 slc 129 130 0 slc 132 136 0 slc 139 139 0 slc 143 146 0 slc 150 150 0 slc 155 155 27 slc 170 170 26 slc 183 183 149 slc 192 192 0 slc 195 195 0 slc 213 213 0 slc 234 234 0 slc 236 236 0 slc 240 240 0 slc 250 250 0
 ##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/decoder.vhd -id 4 -inactiveList slc 3 3 0 slc 22 25 0
-##sde_property: file /tp/xph3app/xph3app602/projet_drone/VHD/top_ppm.vhd -id 5 -inactiveList slc 17 22 0 slc 28 28 0 slc 30 42 0 slc 62 64 0 slc 66 66 0 slc 70 83 0
 #span WORK.constants_package ../../VHD/constants.vhd 8 30 ../../VHD/constants.vhd 1 30
 #rtl_idmap WORK.constants_package 1 -lang 2 -type pack
 #span LIB_VHD.constants_package /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 8 30 /tp/xph3app/xph3app602/projet_drone/VHD/constants.vhd 1 30
 #rtl_idmap LIB_VHD.constants_package 2 -lang 2 -type pack
-#span WORK.top_ppm.rtl ../../VHD/top_ppm.vhd 10 24 ../../VHD/top_ppm.vhd 1 24 ../../VHD/top_ppm.vhd 26 98
-#rtl_idmap WORK.top_ppm 3 -lang 2
-#rtl_idmap WORK.top_ppm.rtl 4 -entityid 3
 #span WORK.decoder.rtl ../../VHD/decoder.vhd 11 18 ../../VHD/decoder.vhd 1 18 ../../VHD/decoder.vhd 20 43
-#rtl_idmap WORK.decoder 5 -lang 2
-#rtl_idmap WORK.decoder.rtl 6 -entityid 5
+#rtl_idmap WORK.decoder 3 -lang 2
+#rtl_idmap WORK.decoder.rtl 4 -entityid 3
 #span WORK.send_ppm.rtl ../../VHD/send_ppm.vhd 12 22 ../../VHD/send_ppm.vhd 1 22 ../../VHD/send_ppm.vhd 24 257
-#rtl_idmap WORK.send_ppm 7 -lang 2
-#rtl_idmap WORK.send_ppm.rtl 8 -entityid 7 -dep_ids 1 2
+#rtl_idmap WORK.send_ppm 5 -lang 2
+#rtl_idmap WORK.send_ppm.rtl 6 -entityid 5 -dep_ids 1 2
 #span WORK.local_counter.b ../../VHD/local_counter.vhd 9 14 ../../VHD/local_counter.vhd 1 14 ../../VHD/local_counter.vhd 16 41
-#rtl_idmap WORK.local_counter 9 -lang 2 -dep_ids 1 2
-#rtl_idmap WORK.local_counter.b 10 -entityid 9 -dep_ids 1 2
-#greybox WORK.top_ppm.rtl 15
+#rtl_idmap WORK.local_counter 7 -lang 2 -dep_ids 1 2
+#rtl_idmap WORK.local_counter.b 8 -entityid 7 -dep_ids 1 2
 #greybox WORK.decoder.rtl 15
 #greybox WORK.send_ppm.rtl 15
 #greybox WORK.local_counter.b 15
-#rtl_top_modules top_ppm
-#top_modules top_ppm
+#rtl_top_modules send_ppm decoder
+#top_modules send_ppm decoder
 #bbox_modules
-#child local_counter WORK.local_counter.b WORK.local_counter.b -elabDuId 4
-#child send_ppm WORK.send_ppm.rtl WORK.send_ppm.rtl -elabDuId 3 local_counter1 local_counter
-#child decoder WORK.decoder.rtl WORK.decoder.rtl -elabDuId 2
-#child top_ppm WORK.top_ppm.rtl WORK.top_ppm.rtl -elabDuId 1 decoder1 decoder send_ppm1 send_ppm
-##totalGeneratedCount:         2
+#child local_counter WORK.local_counter.b WORK.local_counter.b -elabDuId 2
+#child send_ppm WORK.send_ppm.rtl WORK.send_ppm.rtl -elabDuId 1 local_counter1 local_counter
+#child decoder WORK.decoder.rtl WORK.decoder.rtl -elabDuId 3
+##totalGeneratedCount:         3
 ##totalWaivedViolationCount:         0
-##totalReportCount:         2
-##totalDataSeverityCount:         3
+##totalReportCount:         3
+##totalDataSeverityCount:         4
 ##totalSuppressedCount:         0
 ##Active_Rules  BlockHeader BufClock CheckDelayTimescale-ML CombLoop DuplicateCaseLabel-ML LatchFeedback NoAssignX-ML NoXInCase-ML ParamWidthMismatch-ML STARC05-1.2.1.2 STARC05-1.3.1.3 STARC05-2.1.3.1 STARC05-2.1.4.5 STARC05-2.1.5.3 STARC05-2.1.6.5 STARC05-2.10.2.3 STARC05-2.11.3.1 STARC05-2.2.3.3 STARC05-2.3.1.2c STARC05-2.3.1.5b STARC05-2.3.1.6 STARC05-2.3.4.1v STARC05-2.4.1.5 STARC05-2.5.1.2 STARC05-2.5.1.7 STARC05-2.5.1.9 UndrivenInTerm-ML W110 W110a W116 W122 W123 W19 W215 W216 W218 W240 W263 W289 W292 W293 W317 W336 W337 W352 W362 W392 W398 W414 W415 W416 W421 W422 W424 W426 W442a W442b W442c W442f W450L W467 W480 W481a W481b W486 W496a W496b W499 W502 W505 W66 W71 badimplicitSM1 badimplicitSM2 badimplicitSM4 bothedges sim_race02

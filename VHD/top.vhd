@@ -21,10 +21,16 @@ entity top_bar is
 		rout_top	   	: out std_logic_vector(7 downto 0);
 		gout_top	   	: out std_logic_vector(7 downto 0);
 		bout_top		: out std_logic_vector(7 downto 0);
+		r_out_proc	   	: out std_logic_vector(7 downto 0);
+		g_out_proc	   	: out std_logic_vector(7 downto 0);
+		b_out_proc		: out std_logic_vector(7 downto 0);
 		X_barycentre_top	: out std_logic_vector (8 downto 0);
 		Y_barycentre_top	: out std_logic_vector (8 downto 0);
 		HSYNC_top		: out std_logic;
-		VSYNC_top		: out std_logic
+		VSYNC_top		: out std_logic;
+		cam_x			: out std_logic_vector (9 downto 0);
+		cam_y			: out std_logic_vector (8 downto 0);
+		IMG_top			: out std_logic
 
 	); 
 
@@ -134,5 +140,11 @@ architecture bar of top_bar is
 			);
 HSYNC_top<=HSYNC_gen_img;
 VSYNC_top<=VSYNC_gen_img;
+cam_x <= X_gen_img_pos;
+cam_y <= Y_gen_img_pos;
+r_out_proc <= r_img_pos;
+g_out_proc <= g_img_pos;
+b_out_proc <= b_img_pos;
+IMG_top <= IMG_gen_img_pos;
 end bar;
 

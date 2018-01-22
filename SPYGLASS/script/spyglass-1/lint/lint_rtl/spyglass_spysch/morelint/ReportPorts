@@ -1,5 +1,8 @@
 SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
-VALUE@@i_clk_top@@INPUT@@0@@0@@-@@top_ppm@@No
-VALUE@@i_reset_n_top@@INPUT@@0@@0@@-@@top_ppm@@No
-VALUE@@i_sel_top@@INPUT@@3@@0@@-@@top_ppm@@No
-VALUE@@o_ppm_top@@OUTPUT@@0@@0@@-@@top_ppm@@No
+VALUE@@i_sel@@INPUT@@3@@0@@-@@decoder@@No
+VALUE@@o_val@@OUTPUT@@31@@0@@-@@decoder@@No
+SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
+VALUE@@i_clk@@INPUT@@0@@0@@-@@send_ppm@@No
+VALUE@@i_reset_n@@INPUT@@0@@0@@-@@send_ppm@@No
+VALUE@@i_reg@@INPUT@@31@@0@@	i_enable	: in std_logic;@@send_ppm@@No
+VALUE@@o_ppm@@OUTPUT@@0@@0@@-@@send_ppm@@No
