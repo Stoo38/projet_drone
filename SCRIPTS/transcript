@@ -1,0 +1,34 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -do runSimStoo.do -novopt LIB_VHD_BENCH.bench_send_ppm 
+# Loading std.standard
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.constants_package
+# Loading lib_vhd.constants_package
+# Loading LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.send_ppm(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lib_vhd.send_ppm(rtl)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/LIBS/LIB_VHD.local_counter(b)
+# Loading lib_vhd.local_counter(b)
+# do runSimStoo.do 
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 2  Instance: /bench_send_ppm/send_ppm1
+add wave -position insertpoint  \
+sim:/bench_send_ppm/sig_i_clk \
+sim:/bench_send_ppm/sig_i_reset_n \
+sim:/bench_send_ppm/sig_i_reg \
+sim:/bench_send_ppm/sig_o_ppm

@@ -1,0 +1,155 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP2 for RHEL64 -- Nov 25, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+source ../scripts/define_variables.tcl
+LIB_VHD
+#cd $PROJECT_PATH$WORK_PATH
+#set_dont_use c35_CORELIB_TYP/XOR30
+#set_dont_use c35_CORELIB_TYP/XOR31
+define_design_lib $LIBRARY_NAME -path ../libs_synth/$LIBRARY_NAME
+1
+analyze -library $LIBRARY_NAME -format vhdl $VHDL_FILES 
+Running PRESTO HDLC
+-- Compiling Source File ../../VHD/image_process.vhd
+Compiling Entity Declaration IMAGE_PROCESS
+Compiling Architecture RTL of IMAGE_PROCESS
+Warning:  ../../VHD/image_process.vhd:33: The architecture rtl has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ../../VHD/gensync.vhd
+Compiling Entity Declaration GENSYNC
+Compiling Architecture BEHAVIORAL of GENSYNC
+Warning:  ../../VHD/gensync.vhd:20: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ../../VHD/position.vhd
+Compiling Entity Declaration POSITION
+Compiling Architecture DET of POSITION
+Warning:  ../../VHD/position.vhd:30: The architecture det has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ../../VHD/div.vhd
+Compiling Entity Declaration DIV_BINARY
+Compiling Architecture BEHAVIORAL of DIV_BINARY
+Warning:  ../../VHD/div.vhd:21: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ../../VHD/top.vhd
+Compiling Entity Declaration TOP_BAR
+Compiling Architecture BAR of TOP_BAR
+Warning:  ../../VHD/top.vhd:39: The architecture bar has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+1
+elaborate $DESIGN_NAME -architecture $ARCHI_TOP_NAME -library $LIBRARY_NAME
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/gtech.db'
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/standard.sldb'
+  Loading link library 'c35_CORELIB_TYP'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'top_bar'.
+Information: Building the design 'gensync'. (HDL-193)
+
+Inferred memory devices in process
+	in routine gensync line 33 in file
+		'../../VHD/gensync.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      HSYNC_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      VSYNC_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     comptX_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+|     comptY_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'image_process'. (HDL-193)
+
+Statistics for case statements in always block at line 58 in file
+	'../../VHD/image_process.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            61            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine image_process line 42 in file
+		'../../VHD/image_process.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      g_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       ri_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       gi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       bi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      b_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'position'. (HDL-193)
+
+Information: Interrupting current command. (INT-2)
+Warning:  ../../VHD/position.vhd:214: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+Warning:  ../../VHD/position.vhd:216: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+Warning:  ../../VHD/position.vhd:224: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+Warning:  ../../VHD/position.vhd:226: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+
+Statistics for case statements in always block at line 107 in file
+	'../../VHD/position.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           117            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine position line 65 in file
+		'../../VHD/position.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|       ri_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       gi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       bi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      x_bar_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+|      y_bar_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+|     r_bout_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     g_bout_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     b_bout_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|      x_sum_reg      | Flip-flop |  25   |  Y  | N  | N  | N  | N  | N  | N  |
+|      y_sum_reg      | Flip-flop |  25   |  Y  | N  | N  | N  | N  | N  | N  |
+|    count_img_reg    | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine position line 107 in file
+		'../../VHD/position.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     quot_x_reg      | Latch |   9   |  Y  | N  | N  | N  | -  | -  | -  |
+|     quot_y_reg      | Latch |   9   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Error:  Operator 'LT_UNS_OP' not found in synthetic library. (ELAB-352)
+Warning: Design 'top_bar' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+dc_shell> 
+dc_shell> 

@@ -1,0 +1,156 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : top_ppm
+Version: J-2014.09-SP2
+Date   : Mon Jan 22 12:45:40 2018
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB_TYP
+Wire Load Model Mode: enclosed
+
+  Startpoint: sig_clk25_reg
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_clk25_reg
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sig_clk25_reg/C (DF3)                    0.00       0.00 r
+  sig_clk25_reg/Q (DF3)                    1.46       1.46 r
+  U399/Q (BUF6)                            1.09       2.56 r
+  U400/Q (NOR21)                           0.45       3.01 f
+  sig_clk25_reg/D (DF3)                    0.00       3.01 f
+  data arrival time                                   3.01
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  sig_clk25_reg/C (DF3)                    0.00      39.50 r
+  library setup time                       0.00      39.50
+  data required time                                 39.50
+  -----------------------------------------------------------
+  data required time                                 39.50
+  data arrival time                                  -3.01
+  -----------------------------------------------------------
+  slack (MET)                                        36.49
+
+
+  Startpoint: sig_clk25_reg
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: sig_clk25_reg
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  sig_clk25_reg/C (DF3)                    0.00       0.00 r
+  sig_clk25_reg/Q (DF3)                    1.43       1.43 f
+  U399/Q (BUF6)                            1.06       2.50 f
+  U400/Q (NOR21)                           0.39       2.89 r
+  sig_clk25_reg/D (DF3)                    0.00       2.89 r
+  data arrival time                                   2.89
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  sig_clk25_reg/C (DF3)                    0.00      39.50 r
+  library setup time                      -0.01      39.49
+  data required time                                 39.49
+  -----------------------------------------------------------
+  data required time                                 39.49
+  data arrival time                                  -2.89
+  -----------------------------------------------------------
+  slack (MET)                                        36.60
+
+
+  Startpoint: i_reset_n_top
+              (input port clocked by HCLK)
+  Endpoint: sig_clk25_reg
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  i_reset_n_top (in)                       0.00       1.00 r
+  U401/Q (INV3)                            0.07       1.07 f
+  U400/Q (NOR21)                           0.24       1.31 r
+  sig_clk25_reg/D (DF3)                    0.00       1.31 r
+  data arrival time                                   1.31
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  sig_clk25_reg/C (DF3)                    0.00      39.50 r
+  library setup time                      -0.01      39.49
+  data required time                                 39.49
+  -----------------------------------------------------------
+  data required time                                 39.49
+  data arrival time                                  -1.31
+  -----------------------------------------------------------
+  slack (MET)                                        38.18
+
+
+  Startpoint: i_reset_n_top
+              (input port clocked by HCLK)
+  Endpoint: sig_clk25_reg
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_ppm            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 f
+  i_reset_n_top (in)                       0.00       1.00 f
+  U401/Q (INV3)                            0.10       1.10 r
+  U400/Q (NOR21)                           0.20       1.30 f
+  sig_clk25_reg/D (DF3)                    0.00       1.30 f
+  data arrival time                                   1.30
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  sig_clk25_reg/C (DF3)                    0.00      39.50 r
+  library setup time                       0.00      39.50
+  data required time                                 39.50
+  -----------------------------------------------------------
+  data required time                                 39.50
+  data arrival time                                  -1.30
+  -----------------------------------------------------------
+  slack (MET)                                        38.20
+
+
+1

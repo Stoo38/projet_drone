@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version J-2014.09-SP2 for amd64 -- Nov 25, 2014
-#@ # Date:   Mon Jan 22 16:57:42 2018
-#@ # Run by: xph3app6@cimeld11
+#@ # Date:   Tue Jan 23 08:25:05 2018
+#@ # Run by: xph3app6@cimeld16
 #@ 
 
 source /softslin/synthesisvJ2014_09_sp2_64b/admin/setup/.synopsys_dc.setup

@@ -1,0 +1,497 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP2 for RHEL64 -- Nov 25, 2014
+               Copyright (c) 1988-2014 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+source ../scripts/define_variables.tcl
+LIB_VHD
+#cd $PROJECT_PATH$WORK_PATH
+#set_dont_use c35_CORELIB_TYP/XOR30
+#set_dont_use c35_CORELIB_TYP/XOR31
+define_design_lib $LIBRARY_NAME -path ../libs_synth/$LIBRARY_NAME
+1
+analyze -library $LIBRARY_NAME -format vhdl $VHDL_FILES 
+Running PRESTO HDLC
+-- Compiling Source File ../../VHD/image_process.vhd
+Compiling Entity Declaration IMAGE_PROCESS
+Compiling Architecture RTL of IMAGE_PROCESS
+-- Compiling Source File ../../VHD/gensync.vhd
+Compiling Entity Declaration GENSYNC
+Compiling Architecture BEHAVIORAL of GENSYNC
+-- Compiling Source File ../../VHD/position.vhd
+Compiling Entity Declaration POSITION
+Compiling Architecture DET of POSITION
+-- Compiling Source File ../../VHD/div.vhd
+Compiling Entity Declaration DIV_BINARY
+Compiling Architecture BEHAVIORAL of DIV_BINARY
+-- Compiling Source File ../../VHD/top.vhd
+Compiling Entity Declaration TOP_BAR
+Compiling Architecture BAR of TOP_BAR
+Presto compilation completed successfully.
+Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+1
+elaborate $DESIGN_NAME -architecture $ARCHI_TOP_NAME -library $LIBRARY_NAME
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/gtech.db'
+Loading db file '/softslin/synthesisvJ2014_09_sp2_64b/libraries/syn/standard.sldb'
+  Loading link library 'c35_CORELIB_TYP'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'top_bar'.
+Information: Building the design 'gensync'. (HDL-193)
+
+Inferred memory devices in process
+	in routine gensync line 33 in file
+		'../../VHD/gensync.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      HSYNC_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      VSYNC_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     comptX_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+|     comptY_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'image_process'. (HDL-193)
+
+Statistics for case statements in always block at line 58 in file
+	'../../VHD/image_process.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            61            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine image_process line 42 in file
+		'../../VHD/image_process.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      g_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       ri_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       gi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       bi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      b_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'position'. (HDL-193)
+Warning:  ../../VHD/position.vhd:214: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+Warning:  ../../VHD/position.vhd:216: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+Warning:  ../../VHD/position.vhd:224: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+Warning:  ../../VHD/position.vhd:226: Potential overflow which may cause synthesis and simulation mismatch in operator '*'. (ELAB-373)
+
+Statistics for case statements in always block at line 107 in file
+	'../../VHD/position.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           117            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine position line 65 in file
+		'../../VHD/position.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|       ri_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       gi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       bi_reg        | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      x_bar_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+|      y_bar_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+|     r_bout_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     g_bout_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     b_bout_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |  18   |  Y  | N  | N  | N  | N  | N  | N  |
+|      x_sum_reg      | Flip-flop |  25   |  Y  | N  | N  | N  | N  | N  | N  |
+|      y_sum_reg      | Flip-flop |  25   |  Y  | N  | N  | N  | N  | N  | N  |
+|    count_img_reg    | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine position line 107 in file
+		'../../VHD/position.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     quot_x_reg      | Latch |   9   |  Y  | N  | N  | N  | -  | -  | -  |
+|     quot_y_reg      | Latch |   9   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+1
+source ../scripts/top_num.sdc
+1
+set_operating_conditions -library c35_CORELIB_TYP WORST
+Using operating conditions 'WORST' found in library 'c35_CORELIB_TYP'.
+1
+compile -exact_map -area_effort high -ungroup_all
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.2 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 51 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY12'. (OPT-1307)
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY22'. (OPT-1307)
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY32'. (OPT-1307)
+Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY42'. (OPT-1307)
+  Loading target library 'c35_CORELIB_TYP'
+Warning: Operating condition WORST set on design top_bar has different process,
+voltage and temperatures parameters than the parameters at which target library 
+c35_CORELIB_TYP is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'position'
+Information: Ungrouping hierarchy dp_cluster_0. (OPT-772)
+Information: Ungrouping hierarchy dp_cluster_1. (OPT-772)
+Information: Ungrouping hierarchy dp_cluster_2. (OPT-772)
+Information: Ungrouping hierarchy dp_cluster_3. (OPT-772)
+Information: Ungrouping hierarchy dp_cluster_4. (OPT-772)
+Information: Ungrouping hierarchy dp_cluster_5. (OPT-772)
+Information: Ungrouping hierarchy dp_cluster_6. (OPT-772)
+Information: Ungrouping hierarchy dp_cluster_7. (OPT-772)
+  Processing 'image_process'
+  Processing 'gensync'
+  Processing 'top_bar'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy gensync1. (OPT-772)
+Information: Ungrouping hierarchy image_process1. (OPT-772)
+Information: Ungrouping hierarchy position1. (OPT-772)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'DW01_cmp2_width20'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_inc_width18'
+  Processing 'DW01_add_width18'
+  Processing 'DW01_add_width18'
+  Processing 'DW01_inc_width20'
+  Processing 'DW01_cmp2_width32'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width32'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width32'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width31'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width30'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width29'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width28'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width27'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width26'
+  Processing 'DW01_cmp2_width32'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width32'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width32'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width31'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width30'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width29'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width28'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width27'
+  Processing 'DW01_sub_width25'
+  Processing 'DW01_cmp2_width26'
+  Processing 'DW01_sub_width9'
+  Processing 'DW01_cmp2_width9'
+  Processing 'DW01_sub_width9'
+  Processing 'DW01_cmp2_width9'
+  Processing 'DW01_add_width9'
+  Processing 'DW01_cmp2_width9'
+  Processing 'DW01_add_width9'
+  Processing 'DW01_cmp2_width9'
+  Allocating blocks in 'DW02_mult_A_width9_B_width1'
+  Allocating blocks in 'DW01_absval_width9'
+  Allocating blocks in 'DW01_absval_width1'
+  Processing 'DW02_mult_A_width9_B_width1'
+  Processing 'DW01_add_width25'
+  Processing 'DW02_mult_A_width9_B_width1'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW02_mult_A_width9_B_width1'
+  Processing 'DW01_add_width25'
+  Processing 'DW02_mult_A_width9_B_width1'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_add_width25'
+  Processing 'DW01_cmp2_width8'
+  Processing 'DW01_cmp2_width8'
+  Processing 'DW01_cmp2_width8'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_add_width10'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_inc_width10'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_inc_width10'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_cmp2_width11'
+  Processing 'DW01_add_width9'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15  697063.8      0.00       0.0       0.0                          
+    0:00:15  697063.8      0.00       0.0       0.0                          
+    0:00:15  697063.8      0.00       0.0       0.0                          
+    0:00:15  697063.8      0.00       0.0       0.0                          
+    0:00:15  697063.8      0.00       0.0       0.0                          
+    0:00:17  543185.2      0.00       0.0       0.0                          
+    0:00:17  542457.2      0.00       0.0       0.0                          
+    0:00:17  540327.8      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:17  540164.0      0.00       0.0       0.0                          
+    0:00:18  529962.0      0.00       0.0       0.0                          
+    0:00:18  525121.4      0.00       0.0       0.0                          
+    0:00:18  522542.2      0.00       0.0       0.0                          
+    0:00:18  520462.6      0.00       0.0       0.0                          
+    0:00:19  520072.0      0.00       0.0       0.0                          
+    0:00:19  520072.0      0.00       0.0       0.0                          
+    0:00:19  520072.0      0.00       0.0       0.0                          
+    0:00:19  519635.2      0.00       0.0       0.0                          
+    0:00:19  519635.2      0.00       0.0       0.0                          
+    0:00:19  519635.2      0.00       0.0       0.0                          
+    0:00:19  519635.2      0.00       0.0       0.0                          
+    0:00:19  519635.2      0.00       0.0       0.0                          
+    0:00:19  519635.2      0.00       0.0       0.0                          
+    0:00:19  519016.4      0.00       0.0       0.0                          
+Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#compile -exact_map -area_effort high
+write_sdf ../results/$DESIGN_NAME.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/results/top_bar.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+write -format ddc -hierarchy -output ../results/$DESIGN_NAME.ddc
+Writing ddc file '../results/top_bar.ddc'.
+1
+#Genere la netlist au format VHDL
+write -hierarchy -format vhdl -output ../results/${DESIGN_NAME}.vhd
+Writing vhdl file '/tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/results/top_bar.vhd'.
+Warning: A dummy net 'n_1000' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1001' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1002' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1003' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1004' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1005' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1006' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1007' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1008' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1009' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1010' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1011' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1012' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1013' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1014' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1015' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1016' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1017' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1018' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1019' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1020' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1021' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1022' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1023' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1024' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1025' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1026' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1027' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1028' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1029' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1030' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1031' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1032' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1033' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1034' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1035' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1036' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1037' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1038' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1039' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1040' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1041' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1042' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1043' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1044' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1045' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1046' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1047' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1048' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1049' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1050' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1051' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1052' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1053' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1054' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1055' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1056' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1057' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1058' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1059' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1060' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1061' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1062' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1063' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1064' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1065' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1066' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1067' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1068' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1069' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1070' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1071' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1072' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1073' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1074' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1075' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1076' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1077' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1078' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1079' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1080' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1081' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1082' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1083' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1084' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1085' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1086' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1087' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1088' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1089' is created to connect open pin 'Q'. (VHDL-290)
+Warning: A dummy net 'n_1090' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1091' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1092' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1093' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1094' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1095' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1096' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1097' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1098' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1099' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1100' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1101' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1102' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1103' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1104' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1105' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1106' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1107' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1108' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1109' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1110' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1111' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1112' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1113' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1114' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1115' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1116' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1117' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1118' is created to connect open pin 'QN'. (VHDL-290)
+1
+write -hierarchy -format verilog -output ../results/$DESIGN_NAME.v		
+Writing verilog file '/tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/results/top_bar.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+report_timing -nworst 10	> ../log/$DESIGN_NAME.timing.log
+report_area					> ../log/$DESIGN_NAME.area.log
+report_power				> ../log/$DESIGN_NAME.power.log
+report_cell					> ../log/$DESIGN_NAME.cell.log
+report_clock				> ../log/$DESIGN_NAME.clock.log
+report_qor					> ../log/$DESIGN_NAME.qor.log
+quit
+
+Thank you...

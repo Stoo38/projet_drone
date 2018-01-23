@@ -1,0 +1,1184 @@
+ 
+****************************************
+Report : cell
+Design : top_ppm
+Version: J-2014.09-SP2
+Date   : Mon Jan 22 12:45:41 2018
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+   mo - map_only
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U5                        NOR21           c35_CORELIB_TYP 54.599998 
+U6                        MUX22           c35_CORELIB_TYP 109.199997
+U7                        MUX22           c35_CORELIB_TYP 109.199997
+U8                        MUX22           c35_CORELIB_TYP 109.199997
+U9                        MUX22           c35_CORELIB_TYP 109.199997
+U10                       XNR21           c35_CORELIB_TYP 109.199997
+U11                       NOR21           c35_CORELIB_TYP 54.599998 
+U12                       INV3            c35_CORELIB_TYP 36.400002 
+U13                       NOR21           c35_CORELIB_TYP 54.599998 
+U14                       XNR21           c35_CORELIB_TYP 109.199997
+U15                       INV3            c35_CORELIB_TYP 36.400002 
+U16                       NOR21           c35_CORELIB_TYP 54.599998 
+U17                       INV3            c35_CORELIB_TYP 36.400002 
+U18                       INV3            c35_CORELIB_TYP 36.400002 
+U19                       INV3            c35_CORELIB_TYP 36.400002 
+U20                       NOR21           c35_CORELIB_TYP 54.599998 
+U21                       INV3            c35_CORELIB_TYP 36.400002 
+U22                       NOR21           c35_CORELIB_TYP 54.599998 
+U23                       INV3            c35_CORELIB_TYP 36.400002 
+U24                       XNR21           c35_CORELIB_TYP 109.199997
+U25                       NOR21           c35_CORELIB_TYP 54.599998 
+U26                       INV3            c35_CORELIB_TYP 36.400002 
+U27                       NOR21           c35_CORELIB_TYP 54.599998 
+U28                       INV3            c35_CORELIB_TYP 36.400002 
+U29                       NOR21           c35_CORELIB_TYP 54.599998 
+U30                       INV3            c35_CORELIB_TYP 36.400002 
+U31                       NOR21           c35_CORELIB_TYP 54.599998 
+U32                       INV3            c35_CORELIB_TYP 36.400002 
+U33                       INV3            c35_CORELIB_TYP 36.400002 
+U34                       XOR21           c35_CORELIB_TYP 127.400002
+U35                       INV3            c35_CORELIB_TYP 36.400002 
+U36                       INV3            c35_CORELIB_TYP 36.400002 
+U37                       INV3            c35_CORELIB_TYP 36.400002 
+U38                       INV3            c35_CORELIB_TYP 36.400002 
+U39                       INV3            c35_CORELIB_TYP 36.400002 
+U40                       INV3            c35_CORELIB_TYP 36.400002 
+U41                       NOR21           c35_CORELIB_TYP 54.599998 
+U42                       INV3            c35_CORELIB_TYP 36.400002 
+U43                       INV3            c35_CORELIB_TYP 36.400002 
+U44                       NOR21           c35_CORELIB_TYP 54.599998 
+U45                       INV3            c35_CORELIB_TYP 36.400002 
+U46                       NOR21           c35_CORELIB_TYP 54.599998 
+U47                       XOR21           c35_CORELIB_TYP 127.400002
+U48                       XOR21           c35_CORELIB_TYP 127.400002
+U49                       XOR21           c35_CORELIB_TYP 127.400002
+U50                       XOR21           c35_CORELIB_TYP 127.400002
+U51                       XOR21           c35_CORELIB_TYP 127.400002
+U52                       NOR21           c35_CORELIB_TYP 54.599998 
+U53                       INV3            c35_CORELIB_TYP 36.400002 
+U54                       NOR21           c35_CORELIB_TYP 54.599998 
+U55                       NOR21           c35_CORELIB_TYP 54.599998 
+U56                       INV3            c35_CORELIB_TYP 36.400002 
+U57                       INV3            c35_CORELIB_TYP 36.400002 
+U58                       NOR21           c35_CORELIB_TYP 54.599998 
+U59                       INV3            c35_CORELIB_TYP 36.400002 
+U60                       INV3            c35_CORELIB_TYP 36.400002 
+U61                       NOR21           c35_CORELIB_TYP 54.599998 
+U62                       INV3            c35_CORELIB_TYP 36.400002 
+U63                       INV3            c35_CORELIB_TYP 36.400002 
+U64                       NOR21           c35_CORELIB_TYP 54.599998 
+U65                       INV3            c35_CORELIB_TYP 36.400002 
+U66                       INV3            c35_CORELIB_TYP 36.400002 
+U67                       INV3            c35_CORELIB_TYP 36.400002 
+U68                       XOR21           c35_CORELIB_TYP 127.400002
+U69                       INV3            c35_CORELIB_TYP 36.400002 
+U70                       XOR21           c35_CORELIB_TYP 127.400002
+U71                       INV3            c35_CORELIB_TYP 36.400002 
+U72                       XNR21           c35_CORELIB_TYP 109.199997
+U73                       INV3            c35_CORELIB_TYP 36.400002 
+U74                       XOR21           c35_CORELIB_TYP 127.400002
+U75                       INV3            c35_CORELIB_TYP 36.400002 
+U76                       XOR21           c35_CORELIB_TYP 127.400002
+U77                       INV3            c35_CORELIB_TYP 36.400002 
+U78                       INV3            c35_CORELIB_TYP 36.400002 
+U79                       INV3            c35_CORELIB_TYP 36.400002 
+U80                       INV3            c35_CORELIB_TYP 36.400002 
+U81                       INV3            c35_CORELIB_TYP 36.400002 
+U82                       INV3            c35_CORELIB_TYP 36.400002 
+U83                       INV3            c35_CORELIB_TYP 36.400002 
+U84                       INV3            c35_CORELIB_TYP 36.400002 
+U85                       INV3            c35_CORELIB_TYP 36.400002 
+U86                       INV3            c35_CORELIB_TYP 36.400002 
+U87                       NOR21           c35_CORELIB_TYP 54.599998 
+U88                       INV3            c35_CORELIB_TYP 36.400002 
+U89                       NOR21           c35_CORELIB_TYP 54.599998 
+U90                       XOR21           c35_CORELIB_TYP 127.400002
+U91                       XOR21           c35_CORELIB_TYP 127.400002
+U92                       XOR21           c35_CORELIB_TYP 127.400002
+U93                       XOR21           c35_CORELIB_TYP 127.400002
+U94                       XOR21           c35_CORELIB_TYP 127.400002
+U95                       XOR21           c35_CORELIB_TYP 127.400002
+U96                       XNR21           c35_CORELIB_TYP 109.199997
+U97                       XNR21           c35_CORELIB_TYP 109.199997
+U98                       XNR21           c35_CORELIB_TYP 109.199997
+U99                       XNR21           c35_CORELIB_TYP 109.199997
+U100                      XOR21           c35_CORELIB_TYP 127.400002
+U101                      XOR21           c35_CORELIB_TYP 127.400002
+U102                      XOR21           c35_CORELIB_TYP 127.400002
+U103                      XOR21           c35_CORELIB_TYP 127.400002
+U104                      XOR21           c35_CORELIB_TYP 127.400002
+U105                      XOR21           c35_CORELIB_TYP 127.400002
+U106                      XOR21           c35_CORELIB_TYP 127.400002
+                                                                    d
+U107                      XOR21           c35_CORELIB_TYP 127.400002
+                                                                    d
+U108                      XOR21           c35_CORELIB_TYP 127.400002
+                                                                    d
+U109                      XOR21           c35_CORELIB_TYP 127.400002
+                                                                    d
+U110                      XNR21           c35_CORELIB_TYP 109.199997
+U111                      XNR21           c35_CORELIB_TYP 109.199997
+U112                      XNR21           c35_CORELIB_TYP 109.199997
+U113                      XNR21           c35_CORELIB_TYP 109.199997
+U114                      NAND22          c35_CORELIB_TYP 54.599998 
+U115                      INV3            c35_CORELIB_TYP 36.400002 
+U116                      NOR21           c35_CORELIB_TYP 54.599998 
+U117                      INV3            c35_CORELIB_TYP 36.400002 
+U118                      INV3            c35_CORELIB_TYP 36.400002 
+U119                      NOR21           c35_CORELIB_TYP 54.599998 
+U120                      INV3            c35_CORELIB_TYP 36.400002 
+U121                      INV3            c35_CORELIB_TYP 36.400002 
+U122                      NOR21           c35_CORELIB_TYP 54.599998 
+U123                      INV3            c35_CORELIB_TYP 36.400002 
+U124                      INV3            c35_CORELIB_TYP 36.400002 
+U125                      NOR21           c35_CORELIB_TYP 54.599998 
+U126                      INV3            c35_CORELIB_TYP 36.400002 
+U127                      INV3            c35_CORELIB_TYP 36.400002 
+U128                      NOR21           c35_CORELIB_TYP 54.599998 
+U129                      INV3            c35_CORELIB_TYP 36.400002 
+U130                      INV3            c35_CORELIB_TYP 36.400002 
+U131                      NOR21           c35_CORELIB_TYP 54.599998 
+U132                      INV3            c35_CORELIB_TYP 36.400002 
+U133                      INV3            c35_CORELIB_TYP 36.400002 
+U134                      NOR21           c35_CORELIB_TYP 54.599998 
+U135                      INV3            c35_CORELIB_TYP 36.400002 
+U136                      INV3            c35_CORELIB_TYP 36.400002 
+U137                      NOR21           c35_CORELIB_TYP 54.599998 
+U138                      INV3            c35_CORELIB_TYP 36.400002 
+U139                      INV3            c35_CORELIB_TYP 36.400002 
+U140                      NOR21           c35_CORELIB_TYP 54.599998 
+U141                      INV3            c35_CORELIB_TYP 36.400002 
+U142                      NOR21           c35_CORELIB_TYP 54.599998 
+U143                      INV3            c35_CORELIB_TYP 36.400002 
+U144                      NOR21           c35_CORELIB_TYP 54.599998 
+U145                      INV3            c35_CORELIB_TYP 36.400002 
+U146                      NOR21           c35_CORELIB_TYP 54.599998 
+U147                      INV3            c35_CORELIB_TYP 36.400002 
+U148                      NOR21           c35_CORELIB_TYP 54.599998 
+U149                      INV3            c35_CORELIB_TYP 36.400002 
+U150                      INV3            c35_CORELIB_TYP 36.400002 
+U151                      XNR21           c35_CORELIB_TYP 109.199997
+U152                      INV3            c35_CORELIB_TYP 36.400002 
+U153                      XOR21           c35_CORELIB_TYP 127.400002
+U154                      INV3            c35_CORELIB_TYP 36.400002 
+U155                      XNR21           c35_CORELIB_TYP 109.199997
+U156                      INV3            c35_CORELIB_TYP 36.400002 
+U157                      XOR21           c35_CORELIB_TYP 127.400002
+U158                      INV3            c35_CORELIB_TYP 36.400002 
+U159                      INV3            c35_CORELIB_TYP 36.400002 
+U160                      INV3            c35_CORELIB_TYP 36.400002 
+U161                      INV3            c35_CORELIB_TYP 36.400002 
+U162                      INV3            c35_CORELIB_TYP 36.400002 
+U163                      INV3            c35_CORELIB_TYP 36.400002 
+U164                      INV3            c35_CORELIB_TYP 36.400002 
+U165                      INV3            c35_CORELIB_TYP 36.400002 
+U166                      NOR21           c35_CORELIB_TYP 54.599998 
+U167                      INV3            c35_CORELIB_TYP 36.400002 
+U168                      NOR21           c35_CORELIB_TYP 54.599998 
+U169                      INV3            c35_CORELIB_TYP 36.400002 
+U170                      NOR21           c35_CORELIB_TYP 54.599998 
+U171                      INV3            c35_CORELIB_TYP 36.400002 
+U172                      NOR21           c35_CORELIB_TYP 54.599998 
+U173                      INV3            c35_CORELIB_TYP 36.400002 
+U174                      NOR21           c35_CORELIB_TYP 54.599998 
+U175                      INV3            c35_CORELIB_TYP 36.400002 
+U176                      NOR21           c35_CORELIB_TYP 54.599998 
+U177                      INV3            c35_CORELIB_TYP 36.400002 
+U178                      NOR21           c35_CORELIB_TYP 54.599998 
+U179                      INV3            c35_CORELIB_TYP 36.400002 
+U180                      NOR21           c35_CORELIB_TYP 54.599998 
+U181                      BUF2            c35_CORELIB_TYP 54.599998 
+U182                      BUF2            c35_CORELIB_TYP 54.599998 
+U183                      BUF2            c35_CORELIB_TYP 54.599998 
+U184                      BUF2            c35_CORELIB_TYP 54.599998 
+U185                      BUF2            c35_CORELIB_TYP 54.599998 
+U186                      NOR40           c35_CORELIB_TYP 72.800003 
+U187                      INV3            c35_CORELIB_TYP 36.400002 
+U188                      NAND22          c35_CORELIB_TYP 54.599998 
+U189                      NAND31          c35_CORELIB_TYP 72.800003 
+U190                      NOR31           c35_CORELIB_TYP 72.800003 
+U191                      XOR21           c35_CORELIB_TYP 127.400002
+U192                      XOR21           c35_CORELIB_TYP 127.400002
+U193                      XOR21           c35_CORELIB_TYP 127.400002
+U194                      NAND31          c35_CORELIB_TYP 72.800003 
+U195                      XOR21           c35_CORELIB_TYP 127.400002
+U196                      XOR21           c35_CORELIB_TYP 127.400002
+U197                      XOR21           c35_CORELIB_TYP 127.400002
+U198                      XNR21           c35_CORELIB_TYP 109.199997
+U199                      XNR21           c35_CORELIB_TYP 109.199997
+U200                      XOR21           c35_CORELIB_TYP 127.400002
+U201                      XOR21           c35_CORELIB_TYP 127.400002
+U202                      XOR21           c35_CORELIB_TYP 127.400002
+U203                      XOR21           c35_CORELIB_TYP 127.400002
+U204                      XOR21           c35_CORELIB_TYP 127.400002
+U205                      XOR21           c35_CORELIB_TYP 127.400002
+U206                      NAND41          c35_CORELIB_TYP 91.000000 
+U207                      INV3            c35_CORELIB_TYP 36.400002 
+U208                      NOR21           c35_CORELIB_TYP 54.599998 
+U209                      NAND22          c35_CORELIB_TYP 54.599998 
+U210                      XOR21           c35_CORELIB_TYP 127.400002
+U211                      NOR21           c35_CORELIB_TYP 54.599998 
+U212                      XOR21           c35_CORELIB_TYP 127.400002
+U213                      NOR21           c35_CORELIB_TYP 54.599998 
+U214                      XOR21           c35_CORELIB_TYP 127.400002
+U215                      NOR21           c35_CORELIB_TYP 54.599998 
+U216                      XOR21           c35_CORELIB_TYP 127.400002
+U217                      NOR21           c35_CORELIB_TYP 54.599998 
+U218                      XOR21           c35_CORELIB_TYP 127.400002
+U219                      XOR21           c35_CORELIB_TYP 127.400002
+U220                      XOR21           c35_CORELIB_TYP 127.400002
+U221                      XOR21           c35_CORELIB_TYP 127.400002
+U222                      XNR21           c35_CORELIB_TYP 109.199997
+U223                      NAND22          c35_CORELIB_TYP 54.599998 
+U224                      NOR21           c35_CORELIB_TYP 54.599998 
+U225                      NOR21           c35_CORELIB_TYP 54.599998 
+U226                      XNR21           c35_CORELIB_TYP 109.199997
+U227                      NAND22          c35_CORELIB_TYP 54.599998 
+U228                      NOR21           c35_CORELIB_TYP 54.599998 
+U229                      NOR21           c35_CORELIB_TYP 54.599998 
+U230                      XNR21           c35_CORELIB_TYP 109.199997
+U231                      NAND22          c35_CORELIB_TYP 54.599998 
+U232                      NOR21           c35_CORELIB_TYP 54.599998 
+U233                      NOR21           c35_CORELIB_TYP 54.599998 
+U234                      XNR21           c35_CORELIB_TYP 109.199997
+U235                      NAND22          c35_CORELIB_TYP 54.599998 
+U236                      NOR21           c35_CORELIB_TYP 54.599998 
+U237                      NOR21           c35_CORELIB_TYP 54.599998 
+U238                      XNR21           c35_CORELIB_TYP 109.199997
+U239                      XNR21           c35_CORELIB_TYP 109.199997
+U240                      XOR21           c35_CORELIB_TYP 127.400002
+U241                      XOR21           c35_CORELIB_TYP 127.400002
+U242                      XOR21           c35_CORELIB_TYP 127.400002
+U243                      XOR21           c35_CORELIB_TYP 127.400002
+U244                      NAND22          c35_CORELIB_TYP 54.599998 
+U245                      INV3            c35_CORELIB_TYP 36.400002 
+U246                      NAND22          c35_CORELIB_TYP 54.599998 
+U247                      NAND22          c35_CORELIB_TYP 54.599998 
+U248                      XNR21           c35_CORELIB_TYP 109.199997
+U249                      NOR40           c35_CORELIB_TYP 72.800003 
+U250                      NAND41          c35_CORELIB_TYP 91.000000 
+U251                      NAND41          c35_CORELIB_TYP 91.000000 
+U252                      NAND41          c35_CORELIB_TYP 91.000000 
+U253                      NOR40           c35_CORELIB_TYP 72.800003 
+U254                      NAND22          c35_CORELIB_TYP 54.599998 
+U255                      NAND22          c35_CORELIB_TYP 54.599998 
+U256                      NAND31          c35_CORELIB_TYP 72.800003 
+U257                      AOI221          c35_CORELIB_TYP 91.000000 
+U258                      NAND22          c35_CORELIB_TYP 54.599998 
+U259                      NAND22          c35_CORELIB_TYP 54.599998 
+U260                      NAND22          c35_CORELIB_TYP 54.599998 
+U261                      NAND22          c35_CORELIB_TYP 54.599998 
+U262                      INV3            c35_CORELIB_TYP 36.400002 
+U263                      INV3            c35_CORELIB_TYP 36.400002 
+U264                      NOR21           c35_CORELIB_TYP 54.599998 
+U265                      INV3            c35_CORELIB_TYP 36.400002 
+U266                      NOR21           c35_CORELIB_TYP 54.599998 
+U267                      INV3            c35_CORELIB_TYP 36.400002 
+U268                      NOR21           c35_CORELIB_TYP 54.599998 
+U269                      INV3            c35_CORELIB_TYP 36.400002 
+U270                      NOR21           c35_CORELIB_TYP 54.599998 
+U271                      INV3            c35_CORELIB_TYP 36.400002 
+U272                      NOR21           c35_CORELIB_TYP 54.599998 
+U273                      INV3            c35_CORELIB_TYP 36.400002 
+U274                      INV3            c35_CORELIB_TYP 36.400002 
+U275                      NOR21           c35_CORELIB_TYP 54.599998 
+U276                      INV3            c35_CORELIB_TYP 36.400002 
+U277                      INV3            c35_CORELIB_TYP 36.400002 
+U278                      NOR21           c35_CORELIB_TYP 54.599998 
+U279                      INV3            c35_CORELIB_TYP 36.400002 
+U280                      INV3            c35_CORELIB_TYP 36.400002 
+U281                      NOR21           c35_CORELIB_TYP 54.599998 
+U282                      INV3            c35_CORELIB_TYP 36.400002 
+U283                      INV3            c35_CORELIB_TYP 36.400002 
+U284                      NOR21           c35_CORELIB_TYP 54.599998 
+U285                      INV3            c35_CORELIB_TYP 36.400002 
+U286                      INV3            c35_CORELIB_TYP 36.400002 
+U287                      NOR21           c35_CORELIB_TYP 54.599998 
+U288                      INV3            c35_CORELIB_TYP 36.400002 
+U289                      INV3            c35_CORELIB_TYP 36.400002 
+U290                      NOR21           c35_CORELIB_TYP 54.599998 
+U291                      INV3            c35_CORELIB_TYP 36.400002 
+U292                      INV3            c35_CORELIB_TYP 36.400002 
+U293                      NOR21           c35_CORELIB_TYP 54.599998 
+U294                      INV3            c35_CORELIB_TYP 36.400002 
+U295                      INV3            c35_CORELIB_TYP 36.400002 
+U296                      NOR21           c35_CORELIB_TYP 54.599998 
+U297                      INV3            c35_CORELIB_TYP 36.400002 
+U298                      NOR21           c35_CORELIB_TYP 54.599998 
+U299                      INV3            c35_CORELIB_TYP 36.400002 
+U300                      NOR21           c35_CORELIB_TYP 54.599998 
+U301                      INV3            c35_CORELIB_TYP 36.400002 
+U302                      NOR21           c35_CORELIB_TYP 54.599998 
+U303                      INV3            c35_CORELIB_TYP 36.400002 
+U304                      INV3            c35_CORELIB_TYP 36.400002 
+U305                      NOR21           c35_CORELIB_TYP 54.599998 
+U306                      NOR21           c35_CORELIB_TYP 54.599998 
+U307                      INV3            c35_CORELIB_TYP 36.400002 
+U308                      INV3            c35_CORELIB_TYP 36.400002 
+U309                      XOR21           c35_CORELIB_TYP 127.400002
+U310                      INV3            c35_CORELIB_TYP 36.400002 
+U311                      XOR21           c35_CORELIB_TYP 127.400002
+U312                      INV3            c35_CORELIB_TYP 36.400002 
+U313                      INV3            c35_CORELIB_TYP 36.400002 
+U314                      NOR21           c35_CORELIB_TYP 54.599998 
+U315                      NAND22          c35_CORELIB_TYP 54.599998 
+U316                      NAND22          c35_CORELIB_TYP 54.599998 
+U317                      NAND22          c35_CORELIB_TYP 54.599998 
+U318                      NAND22          c35_CORELIB_TYP 54.599998 
+U319                      INV3            c35_CORELIB_TYP 36.400002 
+U320                      INV3            c35_CORELIB_TYP 36.400002 
+U321                      INV3            c35_CORELIB_TYP 36.400002 
+U322                      INV3            c35_CORELIB_TYP 36.400002 
+U323                      NOR21           c35_CORELIB_TYP 54.599998 
+U324                      NOR21           c35_CORELIB_TYP 54.599998 
+U325                      BUF2            c35_CORELIB_TYP 54.599998 
+U326                      BUF2            c35_CORELIB_TYP 54.599998 
+U327                      NAND22          c35_CORELIB_TYP 54.599998 
+U328                      INV3            c35_CORELIB_TYP 36.400002 
+U329                      NOR21           c35_CORELIB_TYP 54.599998 
+U330                      INV3            c35_CORELIB_TYP 36.400002 
+U331                      INV3            c35_CORELIB_TYP 36.400002 
+U332                      INV3            c35_CORELIB_TYP 36.400002 
+U333                      INV3            c35_CORELIB_TYP 36.400002 
+U334                      INV3            c35_CORELIB_TYP 36.400002 
+U335                      INV3            c35_CORELIB_TYP 36.400002 
+U336                      INV3            c35_CORELIB_TYP 36.400002 
+U337                      INV3            c35_CORELIB_TYP 36.400002 
+U338                      INV3            c35_CORELIB_TYP 36.400002 
+U339                      NAND22          c35_CORELIB_TYP 54.599998 d
+U340                      INV3            c35_CORELIB_TYP 36.400002 
+U341                      NAND22          c35_CORELIB_TYP 54.599998 d
+U342                      INV3            c35_CORELIB_TYP 36.400002 
+U343                      NAND22          c35_CORELIB_TYP 54.599998 d
+U344                      INV3            c35_CORELIB_TYP 36.400002 
+U345                      NAND22          c35_CORELIB_TYP 54.599998 d
+U346                      BUF2            c35_CORELIB_TYP 54.599998 
+U347                      XOR21           c35_CORELIB_TYP 127.400002
+U348                      INV3            c35_CORELIB_TYP 36.400002 
+U349                      NOR21           c35_CORELIB_TYP 54.599998 
+U350                      INV3            c35_CORELIB_TYP 36.400002 
+U351                      NOR21           c35_CORELIB_TYP 54.599998 
+U352                      INV3            c35_CORELIB_TYP 36.400002 
+U353                      NOR21           c35_CORELIB_TYP 54.599998 
+U354                      INV3            c35_CORELIB_TYP 36.400002 
+U355                      NOR21           c35_CORELIB_TYP 54.599998 
+U356                      INV3            c35_CORELIB_TYP 36.400002 
+U357                      INV3            c35_CORELIB_TYP 36.400002 
+U358                      INV3            c35_CORELIB_TYP 36.400002 
+U359                      INV3            c35_CORELIB_TYP 36.400002 
+U360                      NOR21           c35_CORELIB_TYP 54.599998 
+U361                      INV3            c35_CORELIB_TYP 36.400002 
+U362                      NOR21           c35_CORELIB_TYP 54.599998 
+U363                      INV3            c35_CORELIB_TYP 36.400002 
+U364                      NOR21           c35_CORELIB_TYP 54.599998 
+U365                      INV3            c35_CORELIB_TYP 36.400002 
+U366                      NOR21           c35_CORELIB_TYP 54.599998 
+U367                      INV3            c35_CORELIB_TYP 36.400002 
+U368                      NOR21           c35_CORELIB_TYP 54.599998 
+U369                      INV3            c35_CORELIB_TYP 36.400002 
+U370                      NOR21           c35_CORELIB_TYP 54.599998 
+U371                      INV3            c35_CORELIB_TYP 36.400002 
+U372                      NOR21           c35_CORELIB_TYP 54.599998 
+U373                      INV3            c35_CORELIB_TYP 36.400002 
+U374                      NOR21           c35_CORELIB_TYP 54.599998 
+U375                      INV3            c35_CORELIB_TYP 36.400002 
+U376                      NOR21           c35_CORELIB_TYP 54.599998 
+U377                      INV3            c35_CORELIB_TYP 36.400002 
+U378                      NOR21           c35_CORELIB_TYP 54.599998 
+U379                      INV3            c35_CORELIB_TYP 36.400002 
+U380                      NOR21           c35_CORELIB_TYP 54.599998 
+U381                      INV3            c35_CORELIB_TYP 36.400002 
+U382                      NOR21           c35_CORELIB_TYP 54.599998 
+U383                      INV3            c35_CORELIB_TYP 36.400002 
+U384                      NOR21           c35_CORELIB_TYP 54.599998 
+U385                      INV3            c35_CORELIB_TYP 36.400002 
+U386                      NOR21           c35_CORELIB_TYP 54.599998 
+U387                      INV3            c35_CORELIB_TYP 36.400002 
+U388                      NOR21           c35_CORELIB_TYP 54.599998 
+U389                      INV3            c35_CORELIB_TYP 36.400002 
+U390                      NOR21           c35_CORELIB_TYP 54.599998 
+U391                      INV3            c35_CORELIB_TYP 36.400002 
+U392                      NOR21           c35_CORELIB_TYP 54.599998 
+U393                      INV3            c35_CORELIB_TYP 36.400002 
+U394                      NOR21           c35_CORELIB_TYP 54.599998 
+U395                      INV3            c35_CORELIB_TYP 36.400002 
+U396                      INV3            c35_CORELIB_TYP 36.400002 
+U397                      INV3            c35_CORELIB_TYP 36.400002 
+U398                      NOR21           c35_CORELIB_TYP 54.599998 
+U399                      BUF6            c35_CORELIB_TYP 72.800003 
+U400                      NOR21           c35_CORELIB_TYP 54.599998 
+U401                      INV3            c35_CORELIB_TYP 36.400002 
+U402                      NAND41          c35_CORELIB_TYP 91.000000 
+U403                      NOR21           c35_CORELIB_TYP 54.599998 
+U404                      NOR31           c35_CORELIB_TYP 72.800003 
+U405                      NOR31           c35_CORELIB_TYP 72.800003 
+U406                      XOR21           c35_CORELIB_TYP 127.400002
+U407                      NOR31           c35_CORELIB_TYP 72.800003 
+U408                      XOR21           c35_CORELIB_TYP 127.400002
+U409                      NOR31           c35_CORELIB_TYP 72.800003 
+U410                      OAI2111         c35_CORELIB_TYP 91.000000 
+U411                      INV3            c35_CORELIB_TYP 36.400002 
+U412                      NAND22          c35_CORELIB_TYP 54.599998 
+U413                      NAND41          c35_CORELIB_TYP 91.000000 
+U414                      XNR21           c35_CORELIB_TYP 109.199997
+U415                      XNR21           c35_CORELIB_TYP 109.199997
+U416                      XNR21           c35_CORELIB_TYP 109.199997
+U417                      NAND41          c35_CORELIB_TYP 91.000000 
+U418                      XNR21           c35_CORELIB_TYP 109.199997
+U419                      XNR21           c35_CORELIB_TYP 109.199997
+U420                      XNR21           c35_CORELIB_TYP 109.199997
+U421                      NAND41          c35_CORELIB_TYP 91.000000 
+U422                      XNR21           c35_CORELIB_TYP 109.199997
+U423                      XNR21           c35_CORELIB_TYP 109.199997
+U424                      XNR21           c35_CORELIB_TYP 109.199997
+U425                      NAND41          c35_CORELIB_TYP 91.000000 
+U426                      XNR21           c35_CORELIB_TYP 109.199997
+U427                      XNR21           c35_CORELIB_TYP 109.199997
+U428                      XNR21           c35_CORELIB_TYP 109.199997
+U429                      NOR40           c35_CORELIB_TYP 72.800003 
+U430                      INV3            c35_CORELIB_TYP 36.400002 
+U431                      NOR21           c35_CORELIB_TYP 54.599998 
+U432                      XNR21           c35_CORELIB_TYP 109.199997
+U433                      XNR21           c35_CORELIB_TYP 109.199997
+U434                      NOR40           c35_CORELIB_TYP 72.800003 
+U435                      NOR40           c35_CORELIB_TYP 72.800003 
+U436                      NOR40           c35_CORELIB_TYP 72.800003 
+U437                      NOR40           c35_CORELIB_TYP 72.800003 
+U438                      XNR21           c35_CORELIB_TYP 109.199997
+U439                      XNR21           c35_CORELIB_TYP 109.199997
+U440                      INV3            c35_CORELIB_TYP 36.400002 
+U441                      AOI311          c35_CORELIB_TYP 91.000000 
+U442                      NOR40           c35_CORELIB_TYP 72.800003 
+U443                      NAND41          c35_CORELIB_TYP 91.000000 
+U444                      XNR21           c35_CORELIB_TYP 109.199997
+U445                      XNR21           c35_CORELIB_TYP 109.199997
+U446                      XNR21           c35_CORELIB_TYP 109.199997
+U447                      NAND41          c35_CORELIB_TYP 91.000000 
+U448                      XNR21           c35_CORELIB_TYP 109.199997
+U449                      XNR21           c35_CORELIB_TYP 109.199997
+U450                      XNR21           c35_CORELIB_TYP 109.199997
+U451                      NAND41          c35_CORELIB_TYP 91.000000 
+U452                      XNR21           c35_CORELIB_TYP 109.199997
+U453                      XNR21           c35_CORELIB_TYP 109.199997
+U454                      XNR21           c35_CORELIB_TYP 109.199997
+U455                      NAND41          c35_CORELIB_TYP 91.000000 
+U456                      NOR21           c35_CORELIB_TYP 54.599998 
+U457                      XOR21           c35_CORELIB_TYP 127.400002
+U458                      XOR21           c35_CORELIB_TYP 127.400002
+U459                      NAND41          c35_CORELIB_TYP 91.000000 
+U460                      XNR21           c35_CORELIB_TYP 109.199997
+U461                      XNR21           c35_CORELIB_TYP 109.199997
+U462                      XNR21           c35_CORELIB_TYP 109.199997
+U463                      NAND41          c35_CORELIB_TYP 91.000000 
+U464                      XNR21           c35_CORELIB_TYP 109.199997
+U465                      XNR21           c35_CORELIB_TYP 109.199997
+U466                      XNR21           c35_CORELIB_TYP 109.199997
+U467                      NAND41          c35_CORELIB_TYP 91.000000 
+U468                      XNR21           c35_CORELIB_TYP 109.199997
+U469                      XNR21           c35_CORELIB_TYP 109.199997
+U470                      XNR21           c35_CORELIB_TYP 109.199997
+U471                      XOR21           c35_CORELIB_TYP 127.400002
+U472                      XOR21           c35_CORELIB_TYP 127.400002
+U473                      XOR21           c35_CORELIB_TYP 127.400002
+U474                      XOR21           c35_CORELIB_TYP 127.400002
+U475                      XNR21           c35_CORELIB_TYP 109.199997
+U476                      NAND41          c35_CORELIB_TYP 91.000000 
+U477                      INV3            c35_CORELIB_TYP 36.400002 
+U478                      NOR21           c35_CORELIB_TYP 54.599998 
+U479                      XNR21           c35_CORELIB_TYP 109.199997
+U480                      NAND41          c35_CORELIB_TYP 91.000000 
+U481                      INV3            c35_CORELIB_TYP 36.400002 
+U482                      NOR21           c35_CORELIB_TYP 54.599998 
+U483                      XNR21           c35_CORELIB_TYP 109.199997
+U484                      NAND41          c35_CORELIB_TYP 91.000000 
+U485                      INV3            c35_CORELIB_TYP 36.400002 
+U486                      NOR21           c35_CORELIB_TYP 54.599998 
+U487                      XNR21           c35_CORELIB_TYP 109.199997
+U488                      XOR21           c35_CORELIB_TYP 127.400002
+U489                      XOR21           c35_CORELIB_TYP 127.400002
+U490                      XOR21           c35_CORELIB_TYP 127.400002
+U491                      XOR21           c35_CORELIB_TYP 127.400002
+U492                      XNR21           c35_CORELIB_TYP 109.199997
+U493                      XNR21           c35_CORELIB_TYP 109.199997
+U494                      XNR21           c35_CORELIB_TYP 109.199997
+U495                      XNR21           c35_CORELIB_TYP 109.199997
+U496                      AOI221          c35_CORELIB_TYP 91.000000 
+U497                      NOR21           c35_CORELIB_TYP 54.599998 
+U498                      NAND22          c35_CORELIB_TYP 54.599998 
+U499                      NOR21           c35_CORELIB_TYP 54.599998 
+U500                      INV3            c35_CORELIB_TYP 36.400002 
+U501                      OAI2111         c35_CORELIB_TYP 91.000000 
+U502                      NAND22          c35_CORELIB_TYP 54.599998 
+U503                      INV3            c35_CORELIB_TYP 36.400002 
+U504                      OAI2111         c35_CORELIB_TYP 91.000000 
+U505                      NAND31          c35_CORELIB_TYP 72.800003 
+U506                      OAI2111         c35_CORELIB_TYP 91.000000 
+U507                      NAND22          c35_CORELIB_TYP 54.599998 
+U508                      NAND31          c35_CORELIB_TYP 72.800003 
+U509                      NOR21           c35_CORELIB_TYP 54.599998 
+U510                      NOR21           c35_CORELIB_TYP 54.599998 
+U511                      NAND31          c35_CORELIB_TYP 72.800003 
+U512                      XNR21           c35_CORELIB_TYP 109.199997
+U513                      XNR21           c35_CORELIB_TYP 109.199997
+U514                      XNR21           c35_CORELIB_TYP 109.199997
+U515                      XOR21           c35_CORELIB_TYP 127.400002
+U516                      NAND31          c35_CORELIB_TYP 72.800003 
+U517                      XOR21           c35_CORELIB_TYP 127.400002
+U518                      XOR21           c35_CORELIB_TYP 127.400002
+U519                      XOR21           c35_CORELIB_TYP 127.400002
+U520                      XOR21           c35_CORELIB_TYP 127.400002
+U521                      XOR21           c35_CORELIB_TYP 127.400002
+U522                      XOR21           c35_CORELIB_TYP 127.400002
+U523                      XOR21           c35_CORELIB_TYP 127.400002
+U524                      INV3            c35_CORELIB_TYP 36.400002 
+U525                      INV3            c35_CORELIB_TYP 36.400002 
+U526                      NAND22          c35_CORELIB_TYP 54.599998 
+U527                      NOR21           c35_CORELIB_TYP 54.599998 
+U528                      NOR21           c35_CORELIB_TYP 54.599998 
+U529                      NOR21           c35_CORELIB_TYP 54.599998 
+U530                      NOR21           c35_CORELIB_TYP 54.599998 
+U531                      NOR21           c35_CORELIB_TYP 54.599998 
+U532                      XOR21           c35_CORELIB_TYP 127.400002
+U533                      NOR21           c35_CORELIB_TYP 54.599998 
+U534                      XOR21           c35_CORELIB_TYP 127.400002
+U535                      NOR21           c35_CORELIB_TYP 54.599998 
+U536                      NOR21           c35_CORELIB_TYP 54.599998 
+U537                      NOR21           c35_CORELIB_TYP 54.599998 
+U538                      XOR21           c35_CORELIB_TYP 127.400002
+U539                      NOR21           c35_CORELIB_TYP 54.599998 
+U540                      XOR21           c35_CORELIB_TYP 127.400002
+U541                      NOR21           c35_CORELIB_TYP 54.599998 
+U542                      NOR21           c35_CORELIB_TYP 54.599998 
+U543                      NOR21           c35_CORELIB_TYP 54.599998 
+U544                      NOR21           c35_CORELIB_TYP 54.599998 
+U545                      XNR21           c35_CORELIB_TYP 109.199997
+U546                      XNR21           c35_CORELIB_TYP 109.199997
+U547                      XNR21           c35_CORELIB_TYP 109.199997
+U548                      XNR21           c35_CORELIB_TYP 109.199997
+U549                      XNR21           c35_CORELIB_TYP 109.199997
+U550                      XNR21           c35_CORELIB_TYP 109.199997
+U551                      NAND22          c35_CORELIB_TYP 54.599998 
+U552                      AOI211          c35_CORELIB_TYP 72.800003 
+U553                      NAND41          c35_CORELIB_TYP 91.000000 
+U554                      INV3            c35_CORELIB_TYP 36.400002 
+U555                      INV3            c35_CORELIB_TYP 36.400002 
+U556                      XOR21           c35_CORELIB_TYP 127.400002
+U557                      NAND22          c35_CORELIB_TYP 54.599998 
+U558                      XNR21           c35_CORELIB_TYP 109.199997
+U559                      XNR21           c35_CORELIB_TYP 109.199997
+U560                      XNR21           c35_CORELIB_TYP 109.199997
+U561                      XNR21           c35_CORELIB_TYP 109.199997
+U562                      XNR21           c35_CORELIB_TYP 109.199997
+U563                      XNR21           c35_CORELIB_TYP 109.199997
+U564                      XNR21           c35_CORELIB_TYP 109.199997
+U565                      XNR21           c35_CORELIB_TYP 109.199997
+U566                      XNR21           c35_CORELIB_TYP 109.199997
+U567                      XNR21           c35_CORELIB_TYP 109.199997
+U568                      XNR21           c35_CORELIB_TYP 109.199997
+U569                      XNR21           c35_CORELIB_TYP 109.199997
+U570                      NAND22          c35_CORELIB_TYP 54.599998 
+U571                      XNR21           c35_CORELIB_TYP 109.199997
+U572                      XNR21           c35_CORELIB_TYP 109.199997
+U573                      NAND22          c35_CORELIB_TYP 54.599998 
+U574                      XNR21           c35_CORELIB_TYP 109.199997
+U575                      XNR21           c35_CORELIB_TYP 109.199997
+U576                      XNR21           c35_CORELIB_TYP 109.199997
+U577                      XNR21           c35_CORELIB_TYP 109.199997
+U578                      XNR21           c35_CORELIB_TYP 109.199997
+U579                      XNR21           c35_CORELIB_TYP 109.199997
+U580                      XNR21           c35_CORELIB_TYP 109.199997
+U581                      XNR21           c35_CORELIB_TYP 109.199997
+U582                      XNR21           c35_CORELIB_TYP 109.199997
+U583                      INV3            c35_CORELIB_TYP 36.400002 
+U584                      XNR21           c35_CORELIB_TYP 109.199997
+U585                      NAND22          c35_CORELIB_TYP 54.599998 
+U586                      INV3            c35_CORELIB_TYP 36.400002 
+U587                      OAI2111         c35_CORELIB_TYP 91.000000 
+U588                      AOI221          c35_CORELIB_TYP 91.000000 
+U589                      INV3            c35_CORELIB_TYP 36.400002 
+U590                      NOR21           c35_CORELIB_TYP 54.599998 
+U591                      INV3            c35_CORELIB_TYP 36.400002 
+U592                      NOR21           c35_CORELIB_TYP 54.599998 
+U593                      INV3            c35_CORELIB_TYP 36.400002 
+U594                      NOR21           c35_CORELIB_TYP 54.599998 
+U595                      INV3            c35_CORELIB_TYP 36.400002 
+U596                      NOR21           c35_CORELIB_TYP 54.599998 
+U597                      XNR21           c35_CORELIB_TYP 109.199997
+U598                      XNR21           c35_CORELIB_TYP 109.199997
+U599                      INV3            c35_CORELIB_TYP 36.400002 
+U600                      NOR21           c35_CORELIB_TYP 54.599998 
+U601                      INV3            c35_CORELIB_TYP 36.400002 
+U602                      NOR21           c35_CORELIB_TYP 54.599998 
+U603                      INV3            c35_CORELIB_TYP 36.400002 
+U604                      NOR21           c35_CORELIB_TYP 54.599998 
+U605                      INV3            c35_CORELIB_TYP 36.400002 
+U606                      NOR21           c35_CORELIB_TYP 54.599998 
+U607                      INV3            c35_CORELIB_TYP 36.400002 
+U608                      NOR21           c35_CORELIB_TYP 54.599998 
+U609                      AOI221          c35_CORELIB_TYP 91.000000 
+U610                      NOR40           c35_CORELIB_TYP 72.800003 
+U611                      NOR40           c35_CORELIB_TYP 72.800003 
+U612                      INV3            c35_CORELIB_TYP 36.400002 
+U613                      NOR21           c35_CORELIB_TYP 54.599998 
+U614                      NOR21           c35_CORELIB_TYP 54.599998 
+U615                      XOR21           c35_CORELIB_TYP 127.400002
+U616                      XOR21           c35_CORELIB_TYP 127.400002
+U617                      INV3            c35_CORELIB_TYP 36.400002 
+U618                      OAI2111         c35_CORELIB_TYP 91.000000 
+U619                      NAND31          c35_CORELIB_TYP 72.800003 
+U620                      NAND31          c35_CORELIB_TYP 72.800003 
+U621                      XNR21           c35_CORELIB_TYP 109.199997
+U622                      INV3            c35_CORELIB_TYP 36.400002 
+U623                      INV3            c35_CORELIB_TYP 36.400002 
+U624                      NAND31          c35_CORELIB_TYP 72.800003 
+U625                      BUF2            c35_CORELIB_TYP 54.599998 
+U626                      OAI222          c35_CORELIB_TYP 91.000000 
+U627                      OAI222          c35_CORELIB_TYP 91.000000 
+U628                      OAI222          c35_CORELIB_TYP 91.000000 
+U629                      OAI222          c35_CORELIB_TYP 91.000000 
+send_ppm1/U6              OAI222          c35_CORELIB_TYP 91.000000 
+send_ppm1/U13             OAI212          c35_CORELIB_TYP 72.800003 
+send_ppm1/U16             OAI212          c35_CORELIB_TYP 72.800003 
+send_ppm1/U39             OAI222          c35_CORELIB_TYP 91.000000 
+send_ppm1/current_state_reg[0]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/current_state_reg[1]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/current_state_reg[2]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_2
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_3
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_4
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_6
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_7
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_8
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_9
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_10
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_11
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_12
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_13
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_14
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_1_root_sub_235_cf/U1_15
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_2
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_3
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_4
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_6
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_7
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_8
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_9
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_10
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_11
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_12
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_13
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_14
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/add_3_root_sub_235_cf/U1_15
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_2
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_3
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_4
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_6
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_7
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_8
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_9
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_10
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_11
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_12
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_13
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_14
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_15
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_0/sub_0_root_sub_235_cf/U2_16
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S2_5_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S2_6_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S3_2_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S3_3_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S3_4_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S3_5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S3_6_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S4_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_1/mult_114/S5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S2_5_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S2_6_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S3_2_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S3_3_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S3_4_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S3_5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S3_6_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S4_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_2/mult_117/S5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S2_5_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S2_6_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S3_2_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S3_3_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S3_4_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S3_5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S3_6_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S4_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_3/mult_120/S5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S2_5_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S2_6_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S3_2_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S3_3_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S3_4_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S3_5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S3_6_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S4_1
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/dp_cluster_4/mult_123/S5_5
+                          ADD32           c35_CORELIB_TYP 273.000000
+                                                                    d, mo, r
+send_ppm1/local_counter1/add_34/U1_1_1
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_2
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_3
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_4
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_5
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_6
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_7
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_8
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_9
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_10
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_11
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_12
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_13
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_14
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_15
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_16
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_17
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/add_34/U1_1_18
+                          ADD22           c35_CORELIB_TYP 145.600006
+                                                                    mo, r
+send_ppm1/local_counter1/o_count_reg[0]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[1]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[2]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[3]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[4]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[5]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[6]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[7]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[8]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[9]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[10]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[11]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[12]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[13]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[14]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[15]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[16]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[17]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[18]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/o_count_reg[19]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[0]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[1]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[2]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[3]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[4]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[5]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[6]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[7]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[8]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[9]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[10]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[11]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[12]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[13]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[14]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[15]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[16]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[17]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[18]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/local_counter1/v_val_reg[19]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/sig_out_ppm_reg DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/sig_reg_storage_reg[0]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[1]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[2]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[3]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[4]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[5]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[6]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[7]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[8]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[9]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[10]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[11]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[12]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[13]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[14]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[15]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[16]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[17]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[18]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[19]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[20]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[21]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[22]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[23]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[24]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[25]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[26]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[27]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[28]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[29]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[30]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_reg_storage_reg[31]
+                          DFE1            c35_CORELIB_TYP 327.600006
+                                                                    n
+send_ppm1/sig_state_reg[0]
+                          JK3             c35_CORELIB_TYP 345.799988
+                                                                    n
+send_ppm1/sig_state_reg[1]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+send_ppm1/sig_state_reg[2]
+                          DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+sig_clk25_reg             DF3             c35_CORELIB_TYP 273.000000
+                                                                    n
+--------------------------------------------------------------------------------
+Total 806 cells                                           92237.600212
+1

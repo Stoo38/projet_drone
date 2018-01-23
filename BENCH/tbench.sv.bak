@@ -150,15 +150,15 @@ top_bar top (
 	.b_out_proc (img_out.b),
 	.HSYNC_top (vga_hsync),
 	.VSYNC_top (vga_vsync),
-	.cam_x (cam_x[8:0]),
+	.cam_x (cam_x),
 	.cam_y (cam_y),
-	.IMG (vga_img)
+	.IMG_top (vga_img)
 );
 // Re-use Hsync and Vsync to re-build pixel array
 
 
 always @(posedge vga_clk) 
-  //if ((cam_x < 640) && (cam_y < 480))
+  if ((vga_x < 640) && (vga_x < 480))
   begin
     img_vga[vga_x][vga_y].r = img_out.r & {8{cam_img}};
     img_vga[vga_x][vga_y].g = img_out.g & {8{cam_img}};

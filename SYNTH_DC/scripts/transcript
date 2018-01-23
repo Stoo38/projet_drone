@@ -7,9 +7,1643 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/top_ppm.sdf -sdfnoerror -sdfnowarn LIB_VHD_BENCH.bench_top_ppm(tb_top_ppm)
-# vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/top_ppm.sdf -sdfnoerror -sdfnowarn LIB_VHD_BENCH.bench_top_ppm(tb_top_ppm) 
+vsim -novopt LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# vsim -novopt LIB_VHD_BENCH.bench_send_ppm(tb_ppm) 
+# Loading std.standard
+# Refreshing /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/libs/LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/libs/LIB_VHD.constants_package
+# Loading lib_vhd.constants_package
+# Loading LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/libs/LIB_VHD.send_ppm(syn_rtl)
+# Refreshing /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/libs/LIB_VHD.conv_pack_send_ppm
+# Loading lib_vhd.conv_pack_send_ppm
+# Loading lib_vhd.send_ppm(syn_rtl)
+# ** Warning: (vsim-3473) Component instance "U16 : OAI222" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U22 : OAI212" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U23 : OAI222" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U25 : OAI212" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U26 : OAI222" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_1 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_2 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_3 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_4 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_5 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_6 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_7 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_8 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_9 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_10 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_11 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_12 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_13 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_14 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_15 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_16 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_17 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_add_34_U1_1_18 : ADD22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S3_2_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S3_3_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S3_4_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S3_5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S2_5_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S3_6_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S2_6_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_4_mult_123_S4_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S3_2_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S3_3_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S3_4_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S3_5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S2_5_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S3_6_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S2_6_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_3_mult_120_S4_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S3_2_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S3_3_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S3_4_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S3_5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S2_5_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S3_6_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S2_6_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_2_mult_117_S4_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S3_2_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S3_3_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S3_4_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S3_5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S2_5_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S3_6_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S2_6_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S5_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_1_mult_114_S4_1 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_2 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_3 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_4 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_6 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_7 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_8 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_9 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_10 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_11 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_12 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_13 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_14 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_15 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_sub_0_root_sub_235_cf_U2_16 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_2 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_3 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_4 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_6 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_7 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_8 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_9 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_10 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_11 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_12 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_13 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_14 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_1_root_sub_235_cf_U1_15 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_2 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_3 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_4 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_5 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_6 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_7 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_8 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_9 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_10 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_11 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_12 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_13 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_14 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "dp_cluster_0_add_3_root_sub_235_cf_U1_15 : ADD32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "current_state_reg_0_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "current_state_reg_1_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "current_state_reg_2_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_out_ppm_reg : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_0_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_1_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_2_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_3_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_4_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_5_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_6_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_7_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_8_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_9_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_10_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_11_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_12_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_13_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_14_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_15_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_16_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_17_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_18_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_o_count_reg_19_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_19_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_18_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_17_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_16_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_15_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_14_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_13_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_12_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_11_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_10_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_9_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_8_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_7_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_6_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_5_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_4_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_3_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_2_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_1_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "local_counter1_v_val_reg_0_inst : DF3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_state_reg_2_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_state_reg_1_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_state_reg_0_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_30_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_29_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_22_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_14_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_6_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_21_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_13_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_5_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_28_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_20_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_12_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_27_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_26_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_19_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_18_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_11_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_10_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_3_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_4_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_2_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_15_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_31_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_23_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_7_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_9_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_17_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_25_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_8_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_16_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_1_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_24_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "sig_reg_storage_reg_0_inst : DFE1" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U87 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U88 : MUX22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U89 : MUX22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U90 : MUX22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U91 : MUX22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U92 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U93 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U94 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U95 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U96 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U97 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U98 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U99 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U100 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U101 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U102 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U103 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U104 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U105 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U106 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U107 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U108 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U109 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U110 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U111 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U112 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U113 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U114 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U115 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U116 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U117 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U118 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U119 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U120 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U121 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U122 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U123 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U124 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U125 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U126 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U127 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U128 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U129 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U130 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U131 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U132 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U133 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U134 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U135 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U136 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U137 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U138 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U139 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U140 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U141 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U142 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U143 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U144 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U145 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U146 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U147 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U148 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U149 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U150 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U151 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U152 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U153 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U154 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U155 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U156 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U157 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U158 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U159 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U160 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U161 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U162 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U163 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U164 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U165 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U166 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U167 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U168 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U169 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U170 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U171 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U172 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U173 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U174 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U175 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U176 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U177 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U178 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U179 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U180 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U181 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U182 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U183 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U184 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U185 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U186 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U187 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U188 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U189 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U190 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U191 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U192 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U193 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U194 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U195 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U196 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U197 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U198 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U199 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U200 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U201 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U202 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U203 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U204 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U205 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U206 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U207 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U208 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U209 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U210 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U211 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U212 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U213 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U214 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U215 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U216 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U217 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U218 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U219 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U220 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U221 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U222 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U223 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U224 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U225 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U226 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U227 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U228 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U229 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U230 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U231 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U232 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U233 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U234 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U235 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U236 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U237 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U238 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U239 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U240 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U241 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U242 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U243 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U244 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U245 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U246 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U247 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U248 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U249 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U250 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U251 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U252 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U253 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U254 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U255 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U256 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U257 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U258 : NAND41" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U259 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U260 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U261 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U262 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U263 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U264 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U265 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U266 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U267 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U268 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U269 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U270 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U271 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U272 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U273 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U274 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U275 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U276 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U277 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U278 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U279 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U280 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U281 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U282 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U283 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U284 : BUF2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U285 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U286 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U287 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U288 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U289 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U290 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U291 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U292 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U293 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U294 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U295 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U296 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U297 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U298 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U299 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U300 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U301 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U302 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U303 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U304 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U305 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U306 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U307 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U308 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U309 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U310 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U311 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U312 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U313 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U314 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U315 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U316 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U317 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U318 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U319 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U320 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U321 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U322 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U323 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U324 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U325 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U326 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U327 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U328 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U329 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U330 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U331 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U332 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U333 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U334 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U335 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U336 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U337 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U338 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U339 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U340 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U341 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U342 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U343 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U344 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U345 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U346 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U347 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U348 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U349 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U350 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U351 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U352 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U353 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U354 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U355 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U356 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U357 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U358 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U359 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U360 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U361 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U362 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U363 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U364 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U365 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U366 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U367 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U368 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U369 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U370 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U371 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U372 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U373 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U374 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U375 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U376 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U377 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U378 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U379 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U380 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U381 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U382 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U383 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U384 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U385 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U386 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U387 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U388 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U389 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U390 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U391 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U392 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U393 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U394 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U395 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U396 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U397 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U398 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U399 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U400 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U401 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U402 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U403 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U404 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U405 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U406 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U407 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U408 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U409 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U410 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U411 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U412 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U413 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U414 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U415 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U416 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U417 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U418 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U419 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U420 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U421 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U422 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U423 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U424 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U425 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U426 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U427 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U428 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U429 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U430 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U431 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U432 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U433 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U434 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U435 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U436 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U437 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U438 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U439 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U440 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U441 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U442 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U443 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U444 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U445 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U446 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U447 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U448 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U449 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U450 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U451 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U452 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U453 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U454 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U455 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U456 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U457 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U458 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U459 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U460 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U461 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U462 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U463 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U464 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U465 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U466 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U467 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U468 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U469 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U470 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U471 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U472 : AOI211" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U473 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U474 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U475 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U476 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U477 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U478 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U479 : OAI2111" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U480 : AOI221" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U481 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U482 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U483 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U484 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U485 : AOI211" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U486 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U487 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U488 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U489 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U490 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U491 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U492 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U493 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U494 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U495 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U496 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U497 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U498 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U499 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U500 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U501 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U502 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U503 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U504 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U505 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U506 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U507 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U508 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U509 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U510 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U511 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U512 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U513 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U514 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U515 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U516 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U517 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U518 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U519 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U520 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U521 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U522 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U523 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U524 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U525 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U526 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U527 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U528 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U529 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U530 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U531 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U532 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U533 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U534 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U535 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U536 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U537 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U538 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U539 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U540 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U541 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U542 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U543 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U544 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U545 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U546 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U547 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U548 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U549 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U550 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U551 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U552 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U553 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U554 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U555 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U556 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U557 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U558 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U559 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U560 : OAI2111" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U561 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U562 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U563 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U564 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U565 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U566 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U567 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U568 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U569 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U570 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U571 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U572 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U573 : AOI311" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U574 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U575 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U576 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U577 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U578 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U579 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U580 : AOI221" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U581 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U582 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U583 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U584 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U585 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U586 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U587 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U588 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U589 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U590 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U591 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U592 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U593 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U594 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U595 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U596 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U597 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U598 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U599 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U600 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U601 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U602 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U603 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U604 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U605 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U606 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U607 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U608 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U609 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U610 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U611 : OAI2111" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U612 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U613 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U614 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U615 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U616 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U617 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U618 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U619 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U620 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U621 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U622 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U623 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U624 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U625 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U626 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U627 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U628 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U629 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U630 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U631 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U632 : XOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U633 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U634 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U635 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U636 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U637 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U638 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U639 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U640 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U641 : AOI221" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U642 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U643 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U644 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U645 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U646 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U647 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U648 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U649 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U650 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U651 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U652 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U653 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U654 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U655 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U656 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U657 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U658 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U659 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U660 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U661 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U662 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U663 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U664 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U665 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U666 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U667 : NAND41" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U668 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U669 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U670 : NOR40" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U671 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U672 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U673 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U674 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U675 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U676 : INV3" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U677 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U678 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U679 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U680 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U681 : NAND41" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U682 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U683 : XNR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U684 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U685 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U686 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U687 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U688 : NAND22" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U689 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U690 : NOR31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U691 : AOI221" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U692 : NOR21" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-3473) Component instance "U693 : NAND31" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1 File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.vhd
+# ** Warning: (vsim-8684) No drivers exist on out port /bench_send_ppm/send_ppm1/o_ppm, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /bench_send_ppm/sig_o_ppm.
+vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf -sdfnoerror -sdfnowarn -vopt LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
+# vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf -sdfnoerror -sdfnowarn -vopt LIB_VHD_BENCH.bench_send_ppm(tb_ppm) 
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/bench/bench_top_ppm.vhd(30): (vopt-1130) Port "SW" of entity "top_ppm" is not in the component being instantiated.
-# Optimization failed
-# Error loading design
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_vhd.constants_package
+# Loading work.bench_send_ppm(tb_ppm)#1
+# Loading lib_vhd.conv_pack_send_ppm
+# Loading lib_vhd.send_ppm(syn_rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading c35_CORELIB.vtables
+# Loading c35_CORELIB.oai222(vital)#1
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1/U16
+# Loading c35_CORELIB.oai212(vital)#1
+# Loading c35_CORELIB.add22(vital)#1
+# Loading c35_CORELIB.add32(vital)#1
+# Loading c35_CORELIB.df3(vital)#1
+# Loading c35_CORELIB.dfe1(vital)#1
+# Loading c35_CORELIB.nor21(vital)#1
+# Loading c35_CORELIB.mux22(vital)#1
+# Loading c35_CORELIB.xnr21(vital)#1
+# Loading c35_CORELIB.inv3(vital)#1
+# Loading c35_CORELIB.xor21(vital)#1
+# Loading c35_CORELIB.buf2(vital)#1
+# Loading c35_CORELIB.nor40(vital)#1
+# Loading c35_CORELIB.nand31(vital)#1
+# Loading c35_CORELIB.nand22(vital)#1
+# Loading c35_CORELIB.nand41(vital)#1
+# Loading c35_CORELIB.aoi211(vital)#1
+# Loading c35_CORELIB.nor31(vital)#1
+# Loading c35_CORELIB.oai2111(vital)#1
+# Loading c35_CORELIB.aoi221(vital)#1
+# Loading c35_CORELIB.aoi311(vital)#1
+# Loading c35_CORELIB.aoi221(vital)#2
+# Loading instances from /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf
+# Loading timing data from /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/bench/test_ppm.vhd
+add wave -position insertpoint sim:/bench_send_ppm/*
+run
+# Window cannot be closed because the modal window "Select SDF file" is still open.
+# Window cannot be closed because the modal window "Add SDF Entry" is still open.
+# Load canceled

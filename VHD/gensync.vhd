@@ -35,7 +35,7 @@ begin
 	 if (CLK'event and CLK='1') then
 		HSYNC<=pulseX;
 		VSYNC<=pulseY;      
-		  if (comptX<800 and (reset  ='1')) then  --800		 	
+		  if (comptX<800 and (reset  ='1')) then  --800	sylvain, modification ed ludovic en 640	 	
 		 	  comptX<=comptX+1;
 		  else 
 	 		  comptX<="0000000000";
@@ -53,28 +53,32 @@ end process;
 
 process (comptX)
 begin 
-	if (comptX<92) then -- 86
-		X<="0000000000";
-		pulseX<='0';
-		IMGX<='0';
-	elsif (comptX<(92+46)) then -- 96+48 --92+46 -- 46
-			X <= "0000000000";
-			pulseX<='1';
+--	if (comptX<"1010000001") then --ajout ludo
+		if (comptX<92) then -- 86
+			X<="0000000000";
+			pulseX<='0';
 			IMGX<='0';
-	 elsif (comptX <(92+46+(128))) then -- 96+48+640  --92+46+576 affichage pixels --64
-				X <= comptX-92-46-118;
-				IMGX<='0';
-				pulseX<='1';
-		elsif (comptX <(92+46+630)) then -- 96+48+640  --92+46+576 affichage pixels --64
-											   -- on perd 10 pixels a droite...
-				X <= comptX-92-46-118;
-				IMGX<='1';
-				pulseX<='1';
-			else 
-				X<="0000000000";
+		elsif (comptX<(92+46)) then -- 96+48 --92+46 -- 46
+				X <= "0000000000";
 				pulseX<='1';
 				IMGX<='0';
-	end if;
+		 elsif (comptX <(92+46+(128))) then -- 96+48+640  --92+46+576 affichage pixels --64
+					X <= comptX-92-46-118;
+					IMGX<='0';
+					pulseX<='1';
+			elsif (comptX <(92+46+630)) then -- 96+48+640  --92+46+576 affichage pixels --64
+												   -- on perd 10 pixels a droite...
+					X <= comptX-92-46-118;
+					IMGX<='1';
+					pulseX<='1';
+				else 
+					X<="0000000000";
+					pulseX<='1';
+					IMGX<='0';
+		end if;
+--	else --ajout ludo
+--		X <= "0000000000";--ajout ludo
+--	end if;--ajout ludo
 end process;
 
 process (comptY)

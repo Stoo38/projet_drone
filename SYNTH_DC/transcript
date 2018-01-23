@@ -7,47 +7,4 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf -sdfnoerror -sdfnowarn LIB_VHD_BENCH.bench_send_ppm(tb_ppm)
-# vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf -sdfnoerror -sdfnowarn LIB_VHD_BENCH.bench_send_ppm(tb_ppm) 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_vhd.constants_package
-# Loading work.bench_send_ppm(tb_ppm)#1
-# Loading lib_vhd.conv_pack_send_ppm
-# Loading lib_vhd.send_ppm(syn_rtl)#1
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading c35_CORELIB.vtables
-# Loading c35_CORELIB.oai222(vital)#1
-# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
-#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm/send_ppm1/U16
-# Loading c35_CORELIB.oai212(vital)#1
-# Loading c35_CORELIB.add22(vital)#1
-# Loading c35_CORELIB.add32(vital)#1
-# Loading c35_CORELIB.df3(vital)#1
-# Loading c35_CORELIB.dfe1(vital)#1
-# Loading c35_CORELIB.nor21(vital)#1
-# Loading c35_CORELIB.mux22(vital)#1
-# Loading c35_CORELIB.xnr21(vital)#1
-# Loading c35_CORELIB.inv3(vital)#1
-# Loading c35_CORELIB.xor21(vital)#1
-# Loading c35_CORELIB.buf2(vital)#1
-# Loading c35_CORELIB.nor40(vital)#1
-# Loading c35_CORELIB.nand31(vital)#1
-# Loading c35_CORELIB.nand22(vital)#1
-# Loading c35_CORELIB.nand41(vital)#1
-# Loading c35_CORELIB.aoi211(vital)#1
-# Loading c35_CORELIB.nor31(vital)#1
-# Loading c35_CORELIB.oai2111(vital)#1
-# Loading c35_CORELIB.aoi221(vital)#1
-# Loading c35_CORELIB.aoi311(vital)#1
-# Loading c35_CORELIB.aoi221(vital)#2
-# Loading instances from /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf
-# Loading timing data from /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/netlist/send_ppm.sdf
-# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ns  Iteration: 0  Instance: /bench_send_ppm File: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC/bench/test_ppm.vhd
-add wave -position insertpoint sim:/bench_send_ppm/*
-run
+# Load canceled

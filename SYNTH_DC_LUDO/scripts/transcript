@@ -1,0 +1,17 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/netlist/top_bar.sdf -sdfnoerror -sdfnowarn LIB_VHD_BENCH.tbench
+# vsim -L c35_CORELIB -L c35_IOLIB_4M -sdftyp /=/tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/netlist/top_bar.sdf -sdfnoerror -sdfnowarn LIB_VHD_BENCH.tbench 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/bench/tbench_sans_top.sv(81): Module 'gensync' is not defined.
+# ** Error: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/bench/tbench_sans_top.sv(111): Module 'image_process' is not defined.
+# ** Error: /tp/xph3app/xph3app602/projet_drone/SYNTH_DC_LUDO/bench/tbench_sans_top.sv(136): Module 'position' is not defined.
+# Optimization failed
+# Error loading design

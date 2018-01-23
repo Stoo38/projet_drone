@@ -1,8 +1,0 @@
-/bin/rm -r $TP_PATH/libs/lib_BENCH
-
-vlib $TP_PATH/libs/lib_BENCH
-
-vmap  lib_BENCH $TP_PATH/libs/lib_BENCH
-
-vcom +acc -work  lib_BENCH  sender.vhd reciever.vhd bench.vhd 
-

@@ -1,0 +1,913 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : top_bar
+Version: J-2014.09-SP2
+Date   : Tue Jan 23 12:09:37 2018
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB_TYP
+Wire Load Model Mode: enclosed
+
+  Startpoint: gensync1/comptY_reg[4]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[4]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[4]/Q (DFE1)                         1.88       1.88 r
+  U2364/Q (NOR40)                                         1.26       3.15 f
+  U2362/Q (INV3)                                          0.51       3.65 r
+  U2360/Q (NOR40)                                         0.92       4.58 f
+  U2446/Q (NOR21)                                         0.70       5.27 r
+  U2444/Q (NAND22)                                        0.12       5.39 f
+  U2443/Q (INV3)                                          0.69       6.08 r
+  U2372/Q (NAND22)                                        0.50       6.58 f
+  U1075/Q (INV3)                                          1.10       7.68 r
+  U2450/Q (INV3)                                          0.11       7.79 f
+  U2449/Q (NOR21)                                         0.54       8.32 r
+  position1/r409/U1_1/S (ADD32)                           1.06       9.38 f
+  U1161/Q (INV3)                                          0.38       9.76 r
+  U1160/Q (NOR21)                                         0.40      10.17 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_2/CO (ADD32)
+                                                          0.84      11.01 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_3/CO (ADD32)
+                                                          0.68      11.68 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_4/CO (ADD32)
+                                                          0.68      12.36 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_5/CO (ADD32)
+                                                          0.68      13.03 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_6/CO (ADD32)
+                                                          0.68      13.71 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_7/CO (ADD32)
+                                                          0.68      14.38 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_8/CO (ADD32)
+                                                          0.68      15.06 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_9/CO (ADD32)
+                                                          0.72      15.78 f
+  U1080/Q (INV3)                                          0.23      16.01 r
+  U1079/Q (NOR21)                                         0.49      16.50 f
+  U1085/Q (INV3)                                          0.30      16.79 r
+  U1084/Q (NOR21)                                         0.50      17.29 f
+  U1239/Q (INV3)                                          0.30      17.59 r
+  U1238/Q (NOR21)                                         0.50      18.09 f
+  U1182/Q (INV3)                                          0.30      18.39 r
+  U1181/Q (NOR21)                                         0.50      18.89 f
+  U1249/Q (INV3)                                          0.30      19.18 r
+  U1248/Q (NOR21)                                         0.50      19.68 f
+  U1187/Q (INV3)                                          0.30      19.98 r
+  U1186/Q (NOR21)                                         0.50      20.48 f
+  U1259/Q (INV3)                                          0.30      20.78 r
+  U1258/Q (NOR21)                                         0.50      21.28 f
+  U1197/Q (INV3)                                          0.30      21.57 r
+  U1196/Q (NOR21)                                         0.50      22.08 f
+  U1269/Q (INV3)                                          0.30      22.37 r
+  U1268/Q (NOR21)                                         0.50      22.87 f
+  U1207/Q (INV3)                                          0.30      23.17 r
+  U1206/Q (NOR21)                                         0.50      23.67 f
+  U1279/Q (INV3)                                          0.30      23.97 r
+  U1278/Q (NOR21)                                         0.50      24.47 f
+  U1217/Q (INV3)                                          0.30      24.76 r
+  U1216/Q (NOR21)                                         0.50      25.26 f
+  U1289/Q (INV3)                                          0.30      25.56 r
+  U1287/Q (NOR21)                                         0.50      26.06 f
+  U1230/Q (INV3)                                          0.30      26.36 r
+  U1228/Q (NOR21)                                         0.34      26.70 f
+  U1227/Q (XOR21)                                         0.57      27.27 r
+  U2388/Q (AOI221)                                        0.23      27.50 f
+  U2385/Q (NAND41)                                        1.03      28.53 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.53 r
+  data arrival time                                                 28.53
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.96
+
+
+  Startpoint: gensync1/comptY_reg[3]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[3]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[3]/Q (DFE1)                         1.91       1.91 r
+  U2364/Q (NOR40)                                         1.20       3.11 f
+  U2362/Q (INV3)                                          0.51       3.62 r
+  U2360/Q (NOR40)                                         0.92       4.54 f
+  U2446/Q (NOR21)                                         0.70       5.24 r
+  U2444/Q (NAND22)                                        0.12       5.36 f
+  U2443/Q (INV3)                                          0.69       6.05 r
+  U2372/Q (NAND22)                                        0.50       6.55 f
+  U1075/Q (INV3)                                          1.10       7.64 r
+  U2450/Q (INV3)                                          0.11       7.75 f
+  U2449/Q (NOR21)                                         0.54       8.29 r
+  position1/r409/U1_1/S (ADD32)                           1.06       9.35 f
+  U1161/Q (INV3)                                          0.38       9.73 r
+  U1160/Q (NOR21)                                         0.40      10.13 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_2/CO (ADD32)
+                                                          0.84      10.98 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_3/CO (ADD32)
+                                                          0.68      11.65 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_4/CO (ADD32)
+                                                          0.68      12.33 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_5/CO (ADD32)
+                                                          0.68      13.00 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_6/CO (ADD32)
+                                                          0.68      13.68 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_7/CO (ADD32)
+                                                          0.68      14.35 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_8/CO (ADD32)
+                                                          0.68      15.03 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_9/CO (ADD32)
+                                                          0.72      15.74 f
+  U1080/Q (INV3)                                          0.23      15.97 r
+  U1079/Q (NOR21)                                         0.49      16.46 f
+  U1085/Q (INV3)                                          0.30      16.76 r
+  U1084/Q (NOR21)                                         0.50      17.26 f
+  U1239/Q (INV3)                                          0.30      17.56 r
+  U1238/Q (NOR21)                                         0.50      18.06 f
+  U1182/Q (INV3)                                          0.30      18.35 r
+  U1181/Q (NOR21)                                         0.50      18.85 f
+  U1249/Q (INV3)                                          0.30      19.15 r
+  U1248/Q (NOR21)                                         0.50      19.65 f
+  U1187/Q (INV3)                                          0.30      19.95 r
+  U1186/Q (NOR21)                                         0.50      20.45 f
+  U1259/Q (INV3)                                          0.30      20.74 r
+  U1258/Q (NOR21)                                         0.50      21.25 f
+  U1197/Q (INV3)                                          0.30      21.54 r
+  U1196/Q (NOR21)                                         0.50      22.04 f
+  U1269/Q (INV3)                                          0.30      22.34 r
+  U1268/Q (NOR21)                                         0.50      22.84 f
+  U1207/Q (INV3)                                          0.30      23.14 r
+  U1206/Q (NOR21)                                         0.50      23.64 f
+  U1279/Q (INV3)                                          0.30      23.93 r
+  U1278/Q (NOR21)                                         0.50      24.43 f
+  U1217/Q (INV3)                                          0.30      24.73 r
+  U1216/Q (NOR21)                                         0.50      25.23 f
+  U1289/Q (INV3)                                          0.30      25.53 r
+  U1287/Q (NOR21)                                         0.50      26.03 f
+  U1230/Q (INV3)                                          0.30      26.32 r
+  U1228/Q (NOR21)                                         0.34      26.67 f
+  U1227/Q (XOR21)                                         0.57      27.24 r
+  U2388/Q (AOI221)                                        0.23      27.47 f
+  U2385/Q (NAND41)                                        1.03      28.50 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.50 r
+  data arrival time                                                 28.50
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.99
+
+
+  Startpoint: gensync1/comptY_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[2]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[2]/Q (DFE1)                         1.65       1.65 f
+  U2364/Q (NOR40)                                         0.91       2.56 r
+  U2362/Q (INV3)                                          0.10       2.66 f
+  U2360/Q (NOR40)                                         1.07       3.73 r
+  U2446/Q (NOR21)                                         0.39       4.12 f
+  U2444/Q (NAND22)                                        0.47       4.60 r
+  U2443/Q (INV3)                                          0.47       5.07 f
+  U2372/Q (NAND22)                                        0.91       5.98 r
+  U1075/Q (INV3)                                          0.83       6.81 f
+  U2450/Q (INV3)                                          0.42       7.23 r
+  U2449/Q (NOR21)                                         0.45       7.68 f
+  position1/r409/U1_1/CO (ADD32)                          0.75       8.42 f
+  position1/r409/U1_2/CO (ADD32)                          0.68       9.10 f
+  position1/r409/U1_3/CO (ADD32)                          0.68       9.77 f
+  position1/r409/U1_4/CO (ADD32)                          0.68      10.45 f
+  position1/r409/U1_5/CO (ADD32)                          0.68      11.13 f
+  position1/r409/U1_6/CO (ADD32)                          0.68      11.80 f
+  position1/r409/U1_7/CO (ADD32)                          0.68      12.48 f
+  position1/r409/U1_8/CO (ADD32)                          0.72      13.19 f
+  U1/Q (XOR21)                                            1.39      14.58 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_9/CO (ADD32)
+                                                          1.08      15.66 f
+  U1080/Q (INV3)                                          0.23      15.89 r
+  U1079/Q (NOR21)                                         0.49      16.38 f
+  U1085/Q (INV3)                                          0.30      16.68 r
+  U1084/Q (NOR21)                                         0.50      17.18 f
+  U1239/Q (INV3)                                          0.30      17.47 r
+  U1238/Q (NOR21)                                         0.50      17.97 f
+  U1182/Q (INV3)                                          0.30      18.27 r
+  U1181/Q (NOR21)                                         0.50      18.77 f
+  U1249/Q (INV3)                                          0.30      19.07 r
+  U1248/Q (NOR21)                                         0.50      19.57 f
+  U1187/Q (INV3)                                          0.30      19.86 r
+  U1186/Q (NOR21)                                         0.50      20.36 f
+  U1259/Q (INV3)                                          0.30      20.66 r
+  U1258/Q (NOR21)                                         0.50      21.16 f
+  U1197/Q (INV3)                                          0.30      21.46 r
+  U1196/Q (NOR21)                                         0.50      21.96 f
+  U1269/Q (INV3)                                          0.30      22.26 r
+  U1268/Q (NOR21)                                         0.50      22.76 f
+  U1207/Q (INV3)                                          0.30      23.05 r
+  U1206/Q (NOR21)                                         0.50      23.55 f
+  U1279/Q (INV3)                                          0.30      23.85 r
+  U1278/Q (NOR21)                                         0.50      24.35 f
+  U1217/Q (INV3)                                          0.30      24.65 r
+  U1216/Q (NOR21)                                         0.50      25.15 f
+  U1289/Q (INV3)                                          0.30      25.44 r
+  U1287/Q (NOR21)                                         0.50      25.94 f
+  U1230/Q (INV3)                                          0.30      26.24 r
+  U1228/Q (NOR21)                                         0.34      26.58 f
+  U1227/Q (XOR21)                                         0.57      27.15 r
+  U2388/Q (AOI221)                                        0.23      27.39 f
+  U2385/Q (NAND41)                                        1.03      28.41 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.41 r
+  data arrival time                                                 28.41
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.07
+
+
+  Startpoint: gensync1/comptY_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[2]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[2]/Q (DFE1)                         1.92       1.92 r
+  U2364/Q (NOR40)                                         1.11       3.03 f
+  U2362/Q (INV3)                                          0.51       3.54 r
+  U2360/Q (NOR40)                                         0.92       4.46 f
+  U2446/Q (NOR21)                                         0.70       5.15 r
+  U2444/Q (NAND22)                                        0.12       5.27 f
+  U2443/Q (INV3)                                          0.69       5.96 r
+  U2372/Q (NAND22)                                        0.50       6.46 f
+  U1075/Q (INV3)                                          1.10       7.56 r
+  U2450/Q (INV3)                                          0.11       7.67 f
+  U2449/Q (NOR21)                                         0.54       8.21 r
+  position1/r409/U1_1/S (ADD32)                           1.06       9.27 f
+  U1161/Q (INV3)                                          0.38       9.64 r
+  U1160/Q (NOR21)                                         0.40      10.05 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_2/CO (ADD32)
+                                                          0.84      10.89 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_3/CO (ADD32)
+                                                          0.68      11.57 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_4/CO (ADD32)
+                                                          0.68      12.24 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_5/CO (ADD32)
+                                                          0.68      12.92 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_6/CO (ADD32)
+                                                          0.68      13.59 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_7/CO (ADD32)
+                                                          0.68      14.27 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_8/CO (ADD32)
+                                                          0.68      14.94 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_9/CO (ADD32)
+                                                          0.72      15.66 f
+  U1080/Q (INV3)                                          0.23      15.89 r
+  U1079/Q (NOR21)                                         0.49      16.38 f
+  U1085/Q (INV3)                                          0.30      16.67 r
+  U1084/Q (NOR21)                                         0.50      17.18 f
+  U1239/Q (INV3)                                          0.30      17.47 r
+  U1238/Q (NOR21)                                         0.50      17.97 f
+  U1182/Q (INV3)                                          0.30      18.27 r
+  U1181/Q (NOR21)                                         0.50      18.77 f
+  U1249/Q (INV3)                                          0.30      19.07 r
+  U1248/Q (NOR21)                                         0.50      19.57 f
+  U1187/Q (INV3)                                          0.30      19.86 r
+  U1186/Q (NOR21)                                         0.50      20.36 f
+  U1259/Q (INV3)                                          0.30      20.66 r
+  U1258/Q (NOR21)                                         0.50      21.16 f
+  U1197/Q (INV3)                                          0.30      21.46 r
+  U1196/Q (NOR21)                                         0.50      21.96 f
+  U1269/Q (INV3)                                          0.30      22.25 r
+  U1268/Q (NOR21)                                         0.50      22.75 f
+  U1207/Q (INV3)                                          0.30      23.05 r
+  U1206/Q (NOR21)                                         0.50      23.55 f
+  U1279/Q (INV3)                                          0.30      23.85 r
+  U1278/Q (NOR21)                                         0.50      24.35 f
+  U1217/Q (INV3)                                          0.30      24.65 r
+  U1216/Q (NOR21)                                         0.50      25.15 f
+  U1289/Q (INV3)                                          0.30      25.44 r
+  U1287/Q (NOR21)                                         0.50      25.94 f
+  U1230/Q (INV3)                                          0.30      26.24 r
+  U1228/Q (NOR21)                                         0.34      26.58 f
+  U1227/Q (XOR21)                                         0.57      27.15 r
+  U2388/Q (AOI221)                                        0.23      27.38 f
+  U2385/Q (NAND41)                                        1.03      28.41 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.41 r
+  data arrival time                                                 28.41
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.08
+
+
+  Startpoint: gensync1/comptY_reg[4]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[4]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[4]/Q (DFE1)                         1.88       1.88 r
+  U2364/Q (NOR40)                                         1.26       3.15 f
+  U2362/Q (INV3)                                          0.51       3.65 r
+  U2360/Q (NOR40)                                         0.92       4.58 f
+  U2446/Q (NOR21)                                         0.70       5.27 r
+  U2444/Q (NAND22)                                        0.12       5.39 f
+  U2443/Q (INV3)                                          0.69       6.08 r
+  U2372/Q (NAND22)                                        0.50       6.58 f
+  U1075/Q (INV3)                                          1.10       7.68 r
+  U2450/Q (INV3)                                          0.11       7.79 f
+  U2449/Q (NOR21)                                         0.54       8.32 r
+  position1/r409/U1_1/S (ADD32)                           1.06       9.38 f
+  U1161/Q (INV3)                                          0.38       9.76 r
+  U1162/Q (NOR21)                                         0.40      10.17 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_2/CO (ADD32)
+                                                          0.84      11.01 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_3/CO (ADD32)
+                                                          0.68      11.68 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_4/CO (ADD32)
+                                                          0.68      12.36 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_5/CO (ADD32)
+                                                          0.68      13.03 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_6/CO (ADD32)
+                                                          0.68      13.71 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_7/CO (ADD32)
+                                                          0.68      14.38 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_8/CO (ADD32)
+                                                          0.68      15.06 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_9/CO (ADD32)
+                                                          0.72      15.78 f
+  U1078/Q (INV3)                                          0.23      16.01 r
+  U1076/Q (NOR21)                                         0.49      16.50 f
+  U1083/Q (INV3)                                          0.30      16.79 r
+  U1081/Q (NOR21)                                         0.50      17.29 f
+  U1237/Q (INV3)                                          0.30      17.59 r
+  U1235/Q (NOR21)                                         0.50      18.09 f
+  U1180/Q (INV3)                                          0.30      18.39 r
+  U1178/Q (NOR21)                                         0.50      18.89 f
+  U1247/Q (INV3)                                          0.30      19.18 r
+  U1245/Q (NOR21)                                         0.50      19.68 f
+  U1185/Q (INV3)                                          0.30      19.98 r
+  U1183/Q (NOR21)                                         0.50      20.48 f
+  U1257/Q (INV3)                                          0.30      20.78 r
+  U1255/Q (NOR21)                                         0.50      21.28 f
+  U1195/Q (INV3)                                          0.30      21.57 r
+  U1193/Q (NOR21)                                         0.50      22.08 f
+  U1267/Q (INV3)                                          0.30      22.37 r
+  U1265/Q (NOR21)                                         0.50      22.87 f
+  U1205/Q (INV3)                                          0.30      23.17 r
+  U1203/Q (NOR21)                                         0.50      23.67 f
+  U1277/Q (INV3)                                          0.30      23.97 r
+  U1275/Q (NOR21)                                         0.50      24.47 f
+  U1215/Q (INV3)                                          0.30      24.76 r
+  U1213/Q (NOR21)                                         0.50      25.26 f
+  U1286/Q (INV3)                                          0.30      25.56 r
+  U1285/Q (NOR21)                                         0.50      26.06 f
+  U1224/Q (INV3)                                          0.30      26.36 r
+  U1223/Q (NOR21)                                         0.34      26.70 f
+  U2437/Q (XOR21)                                         0.57      27.27 r
+  U2435/Q (AOI221)                                        0.32      27.59 f
+  U2385/Q (NAND41)                                        0.81      28.40 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.40 r
+  data arrival time                                                 28.40
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.40
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.09
+
+
+  Startpoint: gensync1/comptY_reg[4]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[4]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[4]/Q (DFE1)                         1.88       1.88 r
+  U2364/Q (NOR40)                                         1.26       3.15 f
+  U2362/Q (INV3)                                          0.51       3.65 r
+  U2360/Q (NOR40)                                         0.92       4.58 f
+  U2446/Q (NOR21)                                         0.70       5.27 r
+  U2444/Q (NAND22)                                        0.12       5.39 f
+  U2443/Q (INV3)                                          0.69       6.08 r
+  U2372/Q (NAND22)                                        0.50       6.58 f
+  U1075/Q (INV3)                                          1.10       7.68 r
+  U2450/Q (INV3)                                          0.11       7.79 f
+  U2449/Q (NOR21)                                         0.54       8.32 r
+  position1/r409/U1_1/CO (ADD32)                          0.59       8.92 r
+  position1/r409/U1_2/S (ADD32)                           1.14      10.05 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_2/CO (ADD32)
+                                                          0.81      10.86 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_3/CO (ADD32)
+                                                          0.68      11.54 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_4/CO (ADD32)
+                                                          0.68      12.21 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_5/CO (ADD32)
+                                                          0.68      12.89 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_6/CO (ADD32)
+                                                          0.68      13.56 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_7/CO (ADD32)
+                                                          0.68      14.24 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_8/CO (ADD32)
+                                                          0.68      14.91 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_9/CO (ADD32)
+                                                          0.72      15.63 f
+  U1080/Q (INV3)                                          0.23      15.86 r
+  U1079/Q (NOR21)                                         0.49      16.35 f
+  U1085/Q (INV3)                                          0.30      16.65 r
+  U1084/Q (NOR21)                                         0.50      17.15 f
+  U1239/Q (INV3)                                          0.30      17.44 r
+  U1238/Q (NOR21)                                         0.50      17.94 f
+  U1182/Q (INV3)                                          0.30      18.24 r
+  U1181/Q (NOR21)                                         0.50      18.74 f
+  U1249/Q (INV3)                                          0.30      19.04 r
+  U1248/Q (NOR21)                                         0.50      19.54 f
+  U1187/Q (INV3)                                          0.30      19.83 r
+  U1186/Q (NOR21)                                         0.50      20.33 f
+  U1259/Q (INV3)                                          0.30      20.63 r
+  U1258/Q (NOR21)                                         0.50      21.13 f
+  U1197/Q (INV3)                                          0.30      21.43 r
+  U1196/Q (NOR21)                                         0.50      21.93 f
+  U1269/Q (INV3)                                          0.30      22.23 r
+  U1268/Q (NOR21)                                         0.50      22.73 f
+  U1207/Q (INV3)                                          0.30      23.02 r
+  U1206/Q (NOR21)                                         0.50      23.52 f
+  U1279/Q (INV3)                                          0.30      23.82 r
+  U1278/Q (NOR21)                                         0.50      24.32 f
+  U1217/Q (INV3)                                          0.30      24.62 r
+  U1216/Q (NOR21)                                         0.50      25.12 f
+  U1289/Q (INV3)                                          0.30      25.41 r
+  U1287/Q (NOR21)                                         0.50      25.91 f
+  U1230/Q (INV3)                                          0.30      26.21 r
+  U1228/Q (NOR21)                                         0.34      26.55 f
+  U1227/Q (XOR21)                                         0.57      27.12 r
+  U2388/Q (AOI221)                                        0.23      27.36 f
+  U2385/Q (NAND41)                                        1.03      28.38 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.38 r
+  data arrival time                                                 28.38
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.10
+
+
+  Startpoint: gensync1/comptY_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[1]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[1]/Q (DFE1)                         1.63       1.63 f
+  U2364/Q (NOR40)                                         0.89       2.53 r
+  U2362/Q (INV3)                                          0.10       2.63 f
+  U2360/Q (NOR40)                                         1.07       3.70 r
+  U2446/Q (NOR21)                                         0.39       4.09 f
+  U2444/Q (NAND22)                                        0.47       4.57 r
+  U2443/Q (INV3)                                          0.47       5.04 f
+  U2372/Q (NAND22)                                        0.91       5.95 r
+  U1075/Q (INV3)                                          0.83       6.78 f
+  U2450/Q (INV3)                                          0.42       7.20 r
+  U2449/Q (NOR21)                                         0.45       7.65 f
+  position1/r409/U1_1/CO (ADD32)                          0.75       8.39 f
+  position1/r409/U1_2/CO (ADD32)                          0.68       9.07 f
+  position1/r409/U1_3/CO (ADD32)                          0.68       9.74 f
+  position1/r409/U1_4/CO (ADD32)                          0.68      10.42 f
+  position1/r409/U1_5/CO (ADD32)                          0.68      11.10 f
+  position1/r409/U1_6/CO (ADD32)                          0.68      11.77 f
+  position1/r409/U1_7/CO (ADD32)                          0.68      12.45 f
+  position1/r409/U1_8/CO (ADD32)                          0.72      13.16 f
+  U1/Q (XOR21)                                            1.39      14.55 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_9/CO (ADD32)
+                                                          1.08      15.63 f
+  U1080/Q (INV3)                                          0.23      15.86 r
+  U1079/Q (NOR21)                                         0.49      16.35 f
+  U1085/Q (INV3)                                          0.30      16.65 r
+  U1084/Q (NOR21)                                         0.50      17.15 f
+  U1239/Q (INV3)                                          0.30      17.44 r
+  U1238/Q (NOR21)                                         0.50      17.94 f
+  U1182/Q (INV3)                                          0.30      18.24 r
+  U1181/Q (NOR21)                                         0.50      18.74 f
+  U1249/Q (INV3)                                          0.30      19.04 r
+  U1248/Q (NOR21)                                         0.50      19.54 f
+  U1187/Q (INV3)                                          0.30      19.83 r
+  U1186/Q (NOR21)                                         0.50      20.33 f
+  U1259/Q (INV3)                                          0.30      20.63 r
+  U1258/Q (NOR21)                                         0.50      21.13 f
+  U1197/Q (INV3)                                          0.30      21.43 r
+  U1196/Q (NOR21)                                         0.50      21.93 f
+  U1269/Q (INV3)                                          0.30      22.23 r
+  U1268/Q (NOR21)                                         0.50      22.73 f
+  U1207/Q (INV3)                                          0.30      23.02 r
+  U1206/Q (NOR21)                                         0.50      23.52 f
+  U1279/Q (INV3)                                          0.30      23.82 r
+  U1278/Q (NOR21)                                         0.50      24.32 f
+  U1217/Q (INV3)                                          0.30      24.62 r
+  U1216/Q (NOR21)                                         0.50      25.12 f
+  U1289/Q (INV3)                                          0.30      25.41 r
+  U1287/Q (NOR21)                                         0.50      25.91 f
+  U1230/Q (INV3)                                          0.30      26.21 r
+  U1228/Q (NOR21)                                         0.34      26.55 f
+  U1227/Q (XOR21)                                         0.57      27.12 r
+  U2388/Q (AOI221)                                        0.23      27.36 f
+  U2385/Q (NAND41)                                        1.03      28.38 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.38 r
+  data arrival time                                                 28.38
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.10
+
+
+  Startpoint: gensync1/comptY_reg[3]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[3]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[3]/Q (DFE1)                         1.91       1.91 r
+  U2364/Q (NOR40)                                         1.20       3.11 f
+  U2362/Q (INV3)                                          0.51       3.62 r
+  U2360/Q (NOR40)                                         0.92       4.54 f
+  U2446/Q (NOR21)                                         0.70       5.24 r
+  U2444/Q (NAND22)                                        0.12       5.36 f
+  U2443/Q (INV3)                                          0.69       6.05 r
+  U2372/Q (NAND22)                                        0.50       6.55 f
+  U1075/Q (INV3)                                          1.10       7.64 r
+  U2450/Q (INV3)                                          0.11       7.75 f
+  U2449/Q (NOR21)                                         0.54       8.29 r
+  position1/r409/U1_1/S (ADD32)                           1.06       9.35 f
+  U1161/Q (INV3)                                          0.38       9.73 r
+  U1162/Q (NOR21)                                         0.40      10.13 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_2/CO (ADD32)
+                                                          0.84      10.98 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_3/CO (ADD32)
+                                                          0.68      11.65 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_4/CO (ADD32)
+                                                          0.68      12.33 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_5/CO (ADD32)
+                                                          0.68      13.00 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_6/CO (ADD32)
+                                                          0.68      13.68 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_7/CO (ADD32)
+                                                          0.68      14.35 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_8/CO (ADD32)
+                                                          0.68      15.03 f
+  position1/dp_cluster_6/add_0_root_add_171_3/U1_9/CO (ADD32)
+                                                          0.72      15.74 f
+  U1078/Q (INV3)                                          0.23      15.97 r
+  U1076/Q (NOR21)                                         0.49      16.46 f
+  U1083/Q (INV3)                                          0.30      16.76 r
+  U1081/Q (NOR21)                                         0.50      17.26 f
+  U1237/Q (INV3)                                          0.30      17.56 r
+  U1235/Q (NOR21)                                         0.50      18.06 f
+  U1180/Q (INV3)                                          0.30      18.35 r
+  U1178/Q (NOR21)                                         0.50      18.85 f
+  U1247/Q (INV3)                                          0.30      19.15 r
+  U1245/Q (NOR21)                                         0.50      19.65 f
+  U1185/Q (INV3)                                          0.30      19.95 r
+  U1183/Q (NOR21)                                         0.50      20.45 f
+  U1257/Q (INV3)                                          0.30      20.74 r
+  U1255/Q (NOR21)                                         0.50      21.25 f
+  U1195/Q (INV3)                                          0.30      21.54 r
+  U1193/Q (NOR21)                                         0.50      22.04 f
+  U1267/Q (INV3)                                          0.30      22.34 r
+  U1265/Q (NOR21)                                         0.50      22.84 f
+  U1205/Q (INV3)                                          0.30      23.14 r
+  U1203/Q (NOR21)                                         0.50      23.64 f
+  U1277/Q (INV3)                                          0.30      23.93 r
+  U1275/Q (NOR21)                                         0.50      24.43 f
+  U1215/Q (INV3)                                          0.30      24.73 r
+  U1213/Q (NOR21)                                         0.50      25.23 f
+  U1286/Q (INV3)                                          0.30      25.53 r
+  U1285/Q (NOR21)                                         0.50      26.03 f
+  U1224/Q (INV3)                                          0.30      26.32 r
+  U1223/Q (NOR21)                                         0.34      26.67 f
+  U2437/Q (XOR21)                                         0.57      27.24 r
+  U2435/Q (AOI221)                                        0.32      27.56 f
+  U2385/Q (NAND41)                                        0.81      28.37 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.37 r
+  data arrival time                                                 28.37
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.12
+
+
+  Startpoint: gensync1/comptY_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  gensync1/comptY_reg[2]/C (DFE1)          0.00       0.00 r
+  gensync1/comptY_reg[2]/Q (DFE1)          1.65       1.65 f
+  U2364/Q (NOR40)                          0.91       2.56 r
+  U2362/Q (INV3)                           0.10       2.66 f
+  U2360/Q (NOR40)                          1.07       3.73 r
+  U2446/Q (NOR21)                          0.39       4.12 f
+  U2444/Q (NAND22)                         0.47       4.60 r
+  U2443/Q (INV3)                           0.47       5.07 f
+  U2372/Q (NAND22)                         0.91       5.98 r
+  U1075/Q (INV3)                           0.83       6.81 f
+  U2450/Q (INV3)                           0.42       7.23 r
+  U2449/Q (NOR21)                          0.45       7.68 f
+  position1/r409/U1_1/CO (ADD32)           0.75       8.42 f
+  position1/r409/U1_2/CO (ADD32)           0.68       9.10 f
+  position1/r409/U1_3/CO (ADD32)           0.68       9.77 f
+  position1/r409/U1_4/CO (ADD32)           0.68      10.45 f
+  position1/r409/U1_5/CO (ADD32)           0.68      11.13 f
+  position1/r409/U1_6/CO (ADD32)           0.68      11.80 f
+  position1/r409/U1_7/CO (ADD32)           0.68      12.48 f
+  position1/r409/U1_8/CO (ADD32)           0.72      13.19 f
+  U2413/Q (INV3)                           0.23      13.42 r
+  U2412/Q (NOR21)                          0.49      13.91 f
+  U2409/Q (INV3)                           0.31      14.22 r
+  U2408/Q (NOR21)                          0.50      14.72 f
+  U2417/Q (INV3)                           0.30      15.02 r
+  U2416/Q (NOR21)                          0.50      15.52 f
+  U2405/Q (INV3)                           0.31      15.82 r
+  U2404/Q (NOR21)                          0.50      16.32 f
+  U2452/Q (INV3)                           0.30      16.62 r
+  U2451/Q (NOR21)                          0.50      17.12 f
+  U2475/Q (INV3)                           0.31      17.43 r
+  U2474/Q (NOR21)                          0.50      17.93 f
+  U2456/Q (INV3)                           0.30      18.23 r
+  U2455/Q (NOR21)                          0.50      18.73 f
+  U2479/Q (INV3)                           0.31      19.03 r
+  U2478/Q (NOR21)                          0.50      19.53 f
+  U2460/Q (INV3)                           0.30      19.83 r
+  U2459/Q (NOR21)                          0.50      20.33 f
+  U2483/Q (INV3)                           0.31      20.64 r
+  U2482/Q (NOR21)                          0.50      21.14 f
+  U2464/Q (INV3)                           0.30      21.44 r
+  U2463/Q (NOR21)                          0.50      21.94 f
+  U2487/Q (INV3)                           0.31      22.24 r
+  U2486/Q (NOR21)                          0.50      22.74 f
+  U2468/Q (INV3)                           0.30      23.04 r
+  U2467/Q (NOR21)                          0.50      23.54 f
+  U2491/Q (INV3)                           0.31      23.85 r
+  U2490/Q (NOR21)                          0.50      24.35 f
+  U23/Q (XOR21)                            1.16      25.51 f
+  U1229/Q (INV3)                           0.57      26.07 r
+  U1164/Q (NOR21)                          0.43      26.50 f
+  U1163/Q (XOR21)                          0.50      27.00 r
+  U2388/Q (AOI221)                         0.33      27.33 f
+  U2385/Q (NAND41)                         1.03      28.36 r
+  position1/y_sum_reg[24]/D (DF3)          0.00      28.36 r
+  data arrival time                                  28.36
+
+  clock HCLK (rise edge)                  40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  clock uncertainty                       -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)          0.00      39.50 r
+  library setup time                      -0.01      39.49
+  data required time                                 39.49
+  -----------------------------------------------------------
+  data required time                                 39.49
+  data arrival time                                 -28.36
+  -----------------------------------------------------------
+  slack (MET)                                        11.13
+
+
+  Startpoint: gensync1/comptY_reg[3]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: position1/y_sum_reg[24]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_bar            10k                   c35_CORELIB_TYP
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  gensync1/comptY_reg[3]/C (DFE1)                         0.00       0.00 r
+  gensync1/comptY_reg[3]/Q (DFE1)                         1.64       1.64 f
+  U2364/Q (NOR40)                                         0.86       2.50 r
+  U2362/Q (INV3)                                          0.10       2.60 f
+  U2360/Q (NOR40)                                         1.07       3.67 r
+  U2446/Q (NOR21)                                         0.39       4.07 f
+  U2444/Q (NAND22)                                        0.47       4.54 r
+  U2443/Q (INV3)                                          0.47       5.01 f
+  U2372/Q (NAND22)                                        0.91       5.92 r
+  U1075/Q (INV3)                                          0.83       6.75 f
+  U2450/Q (INV3)                                          0.42       7.17 r
+  U2449/Q (NOR21)                                         0.45       7.62 f
+  position1/r409/U1_1/CO (ADD32)                          0.75       8.37 f
+  position1/r409/U1_2/CO (ADD32)                          0.68       9.04 f
+  position1/r409/U1_3/CO (ADD32)                          0.68       9.72 f
+  position1/r409/U1_4/CO (ADD32)                          0.68      10.40 f
+  position1/r409/U1_5/CO (ADD32)                          0.68      11.07 f
+  position1/r409/U1_6/CO (ADD32)                          0.68      11.75 f
+  position1/r409/U1_7/CO (ADD32)                          0.68      12.42 f
+  position1/r409/U1_8/CO (ADD32)                          0.72      13.14 f
+  U1/Q (XOR21)                                            1.39      14.52 f
+  position1/dp_cluster_2/add_0_root_add_189_3/U1_9/CO (ADD32)
+                                                          1.08      15.60 f
+  U1080/Q (INV3)                                          0.23      15.84 r
+  U1079/Q (NOR21)                                         0.49      16.32 f
+  U1085/Q (INV3)                                          0.30      16.62 r
+  U1084/Q (NOR21)                                         0.50      17.12 f
+  U1239/Q (INV3)                                          0.30      17.42 r
+  U1238/Q (NOR21)                                         0.50      17.92 f
+  U1182/Q (INV3)                                          0.30      18.22 r
+  U1181/Q (NOR21)                                         0.50      18.72 f
+  U1249/Q (INV3)                                          0.30      19.01 r
+  U1248/Q (NOR21)                                         0.50      19.51 f
+  U1187/Q (INV3)                                          0.30      19.81 r
+  U1186/Q (NOR21)                                         0.50      20.31 f
+  U1259/Q (INV3)                                          0.30      20.61 r
+  U1258/Q (NOR21)                                         0.50      21.11 f
+  U1197/Q (INV3)                                          0.30      21.40 r
+  U1196/Q (NOR21)                                         0.50      21.90 f
+  U1269/Q (INV3)                                          0.30      22.20 r
+  U1268/Q (NOR21)                                         0.50      22.70 f
+  U1207/Q (INV3)                                          0.30      23.00 r
+  U1206/Q (NOR21)                                         0.50      23.50 f
+  U1279/Q (INV3)                                          0.30      23.79 r
+  U1278/Q (NOR21)                                         0.50      24.29 f
+  U1217/Q (INV3)                                          0.30      24.59 r
+  U1216/Q (NOR21)                                         0.50      25.09 f
+  U1289/Q (INV3)                                          0.30      25.39 r
+  U1287/Q (NOR21)                                         0.50      25.89 f
+  U1230/Q (INV3)                                          0.30      26.19 r
+  U1228/Q (NOR21)                                         0.34      26.53 f
+  U1227/Q (XOR21)                                         0.57      27.10 r
+  U2388/Q (AOI221)                                        0.23      27.33 f
+  U2385/Q (NAND41)                                        1.03      28.36 r
+  position1/y_sum_reg[24]/D (DF3)                         0.00      28.36 r
+  data arrival time                                                 28.36
+
+  clock HCLK (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             0.00      40.00
+  clock uncertainty                                      -0.50      39.50
+  position1/y_sum_reg[24]/C (DF3)                         0.00      39.50 r
+  library setup time                                     -0.01      39.49
+  data required time                                                39.49
+  --------------------------------------------------------------------------
+  data required time                                                39.49
+  data arrival time                                                -28.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                       11.13
+
+
+1

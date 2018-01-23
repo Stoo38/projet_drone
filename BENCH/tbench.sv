@@ -158,7 +158,7 @@ top_bar top (
 
 
 always @(posedge vga_clk) 
-  //if ((cam_x < 640) && (cam_y < 480))
+  //if ((vga_x < 640) && (vga_y < 480))
   begin
     img_vga[vga_x][vga_y].r = img_out.r & {8{cam_img}};
     img_vga[vga_x][vga_y].g = img_out.g & {8{cam_img}};

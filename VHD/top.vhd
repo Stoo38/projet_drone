@@ -140,7 +140,7 @@ architecture bar of top_bar is
 			);
 HSYNC_top<=HSYNC_gen_img;
 VSYNC_top<=VSYNC_gen_img;
-cam_x <= X_gen_img_pos;
+cam_x <= '0' & X_gen_img_pos(8 downto 0);
 cam_y <= Y_gen_img_pos;
 r_out_proc <= r_img_pos;
 g_out_proc <= g_img_pos;
